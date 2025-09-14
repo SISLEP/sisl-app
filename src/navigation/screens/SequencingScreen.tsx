@@ -71,7 +71,7 @@ const SequencingScreen = ({ data, onNext }) => {
       <Text style={styles.title}>Pick out signs in the correct order</Text>
       <View style={styles.videoContainer}>
         <Video
-          source={{ uri: data.fullSignVideo }} // Note: Ensure your data has a `fullSignVideo` property
+          source={{ uri: data.signVideo }}
           style={styles.mainVideo}
           controls={true}
           resizeMode="contain"

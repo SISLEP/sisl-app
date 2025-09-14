@@ -1,6 +1,7 @@
 // FillInTheBlankScreen.tsx
 import React, { useState } from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Video from 'react-native-video'; // Import the Video component
 
 const FillInTheBlankScreen = ({ data, onNext }) => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -24,6 +25,7 @@ const FillInTheBlankScreen = ({ data, onNext }) => {
     setShowFeedback(false);
   };
   
+  // Update the phrase to display the correct word instead of '____'
   const phraseWithSelection = data.fullPhrase.replace('____', selectedOption || '____');
 
   // Renders the bottom bar with the "Check" button
@@ -66,8 +68,15 @@ const FillInTheBlankScreen = ({ data, onNext }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Fill in the missing sign</Text>
-      <View style={styles.imageContainer}>
-        <Image source={{ uri: data.signImage }} style={styles.mainImage} />
+      <View style={styles.videoContainer}>
+        {/* Replace Image with Video component */}
+        <Video
+          source={{ uri: data.signVideo }} // Use data.signVideo instead of data.signImage
+          style={styles.mainVideo}
+          paused={false} // Autoplay the video
+          repeat={true} // Loop the video
+          resizeMode="contain"
+        />
       </View>
       <View style={styles.phraseContainer}>
         <Text style={styles.phraseText}>{phraseWithSelection}</Text>
@@ -106,7 +115,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginVertical: 20,
   },
-  imageContainer: {
+  videoContainer: { // New style for the video container
     width: '100%',
     aspectRatio: 1.5,
     borderRadius: 12,
@@ -114,11 +123,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
+    overflow: 'hidden',
   },
-  mainImage: {
-    width: '90%',
-    height: '90%',
-    resizeMode: 'contain',
+  mainVideo: { // New style for the video
+    width: '100%',
+    height: '100%',
   },
   phraseContainer: {
     marginBottom: 30,

@@ -1,5 +1,5 @@
 // MatchingPairsScreen.tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Video from 'react-native-video';
@@ -93,9 +93,10 @@ const MatchingPairsScreen = ({ data, onNext }) => {
               onPress={() => handleSelectVideo(item)}
             >
               <Video
-                source={{ uri: item.signVideo }} // Note: Ensure your data has a `signVideo` property
+                source={{ uri: item.signVideo }}
                 style={styles.video}
-                paused={true}
+                paused={false} // This is the change to enable autoplay
+                repeat={true} // Add this to loop the video
                 resizeMode="contain"
               />
             </TouchableOpacity>
@@ -105,7 +106,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
           const isSelected = selectedText?.id === item.id;
           return (
             <TouchableOpacity
-              key={`${item.id}-text`} // Appended '-text' to avoid duplicate keys
+              key={`${item.id}-text`}
               style={[styles.itemCard, styles.textCard, isSelected && styles.selectedCard]}
               onPress={() => handleSelectText(item)}
             >
@@ -160,7 +161,7 @@ const styles = StyleSheet.create({
     borderColor: 'transparent',
   },
   selectedCard: {
-    borderColor: '#84D8FF', // Blue border for selected items
+    borderColor: '#84D8FF',
     backgroundColor: '#EBF8FF',
   },
   textCard: {

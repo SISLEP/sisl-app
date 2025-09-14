@@ -13,12 +13,12 @@
           "data": {
             "items": [
               {
-                "signImage": "path_to_nice_sign.png",
+                "signVideo": "https://myystique16.github.io/video-site/please.mp4",
                 "translation": "Nice",
                 "id": "1"
               },
               {
-                "signImage": "path_to_meetyou_sign.png",
+                "signVideo": "https://myystique16.github.io/video-site/please.mp4",
                 "translation": "Meet you",
                 "id": "2"
               }
@@ -29,7 +29,7 @@
           "type": "sequencing",
           "instructions": "Pick out signs in the correct order",
           "data": {
-            "fullSignImage": "path_to_nice_meet_you_sign.png",
+            "signVideo": "https://myystique16.github.io/video-site/please.mp4",
             "correctOrder": [
               "NICE",
               "MEET-you"
@@ -45,7 +45,7 @@
           "type": "translation",
           "instructions": "Guess the correct translation",
           "data": {
-            "signImage": "path_to_my_sign.png",
+            "signVideo": "https://myystique16.github.io/video-site/please.mp4",
             "correctAnswer": "My",
             "options": [
               "You",
@@ -57,7 +57,7 @@
           "type": "fill_in_the_blank",
           "instructions": "Fill in the missing sign",
           "data": {
-            "signImage": "path_to_nice_meetyou_sign_partial.png",
+            "signVideo": "https://myystique16.github.io/video-site/please.mp4",
             "fullPhrase": "NICE ____",
             "missingWord": "MEET-you",
             "options": [

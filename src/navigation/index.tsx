@@ -8,11 +8,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image } from 'react-native';
 import bell from '../assets/bell.png';
 import newspaper from '../assets/newspaper.png';
-import { Home } from './screens/Home';
+import Home from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
 import { Updates } from './screens/Updates';
 import { NotFound } from './screens/NotFound';
+import LessonScreen from './screens/LessonScreen';
+import LessonCompleteScreen from './screens/LessonCompleteScreen';
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -57,6 +59,18 @@ const RootStack = createNativeStackNavigator({
       options: {
         title: 'Home',
         headerShown: false,
+      },
+    },
+    LessonScreen: {
+      screen: LessonScreen,
+      options: {
+        title: 'Lesson',
+      },
+    },
+    LessonComplete: {
+      screen: LessonCompleteScreen,
+      options: {
+        headerShown: false, // Hide header for a cleaner look
       },
     },
     Profile: {

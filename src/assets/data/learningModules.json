@@ -1,0 +1,100 @@
+{
+  "learningModules": [
+      {
+      "id": "1",
+      "title": "Greetings",
+      "subtitle": "Learn to say hello!",
+      "icon": "👋",
+      "bgColor": "#E6F0FF",
+      "lessons": [
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair",
+          "data": {
+            "items": [
+              {
+                "signImage": "path_to_nice_sign.png",
+                "translation": "Nice",
+                "id": "1"
+              },
+              {
+                "signImage": "path_to_meetyou_sign.png",
+                "translation": "Meet you",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "sequencing",
+          "instructions": "Pick out signs in the correct order",
+          "data": {
+            "fullSignImage": "path_to_nice_meet_you_sign.png",
+            "correctOrder": [
+              "NICE",
+              "MEET-you"
+            ],
+            "options": [
+              "HELLO",
+              "NICE",
+              "MEET-you"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Guess the correct translation",
+          "data": {
+            "signImage": "path_to_my_sign.png",
+            "correctAnswer": "My",
+            "options": [
+              "You",
+              "My"
+            ]
+          }
+        },
+        {
+          "type": "fill_in_the_blank",
+          "instructions": "Fill in the missing sign",
+          "data": {
+            "signImage": "path_to_nice_meetyou_sign_partial.png",
+            "fullPhrase": "NICE ____",
+            "missingWord": "MEET-you",
+            "options": [
+              "HELLO",
+              "MEET-you"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "icon": "🤟",
+      "title": "Let's learn new signs!",
+      "subtitle": "Learn basic signs",
+      "bgColor": "#FFF4E6"
+    },
+    {
+      "id": 3,
+      "icon": "❓",
+      "title": "What is sign language?",
+      "subtitle": "Chat with Joy",
+      "bgColor": "#F0F8FF"
+    },
+    {
+      "id": 4,
+      "icon": "📚",
+      "title": "Keep learning...",
+      "subtitle": "Learn more signs",
+      "bgColor": "#F8F8F8"
+    },
+    {
+      "id": 5,
+      "icon": "😊",
+      "title": "Having a good time so far?",
+      "subtitle": "Chat with Joy",
+      "bgColor": "#F0F8FF"
+    }
+  ]
+}

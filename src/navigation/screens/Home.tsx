@@ -1,5 +1,5 @@
-import { useNavigation } from '@react-navigation/native'; // Import the hook
-import React, { useEffect, useState } from 'react';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import React, { useState, useCallback } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -12,42 +12,134 @@ import {
   View
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { fetchLearningModules } from '../../api/fetch';
+
+const PROGRESS_STORAGE_KEY = 'userProgress';
 
 const Home = () => {
   const navigation = useNavigation();
   const [learningModules, setLearningModules] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [userProgress, setUserProgress] = useState({});
 
-  useEffect(() => {
-    const loadModules = async () => {
-      try {
-        const modules = await fetchLearningModules();
-        setLearningModules(modules);
-      } catch (error) {
-        Alert.alert('Error', 'Failed to load learning modules. Please check your network connection.');
-      } finally {
-        setIsLoading(false);
+  // Function to load progress from AsyncStorage
+  const loadProgress = async () => {
+    try {
+      const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
+      if (storedProgress) {
+        setUserProgress(JSON.parse(storedProgress));
       }
-    };
+    } catch (e) {
+      console.error('Failed to load progress from storage', e);
+    }
+  };
 
-    loadModules();
-  }, []);
+  // Use useFocusEffect to reload modules and progress whenever the screen is focused
+  useFocusEffect(
+    useCallback(() => {
+      const loadData = async () => {
+        setIsLoading(true);
+        try {
+          const modules = await fetchLearningModules();
+          setLearningModules(modules);
+          await loadProgress();
+        } catch (error) {
+          Alert.alert('Error', 'Failed to load learning modules or progress. Please check your network connection.');
+        } finally {
+          setIsLoading(false);
+        }
+      };
+
+      loadData();
+    }, [])
+  );
 
   const handleContinue = () => {
-    // Navigate to the first lesson of the last active module
-    console.log('Continue lesson pressed');
+    // Find the module with the most recent progress
+    const activeModuleId = Object.keys(userProgress).reduce((a, b) => 
+      (userProgress[a] > userProgress[b] ? a : b), null);
+      
+    if (activeModuleId) {
+      const activeModule = learningModules.find(mod => mod.id === activeModuleId);
+      if (activeModule) {
+        const completedLessonsCount = userProgress[activeModuleId].lessonsCompleted;
+        const totalLessons = activeModule.lessons.length;
+        
+        // Check if the module is already complete
+        if (completedLessonsCount >= totalLessons) {
+          Alert.alert("Module Complete", "You have finished this module! Please select a new one to continue learning.");
+          return;
+        }
+
+        // Navigate to the next lesson
+        const nextLessonIndex = completedLessonsCount;
+        navigation.navigate('LessonScreen', { 
+          lessons: activeModule.lessons, 
+          initialLessonIndex: nextLessonIndex,
+          moduleId: activeModule.id
+        });
+        return;
+      }
+    }
+    
+    // If no progress is found, alert the user or navigate to the first module
+    Alert.alert("No Progress Found", "It looks like you're starting fresh. Please select a module to begin.");
   };
 
   const handleModulePress = (moduleId) => {
     const selectedModule = learningModules.find(mod => mod.id === moduleId);
-    if (selectedModule && selectedModule.lessons.length > 0) {
-      // Navigate to the first lesson of the selected module
-      navigation.navigate('LessonScreen', { lessons: selectedModule.lessons });
-      // navigation.navigate('Profile', { user: 'jane' });
-    } else {
+    if (!selectedModule || selectedModule.lessons.length === 0) {
       Alert.alert('No lessons', 'This module has no lessons yet.');
+      return;
     }
+  
+    const progress = userProgress[moduleId];
+    // Check if progress exists and if all lessons are completed.
+    const isCompleted = progress && progress.lessonsCompleted >= selectedModule.lessons.length;
+  
+    if (isCompleted) {
+      Alert.alert(
+        "Module Completed",
+        "You have already finished this module. Do you want to retake the lessons from the beginning?",
+        [
+          {
+            text: "Cancel",
+            style: "cancel"
+          },
+          {
+            text: "Retake",
+            onPress: () => {
+              navigation.navigate('LessonScreen', { 
+                lessons: selectedModule.lessons, 
+                initialLessonIndex: 0, // Start from the beginning
+                moduleId: moduleId
+              });
+            }
+          }
+        ]
+      );
+    } else {
+      // Continue from the last completed lesson or start from the beginning
+      const initialLessonIndex = progress?.lessonsCompleted || 0;
+      navigation.navigate('LessonScreen', { 
+        lessons: selectedModule.lessons,
+        initialLessonIndex: initialLessonIndex,
+        moduleId: moduleId
+      });
+    }
+  };
+
+  const getProgressText = (moduleId) => {
+    const progress = userProgress[moduleId];
+    const module = learningModules.find(m => m.id === moduleId);
+    if (!module) return '0 Lessons Complete';
+
+    if (progress) {
+      const isCompleted = progress.lessonsCompleted >= module.lessons.length;
+      return isCompleted ? 'Completed!' : `${progress.lessonsCompleted}/${module.lessons.length} Lessons Complete`;
+    }
+    return '0 Lessons Complete';
   };
 
   const renderLearningModule = (module) => (
@@ -62,6 +154,7 @@ const Home = () => {
       <View style={styles.moduleContent}>
         <Text style={styles.moduleTitle}>{module.title}</Text>
         <Text style={styles.moduleSubtitle}>{module.subtitle}</Text>
+        <Text style={styles.progressText}>{getProgressText(module.id)}</Text>
       </View>
       <Icon name="chevron-right" size={24} color="#666" />
     </TouchableOpacity>
@@ -240,6 +333,12 @@ const styles = StyleSheet.create({
   moduleSubtitle: {
     fontSize: 14,
     color: '#666',
+  },
+  progressText: {
+    fontSize: 12,
+    color: '#444',
+    marginTop: 4,
+    fontWeight: '600',
   },
   bottomIndicator: {
     alignItems: 'center',

@@ -1,24 +1,80 @@
-// LessonScreen.tsx
 import { useNavigation, useRoute } from '@react-navigation/native';
-import React, { useState } from 'react';
-// Remove Alert as it's no longer used
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, StyleSheet, Text } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import FillInTheBlankScreen from './FillInTheBlankScreen';
 import MatchingPairsScreen from './MatchingPairsScreen';
 import SequencingScreen from './SequencingScreen';
 import TranslationScreen from './TranslationScreen';
 
+const PROGRESS_STORAGE_KEY = 'userProgress';
+
 const LessonScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const { lessons } = route.params;
+  const { lessons, initialLessonIndex, moduleId } = route.params;
 
-  const [currentLessonIndex, setCurrentLessonIndex] = useState(0);
+  const [currentLessonIndex, setCurrentLessonIndex] = useState(initialLessonIndex || 0);
   const currentLesson = lessons[currentLessonIndex];
 
-  const handleNextLesson = () => {
-    if (currentLessonIndex < lessons.length - 1) {
-      setCurrentLessonIndex(currentLessonIndex + 1);
+  // This useEffect ensures the component's state is reset when the user navigates back to it
+  // with a new starting index (e.g., when retaking a completed module).
+  useEffect(() => {
+    setCurrentLessonIndex(initialLessonIndex);
+  }, [initialLessonIndex]);
+
+  // This effect will run when the component mounts and when route params change
+  useEffect(() => {
+    // Check if the user is explicitly retaking a completed module
+    if (initialLessonIndex === 0 && currentLessonIndex === 0) {
+      const resetProgress = async () => {
+        try {
+          const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
+          if (storedProgress) {
+            const progress = JSON.parse(storedProgress);
+            // Only reset if the module was previously completed
+            if (progress[moduleId] && progress[moduleId].lessonsCompleted >= progress[moduleId].totalLessons) {
+              progress[moduleId] = {
+                lessonsCompleted: 0,
+                totalLessons: lessons.length,
+              };
+              await AsyncStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
+              console.log(`Progress for module ${moduleId} has been reset for retake.`);
+            }
+          }
+        } catch (e) {
+          console.error('Failed to reset progress for retake', e);
+        }
+      };
+      resetProgress();
+    }
+  }, [initialLessonIndex, moduleId]);
+
+  // Function to save progress to AsyncStorage
+  const saveProgress = async (lessonsCompleted) => {
+    try {
+      const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
+      const progress = storedProgress ? JSON.parse(storedProgress) : {};
+      
+      progress[moduleId] = {
+        lessonsCompleted,
+        totalLessons: lessons.length
+      };
+      
+      await AsyncStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
+      console.log(`Progress for module ${moduleId} saved: ${lessonsCompleted}/${lessons.length}`);
+    } catch (e) {
+      console.error('Failed to save progress to storage', e);
+    }
+  };
+
+
+  const handleNextLesson = async () => {
+    const nextLessonIndex = currentLessonIndex + 1;
+    await saveProgress(nextLessonIndex);
+    
+    if (nextLessonIndex < lessons.length) {
+      setCurrentLessonIndex(nextLessonIndex);
     } else {
       // End of module, navigate to the completion screen
       navigation.navigate('LessonComplete');

@@ -97,7 +97,7 @@ const Home = () => {
     const progress = userProgress[moduleId];
     // Check if progress exists and if all lessons are completed.
     const isCompleted = progress && progress.lessonsCompleted >= selectedModule.lessons.length;
-  
+
     if (isCompleted) {
       Alert.alert(
         "Module Completed",

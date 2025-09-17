@@ -12,24 +12,31 @@ import {
   FlatList,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import dictionaryData from '../../assets/data/dictionary.json'; // Import your JSON data
+import dictionaryData from '../../assets/data/dictionary.json'; // Import the new JSON structure
 
 const DictionaryCategories = () => {
   const navigation = useNavigation();
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    // Extract unique categories from the JSON data
-    const uniqueCategories = [
-      ...new Set(dictionaryData.map((item) => item.category)),
-    ];
+    // Extract unique categories from the JSON data keys
+    const uniqueCategories = Object.keys(dictionaryData);
     setCategories(uniqueCategories);
   }, []);
+
+  const handleCategoryPress = (category) => {
+    // Pass the list of words for the selected category to the next screen
+    const categoryWords = dictionaryData[category] || [];
+    navigation.navigate('DictionaryWords', {
+      category: category,
+      words: categoryWords,
+    });
+  };
 
   const renderCategoryCard = ({ item }) => (
     <TouchableOpacity
       style={styles.categoryCard}
-      onPress={() => navigation.navigate('DictionaryWords', { category: item })}
+      onPress={() => handleCategoryPress(item)}
     >
       {/* You'll need to add logic for icons and dynamic backgrounds */}
       <Text style={styles.categoryTitle}>{item}</Text>

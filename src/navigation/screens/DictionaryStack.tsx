@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DictionaryCategories from './DictionaryCategories';
 import DictionaryWords from './DictionaryWords';
+import SignDetailsScreen from './SignDetailsScreen';
 
 const DictionaryStack = createNativeStackNavigator({
   screens: {
@@ -15,6 +16,12 @@ const DictionaryStack = createNativeStackNavigator({
       screen: DictionaryWords,
       options: {
         title: 'Category', // Will be dynamically set
+      },
+    },
+    SignDetails: {
+      screen: SignDetailsScreen, // Add the new screen to the stack
+      options: {
+        headerShown: false, // Hide header on this screen for a cleaner look
       },
     },
   },

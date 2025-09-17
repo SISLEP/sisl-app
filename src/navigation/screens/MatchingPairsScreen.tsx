@@ -12,6 +12,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
 
   // When a video or text card is selected, reset the feedback state
   const handleSelectVideo = (item) => {
+    console.log("myy selected video", item);
     setSelectedVideo(item);
     setShowFeedback(false);
   };
@@ -86,6 +87,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
       <View style={styles.gridContainer}>
         {data.items.map((item) => {
           const isSelected = selectedVideo?.id === item.id;
+          console.log("myy ", isSelected);
           return (
             <TouchableOpacity
               key={item.id}

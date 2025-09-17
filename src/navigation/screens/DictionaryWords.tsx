@@ -11,25 +11,35 @@ import {
 } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import dictionaryData from '../../assets/data/dictionary.json';
 
 const DictionaryWords = () => {
   const route = useRoute();
   const navigation = useNavigation();
-  const { category } = route.params;
+  const { category, words: categoryWords } = route.params;
+
   const [words, setWords] = useState([]);
 
   useEffect(() => {
-    // Filter the JSON data based on the category
-    const filteredWords = dictionaryData.filter(
-      (item) => item.category === category
-    );
-    setWords(filteredWords.sort((a, b) => a.word.localeCompare(b.word)));
-    navigation.setOptions({ title: category }); // Set header title dynamically
-  }, [category, navigation]);
+    // Use the words passed from the previous screen
+    setWords(categoryWords.sort((a, b) => a.word.localeCompare(b.word)));
+    navigation.setOptions({ title: category });
+  }, [category, navigation, categoryWords]);
 
-  const renderWordItem = (wordItem) => (
-    <TouchableOpacity key={wordItem.word} style={styles.wordItem}>
+  const handleWordPress = (index) => {
+    // Navigate to the new SignDetailsScreen and pass the word details
+    navigation.navigate('SignDetails', {
+      category: category,
+      initialIndex: index,
+      words: words, // Pass the sorted words array
+    });
+  };
+
+  const renderWordItem = (wordItem, index) => (
+    <TouchableOpacity
+      key={wordItem.word}
+      style={styles.wordItem}
+      onPress={() => handleWordPress(index)}
+    >
       <Text style={styles.wordText}>{wordItem.word}</Text>
       <Icon name="chevron-right" size={24} color="#666" />
     </TouchableOpacity>
@@ -49,7 +59,7 @@ const DictionaryWords = () => {
         </View>
 
         <Text style={styles.listHeader}>Signs in collection</Text>
-        {words.map(renderWordItem)}
+        {words.map((word, index) => renderWordItem(word, index))}
       </ScrollView>
     </SafeAreaView>
   );

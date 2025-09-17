@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image } from 'react-native';
 import bell from '../assets/bell.png';
 import newspaper from '../assets/newspaper.png';
+import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
 import Home from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
@@ -15,6 +16,7 @@ import { Updates } from './screens/Updates';
 import { NotFound } from './screens/NotFound';
 import LessonScreen from './screens/LessonScreen';
 import LessonCompleteScreen from './screens/LessonCompleteScreen';
+import DictionaryStack from './screens/DictionaryStack';
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -49,6 +51,16 @@ const HomeTabs = createBottomTabNavigator({
         ),
       },
     },
+    Dictionary: {
+      // Assuming you have a Dictionary component
+      screen: DictionaryStack,
+      options: {
+        title: 'Dictionary',
+        tabBarIcon: ({ color, size }) => (
+          <Icon name="search" color={color} size={size} /> // Use the Icon component directly
+        ),
+      },
+    },
   },
 });
 
@@ -70,7 +82,7 @@ const RootStack = createNativeStackNavigator({
     LessonComplete: {
       screen: LessonCompleteScreen,
       options: {
-        headerShown: false, // Hide header for a cleaner look
+        headerShown: false,
       },
     },
     Profile: {

@@ -1,0 +1,37 @@
+[
+  {
+    "category": "Alphabet",
+    "word": "A",
+    "videoLink": "https://example.com/videos/a.mp4"
+  },
+  {
+    "category": "Alphabet",
+    "word": "B",
+    "videoLink": "https://example.com/videos/b.mp4"
+  },
+  {
+    "category": "Alphabet",
+    "word": "C",
+    "videoLink": "https://example.com/videos/c.mp4"
+  },
+  {
+    "category": "WH Questions",
+    "word": "What",
+    "videoLink": "https://example.com/videos/what.mp4"
+  },
+  {
+    "category": "WH Questions",
+    "word": "Who",
+    "videoLink": "https://example.com/videos/who.mp4"
+  },
+  {
+    "category": "Family",
+    "word": "Mother",
+    "videoLink": "https://example.com/videos/mother.mp4"
+  },
+  {
+    "category": "Family",
+    "word": "Father",
+    "videoLink": "https://example.com/videos/father.mp4"
+  }
+]

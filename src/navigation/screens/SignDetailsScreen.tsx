@@ -8,9 +8,9 @@ import {
   View,
   Text,
   TouchableOpacity,
-  Image,
   Dimensions,
 } from 'react-native';
+import Video from 'react-native-video'; // Change: Import Video and remove Image
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -57,12 +57,14 @@ const SignDetailsScreen = () => {
         <View style={{ width: 24 }} />
       </View>
       <ScrollView contentContainerStyle={styles.content}>
-        {/* Sign Image Section */}
-        <View style={styles.signImageContainer}>
-          {/* This is a placeholder for the video or image of the sign */}
-          <Image
-            source={{ uri: `https://via.placeholder.com/${width * 0.8}x${width * 0.8}.png?text=${currentSign.word}` }}
-            style={styles.signImage}
+        {/* Sign Video Section */}
+        <View style={styles.signVideoContainer}>
+          <Video
+            source={{ uri: currentSign.signVideo }} // Use the video source from the data
+            style={styles.signVideo}
+            paused={false} // Autoplay the video
+            repeat={true} // Loop the video
+            resizeMode="contain"
           />
           <View style={styles.signOverlay}>
             <Text style={styles.signOverlayText}>{currentSign.word}</Text>
@@ -124,7 +126,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
   },
-  signImageContainer: {
+  // Change: New styles for video container and video component
+  signVideoContainer: {
     width: width * 0.9,
     height: width * 0.9,
     borderRadius: 16,
@@ -134,10 +137,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
-  signImage: {
+  signVideo: {
     width: '100%',
     height: '100%',
-    resizeMode: 'contain',
   },
   signOverlay: {
     position: 'absolute',

@@ -94,6 +94,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
               style={[styles.itemCard, isSelected && styles.selectedCard]}
               onPress={() => handleSelectVideo(item)}
             >
+              <View pointerEvents='none' style ={styles.videoView}>
               <Video
                 source={{ uri: item.signVideo }}
                 style={styles.video}
@@ -101,6 +102,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
                 repeat={true} // Add this to loop the video
                 resizeMode="contain"
               />
+              </View>
             </TouchableOpacity>
           );
         })}
@@ -128,6 +130,10 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     backgroundColor: '#fff',
+  },
+  videoView: {
+    width: '100%',
+    height: '100%',
   },
   video: {
     width: '100%',

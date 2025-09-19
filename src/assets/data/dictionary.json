@@ -2,25 +2,25 @@
   "Alphabet": [
     {
       "word": "A",
-      "videoLink": "https://example.com/videos/a.mp4"
+      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
     },
     {
       "word": "B",
-      "videoLink": "https://example.com/videos/b.mp4"
+      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
     },
     {
       "word": "C",
-      "videoLink": "https://example.com/videos/c.mp4"
+      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
     }
   ],
   "Family": [
     {
       "word": "Mother",
-      "videoLink": "https://example.com/videos/mother.mp4"
+      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
     },
     {
       "word": "Father",
-      "videoLink": "https://example.com/videos/father.mp4"
+      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
     }
   ]
 }

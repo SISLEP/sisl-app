@@ -73,7 +73,8 @@ const SequencingScreen = ({ data, onNext }) => {
         <Video
           source={{ uri: data.signVideo }}
           style={styles.mainVideo}
-          controls={true}
+          paused={false}
+          repeat={true}
           resizeMode="contain"
         />
       </View>

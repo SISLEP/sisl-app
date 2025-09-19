@@ -69,7 +69,8 @@ const TranslationScreen = ({ data, onNext }) => {
         <Video
           source={{ uri: data.signVideo }} // Note: Your JSON has `signImage`, ensure you pass `signVideo`
           style={styles.mainVideo}
-          controls={true}
+          paused={false}
+          repeat={true}
           resizeMode="contain"
         />
       </View>

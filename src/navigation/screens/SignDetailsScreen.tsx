@@ -130,6 +130,8 @@ const styles = StyleSheet.create({
   signVideoContainer: {
     width: width * 0.9,
     height: width * 0.9,
+    maxWidth: 400,
+    maxHeight: 400,
     borderRadius: 16,
     overflow: 'hidden',
     backgroundColor: '#F0F0F0',

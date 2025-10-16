@@ -9,11 +9,11 @@ import { Image } from 'react-native';
 import bell from '../assets/bell.png';
 import home from '../assets/home.png';
 import book from '../assets/book.png';
-import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
+import Icon from 'react-native-vector-icons/FontAwesome'; // Import the icon library
 import Home from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
-import { Updates } from './screens/Updates';
+import { Practices } from './screens/Practices';
 import { NotFound } from './screens/NotFound';
 import LessonScreen from './screens/LessonScreen';
 import LessonCompleteScreen from './screens/LessonCompleteScreen';
@@ -26,29 +26,15 @@ const HomeTabs = createBottomTabNavigator({
       options: {
         title: 'Home',
         tabBarIcon: ({ color, size }) => (
-          <Image
-            source={home}
-            tintColor={color}
-            style={{
-              width: size,
-              height: size,
-            }}
-          />
+          <Icon name="home" color={color} size={size} />
         ),
       },
     },
-    Updates: {
-      screen: Updates,
+    Practice: {
+      screen: Practices,
       options: {
         tabBarIcon: ({ color, size }) => (
-          <Image
-            source={bell}
-            tintColor={color}
-            style={{
-              width: size,
-              height: size,
-            }}
-          />
+          <Icon name="pencil" color={color} size={size} />
         ),
       },
     },
@@ -58,15 +44,7 @@ const HomeTabs = createBottomTabNavigator({
       options: {
         title: 'Dictionary',
         tabBarIcon: ({ color, size }) => (
-          <Image
-                    source={book}
-                    tintColor={color}
-                    style={{
-                      width: size,
-                      height: size,
-                    }}
-                  />
-        ),
+          <Icon name="book" color={color} size={size} />
       },
     },
   },

@@ -7,7 +7,8 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Image } from 'react-native';
 import bell from '../assets/bell.png';
-import newspaper from '../assets/newspaper.png';
+import home from '../assets/home.png';
+import book from '../assets/book.png';
 import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
 import Home from './screens/Home';
 import { Profile } from './screens/Profile';
@@ -23,10 +24,10 @@ const HomeTabs = createBottomTabNavigator({
     Home: {
       screen: Home,
       options: {
-        title: 'Feed',
+        title: 'Home',
         tabBarIcon: ({ color, size }) => (
           <Image
-            source={newspaper}
+            source={home}
             tintColor={color}
             style={{
               width: size,
@@ -57,7 +58,14 @@ const HomeTabs = createBottomTabNavigator({
       options: {
         title: 'Dictionary',
         tabBarIcon: ({ color, size }) => (
-          <Icon name="search" color={color} size={size} /> // Use the Icon component directly
+          <Image
+                    source={book}
+                    tintColor={color}
+                    style={{
+                      width: size,
+                      height: size,
+                    }}
+                  />
         ),
       },
     },

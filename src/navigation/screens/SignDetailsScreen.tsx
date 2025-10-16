@@ -9,8 +9,9 @@ import {
   Text,
   TouchableOpacity,
   Dimensions,
+  Image,
 } from 'react-native';
-import Video from 'react-native-video'; // Change: Import Video and remove Image
+import Video from 'react-native-video';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -23,11 +24,18 @@ const SignDetailsScreen = () => {
 
   const [words, setWords] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);
+  // NEW STATE: Tracks which media is currently visible. 'video' by default.
+  const [mediaType, setMediaType] = useState('video'); 
 
   useEffect(() => {
     // Use the words passed from the previous screen
     setWords(allWords);
   }, [allWords]);
+
+  // Reset mediaType to 'video' whenever the current word index changes.
+  useEffect(() => {
+    setMediaType('video');
+  }, [currentIndex]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
@@ -35,6 +43,11 @@ const SignDetailsScreen = () => {
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + words.length) % words.length);
+  };
+
+  // FUNCTION: Toggles between 'video' and 'image'
+  const toggleMedia = () => {
+    setMediaType((prevType) => (prevType === 'video' ? 'image' : 'video'));
   };
 
   if (words.length === 0) {
@@ -46,6 +59,13 @@ const SignDetailsScreen = () => {
   }
 
   const currentSign = words[currentIndex];
+  const signImageUrl = currentSign.signImage;
+  
+  const isImageAvailable = !!signImageUrl;
+  const isVideoVisible = mediaType === 'video';
+  
+  // Pause video when the image is visible
+  const videoPausedState = !isVideoVisible;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -57,18 +77,45 @@ const SignDetailsScreen = () => {
         <View style={{ width: 24 }} />
       </View>
       <ScrollView contentContainerStyle={styles.content}>
-        {/* Sign Video Section */}
-        <View style={styles.signVideoContainer}>
+        {/* Sign Media Container */}
+        <View style={styles.signMediaContainer}>
+
+          {/* Video Component */}
           <Video
-            source={{ uri: currentSign.signVideo }} // Use the video source from the data
-            style={styles.signVideo}
-            paused={false} // Autoplay the video
-            repeat={true} // Loop the video
+            source={{ uri: currentSign.signVideo }}
+            // Apply hiddenMedia if it's the image's turn
+            style={[styles.mediaElement, !isVideoVisible && styles.hiddenMedia]}
+            paused={videoPausedState}
+            repeat={true}
             resizeMode="contain"
           />
+
+          {/* Image Component */}
+          {isImageAvailable && (
+            <Image
+              source={{ uri: signImageUrl }}
+              // Apply hiddenMedia if it's the video's turn
+              style={[styles.mediaElement, isVideoVisible && styles.hiddenMedia]}
+              resizeMode="contain"
+            />
+          )}
+
+          {/* Overlay for Word and Toggle Icon */}
           <View style={styles.signOverlay}>
             <Text style={styles.signOverlayText}>{currentSign.word}</Text>
           </View>
+
+          {/* TOGGLE BUTTON LOGIC: Only show if an image is available */}
+          {isImageAvailable && (
+            <TouchableOpacity style={styles.toggleButton} onPress={toggleMedia}>
+              <Icon 
+                name="cached" // Reverse/cached icon
+                size={30} 
+                color="#fff" 
+              />
+            </TouchableOpacity>
+          )}
+
         </View>
 
         {/* Navigation Section */}
@@ -126,8 +173,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
   },
-  // Change: New styles for video container and video component
-  signVideoContainer: {
+  signMediaContainer: {
     width: width * 0.9,
     height: width * 0.9,
     maxWidth: 400,
@@ -139,9 +185,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
-  signVideo: {
+  mediaElement: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
     width: '100%',
     height: '100%',
+  },
+  hiddenMedia: {
+    opacity: 0,
+    width: 0,
+    height: 0,
   },
   signOverlay: {
     position: 'absolute',
@@ -150,11 +204,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     borderRadius: 8,
+    zIndex: 10,
   },
   signOverlayText: {
     color: '#fff',
     fontSize: 24,
     fontWeight: 'bold',
+  },
+  toggleButton: {
+    position: 'absolute',
+    top: 15,
+    right: 15,
+    padding: 5,
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
+    borderRadius: 50,
+    zIndex: 10,
   },
   navigationSection: {
     flexDirection: 'row',

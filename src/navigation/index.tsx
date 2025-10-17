@@ -45,6 +45,7 @@ const HomeTabs = createBottomTabNavigator({
         title: 'Dictionary',
         tabBarIcon: ({ color, size }) => (
           <Icon name="book" color={color} size={size} />
+        ),
       },
     },
   },

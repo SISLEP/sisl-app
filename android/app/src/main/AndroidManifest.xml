@@ -24,8 +24,8 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="reactnavigation"/>
-        <data android:scheme="exp+react-navigation"/>
+        <data android:scheme="sislep"/>
+        <data android:scheme="exp+solomon-islands-sign-lanugage"/>
       </intent-filter>
     </activity>
   </application>

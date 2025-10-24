@@ -1,23 +1,23 @@
 {
   "expo": {
     "name": "Solomon Islands Sign Language",
-    "slug": "react-navigation",
+    "slug": "solomon-islands-sign-lanugage",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "scheme": "reactnavigation",
+    "scheme": "sislep",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.reactnavigation"
+      "bundleIdentifier": "org.sislep"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.reactnavigation"
+      "package": "org.sislep"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,8 +34,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "0bce43b3-3e96-4a53-a649-9b25977727b7"
+        "projectId": "56afb791-455c-4890-9ee2-5f42d54f0186"
       }
-    }
+    },
+    "owner": "solomon-islands-deaf-association"
   }
 }

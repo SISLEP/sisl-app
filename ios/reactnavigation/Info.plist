@@ -28,7 +28,7 @@
         <key>CFBundleURLSchemes</key>
         <array>
           <string>reactnavigation</string>
-          <string>com.reactnavigation</string>
+          <string>org.sislep</string>
         </array>
       </dict>
       <dict>

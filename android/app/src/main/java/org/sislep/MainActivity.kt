@@ -1,4 +1,4 @@
-package com.reactnavigation
+package org.sislep
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

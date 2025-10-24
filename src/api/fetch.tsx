@@ -6,7 +6,7 @@
 import learningModulesData from '../assets/data/learningModules.json';
 
 // Placeholder URL for the hosted JSON file.
-// const DATA_URL = 'https://myystique16.github.io/video-site/learningModules.json';
+// const DATA_URL = 'https://sislep.github.io/video-site/learningModules.json';
 
 /**
  * Interface representing a single learning module.

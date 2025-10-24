@@ -13,12 +13,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://myystique16.github.io/video-site/example.mp4",
+                "signVideo": "https://sislep.github.io/video-site/example.mp4",
                 "translation": "Nice",
                 "id": "1"
               },
               {
-                "signVideo": "https://myystique16.github.io/video-site/example.mp4",
+                "signVideo": "https://sislep.github.io/video-site/example.mp4",
                 "translation": "Meet you",
                 "id": "2"
               }
@@ -29,7 +29,7 @@
           "type": "sequencing",
           "instructions": "Pick out signs in the correct order",
           "data": {
-            "signVideo": "https://myystique16.github.io/video-site/example.mp4",
+            "signVideo": "https://sislep.github.io/video-site/example.mp4",
             "correctOrder": [
               "NICE",
               "MEET-you"
@@ -45,7 +45,7 @@
           "type": "translation",
           "instructions": "Guess the correct translation",
           "data": {
-            "signVideo": "https://myystique16.github.io/video-site/example.mp4",
+            "signVideo": "https://sislep.github.io/video-site/example.mp4",
             "correctAnswer": "My",
             "options": [
               "You",
@@ -57,7 +57,7 @@
           "type": "fill_in_the_blank",
           "instructions": "Fill in the missing sign",
           "data": {
-            "signVideo": "https://myystique16.github.io/video-site/example.mp4",
+            "signVideo": "https://sislep.github.io/video-site/example.mp4",
             "fullPhrase": "NICE ____",
             "missingWord": "MEET-you",
             "options": [

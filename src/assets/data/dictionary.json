@@ -2,26 +2,26 @@
   "Alphabet": [
     {
       "word": "A",
-      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
+      "signVideo": "https://sislep.github.io/video-site/example.mp4"
     },
     {
       "word": "B",
-      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
+      "signVideo": "https://sislep.github.io/video-site/example.mp4"
     },
     {
       "word": "C",
-      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
+      "signVideo": "https://sislep.github.io/video-site/example.mp4"
     }
   ],
   "Family": [
     {
       "word": "Mother",
-      "signVideo": "https://myystique16.github.io/video-site/Family-Mommy.mp4",
-      "signImage": "https://myystique16.github.io/video-site/Mommy.png"
+      "signVideo": "https://sislep.github.io/video-site/Family-Mommy.mp4",
+      "signImage": "https://sislep.github.io/video-site/Mommy.png"
     },
     {
       "word": "Father",
-      "signVideo": "https://myystique16.github.io/video-site/example.mp4"
+      "signVideo": "https://sislep.github.io/video-site/example.mp4"
     }
   ]
 }

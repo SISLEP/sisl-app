@@ -1,4 +1,4 @@
-package com.reactnavigation
+package org.sislep
 
 import android.app.Application
 import android.content.res.Configuration

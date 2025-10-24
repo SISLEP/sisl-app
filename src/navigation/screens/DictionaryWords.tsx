@@ -2,20 +2,20 @@
 
 import React, { useEffect, useState } from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   View,
   Text,
   TouchableOpacity,
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context'; 
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const DictionaryWords = () => {
   const route = useRoute();
   const navigation = useNavigation();
-  const { category, words: categoryWords } = route.params;
+  const { category, words: categoryWords } = route.params || { category: '', words: [] };
 
   const [words, setWords] = useState([]);
 
@@ -40,21 +40,32 @@ const DictionaryWords = () => {
       style={styles.wordItem}
       onPress={() => handleWordPress(index)}
     >
-      <Text style={styles.wordText}>{wordItem.word}</Text>
+      <Text
+        style={styles.wordText}
+        numberOfLines={1}
+        ellipsizeMode="tail"
+      >
+        {wordItem.word}
+      </Text>
       <Icon name="chevron-right" size={24} color="#666" />
     </TouchableOpacity>
   );
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.content}>
-        {/* Placeholder for Quiz/Flashcards from screenshot */}
+    // We use edges={['left', 'right', 'bottom']} to explicitly ignore the top edge
+    // which is often handled by the React Navigation header itself, preventing double padding/space.
+    <SafeAreaView 
+        style={styles.container}
+        edges={['left', 'right', 'bottom']}
+    >
+      {/* ScrollView content starts here */}
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.utilitySection}>
           <TouchableOpacity style={styles.utilityCard}>
-            <Text>Quiz</Text>
+            <Text style={styles.utilityCardText}>Quiz</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.utilityCard}>
-            <Text>Flashcards</Text>
+            <Text style={styles.utilityCardText}>Flashcards</Text>
           </TouchableOpacity>
         </View>
 
@@ -68,23 +79,32 @@ const DictionaryWords = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff', 
   },
-  content: {
+  scrollViewContent: {
     paddingHorizontal: 20,
+    paddingBottom: 20, 
+    paddingTop: 0, 
   },
   utilitySection: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginVertical: 20,
+    marginBottom: 20,
+    marginTop: 10, 
   },
   utilityCard: {
     width: '48%',
     height: 100,
     borderRadius: 12,
     backgroundColor: '#E6F0F4',
-    justifyContent: 'center',
+    justifyContent: 'center', 
     alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  utilityCardText: {
+    fontSize: 16,
+    fontWeight: '600',
+    textAlign: 'center',
   },
   listHeader: {
     fontSize: 20,
@@ -101,6 +121,8 @@ const styles = StyleSheet.create({
   },
   wordText: {
     fontSize: 16,
+    flex: 1, 
+    marginRight: 10,
   },
 });
 

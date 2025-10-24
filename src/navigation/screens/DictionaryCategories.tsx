@@ -1,6 +1,6 @@
 // screens/DictionaryCategories.tsx
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -10,30 +10,61 @@ import {
   TextInput,
   TouchableOpacity,
   FlatList,
+  ActivityIndicator,
+  Alert,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import dictionaryData from '../../assets/data/dictionary.json'; // Import the new JSON structure
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { fetchDictionaryData, DictionaryData } from '../../api/fetch'; 
 
 const DictionaryCategories = () => {
   const navigation = useNavigation();
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<string[]>([]);
+  const [dictionaryData, setDictionaryData] = useState<DictionaryData>({});
+  const [isLoading, setIsLoading] = useState(true); // New loading state
 
-  useEffect(() => {
-    // Extract unique categories from the JSON data keys
-    const uniqueCategories = Object.keys(dictionaryData);
-    setCategories(uniqueCategories);
-  }, []);
-
-  const handleCategoryPress = (category) => {
-    // Pass the list of words for the selected category to the next screen
-    const categoryWords = dictionaryData[category] || [];
-    navigation.navigate('DictionaryWords', {
-      category: category,
-      words: categoryWords,
-    });
+  // Function to fetch and process the dictionary data
+  const loadDictionaryData = async () => {
+    setIsLoading(true);
+    try {
+      // Use the refactored fetch function
+      const data = await fetchDictionaryData();
+      setDictionaryData(data);
+      // Extract unique categories from the fetched data keys
+      const uniqueCategories = Object.keys(data);
+      setCategories(uniqueCategories);
+    } catch (error) {
+      console.error('Failed to load dictionary data:', error);
+      Alert.alert('Error', 'Failed to load dictionary. Please check your network connection.');
+      setCategories([]); // Clear categories on fetch failure
+      setDictionaryData({});
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const renderCategoryCard = ({ item }) => (
+  // Use useFocusEffect to reload data whenever the screen is focused
+  useFocusEffect(
+    useCallback(() => {
+      loadDictionaryData();
+    }, [])
+  );
+
+
+  const handleCategoryPress = (category: string) => {
+    // Pass the list of words for the selected category to the next screen
+    const categoryWords = dictionaryData[category] || [];
+    if (categoryWords.length === 0) {
+      Alert.alert('No Words', `The category "${category}" has no words yet.`);
+      return;
+    }
+
+    navigation.navigate('DictionaryWords' as never, {
+      category: category,
+      words: categoryWords,
+    } as never);
+  };
+
+  const renderCategoryCard = ({ item }: { item: string }) => (
     <TouchableOpacity
       style={styles.categoryCard}
       onPress={() => handleCategoryPress(item)}
@@ -52,13 +83,21 @@ const DictionaryCategories = () => {
           <Text style={styles.activeTab}>Public</Text>
           <Text style={styles.inactiveTab}>My collections</Text>
         </View>
-        <FlatList
-          data={categories}
-          renderItem={renderCategoryCard}
-          keyExtractor={(item) => item}
-          numColumns={2}
-          contentContainerStyle={styles.categoryGrid}
-        />
+        
+        {isLoading ? (
+          <ActivityIndicator size="large" color="#FF9500" style={styles.loadingIndicator} />
+        ) : (
+          <FlatList
+            data={categories}
+            renderItem={renderCategoryCard}
+            keyExtractor={(item) => item}
+            numColumns={2}
+            contentContainerStyle={styles.categoryGrid}
+            ListEmptyComponent={() => (
+              <Text style={styles.emptyText}>No categories loaded.</Text>
+            )}
+          />
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -113,6 +152,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
   },
+  loadingIndicator: {
+    marginTop: 50,
+  },
+  emptyText: {
+    textAlign: 'center',
+    marginTop: 50,
+    fontSize: 16,
+    color: '#888',
+  }
 });
 
 export default DictionaryCategories;

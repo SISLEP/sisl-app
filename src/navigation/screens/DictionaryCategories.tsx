@@ -2,16 +2,14 @@
 
 import React, { useState, useCallback } from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
   StyleSheet,
-  View,
+  View, 
   Text,
   TextInput,
   TouchableOpacity,
-  FlatList,
-  ActivityIndicator,
-  Alert,
+  ScrollView,
+  ActivityIndicator, 
+  Alert, 
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { fetchDictionaryData, DictionaryData } from '../../api/fetch'; 
@@ -20,7 +18,7 @@ const DictionaryCategories = () => {
   const navigation = useNavigation();
   const [categories, setCategories] = useState<string[]>([]);
   const [dictionaryData, setDictionaryData] = useState<DictionaryData>({});
-  const [isLoading, setIsLoading] = useState(true); // New loading state
+  const [isLoading, setIsLoading] = useState(true);
 
   // Function to fetch and process the dictionary data
   const loadDictionaryData = async () => {
@@ -35,7 +33,7 @@ const DictionaryCategories = () => {
     } catch (error) {
       console.error('Failed to load dictionary data:', error);
       Alert.alert('Error', 'Failed to load dictionary. Please check your network connection.');
-      setCategories([]); // Clear categories on fetch failure
+      setCategories([]);
       setDictionaryData({});
     } finally {
       setIsLoading(false);
@@ -64,42 +62,73 @@ const DictionaryCategories = () => {
     } as never);
   };
 
-  const renderCategoryCard = ({ item }: { item: string }) => (
+  // Component for a single category card
+  const CategoryCard = ({ item }: { item: string }) => (
     <TouchableOpacity
       style={styles.categoryCard}
       onPress={() => handleCategoryPress(item)}
     >
-      {/* You'll need to add logic for icons and dynamic backgrounds */}
       <Text style={styles.categoryTitle}>{item}</Text>
     </TouchableOpacity>
   );
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.content}>
-        <Text style={styles.headerTitle}>Explore</Text>
-        <TextInput style={styles.searchBar} placeholder="Search for signs or collections" />
-        <View style={styles.tabContainer}>
-          <Text style={styles.activeTab}>Public</Text>
-          <Text style={styles.inactiveTab}>My collections</Text>
-        </View>
-        
-        {isLoading ? (
-          <ActivityIndicator size="large" color="#FF9500" style={styles.loadingIndicator} />
-        ) : (
-          <FlatList
-            data={categories}
-            renderItem={renderCategoryCard}
-            keyExtractor={(item) => item}
-            numColumns={2}
-            contentContainerStyle={styles.categoryGrid}
-            ListEmptyComponent={() => (
-              <Text style={styles.emptyText}>No categories loaded.</Text>
+  // Function to render categories in a two-column grid using map()
+  const renderCategoryGrid = () => {
+    // We will create pairs of items to render in rows
+    const rows = [];
+    for (let i = 0; i < categories.length; i += 2) {
+      rows.push(categories.slice(i, i + 2));
+    }
+
+    return (
+      <View style={styles.gridContainer}>
+        {rows.map((row, index) => (
+          <View key={index} style={styles.gridRow}>
+            <CategoryCard item={row[0]} />
+            {/* If there is a second item in the row, render it, otherwise render an empty view for spacing */}
+            {row.length > 1 ? (
+              <CategoryCard item={row[1]} />
+            ) : (
+              <View style={styles.emptyCardSpace} />
             )}
-          />
-        )}
-      </ScrollView>
-    </SafeAreaView>
+          </View>
+        ))}
+      </View>
+    );
+  };
+
+  return (
+    // Use View as the outermost container
+    <View style={styles.container}>
+      {isLoading ? (
+        // Render loading indicator centered on the screen when loading
+        <View style={styles.loadingOverlay}>
+          <ActivityIndicator size="large" color="#FF9500" />
+        </View>
+      ) : (
+        // Use ScrollView to wrap all content, including the header elements
+        <ScrollView contentContainerStyle={styles.contentContainer}>
+            
+          {/* Header Content */}
+          <View style={styles.headerContainer}>
+              <Text style={styles.headerTitle}>Explore</Text>
+              <TextInput style={styles.searchBar} placeholder="Search for signs or collections" />
+              <View style={styles.tabContainer}>
+                <Text style={styles.activeTab}>Public</Text>
+                <Text style={styles.inactiveTab}>My collections</Text>
+              </View>
+          </View>
+          
+          {/* Category Grid */}
+          {categories.length > 0 ? (
+            renderCategoryGrid()
+          ) : (
+            <Text style={styles.emptyText}>No categories loaded.</Text>
+          )}
+
+        </ScrollView>
+      )}
+    </View>
   );
 };
 
@@ -108,8 +137,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  content: {
+  // Main content container for the ScrollView
+  contentContainer: {
+    paddingBottom: 20, 
+  },
+  headerContainer: {
     paddingHorizontal: 20,
+    paddingBottom: 20, 
   },
   headerTitle: {
     fontSize: 32,
@@ -135,31 +169,42 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#888',
   },
-  categoryGrid: {
+  // Styles for the manually constructed grid
+  gridContainer: {
+    paddingHorizontal: 20,
+  },
+  gridRow: {
+    flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: 16, // Spacing between rows
   },
   categoryCard: {
-    width: '48%', // Adjust for spacing
+    width: '48%', 
     height: 120,
     borderRadius: 12,
-    marginBottom: 16,
     padding: 16,
-    backgroundColor: '#F8F9FA', // Placeholder color
+    backgroundColor: '#F8F9FA', 
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  emptyCardSpace: {
+    width: '48%', // Matches the card width to maintain layout
   },
   categoryTitle: {
     fontSize: 18,
     fontWeight: '600',
   },
-  loadingIndicator: {
-    marginTop: 50,
+  loadingOverlay: { 
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  emptyText: {
+  emptyText: { 
     textAlign: 'center',
     marginTop: 50,
     fontSize: 16,
     color: '#888',
+    paddingHorizontal: 20,
   }
 });
 

@@ -2,30 +2,114 @@
   "learningModules": [
       {
       "id": "1",
-      "title": "Greetings",
-      "subtitle": "Learn to say hello!",
+      "title": "Alphabet A-D",
+      "subtitle": "Learn new signs",
       "icon": "👋",
       "bgColor": "#E6F0FF",
       "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Guess the correct translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-A.mp4",
+            "correctAnswer": "A",
+            "options": [
+              "A",
+              "B"
+            ]
+          }
+        },
         {
           "type": "matching_pairs",
           "instructions": "Tap the matching pair",
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/example.mp4",
-                "translation": "Nice",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-A.mp4",
+                "translation": "A",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/example.mp4",
-                "translation": "Meet you",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-B.mp4",
+                "translation": "B",
                 "id": "2"
               }
             ]
           }
         },
         {
+          "type": "translation",
+          "instructions": "What is being signed?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-B.mp4",
+            "correctAnswer": "B",
+            "options": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-A.mp4",
+                "translation": "A",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-C.mp4",
+                "translation": "C",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Guess the correct translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-D.mp4",
+            "correctAnswer": "D",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-C.mp4",
+                "translation": "C",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-D.mp4",
+                "translation": "D",
+                "id": "2"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "icon": "🤟",
+      "title": "Let's learn new signs!",
+      "subtitle": "Learn basic signs",
+      "bgColor": "#FFF4E6",
+      "lessons": [
+          {
           "type": "sequencing",
           "instructions": "Pick out signs in the correct order",
           "data": {
@@ -41,19 +125,7 @@
             ]
           }
         },
-        {
-          "type": "translation",
-          "instructions": "Guess the correct translation",
-          "data": {
-            "signVideo": "https://sislep.github.io/video-site/example.mp4",
-            "correctAnswer": "My",
-            "options": [
-              "You",
-              "My"
-            ]
-          }
-        },
-        {
+         {
           "type": "fill_in_the_blank",
           "instructions": "Fill in the missing sign",
           "data": {
@@ -67,13 +139,6 @@
           }
         }
       ]
-    },
-    {
-      "id": 2,
-      "icon": "🤟",
-      "title": "Let's learn new signs!",
-      "subtitle": "Learn basic signs",
-      "bgColor": "#FFF4E6"
     },
     {
       "id": 3,

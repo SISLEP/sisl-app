@@ -35,9 +35,6 @@ const MatchingPairsScreen = ({ data, onNext }) => {
   // Renders the initial bottom bar with the "Check" button
   const renderCheckButton = () => (
     <View style={styles.bottomNav}>
-      <TouchableOpacity style={styles.buttonContainer}>
-        <Text style={styles.buttonText}>🐢 Speed</Text>
-      </TouchableOpacity>
       <TouchableOpacity
         style={[
           styles.checkButtonContainer,
@@ -75,19 +72,10 @@ const MatchingPairsScreen = ({ data, onNext }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity>
-          <Icon name="arrow-back-ios" size={24} color="#000" />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Icon name="bookmark-outline" size={24} color="#000" />
-        </TouchableOpacity>
-      </View>
       <Text style={styles.title}>Tap the matching pair</Text>
       <View style={styles.gridContainer}>
         {data.items.map((item) => {
           const isSelected = selectedVideo?.id === item.id;
-          console.log("myy ", isSelected);
           return (
             <TouchableOpacity
               key={item.id}
@@ -180,9 +168,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   bottomNav: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
     paddingVertical: 20,
     borderTopWidth: 1,
     borderTopColor: '#f0f0f0',
@@ -196,9 +181,10 @@ const styles = StyleSheet.create({
     color: '#000',
   },
   checkButtonContainer: {
+    width: '100%', 
     paddingVertical: 14,
-    paddingHorizontal: 40,
     borderRadius: 12,
+    alignItems: 'center',
   },
   enabledButton: {
     backgroundColor: '#58CC02',

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Video from 'react-native-video';
 
-const TranslationScreen = ({ data, onNext }) => {
+const TranslationScreen = ({ data, instructions, onNext }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -64,7 +64,7 @@ const TranslationScreen = ({ data, onNext }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Guess the correct translation</Text>
+      <Text style={styles.title}>{instructions || 'Guess the correct translation'}</Text>
       <View style={styles.videoContainer}>
         <Video
           source={{ uri: data.signVideo }} // Note: Your JSON has `signImage`, ensure you pass `signVideo`

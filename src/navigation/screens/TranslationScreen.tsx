@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     position: 'absolute',
-    bottom: -20,
+    bottom: 0,
     left: -20,
     right: -20,
   },

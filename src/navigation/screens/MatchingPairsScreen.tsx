@@ -128,6 +128,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
                 onLoad={() => handleVideoLoad(item.id)}
                 // Keep muted true for widest compatibility if you don't need audio
                 muted={true} 
+                disableFocus={true}
               />
               </View>
             </TouchableOpacity>

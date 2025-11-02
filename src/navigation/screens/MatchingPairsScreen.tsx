@@ -24,6 +24,9 @@ const MatchingPairsScreen = ({ data, onNext }) => {
   const [shuffledVideos, setShuffledVideos] = useState([]);
   const [shuffledTexts, setShuffledTexts] = useState([]);
 
+  // State to ensure videos only start playing after they have loaded
+  const [videoLoaded, setVideoLoaded] = useState({});
+
   // Effect to Shuffle Cards on Mount
   useEffect(() => {
     if (data && data.items) {
@@ -55,6 +58,12 @@ const MatchingPairsScreen = ({ data, onNext }) => {
     setIsCorrect(correct);
     setShowFeedback(true);
   };
+
+  // Set a video's ID as loaded once its asset is ready
+  const handleVideoLoad = (videoId) => {
+    setVideoLoaded(prev => ({ ...prev, [videoId]: true }));
+  };
+
 
   // Renders the initial bottom bar with the "Check" button
   const renderCheckButton = () => (
@@ -111,9 +120,14 @@ const MatchingPairsScreen = ({ data, onNext }) => {
               <Video
                 source={{ uri: item.signVideo }}
                 style={styles.video}
-                paused={false} // This is the change to enable autoplay
-                repeat={true} // Add this to loop the video
+                // 💡 CONTROL PLAYBACK: Paused is true until the video loads
+                paused={!videoLoaded[item.id]} 
+                repeat={true} 
                 resizeMode="contain"
+                // 💡 ON LOAD: Call the handler to mark this video as loaded
+                onLoad={() => handleVideoLoad(item.id)}
+                // Keep muted true for widest compatibility if you don't need audio
+                muted={true} 
               />
               </View>
             </TouchableOpacity>

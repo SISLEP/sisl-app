@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   View,
@@ -68,7 +67,7 @@ const SignDetailsScreen = () => {
   const videoPausedState = !isVideoVisible;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Icon name="arrow-back-ios" size={24} color="#000" />
@@ -149,7 +148,7 @@ const SignDetailsScreen = () => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

@@ -71,9 +71,9 @@ const DictionaryWords = () => {
   return (
     // We use edges={['left', 'right', 'bottom']} to explicitly ignore the top edge
     // which is often handled by the React Navigation header itself, preventing double padding/space.
-    <SafeAreaView 
+    <View 
         style={styles.container}
-        edges={['left', 'right', 'bottom']}
+        // edges={['left', 'right', 'bottom']}
     >
       {/* ScrollView content starts here */}
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
@@ -89,7 +89,7 @@ const DictionaryWords = () => {
         <Text style={styles.listHeader}>Signs in collection</Text>
         {words.map((word, index) => renderWordItem(word, index))}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

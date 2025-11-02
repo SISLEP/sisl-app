@@ -1,8 +1,8 @@
 // screens/LessonCompleteScreen.tsx
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const LessonCompleteScreen = () => {
   const navigation = useNavigation();
 

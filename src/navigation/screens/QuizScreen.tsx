@@ -1,10 +1,9 @@
 import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useState, useEffect, useCallback } from 'react';
-import { SafeAreaView, StyleSheet, Text, Alert, ScrollView } from 'react-native';
-import FillInTheBlankScreen from './FillInTheBlankScreen';
+import { StyleSheet, Text, Alert, ScrollView, View } from 'react-native';
 import MatchingPairsScreen from './MatchingPairsScreen';
-import SequencingScreen from './SequencingScreen';
 import TranslationScreen from './TranslationScreen';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Helper function to shuffle an array (Fisher-Yates)
 const shuffleArray = (array) => {
@@ -182,11 +181,11 @@ const QuizScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         {renderLessonComponent()}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

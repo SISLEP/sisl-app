@@ -83,16 +83,19 @@ const LessonScreen = () => {
 
   const renderLessonComponent = () => {
     if (!currentLesson) return <Text>No lesson data available.</Text>;
+    
+    // Add a unique key to force a re-mount and state reset when the lesson index changes
+    const uniqueKey = `${currentLesson.type}-${currentLessonIndex}`;
 
     switch (currentLesson.type) {
       case 'matching_pairs':
-        return <MatchingPairsScreen data={currentLesson.data} onNext={handleNextLesson} />;
+        return <MatchingPairsScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
       case 'sequencing':
-        return <SequencingScreen data={currentLesson.data} onNext={handleNextLesson} />;
+        return <SequencingScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
       case 'translation':
-        return <TranslationScreen data={currentLesson.data} onNext={handleNextLesson} />;
+        return <TranslationScreen key={uniqueKey} data={currentLesson.data} instructions={currentLesson.instructions} onNext={handleNextLesson} />;
       case 'fill_in_the_blank':
-        return <FillInTheBlankScreen data={currentLesson.data} onNext={handleNextLesson} />;
+        return <FillInTheBlankScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
       default:
         return <Text>Unknown lesson type: {currentLesson.type}</Text>;
     }

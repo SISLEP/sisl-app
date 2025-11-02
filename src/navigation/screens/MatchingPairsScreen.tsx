@@ -4,11 +4,34 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Video from 'react-native-video';
 
+// Simple shuffling function (Fisher-Yates)
+const shuffleArray = (array) => {
+  let newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
+
 const MatchingPairsScreen = ({ data, onNext }) => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [selectedText, setSelectedText] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+
+  // State for Shuffled Cards
+  const [shuffledVideos, setShuffledVideos] = useState([]);
+  const [shuffledTexts, setShuffledTexts] = useState([]);
+
+  // Effect to Shuffle Cards on Mount
+  useEffect(() => {
+    if (data && data.items) {
+      // Shuffle data.items separately for videos and texts
+      setShuffledVideos(shuffleArray(data.items));
+      setShuffledTexts(shuffleArray(data.items));
+    }
+  }, [data]); // Re-run if data changes
 
   // When a video or text card is selected, reset the feedback state
   const handleSelectVideo = (item) => {
@@ -27,6 +50,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
     if (!selectedVideo || !selectedText) {
       return; // Do nothing if a pair isn't fully selected
     }
+    // Simple ID matching logic is used as there are no distractors
     const correct = selectedVideo.id === selectedText.id;
     setIsCorrect(correct);
     setShowFeedback(true);
@@ -74,7 +98,8 @@ const MatchingPairsScreen = ({ data, onNext }) => {
     <View style={styles.container}>
       <Text style={styles.title}>Tap the matching pair</Text>
       <View style={styles.gridContainer}>
-        {data.items.map((item) => {
+        {/* Use shuffledVideos for randomized order */}
+        {shuffledVideos.map((item) => {
           const isSelected = selectedVideo?.id === item.id;
           return (
             <TouchableOpacity
@@ -94,7 +119,8 @@ const MatchingPairsScreen = ({ data, onNext }) => {
             </TouchableOpacity>
           );
         })}
-        {data.items.map((item) => {
+        {/* Use shuffledTexts for randomized order */}
+        {shuffledTexts.map((item) => {
           const isSelected = selectedText?.id === item.id;
           return (
             <TouchableOpacity

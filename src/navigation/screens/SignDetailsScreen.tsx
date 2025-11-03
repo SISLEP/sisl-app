@@ -123,28 +123,10 @@ const SignDetailsScreen = () => {
             <Icon name="arrow-back-ios" size={30} color="#FF9500" />
           </TouchableOpacity>
           <View style={styles.currentSignContainer}>
-            <Icon name="keyboard-arrow-up" size={24} color="#666" />
-            <Text style={styles.currentSignText}>Current sign</Text>
             <Text style={styles.currentSignWord}>{currentSign.word}</Text>
           </View>
           <TouchableOpacity style={styles.arrowButton} onPress={handleNext}>
             <Icon name="arrow-forward-ios" size={30} color="#FF9500" />
-          </TouchableOpacity>
-        </View>
-
-        {/* Bottom Menu */}
-        <View style={styles.bottomMenu}>
-          <TouchableOpacity style={styles.menuItem}>
-            <Text>🐢</Text>
-            <Text style={styles.menuItemText}>Speed</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItem}>
-            <Text>🤔</Text>
-            <Text style={styles.menuItemText}>Quiz</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItem}>
-            <Text>🗂️</Text>
-            <Text style={styles.menuItemText}>Flashcards</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

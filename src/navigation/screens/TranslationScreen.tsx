@@ -64,12 +64,12 @@ const TranslationScreen = ({ data, instructions, onNext }) => {
   };
 
   return (
-    <View style={styles.container}>
-      <ScrollView>
+    <View style={styles.container}> 
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <Text style={styles.title}>{instructions || 'Guess the correct translation'}</Text>
         <View style={styles.videoContainer}>
           <Video
-            source={{ uri: data.signVideo }} // Note: Your JSON has `signImage`, ensure you pass `signVideo`
+            source={{ uri: data.signVideo }}
             style={styles.mainVideo}
             paused={false}
             repeat={true}
@@ -90,11 +90,12 @@ const TranslationScreen = ({ data, instructions, onNext }) => {
             </TouchableOpacity>
           ))}
         </View>
-
-        <View style={styles.footer}>
-          {showFeedback ? renderFeedback() : renderCheckButton()}
-        </View>
       </ScrollView>
+
+      {/* This container is outside the ScrollView and fixed to the bottom */}
+      <View style={styles.bottomFixedContainer}>
+        {showFeedback ? renderFeedback() : renderCheckButton()}
+      </View>
     </View>
   );
 };
@@ -102,9 +103,12 @@ const TranslationScreen = ({ data, instructions, onNext }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 20,
     backgroundColor: '#fff',
+  },
+  scrollViewContent: {
+    paddingHorizontal: 20,
     alignItems: 'center',
+    paddingBottom: 100,
   },
   title: {
     fontSize: 24,
@@ -119,6 +123,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8F9FA',
     marginBottom: 20,
     overflow: 'hidden',
+    alignSelf: 'center',
   },
   mainVideo: {
     width: '100%',
@@ -145,9 +150,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
   },
-  footer: {
-    width: '100%',
-    marginTop: 'auto',
+  bottomFixedContainer: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 10, // Ensure it's above the scroll view content
+    paddingHorizontal: 20, // Add back the horizontal padding
   },
   bottomNav: {
     paddingVertical: 20,
@@ -178,10 +187,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    position: 'absolute',
-    bottom: 0,
-    left: -20,
-    right: -20,
+    marginLeft: -20, 
+    marginRight: -20,
+    paddingHorizontal: 20,
   },
   correctFeedback: {
     backgroundColor: '#D7FFB8',

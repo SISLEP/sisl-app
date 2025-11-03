@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DictionaryCategories from './DictionaryCategories';
 import DictionaryWords from './DictionaryWords';
+import QuizScreen from './QuizScreen';
 import SignDetailsScreen from './SignDetailsScreen';
 
 const DictionaryStack = createNativeStackNavigator({
@@ -17,6 +18,12 @@ const DictionaryStack = createNativeStackNavigator({
       options: {
         title: 'Category', // Will be dynamically set
       },
+    },
+    QuizScreen: {
+      screen: QuizScreen,
+      options: ({ route }) => ({
+        title: `${route.params?.category || ''} Quiz`,
+      }),
     },
     SignDetails: {
       screen: SignDetailsScreen, // Add the new screen to the stack

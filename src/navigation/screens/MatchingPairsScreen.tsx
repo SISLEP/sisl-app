@@ -1,14 +1,41 @@
 // MatchingPairsScreen.tsx
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Video from 'react-native-video';
+
+// Simple shuffling function (Fisher-Yates)
+const shuffleArray = (array) => {
+  let newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
 
 const MatchingPairsScreen = ({ data, onNext }) => {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [selectedText, setSelectedText] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+
+  // State for Shuffled Cards
+  const [shuffledVideos, setShuffledVideos] = useState([]);
+  const [shuffledTexts, setShuffledTexts] = useState([]);
+
+  // State to ensure videos only start playing after they have loaded
+  const [videoLoaded, setVideoLoaded] = useState({});
+
+  // Effect to Shuffle Cards on Mount
+  useEffect(() => {
+    if (data && data.items) {
+      // Shuffle data.items separately for videos and texts
+      setShuffledVideos(shuffleArray(data.items));
+      setShuffledTexts(shuffleArray(data.items));
+    }
+  }, [data]); // Re-run if data changes
 
   // When a video or text card is selected, reset the feedback state
   const handleSelectVideo = (item) => {
@@ -27,14 +54,21 @@ const MatchingPairsScreen = ({ data, onNext }) => {
     if (!selectedVideo || !selectedText) {
       return; // Do nothing if a pair isn't fully selected
     }
+    // Simple ID matching logic is used as there are no distractors
     const correct = selectedVideo.id === selectedText.id;
     setIsCorrect(correct);
     setShowFeedback(true);
   };
 
+  // Set a video's ID as loaded once its asset is ready
+  const handleVideoLoad = (videoId) => {
+    setVideoLoaded(prev => ({ ...prev, [videoId]: true }));
+  };
+
+
   // Renders the initial bottom bar with the "Check" button
   const renderCheckButton = () => (
-    <View style={styles.bottomNav}>
+    <SafeAreaView style={styles.bottomNav}>
       <TouchableOpacity
         style={[
           styles.checkButtonContainer,
@@ -45,7 +79,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
       >
         <Text style={styles.checkText}>Check</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 
   // Renders the feedback box after checking the answer
@@ -74,7 +108,8 @@ const MatchingPairsScreen = ({ data, onNext }) => {
     <View style={styles.container}>
       <Text style={styles.title}>Tap the matching pair</Text>
       <View style={styles.gridContainer}>
-        {data.items.map((item) => {
+        {/* Use shuffledVideos for randomized order */}
+        {shuffledVideos.map((item) => {
           const isSelected = selectedVideo?.id === item.id;
           return (
             <TouchableOpacity
@@ -86,15 +121,22 @@ const MatchingPairsScreen = ({ data, onNext }) => {
               <Video
                 source={{ uri: item.signVideo }}
                 style={styles.video}
-                paused={false} // This is the change to enable autoplay
-                repeat={true} // Add this to loop the video
+                // 💡 CONTROL PLAYBACK: Paused is true until the video loads
+                paused={!videoLoaded[item.id]} 
+                repeat={true} 
                 resizeMode="contain"
+                // 💡 ON LOAD: Call the handler to mark this video as loaded
+                onLoad={() => handleVideoLoad(item.id)}
+                // Keep muted true for widest compatibility if you don't need audio
+                muted={true} 
+                disableFocus={true}
               />
               </View>
             </TouchableOpacity>
           );
         })}
-        {data.items.map((item) => {
+        {/* Use shuffledTexts for randomized order */}
+        {shuffledTexts.map((item) => {
           const isSelected = selectedText?.id === item.id;
           return (
             <TouchableOpacity
@@ -169,8 +211,6 @@ const styles = StyleSheet.create({
   },
   bottomNav: {
     paddingVertical: 20,
-    borderTopWidth: 1,
-    borderTopColor: '#f0f0f0',
   },
   buttonContainer: {
     padding: 10,

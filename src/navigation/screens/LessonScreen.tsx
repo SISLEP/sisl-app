@@ -1,6 +1,6 @@
 import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import FillInTheBlankScreen from './FillInTheBlankScreen';
 import MatchingPairsScreen from './MatchingPairsScreen';
@@ -102,9 +102,9 @@ const LessonScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       {renderLessonComponent()}
-    </SafeAreaView>
+    </View>
   );
 };
 

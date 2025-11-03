@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import {
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   View,
@@ -67,8 +66,11 @@ const SignDetailsScreen = () => {
   // Pause video when the image is visible
   const videoPausedState = !isVideoVisible;
 
+  // Create a unique key for the Video component based on the current index
+  const videoKey = `sign-video-${currentIndex}`;
+
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Icon name="arrow-back-ios" size={24} color="#000" />
@@ -82,6 +84,7 @@ const SignDetailsScreen = () => {
 
           {/* Video Component */}
           <Video
+            key={videoKey} // <-- This forces the video component to reload completely
             source={{ uri: currentSign.signVideo }}
             // Apply hiddenMedia if it's the image's turn
             style={[styles.mediaElement, !isVideoVisible && styles.hiddenMedia]}
@@ -124,32 +127,20 @@ const SignDetailsScreen = () => {
             <Icon name="arrow-back-ios" size={30} color="#FF9500" />
           </TouchableOpacity>
           <View style={styles.currentSignContainer}>
-            <Icon name="keyboard-arrow-up" size={24} color="#666" />
-            <Text style={styles.currentSignText}>Current sign</Text>
-            <Text style={styles.currentSignWord}>{currentSign.word}</Text>
+            <Text 
+              style={styles.currentSignWord}
+              numberOfLines={2} // Limit to two lines for long words
+              ellipsizeMode="tail"
+            >
+              {currentSign.word}
+            </Text>
           </View>
           <TouchableOpacity style={styles.arrowButton} onPress={handleNext}>
             <Icon name="arrow-forward-ios" size={30} color="#FF9500" />
           </TouchableOpacity>
         </View>
-
-        {/* Bottom Menu */}
-        <View style={styles.bottomMenu}>
-          <TouchableOpacity style={styles.menuItem}>
-            <Text>🐢</Text>
-            <Text style={styles.menuItemText}>Speed</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItem}>
-            <Text>🤔</Text>
-            <Text style={styles.menuItemText}>Quiz</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.menuItem}>
-            <Text>🗂️</Text>
-            <Text style={styles.menuItemText}>Flashcards</Text>
-          </TouchableOpacity>
-        </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -223,9 +214,8 @@ const styles = StyleSheet.create({
   navigationSection: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     width: '100%',
-    paddingHorizontal: 20,
     marginBottom: 20,
   },
   arrowButton: {
@@ -234,16 +224,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF5E6',
   },
   currentSignContainer: {
+    // Takes up only the remaining space
+    flex: 1, 
     alignItems: 'center',
-  },
-  currentSignText: {
-    fontSize: 14,
-    color: '#666',
   },
   currentSignWord: {
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 4,
+    textAlign: 'center', 
   },
   bottomMenu: {
     flexDirection: 'row',

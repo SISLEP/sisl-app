@@ -25,6 +25,23 @@ const DictionaryWords = () => {
     navigation.setOptions({ title: category });
   }, [category, navigation, categoryWords]);
 
+  const handleQuizPress = () => {
+    if (words.length < 7) {
+      Alert.alert(
+        'Not Enough Words', 
+        `You need at least 7 words in this category to start a quiz. Only ${words.length} available.`
+      );
+      return;
+    }
+
+    const quizWords = getRandomSubset(words, 7);
+    // Navigate to the new QuizScreen
+    navigation.navigate('QuizScreen', {
+      quizWords: quizWords,
+      category: category,
+    });
+  };
+
   const handleWordPress = (index) => {
     // Navigate to the new SignDetailsScreen and pass the word details
     navigation.navigate('SignDetails', {
@@ -54,14 +71,14 @@ const DictionaryWords = () => {
   return (
     // We use edges={['left', 'right', 'bottom']} to explicitly ignore the top edge
     // which is often handled by the React Navigation header itself, preventing double padding/space.
-    <SafeAreaView 
+    <View 
         style={styles.container}
-        edges={['left', 'right', 'bottom']}
+        // edges={['left', 'right', 'bottom']}
     >
       {/* ScrollView content starts here */}
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.utilitySection}>
-          <TouchableOpacity style={styles.utilityCard}>
+          <TouchableOpacity style={styles.utilityCard} onPress={handleQuizPress}>
             <Text style={styles.utilityCardText}>Quiz</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.utilityCard}>
@@ -72,7 +89,7 @@ const DictionaryWords = () => {
         <Text style={styles.listHeader}>Signs in collection</Text>
         {words.map((word, index) => renderWordItem(word, index))}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -125,5 +142,17 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
 });
+
+// Added a helper function to select a random subset of an array
+const getRandomSubset = (arr, size) => {
+  let shuffled = arr.slice(0), i = arr.length, temp, index;
+  while (i--) {
+    index = Math.floor((i + 1) * Math.random());
+    temp = shuffled[index];
+    shuffled[index] = shuffled[i];
+    shuffled[i] = temp;
+  }
+  return shuffled.slice(0, size);
+};
 
 export default DictionaryWords;

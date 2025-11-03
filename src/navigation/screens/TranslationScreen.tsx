@@ -1,6 +1,7 @@
 // TranslationScreen.tsx
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Video from 'react-native-video';
 
 const TranslationScreen = ({ data, instructions, onNext }) => {
@@ -27,7 +28,7 @@ const TranslationScreen = ({ data, instructions, onNext }) => {
   
   // Renders the bottom bar with the "Check" button
   const renderCheckButton = () => (
-    <View style={styles.bottomNav}>
+    <SafeAreaView style={styles.bottomNav}>
       <TouchableOpacity
         style={[
           styles.checkButtonContainer,
@@ -38,7 +39,7 @@ const TranslationScreen = ({ data, instructions, onNext }) => {
       >
         <Text style={styles.checkText}>Check</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 
   // Renders the feedback box after checking the answer
@@ -64,34 +65,36 @@ const TranslationScreen = ({ data, instructions, onNext }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{instructions || 'Guess the correct translation'}</Text>
-      <View style={styles.videoContainer}>
-        <Video
-          source={{ uri: data.signVideo }} // Note: Your JSON has `signImage`, ensure you pass `signVideo`
-          style={styles.mainVideo}
-          paused={false}
-          repeat={true}
-          resizeMode="contain"
-        />
-      </View>
-      <View style={styles.optionsContainer}>
-        {data.options.map((option) => (
-          <TouchableOpacity
-            key={option}
-            style={[
-              styles.optionButton,
-              selectedOption === option && styles.selectedButton,
-            ]}
-            onPress={() => handleSelectOption(option)}
-          >
-            <Text style={styles.optionText}>{option}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+      <ScrollView>
+        <Text style={styles.title}>{instructions || 'Guess the correct translation'}</Text>
+        <View style={styles.videoContainer}>
+          <Video
+            source={{ uri: data.signVideo }} // Note: Your JSON has `signImage`, ensure you pass `signVideo`
+            style={styles.mainVideo}
+            paused={false}
+            repeat={true}
+            resizeMode="contain"
+          />
+        </View>
+        <View style={styles.optionsContainer}>
+          {data.options.map((option) => (
+            <TouchableOpacity
+              key={option}
+              style={[
+                styles.optionButton,
+                selectedOption === option && styles.selectedButton,
+              ]}
+              onPress={() => handleSelectOption(option)}
+            >
+              <Text style={styles.optionText}>{option}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
 
-      <View style={styles.footer}>
-        {showFeedback ? renderFeedback() : renderCheckButton()}
-      </View>
+        <View style={styles.footer}>
+          {showFeedback ? renderFeedback() : renderCheckButton()}
+        </View>
+      </ScrollView>
     </View>
   );
 };

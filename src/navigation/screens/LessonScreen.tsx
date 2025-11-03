@@ -1,12 +1,11 @@
 import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import FillInTheBlankScreen from './FillInTheBlankScreen';
 import MatchingPairsScreen from './MatchingPairsScreen';
 import SequencingScreen from './SequencingScreen';
 import TranslationScreen from './TranslationScreen';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
 
@@ -103,9 +102,9 @@ const LessonScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       {renderLessonComponent()}
-    </SafeAreaView>
+    </View>
   );
 };
 

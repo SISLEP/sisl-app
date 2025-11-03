@@ -1,6 +1,7 @@
 // MatchingPairsScreen.tsx
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Video from 'react-native-video';
 
@@ -67,7 +68,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
 
   // Renders the initial bottom bar with the "Check" button
   const renderCheckButton = () => (
-    <View style={styles.bottomNav}>
+    <SafeAreaView style={styles.bottomNav}>
       <TouchableOpacity
         style={[
           styles.checkButtonContainer,
@@ -78,7 +79,7 @@ const MatchingPairsScreen = ({ data, onNext }) => {
       >
         <Text style={styles.checkText}>Check</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 
   // Renders the feedback box after checking the answer
@@ -210,8 +211,6 @@ const styles = StyleSheet.create({
   },
   bottomNav: {
     paddingVertical: 20,
-    borderTopWidth: 1,
-    borderTopColor: '#f0f0f0',
   },
   buttonContainer: {
     padding: 10,

@@ -123,7 +123,13 @@ const SignDetailsScreen = () => {
             <Icon name="arrow-back-ios" size={30} color="#FF9500" />
           </TouchableOpacity>
           <View style={styles.currentSignContainer}>
-            <Text style={styles.currentSignWord}>{currentSign.word}</Text>
+            <Text 
+              style={styles.currentSignWord}
+              numberOfLines={2} // Limit to two lines for long words
+              ellipsizeMode="tail"
+            >
+              {currentSign.word}
+            </Text>
           </View>
           <TouchableOpacity style={styles.arrowButton} onPress={handleNext}>
             <Icon name="arrow-forward-ios" size={30} color="#FF9500" />
@@ -204,9 +210,8 @@ const styles = StyleSheet.create({
   navigationSection: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     width: '100%',
-    paddingHorizontal: 20,
     marginBottom: 20,
   },
   arrowButton: {
@@ -215,16 +220,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF5E6',
   },
   currentSignContainer: {
+    // Takes up only the remaining space
+    flex: 1, 
     alignItems: 'center',
-  },
-  currentSignText: {
-    fontSize: 14,
-    color: '#666',
   },
   currentSignWord: {
     fontSize: 24,
     fontWeight: 'bold',
     marginTop: 4,
+    textAlign: 'center', 
   },
   bottomMenu: {
     flexDirection: 'row',

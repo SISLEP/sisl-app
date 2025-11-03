@@ -66,6 +66,9 @@ const SignDetailsScreen = () => {
   // Pause video when the image is visible
   const videoPausedState = !isVideoVisible;
 
+  // Create a unique key for the Video component based on the current index
+  const videoKey = `sign-video-${currentIndex}`;
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -81,6 +84,7 @@ const SignDetailsScreen = () => {
 
           {/* Video Component */}
           <Video
+            key={videoKey} // <-- This forces the video component to reload completely
             source={{ uri: currentSign.signVideo }}
             // Apply hiddenMedia if it's the image's turn
             style={[styles.mediaElement, !isVideoVisible && styles.hiddenMedia]}

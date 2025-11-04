@@ -7,61 +7,86 @@ import {
   View,
   Text,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context'; 
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { getWordsForSession } from '../../storage/memoryService'; // Import the memory service
+import { Word } from '../../data/word'; // Assuming Word type is defined here
 
 const DictionaryWords = () => {
   const route = useRoute();
   const navigation = useNavigation();
-  const { category, words: categoryWords } = route.params || { category: '', words: [] };
+  const { category, words: categoryWords } = route.params as {
+    category: string;
+    words: Word[];
+  } || {
+    category: '',
+    words: [],
+  };
 
-  const [words, setWords] = useState([]);
+  const [words, setWords] = useState<Word[]>([]);
 
   useEffect(() => {
-    // Use the words passed from the previous screen
-    setWords(categoryWords.sort((a, b) => a.word.localeCompare(b.word)));
+    // Assuming categoryWords is an array of Word objects
+    const sortedWords = [...categoryWords].sort((a, b) =>
+      a.word.localeCompare(b.word),
+    );
+    setWords(sortedWords);
     navigation.setOptions({ title: category });
   }, [category, navigation, categoryWords]);
 
-  const handleQuizPress = () => {
+  const handleQuizPress = async () => {
     if (words.length < 7) {
       Alert.alert(
-        'Not Enough Words', 
-        `You need at least 7 words in this category to start a quiz. Only ${words.length} available.`
+        'Not Enough Words',
+        `You need at least 7 words in this category to start a quiz. Only ${words.length} available.`,
       );
       return;
     }
 
-    const quizWords = getRandomSubset(words, 7);
-    // Navigate to the new QuizScreen
-    navigation.navigate('QuizScreen', {
+    // Use the memory service to get 7 words, prioritizing least-known
+    const quizWords = await getWordsForSession(words, 7);
+    // Assuming 'QuizScreen' exists and can handle quizWords
+    navigation.navigate('QuizScreen' as never, {
       quizWords: quizWords,
       category: category,
-    });
+    } as never);
   };
 
-  const handleWordPress = (index) => {
-    // Navigate to the new SignDetailsScreen and pass the word details
-    navigation.navigate('SignDetails', {
+  const handleFlashcardsPress = async () => {
+    if (words.length < 7) {
+      Alert.alert(
+        'Not Enough Words',
+        `You need at least 7 words in this category to start flashcards. Only ${words.length} available.`,
+      );
+      return;
+    }
+
+    // Use the memory service to get 7 words
+    const flashcardWords = await getWordsForSession(words, 7);
+    // Assuming 'FlashcardScreen' exists
+    navigation.navigate('FlashcardScreen' as never, {
+      flashcardWords: flashcardWords,
+      category: category,
+    } as never);
+  };
+
+  const handleWordPress = (index: number) => {
+    navigation.navigate('SignDetails' as never, {
       category: category,
       initialIndex: index,
-      words: words, // Pass the sorted words array
-    });
+      words: words,
+    } as never);
   };
 
-  const renderWordItem = (wordItem, index) => (
+  const renderWordItem = (wordItem: Word, index: number) => (
     <TouchableOpacity
-      key={wordItem.word}
+      key={wordItem.id || wordItem.word} // Use a unique id if available
       style={styles.wordItem}
       onPress={() => handleWordPress(index)}
     >
-      <Text
-        style={styles.wordText}
-        numberOfLines={1}
-        ellipsizeMode="tail"
-      >
+      <Text style={styles.wordText} numberOfLines={1} ellipsizeMode="tail">
         {wordItem.word}
       </Text>
       <Icon name="chevron-right" size={24} color="#666" />
@@ -69,19 +94,17 @@ const DictionaryWords = () => {
   );
 
   return (
-    // We use edges={['left', 'right', 'bottom']} to explicitly ignore the top edge
-    // which is often handled by the React Navigation header itself, preventing double padding/space.
-    <View 
-        style={styles.container}
-        // edges={['left', 'right', 'bottom']}
-    >
-      {/* ScrollView content starts here */}
+    <View style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.utilitySection}>
           <TouchableOpacity style={styles.utilityCard} onPress={handleQuizPress}>
             <Text style={styles.utilityCardText}>Quiz</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.utilityCard}>
+          {/* Updated to call handleFlashcardsPress */}
+          <TouchableOpacity
+            style={styles.utilityCard}
+            onPress={handleFlashcardsPress}
+          >
             <Text style={styles.utilityCardText}>Flashcards</Text>
           </TouchableOpacity>
         </View>
@@ -96,25 +119,25 @@ const DictionaryWords = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff', 
+    backgroundColor: '#fff',
   },
   scrollViewContent: {
     paddingHorizontal: 20,
-    paddingBottom: 20, 
-    paddingTop: 0, 
+    paddingBottom: 20,
+    paddingTop: 0,
   },
   utilitySection: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 20,
-    marginTop: 10, 
+    marginTop: 10,
   },
   utilityCard: {
     width: '48%',
     height: 100,
     borderRadius: 12,
     backgroundColor: '#E6F0F4',
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 10,
   },
@@ -138,21 +161,9 @@ const styles = StyleSheet.create({
   },
   wordText: {
     fontSize: 16,
-    flex: 1, 
+    flex: 1,
     marginRight: 10,
   },
 });
-
-// Added a helper function to select a random subset of an array
-const getRandomSubset = (arr, size) => {
-  let shuffled = arr.slice(0), i = arr.length, temp, index;
-  while (i--) {
-    index = Math.floor((i + 1) * Math.random());
-    temp = shuffled[index];
-    shuffled[index] = shuffled[i];
-    shuffled[i] = temp;
-  }
-  return shuffled.slice(0, size);
-};
 
 export default DictionaryWords;

@@ -3,6 +3,7 @@ import DictionaryCategories from './DictionaryCategories';
 import DictionaryWords from './DictionaryWords';
 import QuizScreen from './QuizScreen';
 import SignDetailsScreen from './SignDetailsScreen';
+import FlashcardScreen from './FlashcardScreen';
 
 const DictionaryStack = createNativeStackNavigator({
   screens: {
@@ -17,20 +18,28 @@ const DictionaryStack = createNativeStackNavigator({
       screen: DictionaryWords,
       options: {
         title: 'Category', // Will be dynamically set
+        headerShown: false
       },
     },
     QuizScreen: {
       screen: QuizScreen,
       options: ({ route }) => ({
         title: `${route.params?.category || ''} Quiz`,
+        headerShown: false
       }),
     },
     SignDetails: {
       screen: SignDetailsScreen, // Add the new screen to the stack
       options: {
-        headerShown: false, // Hide header on this screen for a cleaner look
+        headerShown: false,
       },
     },
+    FlashcardScreen: {
+      screen: FlashcardScreen,
+      options: {
+        headerShown: false,
+      },
+    }
   },
 });
 

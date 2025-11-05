@@ -32,12 +32,15 @@ interface LearningModulesResponse {
   learningModules: LearningModule[];
 }
 
-// Interface for a single dictionary word item
-interface DictionaryWord {
-  id: string;
+/**
+ * Interface for a single dictionary word item.
+ */
+export interface DictionaryWord {
+  id?: string; // Optional since it's not present in dictionary.json
   word: string;
-  videoUrl: string;
-  // Add other properties if known, using 'any' for now for flexibility
+  videoUrl?: string; // Original property - keeping for generic use
+  signVideo: string; // Property found in dictionary.json
+  signImage?: string; // Optional property found in dictionary.json
 }
 
 /**
@@ -117,4 +120,19 @@ const fetchDictionaryData = async (): Promise<DictionaryData> => {
   );
 };
 
-export { fetchLearningModules, fetchDictionaryData };
+/**
+ * Fetches all dictionary words, flattening the category structure into a single array.
+ *
+ * @returns {Promise<DictionaryWord[]>} A promise that resolves with a flattened array of all dictionary words.
+ */
+const fetchAllWords = async (): Promise<DictionaryWord[]> => {
+  const dictionaryData = await fetchDictionaryData();
+  
+  // Flatten the object of arrays into a single array of DictionaryWord objects
+  const allWords = Object.values(dictionaryData).flat();
+  
+  console.log(`Total dictionary words fetched and flattened: ${allWords.length}`);
+  return allWords;
+};
+
+export { fetchLearningModules, fetchDictionaryData, fetchAllWords };

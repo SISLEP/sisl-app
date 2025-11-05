@@ -4,6 +4,7 @@ import DictionaryWords from './DictionaryWords';
 import QuizScreen from './QuizScreen';
 import SignDetailsScreen from './SignDetailsScreen';
 import FlashcardScreen from './FlashcardScreen';
+import SearchScreen from './SearchScreen';
 
 const DictionaryStack = createNativeStackNavigator({
   screens: {
@@ -39,7 +40,14 @@ const DictionaryStack = createNativeStackNavigator({
       options: {
         headerShown: false,
       },
-    }
+    },
+    SearchScreen: {
+      screen: SearchScreen,
+      options: {
+        title: 'Search Signs',
+        headerShown: false,
+      },
+    },
   },
 });
 

@@ -40,7 +40,7 @@ const ProgressBar = ({ current, total }: { current: number; total: number }) => 
 
 // Component to display the Sign Video using the provided URL
 const FlashcardVideoDisplay = ({ word }: { word: Word }) => {
-  const videoKey = `flashcard-sign-video-${word.id}`; 
+  const videoKey = `flashcard-sign-video-${word.word}`; 
   
   return (
     <View style={styles.videoContainer}>

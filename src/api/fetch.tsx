@@ -36,11 +36,9 @@ interface LearningModulesResponse {
  * Interface for a single dictionary word item.
  */
 export interface DictionaryWord {
-  id?: string; // Optional since it's not present in dictionary.json
   word: string;
-  videoUrl?: string; // Original property - keeping for generic use
-  signVideo: string; // Property found in dictionary.json
-  signImage?: string; // Optional property found in dictionary.json
+  signVideo: string;
+  signImage?: string;
 }
 
 /**

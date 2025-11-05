@@ -13,11 +13,11 @@ import Icon from 'react-native-vector-icons/FontAwesome'; // Import the icon lib
 import Home from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
-import { Practices } from './screens/Practices';
 import { NotFound } from './screens/NotFound';
 import LessonScreen from './screens/LessonScreen';
 import LessonCompleteScreen from './screens/LessonCompleteScreen';
 import DictionaryStack from './screens/DictionaryStack';
+import PracticeStack from './screens/PracticeStack';
 
 const HomeTabs = createBottomTabNavigator({
   screens: {
@@ -31,7 +31,7 @@ const HomeTabs = createBottomTabNavigator({
       },
     },
     Practice: {
-      screen: Practices,
+      screen: PracticeStack,
       options: {
         tabBarIcon: ({ color, size }) => (
           <Icon name="pencil" color={color} size={size} />

@@ -47,6 +47,19 @@ const DictionaryCategories = () => {
     }, [])
   );
 
+  const handleSearchBarPress = () => {
+    // Navigate to the SearchScreen, passing the current category and word data
+    // so the search screen has the data it needs to perform filtering.
+    if (categories.length === 0) {
+       // Optional: Prevent navigation if data hasn't loaded (though isLoading handles this)
+       Alert.alert('Loading', 'Please wait for the dictionary data to load.');
+       return;
+    }
+    navigation.navigate('SearchScreen' as never, {
+      categories: categories,
+      dictionaryData: dictionaryData,
+    } as never);
+  };
 
   const handleCategoryPress = (category: string) => {
     // Pass the list of words for the selected category to the next screen
@@ -112,11 +125,16 @@ const DictionaryCategories = () => {
           {/* Header Content */}
           <View style={styles.headerContainer}>
               <Text style={styles.headerTitle}>Explore</Text>
-              <TextInput style={styles.searchBar} placeholder="Search for signs or collections" />
-              <View style={styles.tabContainer}>
-                <Text style={styles.activeTab}>Public</Text>
-                <Text style={styles.inactiveTab}>My collections</Text>
-              </View>
+              <TouchableOpacity onPress={handleSearchBarPress} activeOpacity={0.8}>
+                {/* Use a disabled TextInput style to visually look like the search bar */}
+                <TextInput 
+                    style={styles.searchBar} 
+                    placeholder="Search for signs or collections"
+                    placeholderTextColor="#888888"
+                    editable={false} // Make it un-editable so the press is captured
+                    pointerEvents="none" // Ensure the touch event is passed to the parent TouchableOpacity
+                />
+              </TouchableOpacity>
           </View>
           
           {/* Category Grid */}

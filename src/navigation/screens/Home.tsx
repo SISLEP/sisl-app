@@ -56,35 +56,31 @@ const Home = () => {
   );
 
   const handleContinue = () => {
-    // Find the module with the most recent progress
-    const activeModuleId = Object.keys(userProgress).reduce((a, b) => 
-      (userProgress[a] > userProgress[b] ? a : b), null);
-      
-    if (activeModuleId) {
-      const activeModule = learningModules.find(mod => mod.id === activeModuleId);
-      if (activeModule) {
-        const completedLessonsCount = userProgress[activeModuleId].lessonsCompleted;
-        const totalLessons = activeModule.lessons.length;
-        
-        // Check if the module is already complete
-        if (completedLessonsCount >= totalLessons) {
-          Alert.alert("Module Complete", "You have finished this module! Please select a new one to continue learning.");
-          return;
-        }
+    // Find the first module that is not yet completed
+    const uncompletedModule = learningModules.find(mod => {
+      const progress = userProgress[mod.id];
+      // A module is considered uncompleted if:
+      // 1. There is no progress recorded, OR
+      // 2. The number of completed lessons is less than the total number of lessons
+      return !progress || progress.lessonsCompleted < mod.lessons.length;
+    });
 
-        // Navigate to the next lesson
-        const nextLessonIndex = completedLessonsCount;
-        navigation.navigate('LessonScreen', { 
-          lessons: activeModule.lessons, 
-          initialLessonIndex: nextLessonIndex,
-          moduleId: activeModule.id
-        });
-        return;
-      }
+    if (uncompletedModule) {
+      const completedLessonsCount = userProgress[uncompletedModule.id]?.lessonsCompleted || 0;
+      
+      // The starting lesson index will be the next lesson after the last completed one.
+      const nextLessonIndex = completedLessonsCount;
+
+      navigation.navigate('LessonScreen', {
+        lessons: uncompletedModule.lessons,
+        initialLessonIndex: nextLessonIndex,
+        moduleId: uncompletedModule.id
+      });
+      return;
     }
-    
-    // If no progress is found, alert the user or navigate to the first module
-    Alert.alert("No Progress Found", "It looks like you're starting fresh. Please select a module to begin.");
+
+    // If all modules are completed or no modules are available
+    Alert.alert("No New Modules", "It looks like you've finished all available modules. Great work! You can retake any module below.");
   };
 
   const handleModulePress = (moduleId) => {

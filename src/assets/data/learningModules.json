@@ -11,7 +11,7 @@
           "type": "translation",
           "instructions": "Guess the correct translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-A.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4",
             "correctAnswer": "A",
             "options": [
               "A",
@@ -25,12 +25,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-A.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4",
                 "translation": "A",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-B.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4",
                 "translation": "B",
                 "id": "2"
               }
@@ -43,12 +43,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-A.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4",
                 "translation": "A",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-C.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4",
                 "translation": "C",
                 "id": "2"
               }
@@ -59,7 +59,7 @@
           "type": "translation",
           "instructions": "What is being signed?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-B.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4",
             "correctAnswer": "B",
             "options": [
               "A",
@@ -74,12 +74,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-C.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4",
                 "translation": "C",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-D.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4",
                 "translation": "D",
                 "id": "2"
               }
@@ -90,7 +90,7 @@
           "type": "translation",
           "instructions": "Guess the correct translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-D.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4",
             "correctAnswer": "D",
             "options": [
               "A",
@@ -113,7 +113,7 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-E.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4",
             "correctAnswer": "E",
             "options": [
               "E",
@@ -128,12 +128,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-E.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4",
                 "translation": "E",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-F.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4",
                 "translation": "F",
                 "id": "2"
               }
@@ -144,7 +144,7 @@
           "type": "translation",
           "instructions": "Choose the right translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-F.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4",
             "correctAnswer": "F",
             "options": [
               "E",
@@ -159,12 +159,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-G.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4",
                 "translation": "G",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-H.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4",
                 "translation": "H",
                 "id": "2"
               }
@@ -175,7 +175,7 @@
           "type": "translation",
           "instructions": "Select the correct word",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-G.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4",
             "correctAnswer": "G",
             "options": [
               "E",
@@ -188,7 +188,7 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-H.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4",
             "correctAnswer": "H",
             "options": [
               "H",
@@ -203,12 +203,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-I.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4",
                 "translation": "I",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-J.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4",
                 "translation": "J",
                 "id": "2"
               }
@@ -219,7 +219,7 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-I.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4",
             "correctAnswer": "I",
             "options": [
               "H",
@@ -232,7 +232,7 @@
           "type": "translation",
           "instructions": "Choose the right translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-J.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4",
             "correctAnswer": "J",
             "options": [
               "H",
@@ -247,12 +247,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-J.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4",
                 "translation": "J",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-K.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4",
                 "translation": "K",
                 "id": "2"
               }
@@ -263,7 +263,7 @@
           "type": "translation",
           "instructions": "Select the correct word",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-K.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4",
             "correctAnswer": "K",
             "options": [
               "K",
@@ -285,7 +285,7 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-L.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4",
             "correctAnswer": "L",
             "options": [
               "K",
@@ -300,12 +300,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-L.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4",
                 "translation": "L",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-M.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4",
                 "translation": "M",
                 "id": "2"
               }
@@ -316,7 +316,7 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-M.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4",
             "correctAnswer": "M",
             "options": [
               "K",
@@ -331,12 +331,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-N.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4",
                 "translation": "N",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-O.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4",
                 "translation": "O",
                 "id": "2"
               }
@@ -347,7 +347,7 @@
           "type": "translation",
           "instructions": "Choose the right translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-N.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4",
             "correctAnswer": "N",
             "options": [
               "N",
@@ -360,7 +360,7 @@
           "type": "translation",
           "instructions": "Select the correct word",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-O.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4",
             "correctAnswer": "O",
             "options": [
               "N",
@@ -375,12 +375,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-P.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4",
                 "translation": "P",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-Q.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4",
                 "translation": "Q",
                 "id": "2"
               }
@@ -391,7 +391,7 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-P.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4",
             "correctAnswer": "P",
             "options": [
               "N",
@@ -404,7 +404,7 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-Q.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4",
             "correctAnswer": "Q",
             "options": [
               "Q",
@@ -419,12 +419,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-Q.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4",
                 "translation": "Q",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-R.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4",
                 "translation": "R",
                 "id": "2"
               }
@@ -435,7 +435,7 @@
           "type": "translation",
           "instructions": "Choose the right translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-R.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4",
             "correctAnswer": "R",
             "options": [
               "Q",
@@ -457,7 +457,7 @@
           "type": "translation",
           "instructions": "Select the correct word",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-S.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4",
             "correctAnswer": "S",
             "options": [
               "Q",
@@ -472,12 +472,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-S.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4",
                 "translation": "S",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-T.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4",
                 "translation": "T",
                 "id": "2"
               }
@@ -488,7 +488,7 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-T.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4",
             "correctAnswer": "T",
             "options": [
               "T",
@@ -503,12 +503,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-U.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4",
                 "translation": "U",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-V.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4",
                 "translation": "V",
                 "id": "2"
               }
@@ -519,7 +519,7 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-U.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4",
             "correctAnswer": "U",
             "options": [
               "T",
@@ -532,7 +532,7 @@
           "type": "translation",
           "instructions": "Choose the right translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-V.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4",
             "correctAnswer": "V",
             "options": [
               "T",
@@ -547,12 +547,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-W.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4",
                 "translation": "W",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-X.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4",
                 "translation": "X",
                 "id": "2"
               }
@@ -563,7 +563,7 @@
           "type": "translation",
           "instructions": "Select the correct word",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-W.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4",
             "correctAnswer": "W",
             "options": [
               "W",
@@ -576,7 +576,7 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-X.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4",
             "correctAnswer": "X",
             "options": [
               "W",
@@ -591,12 +591,12 @@
           "data": {
             "items": [
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-Y.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4",
                 "translation": "Y",
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-Z.mp4",
+                "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4",
                 "translation": "Z",
                 "id": "2"
               }
@@ -607,7 +607,7 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-Y.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4",
             "correctAnswer": "Y",
             "options": [
               "W",
@@ -621,7 +621,7 @@
           "type": "translation",
           "instructions": "Choose the right translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet-Z.mp4",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4",
             "correctAnswer": "Z",
             "options": [
               "W",

@@ -114,3 +114,16 @@ export const getWordsForSession = async (
   // Return the requested number of words from the top of the sorted list
   return sortedWords.slice(0, count);
 };
+
+/**
+ * Gets a list of all word IDs (strings) that currently have memory scores.
+ */
+export const getAllWordsLearned = async (): Promise<string[]> => {
+  try {
+    const scores = await getMemoryScores();
+    return Object.keys(scores);
+  } catch (e) {
+    console.error('Failed to get all learned words', e);
+    return [];
+  }
+};

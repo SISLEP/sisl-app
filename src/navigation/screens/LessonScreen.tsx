@@ -6,8 +6,46 @@ import FillInTheBlankScreen from './FillInTheBlankScreen';
 import MatchingPairsScreen from './MatchingPairsScreen';
 import SequencingScreen from './SequencingScreen';
 import TranslationScreen from './TranslationScreen';
+import { saveWordMemory } from '../../storage/memoryService'; // 1. Import saveWordMemory
+import { Word } from '../../data/word'; // 2. Import Word type (assuming path is correct)
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
+
+// Helper type to safely access word string from various data structures
+type LessonDataItem = { word?: string } | Word | string;
+
+// 3. Function to safely extract words from various lesson data structures
+const extractWordsFromLessonData = (data: any): string[] => {
+  if (!data) return [];
+  
+  // Assuming 'data' is an array of items, each containing a 'word' property
+  if (Array.isArray(data)) {
+    return data
+      .map((item: LessonDataItem) => {
+        // Handle objects with a 'word' property
+        if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {
+          return item.word;
+        }
+        // Handle the case where the array contains just the word strings
+        if (typeof item === 'string') {
+          return item;
+        }
+        // Handle the explicit Word type if necessary, assuming it matches { word: string }
+        if ('word' in item && typeof (item as Word).word === 'string') {
+          return (item as Word).word;
+        }
+        return null;
+      })
+      .filter((word): word is string => word !== null && word.trim() !== '');
+  }
+
+  // Fallback for non-array data structure (less common for lessons but good for safety)
+  if (typeof data === 'object' && 'word' in data && typeof data.word === 'string') {
+      return [data.word];
+  }
+
+  return [];
+};
 
 const LessonScreen = () => {
   const navigation = useNavigation();
@@ -70,6 +108,20 @@ const LessonScreen = () => {
 
 
   const handleNextLesson = async () => {
+    // 4. Word Memory Saving Logic
+    if (currentLesson) {
+      const wordsToSave = extractWordsFromLessonData(currentLesson.data);
+      console.log('Words to save as Badly remembered:', wordsToSave);
+      
+      // Save each word with the 'Badly' rating as requested
+      const memoryPromises = wordsToSave.map(wordId => 
+        saveWordMemory(wordId, 'Badly')
+      );
+      await Promise.all(memoryPromises);
+      console.log(`Saved ${wordsToSave.length} words with 'Badly' rating to memory service.`);
+    }
+    // End of Word Memory Saving Logic
+
     const nextLessonIndex = currentLessonIndex + 1;
     await saveProgress(nextLessonIndex);
     

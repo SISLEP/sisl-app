@@ -4,19 +4,9 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Alert, ActivityIndicator } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-// CORRECTED PATH and added getAllWordsLearned
 import { getWordsForSession, getAllWordsLearned } from '../../storage/memoryService'; 
-// NOTE: fetchDictionaryWords is required but was not provided. Mocking a simple one here.
-import { fetchAllWords } from '../../api/fetch'; // Assuming this is the correct path for fetching ALL words
-import { Word } from '../../data/word'; // Assuming Word type is defined here
-
-// // Define the Word type locally if needed, or import the complete one if available
-// export interface Word {
-//   id: string; // Add ID for better tracking if available
-//   word: string;
-//   definition: string;
-//   signVideo: string;
-// }
+import { fetchAllWords } from '../../api/fetch';
+import { Word } from '../../data/word';
 
 const FLASHCARD_COUNT = 10;
 const QUIZ_WORD_COUNT = 7; // As required by QuizScreen's generator logic
@@ -109,10 +99,10 @@ export function PracticeHome() {
       {/* Description */}
       <View style={styles.descriptionContainer}>
         <Text style={styles.descriptionText}>
-          Take our quiz to **test your knowledge**.
+          Take our quiz to test your knowledge.
         </Text>
         <Text style={styles.descriptionText}>
-          Or test your **recall with flashcards**.
+          Or test your recall with flashcards.
         </Text>
       </View>
 
@@ -189,7 +179,6 @@ const styles = StyleSheet.create({
   },
   quizButton: {
     backgroundColor: '#B2EBF2', // Light Cyan/Blue for Quiz
-    // A lighter blue-green similar to the screenshot's 'Start quiz'
   },
   flashcardButton: {
     backgroundColor: '#FFD166', // Amber/Orange for Flashcards

@@ -3,12 +3,15 @@
  */
 
 // Import the local JSON data to use as fallbacks.
-import learningModulesData from '../assets/data/learningModules.json';
+// IMPORTANT: Update imports to use the new categorized file structure
+import categorizedModulesData from '../assets/data/categorizedModules.json'; // New module data
+import categoriesData from '../assets/data/categories.json'; // New category list data
 // Assuming the user has a local dictionary JSON file at this path:
 import localDictionaryData from '../assets/data/dictionary.json'; 
 
 // Placeholder URLs for the hosted JSON files.
-const MODULES_DATA_URL = 'https://sislep.github.io/video-site/learningModules.json';
+const CATEGORIES_DATA_URL = 'https://sislep.github.io/video-site/categories.json'; // New URL
+const MODULES_DATA_URL = 'https://sislep.github.io/video-site/categorizedModules.json'; // Updated URL
 const DICTIONARY_DATA_URL = 'https://sislep.github.io/video-site/dictionary.json';
 
 // --- Interfaces for Data Structures ---
@@ -22,14 +25,34 @@ interface LearningModule {
   subtitle: string;
   icon: string;
   bgColor: string;
+  category: string; // Added category property
   lessons: any[]; // Assuming lessons exist based on Home.tsx usage
 }
 
 /**
- * Interface for the fetched learning modules data structure.
+ * Interface for the categorized modules data structure.
+ * Keys are category IDs, values are arrays of modules.
  */
-interface LearningModulesResponse {
-  learningModules: LearningModule[];
+interface CategorizedModulesResponse {
+  [categoryId: string]: LearningModule[];
+}
+
+/**
+ * Interface for a single category item.
+ */
+export interface CategoryItem {
+    id: string;
+    title: string;
+    icon: string;
+    bgColor: string;
+    moduleCount: number;
+}
+
+/**
+ * Interface for the fetched category list structure.
+ */
+interface CategoriesResponse {
+  categories: CategoryItem[];
 }
 
 /**
@@ -88,20 +111,43 @@ const fetchData = async <T>(url: string, fallbackData: T, dataName: string): Pro
 // --- Specific Fetch Functions using the Generic Helper ---
 
 /**
- * Fetches learning modules, using local data as a fallback.
- * The network request expects the shape of LearningModulesResponse.
+ * Fetches the list of learning categories.
  *
- * @returns {Promise<LearningModule[]>} A promise that resolves with an array of learning modules.
+ * @returns {Promise<CategoryItem[]>} A promise that resolves with an array of category items.
  */
-const fetchLearningModules = async (): Promise<LearningModule[]> => {
-  const response = await fetchData<LearningModulesResponse>(
-    MODULES_DATA_URL,
-    learningModulesData as LearningModulesResponse, // Type cast local data to match expected response structure
-    'learning modules'
+const fetchCategories = async (): Promise<CategoryItem[]> => {
+  const response = await fetchData<CategoriesResponse>(
+    CATEGORIES_DATA_URL,
+    categoriesData as CategoriesResponse,
+    'categories list'
   );
-  // Extract the modules array from the response object
-  return response.learningModules;
+  // Extract the categories array from the response object
+  return response.categories;
 };
+
+/**
+ * Fetches ALL learning modules, grouped by category ID.
+ * The network request expects the shape of CategorizedModulesResponse.
+ *
+ * @returns {Promise<CategorizedModulesResponse>} A promise that resolves with an object of learning modules grouped by category.
+ */
+const fetchCategorizedModules = async (): Promise<CategorizedModulesResponse> => {
+  return fetchData<CategorizedModulesResponse>(
+    MODULES_DATA_URL,
+    categorizedModulesData as CategorizedModulesResponse, // Type cast local data to match expected response structure
+    'categorized learning modules'
+  );
+};
+
+/**
+ * Fetches ALL learning modules, flattened into a single array (for legacy use like 'Continue' button).
+ * * @returns {Promise<LearningModule[]>} A promise that resolves with a flattened array of all learning modules.
+ */
+const fetchAllModules = async (): Promise<LearningModule[]> => {
+    const categorizedModules = await fetchCategorizedModules();
+    // Flatten the object of arrays into a single array of LearningModule objects
+    return Object.values(categorizedModules).flat();
+}
 
 /**
  * Fetches dictionary data, using local data as a fallback.
@@ -133,4 +179,5 @@ const fetchAllWords = async (): Promise<DictionaryWord[]> => {
   return allWords;
 };
 
-export { fetchLearningModules, fetchDictionaryData, fetchAllWords };
+// Export the updated functions
+export { fetchCategories, fetchCategorizedModules, fetchAllModules, fetchDictionaryData, fetchAllWords };

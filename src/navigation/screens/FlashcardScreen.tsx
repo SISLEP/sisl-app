@@ -51,6 +51,7 @@ const FlashcardVideoDisplay = ({ word }: { word: Word }) => {
         paused={false}
         repeat={true}
         resizeMode="contain"
+        muted={true}
       />
     </View>
   );

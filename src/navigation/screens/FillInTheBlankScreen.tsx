@@ -76,6 +76,7 @@ const FillInTheBlankScreen = ({ data, onNext }) => {
           paused={false} // Autoplay the video
           repeat={true} // Loop the video
           resizeMode="contain"
+          muted={true}
         />
       </View>
       <View style={styles.phraseContainer}>

@@ -76,6 +76,7 @@ const SequencingScreen = ({ data, onNext }) => {
           paused={false}
           repeat={true}
           resizeMode="contain"
+          muted={true}
         />
       </View>
       <View style={styles.answerArea}>

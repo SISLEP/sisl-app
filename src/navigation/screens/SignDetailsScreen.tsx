@@ -91,6 +91,7 @@ const SignDetailsScreen = () => {
             paused={videoPausedState}
             repeat={true}
             resizeMode="contain"
+            muted={true}
           />
 
           {/* Image Component */}

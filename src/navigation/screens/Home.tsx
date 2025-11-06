@@ -13,7 +13,8 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchCategories, fetchAllModules } from '../../api/fetch'; // Import new fetch functions
+import { fetchCategories, fetchAllModules } from '../../api/fetch';
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
 
@@ -134,10 +135,7 @@ const Home = () => {
   // Render a category card (styled to resemble the screenshot)
   const renderCategoryCard = (category) => {
     const { total, completed, percentage } = getCategoryCompletionStatus(category.id);
-    
-    // Simple circular progress visualization (conceptual, actual visual might use a library)
-    const progressFill = percentage * 3.6; // Convert percentage to degrees for stroke-dashoffset (if using SVG/path)
-    
+
     return (
       <TouchableOpacity
         key={category.id}
@@ -145,16 +143,19 @@ const Home = () => {
         onPress={() => handleCategoryPress(category.id, category.title)}
       >
         <View style={styles.categoryIconContainer}>
-          {/* Progress Circle Visual (Basic implementation to show progress concept) */}
-          <View 
-            style={[
-              styles.progressCircle, 
-              // Set a visual hint for the current progress
-              { borderColor: percentage > 0 ? category.bgColor : '#E0E0E0' } 
-            ]}
+          <AnimatedCircularProgress
+            size={80} // Size of the circle (was 80 for the View)
+            width={5} // Thickness of the progress line (was 5 for borderWidth)
+            fill={percentage} // Current percentage fill (0-100)
+            tintColor={"#FF9500"} // Color of the progress arc (using category color or a default)
+            backgroundColor="#E0E0E0" // Color of the background track
           >
-             <Text style={styles.categoryEmoji}>{category.icon}</Text>
-          </View>
+            {
+              () => (
+                <Text style={styles.categoryEmoji}>{category.icon}</Text>
+              )
+            }
+          </AnimatedCircularProgress>
         </View>
         <Text style={styles.categoryTitleText}>{category.title}</Text>
         <Text style={styles.categoryCompletionText}>{`${completed}/${total} Modules`}</Text>
@@ -303,17 +304,6 @@ const styles = StyleSheet.create({
   },
   categoryIconContainer: {
     marginBottom: 10,
-  },
-  progressCircle: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    borderWidth: 5,
-    borderColor: '#E0E0E0', // Base color
-    justifyContent: 'center',
-    alignItems: 'center',
-    // Note: Complex circular progress visualization often requires SVG or a dedicated library like react-native-svg-charts.
-    // This basic styling provides the circle outline.
   },
   categoryEmoji: {
     fontSize: 30,

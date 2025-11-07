@@ -19,9 +19,9 @@ import categoriesData from '../assets/data/categories.json'; // New category lis
 import localDictionaryData from '../assets/data/dictionary.json'; 
 
 // Placeholder URLs for the hosted JSON files.
-const CATEGORIES_DATA_URL = 'https://sislep.github.io/video-site/categories.json'; // New URL
+const CATEGORIES_DATA_URL = 'https://sislep.github.io/video-site/lessons/categories.json'; // New URL
 // Base URL for the new modular module structure
-const MODULES_BASE_URL = 'https://sislep.github.io/video-site/'; 
+const MODULES_BASE_URL = 'https://sislep.github.io/video-site/lessons/'; 
 const DICTIONARY_DATA_URL = 'https://sislep.github.io/video-site/dictionary.json';
 
 // Map category IDs to their local module data imports

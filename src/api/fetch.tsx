@@ -2,6 +2,9 @@
  * @fileoverview This file contains the API service for fetching various data structures with a local fallback using a generic helper.
  */
 
+// import * as FileSystem from 'expo-file-system'; // 🚨 UPDATED: Import the standard FileSystem API
+import { Directory, File, Paths, documentDirectory } from 'expo-file-system';
+
 // Import the local JSON data to use as fallbacks.
 // IMPORTANT: Update imports to use the new categorized file structure
 import alphabetModulesData from '../assets/data/alphabet.json';
@@ -24,6 +27,10 @@ const CATEGORIES_DATA_URL = 'https://sislep.github.io/video-site/lessons/categor
 const MODULES_BASE_URL = 'https://sislep.github.io/video-site/lessons/'; 
 const DICTIONARY_DATA_URL = 'https://sislep.github.io/video-site/dictionary.json';
 
+// --- NEW: Offline Storage Configuration ---
+// Files will be saved in the document directory, which is persistent (not cleared automatically like cache).
+const OFFLINE_VIDEOS_BASE_DIR = `${documentDirectory}/offline_videos/`;
+
 // Map category IDs to their local module data imports
 const localModuleDataMap: { [key: string]: { [key: string]: LearningModule[] } } = {
     alphabet: alphabetModulesData,
@@ -38,7 +45,7 @@ const localModuleDataMap: { [key: string]: { [key: string]: LearningModule[] } }
     // Add other categories as needed
 };
 
-// --- Interfaces for Data Structures ---
+// --- Interfaces for Data Structures (Omitted for brevity, kept same as original) ---
 
 /**
  * Interface representing a single learning module.
@@ -94,7 +101,7 @@ export interface DictionaryData {
   [category: string]: DictionaryWord[];
 }
 
-// --- Generic Fetch Function ---
+// --- Generic Fetch Function (Omitted for brevity, kept same as original) ---
 
 /**
  * Generic function to fetch JSON data from a URL with a local fallback on failure.
@@ -131,7 +138,7 @@ const fetchData = async <T>(url: string, fallbackData: T, dataName: string): Pro
   }
 };
 
-// --- Specific Fetch Functions using the Generic Helper ---
+// --- Specific Fetch Functions using the Generic Helper (Omitted for brevity, kept same as original) ---
 
 /**
  * Fetches the list of learning categories.
@@ -206,9 +213,147 @@ const fetchAllWords = async (): Promise<DictionaryWord[]> => {
   return allWords;
 };
 
+// --- NEW: Offline Video Management Functions ---
+
+/**
+ * Helper to get the local directory URI for a specific category's videos.
+ * @param categoryId The ID of the category (e.g., 'alphabet').
+ * @returns The file:// URI for the category's local video folder.
+ */
+const getCategoryDirectory = (categoryId: string): Directory => {
+    return new Directory(Paths.document, "sislep", categoryId);
+};
+
+// const getFile = (fileName: )
+
+/**
+ * Helper to ensure the local category directory exists.
+ * @param categoryId The ID of the category.
+ */
+const ensureCategoryDirectoryExists = async (categoryId: string): Promise<void> => {
+    const dir = new Directory(Paths.document, "sislep", categoryId);
+    if (!dir.exists) {
+        console.log(`Creating directory: ${dir.name}`);
+        // `intermediates: true` creates all necessary parent directories.
+        await dir.create({ intermediates: true }); 
+    }
+};
+
+/**
+ * Helper to get all video URLs (signVideo and signImage) for a category.
+ * This checks the local fallback dictionary data, as the API fetch for
+ * categories in Home.tsx doesn't provide all sign video links.
+ * NOTE: The category ID in fetchModulesByCategory is lowercase, but the keys
+ * in dictionary.json start with a capital letter (e.g., 'Alphabet', 'Body').
+ * This function handles the case discrepancy.
+ *
+ * @param categoryId The lowercase ID of the category (e.g., 'alphabet').
+ * @returns An array of unique video and image URLs for the category.
+ */
+const getCategoryVideoUrls = (categoryId: string): string[] => {
+    // Convert to the expected casing for the dictionary key (e.g., 'alphabet' -> 'Alphabet')
+    const dictionaryKey = categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
+    
+    // Get the words array for the category from the local fallback dictionary data
+    const words = localDictionaryData[dictionaryKey] as DictionaryWord[] || [];
+    
+    const urls = words.flatMap(word => {
+        const videoUrl = word.signVideo;
+        const imageUrl = word.signImage;
+        const result: string[] = [videoUrl];
+        if (imageUrl) {
+            result.push(imageUrl);
+        }
+        return result;
+    }).filter(url => url && url.startsWith('http')); // Filter out undefined/null and ensure it's a remote URL
+    
+    // Return only unique URLs
+    return Array.from(new Set(urls));
+};
+
+/**
+ * Downloads all videos and images for a given category to local storage.
+ * @param categoryId The ID of the category (e.g., 'alphabet').
+ */
+export const downloadCategoryVideos = async (categoryId: string): Promise<void> => {
+    await ensureCategoryDirectoryExists(categoryId);
+    const urls = getCategoryVideoUrls(categoryId);
+    const dir = getCategoryDirectory(categoryId);
+    
+    console.log(`Starting download for ${urls.length} files in category ${categoryId}`);
+
+    const downloadPromises = urls.map(url => {
+        // Extract the filename from the URL (e.g., "https://.../Alphabet/A.mp4" -> "A.mp4")
+        const filename = url.substring(url.lastIndexOf('/') + 1);
+        // const fileUri = `${dirUri}${filename}`;
+        
+        // Use downloadAsync for downloading the file
+        return File.downloadFileAsync(url, dir)
+            .then(result => {
+                if (result && result.status !== 200) {
+                    throw new Error(`Download failed with status ${result.status}`);
+                }
+                console.log(`Downloaded ${filename} to ${dir}`);
+            })
+            .catch(error => {
+                console.error(`Error downloading ${filename}:`, error);
+                // Throw an error to ensure Promise.all fails if any file fails
+                throw new Error(`Failed to download file ${filename}`); 
+            });
+    });
+
+    await Promise.all(downloadPromises);
+    console.log(`All files for category ${categoryId} downloaded successfully.`);
+};
+
+/**
+ * Checks if all videos/images for a category are fully downloaded.
+ * This is a simple check: it verifies the directory exists and contains the
+ * expected number of files.
+ * @param categoryId The ID of the category (e.g., 'alphabet').
+ * @returns A promise that resolves to true if all files are downloaded, false otherwise.
+ */
+export const isCategoryFullyDownloaded = async (categoryId: string): Promise<boolean> => {
+    const dir = getCategoryDirectory(categoryId);
+
+    if (!dir.exists) {
+        return false;
+    }
+
+    const expectedUrls = getCategoryVideoUrls(categoryId);
+    
+    try {
+        const downloadedFiles = dir.list();
+        
+        // Check if the number of files matches the expected number of URLs
+        return downloadedFiles.length === expectedUrls.length;
+    } catch (e) {
+        console.error('Error reading category directory:', e);
+        return false;
+    }
+};
+
+/**
+ * Removes all downloaded videos/images for a category.
+ * @param categoryId The ID of the category (e.g., 'alphabet').
+ */
+export const removeCategoryVideos = async (categoryId: string): Promise<void> => {
+    const dir = getCategoryDirectory(categoryId);
+
+    if (dir.exists) {
+        console.log(`Removing directory: ${dir.name}`);
+        // Use deleteAsync with the recursive option
+        await dir.delete();
+        console.log(`Category videos removed for ${categoryId}.`);
+    } else {
+        console.warn(`Attempted to remove non-existent directory for category: ${categoryId}`);
+    }
+};
+
+
 export { 
     fetchCategories, 
     fetchModulesByCategory, 
     fetchDictionaryData, 
-    fetchAllWords 
+    fetchAllWords,
 };

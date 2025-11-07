@@ -175,27 +175,6 @@ const fetchModulesByCategory = async (categoryId: string): Promise<LearningModul
     return response[categoryId] || [];
 };
 
-/**
- * Fetches ALL learning modules, flattened into a single array.
- * This function is used for logic that needs all modules, like the 'Continue' button logic.
- *
- * @returns {Promise<LearningModule[]>} A promise that resolves with a flattened array of all learning modules.
- */
-const fetchAllModules = async (): Promise<LearningModule[]> => {
-    // 1. Get the list of all category IDs
-    const categories = await fetchCategories();
-    const categoryIds = categories.map(c => c.id);
-
-    // 2. Fetch modules for all categories concurrently
-    const modulePromises = categoryIds.map(id => fetchModulesByCategory(id));
-    const modulesArrays = await Promise.all(modulePromises);
-
-    // 3. Flatten the array of arrays into a single array
-    const allModules = modulesArrays.flat();
-    
-    console.log(`Total learning modules fetched and flattened: ${allModules.length}`);
-    return allModules;
-};
 
 /**
  * Fetches dictionary data, using local data as a fallback.
@@ -227,13 +206,9 @@ const fetchAllWords = async (): Promise<DictionaryWord[]> => {
   return allWords;
 };
 
-// Export the updated functions
 export { 
     fetchCategories, 
-    fetchModulesByCategory, // Export the new function
-    fetchAllModules, 
+    fetchModulesByCategory, 
     fetchDictionaryData, 
     fetchAllWords 
 };
-
-// Removed fetchCategorizedModules as it is no longer required with the new structure

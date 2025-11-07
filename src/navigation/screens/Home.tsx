@@ -29,6 +29,9 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [userProgress, setUserProgress] = useState({});
 
+  // Helper function to create a unique key
+  const getUniqueModuleKey = (mod) => `${mod.category}-${mod.id}`;
+
   // Function to load progress from AsyncStorage (no change needed here)
   const loadProgress = async () => {
     try {
@@ -72,18 +75,20 @@ const Home = () => {
   const handleContinue = () => {
     // Logic uses the flattened 'allModules' list
     const uncompletedModule = allModules.find(mod => {
-      const progress = userProgress[mod.id];
+      const uniqueKey = getUniqueModuleKey(mod); // <-- Use composite key
+      const progress = userProgress[uniqueKey];
       return !progress || progress.lessonsCompleted < mod.lessons.length;
     });
 
     if (uncompletedModule) {
-      const completedLessonsCount = userProgress[uncompletedModule.id]?.lessonsCompleted || 0;
+      const uniqueKey = getUniqueModuleKey(uncompletedModule); // <-- Use composite key
+      const completedLessonsCount = userProgress[uniqueKey]?.lessonsCompleted || 0;
       const nextLessonIndex = completedLessonsCount;
 
       navigation.navigate('LessonScreen', {
         lessons: uncompletedModule.lessons,
         initialLessonIndex: nextLessonIndex,
-        moduleId: uncompletedModule.id
+        moduleId: uniqueKey // <-- Pass the unique composite key
       });
       return;
     }
@@ -122,7 +127,8 @@ const Home = () => {
     let totalCount = categoryModules.length;
 
     categoryModules.forEach(mod => {
-      const progress = userProgress[mod.id];
+      const uniqueKey = getUniqueModuleKey(mod); // <-- Use composite key
+      const progress = userProgress[uniqueKey];
       if (progress && progress.lessonsCompleted >= mod.lessons.length) {
         completedCount++;
       }

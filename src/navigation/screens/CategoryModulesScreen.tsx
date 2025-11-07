@@ -21,7 +21,8 @@ const CategoryModulesScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
   // Destructure params passed from Home.tsx
-  const { categoryTitle, learningModules, userProgress, moduleIdList } = route.params;
+  // We don't use moduleIdList, so it is removed for cleanliness.
+  const { categoryTitle, learningModules, userProgress } = route.params;
 
   if (!learningModules || learningModules.length === 0) {
     return (
@@ -31,11 +32,13 @@ const CategoryModulesScreen = () => {
     );
   }
 
-  // Helper function to get the progress text (moved from Home.tsx)
-  const getProgressText = (moduleId) => {
-    const progress = userProgress[moduleId];
-    const module = learningModules.find((m) => m.id === moduleId);
-    if (!module) return '0 Lessons Complete';
+  // Helper function to create a unique composite key: category-id (e.g., "alphabet-1")
+  const getUniqueModuleKey = (module) => `${module.category}-${module.id}`;
+
+  // Helper function to get the progress text
+  const getProgressText = (module) => { // Takes the full module object now
+    const uniqueKey = getUniqueModuleKey(module); // <-- Build composite key
+    const progress = userProgress[uniqueKey];    // <-- Use composite key for lookup
 
     if (progress) {
       const isCompleted = progress.lessonsCompleted >= module.lessons.length;
@@ -44,15 +47,16 @@ const CategoryModulesScreen = () => {
     return '0 Lessons Complete';
   };
 
-  // Helper function for module press logic (moved from Home.tsx)
-  const handleModulePress = (moduleId) => {
-    const selectedModule = learningModules.find((mod) => mod.id === moduleId);
+  // Helper function for module press logic
+  const handleModulePress = (selectedModule) => { // Takes the full module object now
     if (!selectedModule || selectedModule.lessons.length === 0) {
       Alert.alert('No lessons', 'This module has no lessons yet.');
       return;
     }
 
-    const progress = userProgress[moduleId];
+    const uniqueKey = getUniqueModuleKey(selectedModule); // <-- Build composite key
+    const progress = userProgress[uniqueKey];             // <-- Use composite key for lookup
+    
     // Check if progress exists and if all lessons are completed.
     const isCompleted = progress && progress.lessonsCompleted >= selectedModule.lessons.length;
 
@@ -71,7 +75,7 @@ const CategoryModulesScreen = () => {
               navigation.navigate('LessonScreen', {
                 lessons: selectedModule.lessons,
                 initialLessonIndex: 0, // Start from the beginning
-                moduleId: moduleId,
+                moduleId: uniqueKey,   // <-- Pass the unique composite key
               });
             },
           },
@@ -83,17 +87,17 @@ const CategoryModulesScreen = () => {
       navigation.navigate('LessonScreen', {
         lessons: selectedModule.lessons,
         initialLessonIndex: initialLessonIndex,
-        moduleId: moduleId,
+        moduleId: uniqueKey, // <-- Pass the unique composite key
       });
     }
   };
 
-  // Helper function to render a module card (moved from Home.tsx)
+  // Helper function to render a module card
   const renderLearningModule = (module) => (
     <TouchableOpacity
-      key={module.id}
+      key={getUniqueModuleKey(module)} // Use unique key for React's list rendering
       style={[styles.moduleCard, { backgroundColor: module.bgColor || '#EBEBEB' }]} // Added fallback bgColor
-      onPress={() => handleModulePress(module.id)}
+      onPress={() => handleModulePress(module)} // Pass the full module object
     >
       <View style={styles.moduleIcon}>
         <Text style={styles.moduleEmoji}>{module.icon}</Text>
@@ -101,7 +105,7 @@ const CategoryModulesScreen = () => {
       <View style={styles.moduleContent}>
         <Text style={styles.moduleTitle}>{module.title}</Text>
         <Text style={styles.moduleSubtitle}>{module.subtitle}</Text>
-        <Text style={styles.progressText}>{getProgressText(module.id)}</Text>
+        <Text style={styles.progressText}>{getProgressText(module)}</Text>
       </View>
       <Icon name="chevron-right" size={24} color="#666" />
     </TouchableOpacity>

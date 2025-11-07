@@ -50,7 +50,8 @@ const extractWordsFromLessonData = (data: any): string[] => {
 const LessonScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  const { lessons, initialLessonIndex, moduleId } = route.params;
+  // moduleId now stores the composite key (e.g., "alphabet-1")
+  const { lessons, initialLessonIndex, moduleId } = route.params; 
 
   const [currentLessonIndex, setCurrentLessonIndex] = useState(initialLessonIndex || 0);
   const currentLesson = lessons[currentLessonIndex];
@@ -72,7 +73,7 @@ const LessonScreen = () => {
             const progress = JSON.parse(storedProgress);
             // Only reset if the module was previously completed
             if (progress[moduleId] && progress[moduleId].lessonsCompleted >= progress[moduleId].totalLessons) {
-              progress[moduleId] = {
+              progress[moduleId] = { // <-- Uses moduleId (the composite key)
                 lessonsCompleted: 0,
                 totalLessons: lessons.length,
               };
@@ -86,7 +87,7 @@ const LessonScreen = () => {
       };
       resetProgress();
     }
-  }, [initialLessonIndex, moduleId]);
+  }, [initialLessonIndex, moduleId]); // <-- Uses moduleId in dependencies
 
   // Function to save progress to AsyncStorage
   const saveProgress = async (lessonsCompleted) => {
@@ -94,7 +95,7 @@ const LessonScreen = () => {
       const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
       const progress = storedProgress ? JSON.parse(storedProgress) : {};
       
-      progress[moduleId] = {
+      progress[moduleId] = { // <-- Uses moduleId (the composite key)
         lessonsCompleted,
         totalLessons: lessons.length
       };

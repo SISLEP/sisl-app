@@ -83,7 +83,7 @@
   ],
   "body": [
     {
-      "id": "5",
+      "id": "1",
       "title": "Body Signs (Part 1)",
       "subtitle": "Signs for the body and head",
       "icon": "👤",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": "2",
       "title": "Body Signs (Part 2)",
       "subtitle": "Signs for the lower body and limbs",
       "icon": "💪",
@@ -126,7 +126,7 @@
   ],
   "family": [
     {
-      "id": "7",
+      "id": "1",
       "title": "Family Signs (Part 1)",
       "subtitle": "Signs for relatives",
       "icon": "👨‍👩‍👧‍👦",
@@ -146,7 +146,7 @@
       ]
     },
     {
-      "id": "8",
+      "id": "2",
       "title": "Family Signs (Part 2)",
       "subtitle": "More relationship signs",
       "icon": "💖",
@@ -166,7 +166,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": "3",
       "title": "Family Signs (Part 3)",
       "subtitle": "Signs for grandparents and more",
       "icon": "👵👴",
@@ -186,7 +186,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": "4",
       "title": "Family Signs (Part 4)",
       "subtitle": "Final family signs",
       "icon": "🏠",
@@ -211,7 +211,7 @@
   ],
   "month": [
     {
-      "id": "11",
+      "id": "1",
       "title": "Month Signs (Part 1)",
       "subtitle": "Signs for months of the year",
       "icon": "📅",
@@ -231,7 +231,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": "2",
       "title": "Month Signs (Part 2)",
       "subtitle": "The rest of the months",
       "icon": "🗓️",
@@ -252,7 +252,7 @@
   ],
   "colour": [
     {
-      "id": "13",
+      "id": "1",
       "title": "Colour Signs (Part 1)",
       "subtitle": "Basic colour signs",
       "icon": "🌈",
@@ -272,7 +272,7 @@
       ]
     },
     {
-      "id": "14",
+      "id": "2",
       "title": "Colour Signs (Part 2)",
       "subtitle": "More colour signs",
       "icon": "🎨",
@@ -294,7 +294,7 @@
   ],
   "province": [
     {
-      "id": "15",
+      "id": "1",
       "title": "Province Signs (Part 1)",
       "subtitle": "Signs for locations",
       "icon": "🗺️",
@@ -314,7 +314,7 @@
       ]
     },
     {
-      "id": "16",
+      "id": "2",
       "title": "Province Signs (Part 2)",
       "subtitle": "The rest of the provinces",
       "icon": "📍",
@@ -333,7 +333,7 @@
   ],
   "animal": [
     {
-      "id": "17",
+      "id": "1",
       "title": "Animal Signs (Part 1)",
       "subtitle": "Signs for insects and birds",
       "icon": "🐛",
@@ -353,7 +353,7 @@
       ]
     },
     {
-      "id": "18",
+      "id": "2",
       "title": "Animal Signs (Part 2)",
       "subtitle": "Signs for farm and domestic animals",
       "icon": "🐶",
@@ -373,7 +373,7 @@
       ]
     },
     {
-      "id": "19",
+      "id": "3",
       "title": "Animal Signs (Part 3)",
       "subtitle": "Signs for more animals",
       "icon": "🦎",
@@ -393,7 +393,7 @@
       ]
     },
     {
-      "id": "20",
+      "id": "4",
       "title": "Animal Signs (Part 4)",
       "subtitle": "Final animal signs",
       "icon": "🕷️",
@@ -415,7 +415,7 @@
   ],
   "sport": [
     {
-      "id": "21",
+      "id": "1",
       "title": "Sport Signs (Part 1)",
       "subtitle": "Signs for competitive activities",
       "icon": "⚽",
@@ -435,7 +435,7 @@
       ]
     },
     {
-      "id": "22",
+      "id": "2",
       "title": "Sport Signs (Part 2)",
       "subtitle": "More sport signs",
       "icon": "🏅",
@@ -455,7 +455,7 @@
       ]
     },
     {
-      "id": "23",
+      "id": "3",
       "title": "Sport Signs (Part 3)",
       "subtitle": "Final sport signs",
       "icon": "🏊",
@@ -478,7 +478,7 @@
   ],
   "general": [
     {
-      "id": "24",
+      "id": "1",
       "icon": "🤟",
       "title": "Let's learn new signs!",
       "subtitle": "Learn basic signs",

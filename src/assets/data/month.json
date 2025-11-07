@@ -1,0 +1,43 @@
+{
+  "month": [
+    {
+      "id": "1",
+      "title": "Month Signs (Part 1)",
+      "subtitle": "Signs for months of the year",
+      "icon": "📅",
+      "bgColor": "#E6FFEB",
+      "category": "month",
+      "lessons": [
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/month/SignLanguageMonth.mp4", "correctAnswer": "Sign Language Month", "options": [ "Sign Language Month", "January", "February" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (January & February)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/month/January.mp4", "translation": "January", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/month/February.mp4", "translation": "February", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/month/January.mp4", "correctAnswer": "January", "options": [ "Sign Language Month", "January", "February" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/month/February.mp4", "correctAnswer": "February", "options": [ "Sign Language Month", "January", "February" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (March & April)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/month/March.mp4", "translation": "March", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/month/April.mp4", "translation": "April", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/month/March.mp4", "correctAnswer": "March", "options": [ "March", "April", "May" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/month/April.mp4", "correctAnswer": "April", "options": [ "March", "April", "May" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (May & June)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/month/May.mp4", "translation": "May", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/month/June.mp4", "translation": "June", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/month/May.mp4", "correctAnswer": "May", "options": [ "March", "April", "May" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/month/June.mp4", "correctAnswer": "June", "options": [ "June", "July", "August" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Month Signs (Part 2)",
+      "subtitle": "The rest of the months",
+      "icon": "🗓️",
+      "bgColor": "#E6FFEB",
+      "category": "month",
+      "lessons": [
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/month/July.mp4", "correctAnswer": "July", "options": [ "June", "July", "August" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (July & August)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/month/July.mp4", "translation": "July", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/month/August.mp4", "translation": "August", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/month/August.mp4", "correctAnswer": "August", "options": [ "June", "July", "August" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/month/September.mp4", "correctAnswer": "September", "options": [ "September", "October", "November" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (September & October)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/month/September.mp4", "translation": "September", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/month/October.mp4", "translation": "October", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/month/October.mp4", "correctAnswer": "October", "options": [ "September", "October", "November" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/month/November.mp4", "correctAnswer": "November", "options": [ "September", "October", "November" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (November & December)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/month/November.mp4", "translation": "November", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/month/December.mp4", "translation": "December", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/month/December.mp4", "correctAnswer": "December", "options": [ "November", "December", "January" ] } }
+      ]
+    }
+  ]
+}

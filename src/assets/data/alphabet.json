@@ -1,0 +1,84 @@
+{
+  "alphabet": [
+    {
+      "id": "1",
+      "title": "Alphabet A-D",
+      "subtitle": "Learn new signs",
+      "icon": "👋",
+      "bgColor": "#E6F0FF",
+      "category": "alphabet",
+      "lessons": [
+        { "type": "translation", "instructions": "Guess the correct translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4", "correctAnswer": "A", "options": [ "A", "B" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (A & B)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4", "translation": "A", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4", "translation": "B", "id": "2" } ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (A & C)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4", "translation": "A", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4", "translation": "C", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is being signed?", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4", "correctAnswer": "B", "options": [ "A", "B", "C" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (C & D)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4", "translation": "C", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4", "translation": "D", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Guess the correct translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4", "correctAnswer": "D", "options": [ "A", "B", "C", "D" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Alphabet E-K",
+      "subtitle": "Learn the rest of the signs",
+      "icon": "🔠",
+      "bgColor": "#E6F0FF",
+      "category": "alphabet",
+      "lessons": [
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4", "correctAnswer": "E", "options": [ "E", "F", "G" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (E & F)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4", "translation": "E", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4", "translation": "F", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4", "correctAnswer": "F", "options": [ "E", "F", "G" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (G & H)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4", "translation": "G", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4", "translation": "H", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4", "correctAnswer": "G", "options": [ "E", "F", "G" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4", "correctAnswer": "H", "options": [ "H", "I", "J" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (I & J)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4", "translation": "I", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4", "translation": "J", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4", "correctAnswer": "I", "options": [ "H", "I", "J" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4", "correctAnswer": "J", "options": [ "H", "I", "J" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (J & K)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4", "translation": "J", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4", "translation": "K", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4", "correctAnswer": "K", "options": [ "K", "L", "M" ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Alphabet L-R",
+      "subtitle": "Learn more signs",
+      "icon": "🔠",
+      "bgColor": "#E6F0FF",
+      "category": "alphabet",
+      "lessons": [
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4", "correctAnswer": "L", "options": [ "K", "L", "M" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (L & M)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4", "translation": "L", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4", "translation": "M", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4", "correctAnswer": "M", "options": [ "K", "L", "M" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (N & O)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4", "translation": "N", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4", "translation": "O", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4", "correctAnswer": "N", "options": [ "N", "O", "P" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4", "correctAnswer": "O", "options": [ "N", "O", "P" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (P & Q)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4", "translation": "P", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4", "translation": "Q", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4", "correctAnswer": "P", "options": [ "N", "O", "P" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4", "correctAnswer": "Q", "options": [ "Q", "R", "S" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Q & R)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4", "translation": "Q", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4", "translation": "R", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4", "correctAnswer": "R", "options": [ "Q", "R", "S" ] } }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Alphabet S-Z",
+      "subtitle": "Final alphabet signs",
+      "icon": "🔠",
+      "bgColor": "#E6F0FF",
+      "category": "alphabet",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4", "correctAnswer": "S", "options": [ "Q", "R", "S" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (S & T)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4", "translation": "S", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4", "translation": "T", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4", "correctAnswer": "T", "options": [ "T", "U", "V" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (U & V)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4", "translation": "U", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4", "translation": "V", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4", "correctAnswer": "U", "options": [ "T", "U", "V" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4", "correctAnswer": "V", "options": [ "T", "U", "V" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (W & X)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4", "translation": "W", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4", "translation": "X", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4", "correctAnswer": "W", "options": [ "W", "X", "Y" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4", "correctAnswer": "X", "options": [ "W", "X", "Y" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Y & Z)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4", "translation": "Y", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4", "translation": "Z", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4", "correctAnswer": "Y", "options": [ "W", "X", "Y", "Z" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4", "correctAnswer": "Z", "options": [ "W", "X", "Y", "Z" ] } }
+      ]
+    }
+  ]
+}

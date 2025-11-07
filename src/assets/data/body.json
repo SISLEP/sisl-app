@@ -1,0 +1,45 @@
+{
+  "body": [
+    {
+      "id": "1",
+      "title": "Body Signs (Part 1)",
+      "subtitle": "Signs for the body and head",
+      "icon": "👤",
+      "bgColor": "#FFECF3",
+      "category": "body",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/body/Body.mp4", "correctAnswer": "Body", "options": [ "Body", "Face", "Head" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Face & Head)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/body/Face.mp4", "translation": "Face", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/body/Head.mp4", "translation": "Head", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/body/Face.mp4", "correctAnswer": "Face", "options": [ "Body", "Face", "Head" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/body/Hair.mp4", "correctAnswer": "Hair", "options": [ "Hair", "Eyes", "Nose" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Hair & Eyes)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/body/Hair.mp4", "translation": "Hair", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/body/Eyes.mp4", "translation": "Eyes", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/body/Head.mp4", "correctAnswer": "Head", "options": [ "Body", "Face", "Head" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/body/Eyes.mp4", "correctAnswer": "Eyes", "options": [ "Hair", "Eyes", "Nose" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Mouth & Nose)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4", "translation": "Mouth", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/body/Nose.mp4", "translation": "Nose", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4", "correctAnswer": "Mouth", "options": [ "Mouth", "Teeth", "Tongue" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/body/Nose.mp4", "correctAnswer": "Nose", "options": [ "Hair", "Eyes", "Nose" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Body Signs (Part 2)",
+      "subtitle": "Signs for the lower body and limbs",
+      "icon": "💪",
+      "bgColor": "#FFECF3",
+      "category": "body",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/body/Teeth.mp4", "correctAnswer": "Teeth", "options": [ "Mouth", "Teeth", "Tongue" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Teeth & Tongue)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/body/Teeth.mp4", "translation": "Teeth", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/body/Tongue.mp4", "translation": "Tongue", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/body/Tongue.mp4", "correctAnswer": "Tongue", "options": [ "Mouth", "Teeth", "Tongue" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/body/Chin.mp4", "correctAnswer": "Chin", "options": [ "Chin", "Ear", "Neck" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Ear & Neck)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/body/Ear.mp4", "translation": "Ear", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/body/Neck.mp4", "translation": "Neck", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/body/Ear.mp4", "correctAnswer": "Ear", "options": [ "Chin", "Ear", "Neck" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Fingers & Feet)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/body/Fingers.mp4", "translation": "Fingers", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/body/Feet.mp4", "translation": "Feet", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/body/Armpit.mp4", "correctAnswer": "Armpit", "options": [ "Armpit", "Fingers", "Feet" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/body/Fingers.mp4", "correctAnswer": "Fingers", "options": [ "Armpit", "Fingers", "Feet" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/body/Feet.mp4", "correctAnswer": "Feet", "options": [ "Armpit", "Fingers", "Feet" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/body/Neck.mp4", "correctAnswer": "Neck", "options": [ "Chin", "Ear", "Neck" ] } }
+      ]
+    }
+  ]
+}

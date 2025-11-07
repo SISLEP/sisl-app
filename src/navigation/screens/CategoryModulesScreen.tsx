@@ -1,6 +1,7 @@
-import { useNavigation, useRoute } from '@react-navigation/native';
-import React from 'react';
+import { useNavigation, useRoute, useFocusEffect } from '@react-navigation/native';
+import React, { useState, useCallback } from 'react';
 import {
+  ActivityIndicator,
   Alert,
   SafeAreaView,
   ScrollView,
@@ -11,6 +12,8 @@ import {
   View,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+// Import the specific fetch function
+import { fetchModulesByCategory } from '../../api/fetch'; 
 
 // Assuming the module structure looks something like this:
 // type Lesson = { id: string; title: string; ... };
@@ -20,17 +23,55 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 const CategoryModulesScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  // Destructure params passed from Home.tsx
-  // We don't use moduleIdList, so it is removed for cleanliness.
-  const { categoryTitle, learningModules, userProgress } = route.params;
+  // We now receive categoryId and userProgress directly, not learningModules
+  const { categoryId, categoryTitle, userProgress } = route.params; 
 
-  if (!learningModules || learningModules.length === 0) {
-    return (
-      <View style={styles.emptyContainer}>
-        <Text style={styles.emptyText}>No modules found for this category.</Text>
-      </View>
-    );
-  }
+  const [learningModules, setLearningModules] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // --- NEW: Fetch logic uses useFocusEffect ---
+  useFocusEffect(
+    useCallback(() => {
+      let isActive = true;
+
+      const loadModules = async () => {
+        setIsLoading(true);
+        if (!categoryId) {
+            console.error("Missing categoryId for fetching modules.");
+            setIsLoading(false);
+            return;
+        }
+
+        try {
+          const modules = await fetchModulesByCategory(categoryId);
+          if (isActive) {
+            setLearningModules(modules);
+          }
+          if (modules.length === 0) {
+            Alert.alert('No Modules', `No learning modules found for the '${categoryTitle}' category yet.`);
+          }
+        } catch (error) {
+          console.error(`Failed to load modules for category ${categoryId}:`, error);
+          Alert.alert('Error', 'Failed to load modules. Please check your network connection.');
+          if (isActive) {
+            setLearningModules([]);
+          }
+        } finally {
+          if (isActive) {
+            setIsLoading(false);
+          }
+        }
+      };
+
+      loadModules();
+
+      return () => {
+        isActive = false; // Cleanup function to prevent setting state on unmounted component
+      };
+    }, [categoryId, categoryTitle])
+  );
+  // --- END NEW Fetch logic ---
+
 
   // Helper function to create a unique composite key: category-id (e.g., "alphabet-1")
   const getUniqueModuleKey = (module) => `${module.category}-${module.id}`;
@@ -116,9 +157,20 @@ const CategoryModulesScreen = () => {
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <Text style={styles.categoryTitle}>{categoryTitle}</Text>
-        <View style={styles.modulesSection}>
-          {learningModules.map(renderLearningModule)}
-        </View>
+        
+        {isLoading ? (
+          <ActivityIndicator size="large" color="#FF9500" style={styles.loadingIndicator} />
+        ) : (
+          learningModules.length > 0 ? (
+            <View style={styles.modulesSection}>
+              {learningModules.map(renderLearningModule)}
+            </View>
+          ) : (
+            <View style={styles.emptyContainer}>
+                <Text style={styles.emptyText}>No modules found for this category.</Text>
+            </View>
+          )
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -140,10 +192,14 @@ const styles = StyleSheet.create({
     color: '#000',
     marginBottom: 20,
   },
+  loadingIndicator: { // Added style for the loading indicator
+    marginVertical: 40,
+  },
   emptyContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    height: 300, // Give it some height for visibility
   },
   emptyText: {
     fontSize: 18,

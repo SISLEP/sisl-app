@@ -1,0 +1,41 @@
+{
+  "province": [
+    {
+      "id": "1",
+      "title": "Province Signs (Part 1)",
+      "subtitle": "Signs for locations",
+      "icon": "🗺️",
+      "bgColor": "#FFF9E6",
+      "category": "province",
+      "lessons": [
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/province/Central.mp4", "correctAnswer": "Central", "options": [ "Central", "Choiseul", "Guadalcanal" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Central & Choiseul)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Central.mp4", "translation": "Central", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Choiseul.mp4", "translation": "Choiseul", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/province/Choiseul.mp4", "correctAnswer": "Choiseul", "options": [ "Central", "Choiseul", "Guadalcanal" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/province/Guadalcanal.mp4", "correctAnswer": "Guadalcanal", "options": [ "Central", "Choiseul", "Guadalcanal" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Guadalcanal & Isabel)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Guadalcanal.mp4", "translation": "Guadalcanal", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Isabel.mp4", "translation": "Isabel", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/province/Isabel.mp4", "correctAnswer": "Isabel", "options": [ "Isabel", "Makira", "Malaita" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/province/Makira.mp4", "correctAnswer": "Makira", "options": [ "Isabel", "Makira", "Malaita" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Makira & Malaita)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Makira.mp4", "translation": "Makira", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Malaita.mp4", "translation": "Malaita", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/province/Malaita.mp4", "correctAnswer": "Malaita", "options": [ "Isabel", "Makira", "Malaita" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/province/Rennell&Bellona.mp4", "correctAnswer": "Rennell & Bellona", "options": [ "Rennell & Bellona", "Solomon", "Temotu" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Province Signs (Part 2)",
+      "subtitle": "The rest of the provinces",
+      "icon": "📍",
+      "bgColor": "#FFF9E6",
+      "category": "province",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/province/SignLanguageProvince.mp4", "correctAnswer": "Sign Language Province", "options": [ "Sign Language Province", "Solomon", "Temotu" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Solomon & Temotu)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4", "translation": "Solomon", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4", "translation": "Temotu", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4", "correctAnswer": "Solomon", "options": [ "Sign Language Province", "Solomon", "Temotu" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4", "correctAnswer": "Temotu", "options": [ "Rennell & Bellona", "Solomon", "Temotu" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Temotu & Western)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4", "translation": "Temotu", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Western.mp4", "translation": "Western", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/province/Western.mp4", "correctAnswer": "Western", "options": [ "Western", "Central", "Malaita" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Guadalcanal & Western)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Guadalcanal.mp4", "translation": "Guadalcanal", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Western.mp4", "translation": "Western", "id": "2" } ] } }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "family": [
+    {
+      "id": "1",
+      "title": "Family Signs (Part 1)",
+      "subtitle": "Signs for relatives",
+      "icon": "👨‍👩‍👧‍👦",
+      "bgColor": "#FFF4E6",
+      "category": "family",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/Aunt.mp4", "correctAnswer": "Aunt", "options": [ "Aunt", "Baby", "Boy" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Aunt & Baby)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Aunt.mp4", "translation": "Aunt", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Baby.mp4", "translation": "Baby", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Baby.mp4", "correctAnswer": "Baby", "options": [ "Aunt", "Baby", "Boy" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/Boy.mp4", "correctAnswer": "Boy", "options": [ "Aunt", "Baby", "Boy" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Boyfriend & Brother)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4", "translation": "Boyfriend", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Brother.mp4", "translation": "Brother", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4", "correctAnswer": "Boyfriend", "options": [ "Boyfriend", "Brother", "Cousin" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/Brother.mp4", "correctAnswer": "Brother", "options": [ "Boyfriend", "Brother", "Cousin" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Cousin & Dad)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Cousin.mp4", "translation": "Cousin", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Dad.mp4", "translation": "Dad", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Cousin.mp4", "correctAnswer": "Cousin", "options": [ "Boyfriend", "Brother", "Cousin" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/Dad.mp4", "correctAnswer": "Dad", "options": [ "Dad", "Daughter", "Divorce" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Family Signs (Part 2)",
+      "subtitle": "More relationship signs",
+      "icon": "💖",
+      "bgColor": "#FFF4E6",
+      "category": "family",
+      "lessons": [
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/family/Daughter.mp4", "correctAnswer": "Daughter", "options": [ "Dad", "Daughter", "Divorce" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Daughter & Divorce)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Daughter.mp4", "translation": "Daughter", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Divorce.mp4", "translation": "Divorce", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/Divorce.mp4", "correctAnswer": "Divorce", "options": [ "Dad", "Daughter", "Divorce" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Engagement.mp4", "correctAnswer": "Engagement", "options": [ "Engagement", "Father", "Friend" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Father & Friend)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Father.mp4", "translation": "Father", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Friend.mp4", "translation": "Friend", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/Father.mp4", "correctAnswer": "Father", "options": [ "Engagement", "Father", "Friend" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/family/Friend.mp4", "correctAnswer": "Friend", "options": [ "Engagement", "Father", "Friend" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Girl & Girlfriend)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Girl.mp4", "translation": "Girl", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4", "translation": "Girlfriend", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/Girl.mp4", "correctAnswer": "Girl", "options": [ "Girl", "Girlfriend", "Granddaughter" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4", "correctAnswer": "Girlfriend", "options": [ "Girl", "Girlfriend", "Granddaughter" ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Family Signs (Part 3)",
+      "subtitle": "Signs for grandparents and more",
+      "icon": "👵👴",
+      "bgColor": "#FFF4E6",
+      "category": "family",
+      "lessons": [
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/Granddaughter.mp4", "correctAnswer": "Granddaughter", "options": [ "Girl", "Girlfriend", "Granddaughter" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Grandfather & Grandmother)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Grandfather.mp4", "translation": "Grandfather", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Grandmother.mp4", "translation": "Grandmother", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/family/Grandfather.mp4", "correctAnswer": "Grandfather", "options": [ "Grandfather", "Grandmother", "Grandson" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/Grandmother.mp4", "correctAnswer": "Grandmother", "options": [ "Grandfather", "Grandmother", "Grandson" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Grandson & HusbandandWife)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Grandson.mp4", "translation": "Grandson", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/HusbandandWife.mp4", "translation": "HusbandandWife", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Grandson.mpwer", "correctAnswer": "Grandson", "options": [ "Grandfather", "Grandmother", "Grandson" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/HusbandandWife.mp4", "correctAnswer": "HusbandandWife", "options": [ "HusbandandWife", "Man", "Marry" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Man & Marry)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Man.mp4", "translation": "Man", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Marry.mp4", "translation": "Marry", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/family/Man.mp4", "correctAnswer": "Man", "options": [ "HusbandandWife", "Man", "Marry" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/Marry.mp4", "correctAnswer": "Marry", "options": [ "HusbandandWife", "Man", "Marry" ] } }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Family Signs (Part 4)",
+      "subtitle": "Final family signs",
+      "icon": "🏠",
+      "bgColor": "#FFF4E6",
+      "category": "family",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Mother.mp4", "correctAnswer": "Mother", "options": [ "Mother", "Mummy", "Old" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Mother & Mummy)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Mother.mp4", "translation": "Mother", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Mummy.mp4", "translation": "Mummy", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/Mummy.mp4", "correctAnswer": "Mummy", "options": [ "Mother", "Mummy", "Old" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/family/Old.mp4", "correctAnswer": "Old", "options": [ "Mother", "Mummy", "Old" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Sister & Son)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Sister.mp4", "translation": "Sister", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Son.mp4", "translation": "Son", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/SignLanguageFamily.mp4", "correctAnswer": "Sign Language Family", "options": [ "Sign Language Family", "Sister", "Son" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Sister.mp4", "correctAnswer": "Sister", "options": [ "Sign Language Family", "Sister", "Son" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/Son.mp4", "correctAnswer": "Son", "options": [ "Sign Language Family", "Sister", "Son" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Wedding & Wife)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4", "translation": "Wedding", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4", "translation": "Wife", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/family/Uncle.mp4", "correctAnswer": "Uncle", "options": [ "Uncle", "Wedding", "Wife" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4", "correctAnswer": "Wedding", "options": [ "Uncle", "Wedding", "Wife" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4", "correctAnswer": "Wife", "options": [ "Uncle", "Wedding", "Wife" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/family/Woman.mp4", "correctAnswer": "Woman", "options": [ "Woman", "Man", "Girl" ] } }
+      ]
+    }
+  ]
+}

@@ -13,7 +13,9 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchCategories, fetchAllModules } from '../../api/fetch';
+// Import only fetchCategories for initial load
+// NOTE: fetchAllModules is still used for the 'Continue' button logic.
+import { fetchCategories, fetchAllModules } from '../../api/fetch'; 
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
@@ -25,7 +27,8 @@ const PROGRESS_STORAGE_KEY = 'userProgress';
 const Home = () => {
   const navigation = useNavigation();
   const [categories, setCategories] = useState([]); // Used for category display list
-  const [allModules, setAllModules] = useState([]); // Used for 'Continue' logic and filtering
+  // Retain allModules state, as it's needed by handleContinue and getCategoryCompletionStatus
+  const [allModules, setAllModules] = useState([]); 
   const [isLoading, setIsLoading] = useState(true);
   const [userProgress, setUserProgress] = useState({});
 
@@ -54,7 +57,7 @@ const Home = () => {
           const fetchedCategories = await fetchCategories();
           setCategories(fetchedCategories);
 
-          // 2. Fetch ALL modules (for 'Continue' logic and filtering on category press)
+          // 2. Fetch ALL modules (kept for 'Continue' logic and progress calculation)
           const modules = await fetchAllModules();
           setAllModules(modules);
 
@@ -96,27 +99,21 @@ const Home = () => {
     Alert.alert("No New Modules", "It looks like you've finished all available modules. Great work! Select a category below to retake modules.");
   };
 
+  // --- MODIFIED handleCategoryPress ---
   const handleCategoryPress = (categoryId, categoryTitle) => {
     if (isLoading) return;
 
-    // Filter the global 'allModules' list for the selected category
-    const modulesInCategory = allModules.filter(mod => mod.category === categoryId);
-
-    if (modulesInCategory.length === 0) {
-      Alert.alert('No Modules', `No learning modules found for the '${categoryTitle}' category yet.`);
-      return;
-    }
-
-    // Navigate to the new screen, passing the filtered modules and current user progress
+    // Navigate immediately, passing only the category ID and title.
+    // The CategoryModulesScreen will handle fetching the module list.
     navigation.navigate('CategoryModulesScreen', {
+      categoryId: categoryId, // <-- New parameter to trigger fetch
       categoryTitle: categoryTitle,
-      // Pass the filtered modules and user progress for the child screen to render
-      learningModules: modulesInCategory, 
       userProgress: userProgress,
     });
   };
+  // --- END MODIFIED handleCategoryPress ---
 
-  // Helper function to get completion status
+  // Helper function to get completion status (still relies on allModules)
   const getCategoryCompletionStatus = (categoryId) => {
     // Filter modules belonging to this category from the global list
     const categoryModules = allModules.filter(mod => mod.category === categoryId);

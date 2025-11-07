@@ -4,15 +4,39 @@
 
 // Import the local JSON data to use as fallbacks.
 // IMPORTANT: Update imports to use the new categorized file structure
-import categorizedModulesData from '../assets/data/categorizedModules.json'; // New module data
+import alphabetModulesData from '../assets/data/alphabet.json';
+import bodyModulesData from '../assets/data/body.json';
+import familyModulesData from '../assets/data/family.json';
+import monthModulesData from '../assets/data/month.json';
+import colourModulesData from '../assets/data/colour.json';
+import provinceModulesData from '../assets/data/province.json';
+import animalModulesData from '../assets/data/animal.json';
+import sportModulesData from '../assets/data/sport.json';
+import generalModulesData from '../assets/data/general.json';
+
 import categoriesData from '../assets/data/categories.json'; // New category list data
 // Assuming the user has a local dictionary JSON file at this path:
 import localDictionaryData from '../assets/data/dictionary.json'; 
 
 // Placeholder URLs for the hosted JSON files.
 const CATEGORIES_DATA_URL = 'https://sislep.github.io/video-site/categories.json'; // New URL
-const MODULES_DATA_URL = 'https://sislep.github.io/video-site/categorizedModules.json'; // Updated URL
+// Base URL for the new modular module structure
+const MODULES_BASE_URL = 'https://sislep.github.io/video-site/'; 
 const DICTIONARY_DATA_URL = 'https://sislep.github.io/video-site/dictionary.json';
+
+// Map category IDs to their local module data imports
+const localModuleDataMap: { [key: string]: { [key: string]: LearningModule[] } } = {
+    alphabet: alphabetModulesData,
+    body: bodyModulesData,
+    family: familyModulesData,
+    month: monthModulesData,
+    colour: colourModulesData,
+    province: provinceModulesData,
+    animal: animalModulesData,
+    sport: sportModulesData,
+    general: generalModulesData,
+    // Add other categories as needed
+};
 
 // --- Interfaces for Data Structures ---
 
@@ -27,14 +51,6 @@ interface LearningModule {
   bgColor: string;
   category: string; // Added category property
   lessons: any[]; // Assuming lessons exist based on Home.tsx usage
-}
-
-/**
- * Interface for the categorized modules data structure.
- * Keys are category IDs, values are arrays of modules.
- */
-interface CategorizedModulesResponse {
-  [categoryId: string]: LearningModule[];
 }
 
 /**
@@ -53,6 +69,13 @@ export interface CategoryItem {
  */
 interface CategoriesResponse {
   categories: CategoryItem[];
+}
+
+/**
+ * Interface for the response structure of a single category's modules.
+ */
+interface CategoryModulesResponse {
+    [categoryId: string]: LearningModule[];
 }
 
 /**
@@ -126,28 +149,53 @@ const fetchCategories = async (): Promise<CategoryItem[]> => {
 };
 
 /**
- * Fetches ALL learning modules, grouped by category ID.
- * The network request expects the shape of CategorizedModulesResponse.
+ * Fetches all learning modules for a specific category.
  *
- * @returns {Promise<CategorizedModulesResponse>} A promise that resolves with an object of learning modules grouped by category.
+ * @param {string} categoryId The ID of the category (e.g., 'alphabet', 'body').
+ * @returns {Promise<LearningModule[]>} A promise that resolves with an array of modules for that category.
  */
-const fetchCategorizedModules = async (): Promise<CategorizedModulesResponse> => {
-  return fetchData<CategorizedModulesResponse>(
-    MODULES_DATA_URL,
-    categorizedModulesData as CategorizedModulesResponse, // Type cast local data to match expected response structure
-    'categorized learning modules'
-  );
+const fetchModulesByCategory = async (categoryId: string): Promise<LearningModule[]> => {
+    // Construct the specific URL for the category's JSON file
+    const url = `${MODULES_BASE_URL}${categoryId}.json`;
+    // Get the corresponding local fallback data
+    const localData = localModuleDataMap[categoryId];
+
+    if (!localData) {
+        console.warn(`No local data found for category: ${categoryId}`);
+        return [];
+    }
+
+    const response = await fetchData<CategoryModulesResponse>(
+        url,
+        localData as CategoryModulesResponse,
+        `${categoryId} modules`
+    );
+
+    // The response is an object with one key (the categoryId) pointing to the array of modules
+    return response[categoryId] || [];
 };
 
 /**
- * Fetches ALL learning modules, flattened into a single array (for legacy use like 'Continue' button).
- * * @returns {Promise<LearningModule[]>} A promise that resolves with a flattened array of all learning modules.
+ * Fetches ALL learning modules, flattened into a single array.
+ * This function is used for logic that needs all modules, like the 'Continue' button logic.
+ *
+ * @returns {Promise<LearningModule[]>} A promise that resolves with a flattened array of all learning modules.
  */
 const fetchAllModules = async (): Promise<LearningModule[]> => {
-    const categorizedModules = await fetchCategorizedModules();
-    // Flatten the object of arrays into a single array of LearningModule objects
-    return Object.values(categorizedModules).flat();
-}
+    // 1. Get the list of all category IDs
+    const categories = await fetchCategories();
+    const categoryIds = categories.map(c => c.id);
+
+    // 2. Fetch modules for all categories concurrently
+    const modulePromises = categoryIds.map(id => fetchModulesByCategory(id));
+    const modulesArrays = await Promise.all(modulePromises);
+
+    // 3. Flatten the array of arrays into a single array
+    const allModules = modulesArrays.flat();
+    
+    console.log(`Total learning modules fetched and flattened: ${allModules.length}`);
+    return allModules;
+};
 
 /**
  * Fetches dictionary data, using local data as a fallback.
@@ -180,4 +228,12 @@ const fetchAllWords = async (): Promise<DictionaryWord[]> => {
 };
 
 // Export the updated functions
-export { fetchCategories, fetchCategorizedModules, fetchAllModules, fetchDictionaryData, fetchAllWords };
+export { 
+    fetchCategories, 
+    fetchModulesByCategory, // Export the new function
+    fetchAllModules, 
+    fetchDictionaryData, 
+    fetchAllWords 
+};
+
+// Removed fetchCategorizedModules as it is no longer required with the new structure

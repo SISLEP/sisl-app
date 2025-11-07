@@ -13,23 +13,18 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-// We only import fetchCategories (and implicitly don't import fetchAllModules)
 import { fetchCategories } from '../../api/fetch'; 
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
 
-// Define types for clarity (CategoryItem now includes moduleCount)
-// interface CategoryItem { id: string; title: string; icon: string; bgColor: string; moduleCount: number; }
-
 const Home = () => {
   const navigation = useNavigation();
   const [categories, setCategories] = useState([]); 
-  // allModules state remains removed
   const [isLoading, setIsLoading] = useState(true);
   const [userProgress, setUserProgress] = useState({});
 
-  // Helper function to load progress from AsyncStorage (no change needed here)
+  // Helper function to load progress from AsyncStorage
   const loadProgress = async () => {
     try {
       const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
@@ -41,13 +36,13 @@ const Home = () => {
     }
   };
 
-  // Use useFocusEffect to reload categories and progress whenever the screen is focused
+  // Use useFocusEffect to reload categories and progress
   useFocusEffect(
     useCallback(() => {
       const loadData = async () => {
         setIsLoading(true);
         try {
-          // 1. Fetch categories list (The ONLY network fetch now)
+          // 1. Fetch categories list
           const fetchedCategories = await fetchCategories();
           setCategories(fetchedCategories);
 
@@ -65,22 +60,45 @@ const Home = () => {
     }, [])
   );
 
-  // --- REVISED handleContinue (Simplification for no allModules) ---
+  // Finds next incomplete Category
   const handleContinue = () => {
-    // Since we lack total lesson count/next module pointer, we prompt the user to continue 
-    // in the first category that has *started* progress or the very first category.
-    Alert.alert(
-      "Continue Learning", 
-      "To find your next lesson, please select a category below. The category screen will check your progress and prompt you to continue.",
-      [{ text: 'OK' }]
-    );
+    if (isLoading || categories.length === 0) return;
+
+    // Helper to check if a category is fully completed based on moduleCount and userProgress keys
+    const isCategoryComplete = (category) => {
+      const totalModules = category.moduleCount || 0;
+      if (totalModules === 0) return true; // Treat empty categories as complete
+
+      // Count how many modules in this category have *any* progress recorded.
+      const modulesWithProgress = Object.keys(userProgress).filter(key => 
+        key.startsWith(category.id + '-')
+      ).length;
+
+      // This is still an assumption: a module is only counted as complete if it has
+      // a progress entry. We assume that if every module has an entry, the category is "done" 
+      // for the purpose of finding the next one.
+      return modulesWithProgress >= totalModules;
+    };
+
+    // Find the first category that is NOT complete
+    const nextCategory = categories.find(category => !isCategoryComplete(category));
+
+    if (nextCategory) {
+      // Navigate to the found category. CategoryModulesScreen will load the modules 
+      // and determine the exact next lesson index based on userProgress.
+      navigation.navigate('CategoryModulesScreen', {
+        categoryId: nextCategory.id, 
+        categoryTitle: nextCategory.title,
+        userProgress: userProgress,
+      });
+    } else {
+      Alert.alert("All Modules Complete!", "You've finished all available lessons. Great work! Select a category to retake modules.");
+    }
   };
-  // --- END REVISED handleContinue ---
 
   const handleCategoryPress = (categoryId, categoryTitle) => {
     if (isLoading) return;
 
-    // Navigate immediately, passing the minimum required data.
     navigation.navigate('CategoryModulesScreen', {
       categoryId: categoryId, 
       categoryTitle: categoryTitle,
@@ -88,60 +106,26 @@ const Home = () => {
     });
   };
 
-  // --- REVISED getCategoryCompletionStatus (Using moduleCount and Progress Keys) ---
   const getCategoryCompletionStatus = (category) => {
     const totalCount = category.moduleCount || 0; // Use moduleCount from fetched data
-    let completedCount = 0;
-
-    // Iterate through all modules defined in userProgress
-    Object.keys(userProgress).forEach(key => {
-      // Check if the progress key belongs to the current category (e.g., 'alphabet-1')
-      if (key.startsWith(category.id + '-')) {
-        const progress = userProgress[key];
-        
-        // This is a major assumption due to not fetching modules: 
-        // We MUST assume a module is completed if lessonsCompleted > 0
-        // OR if the value explicitly tracks full completion status (which it doesn't here).
-        // Since we don't know the module's lesson count, we can only count modules that have 
-        // *some* progress, or rely on a property we don't have.
-        
-        // The most conservative count is to simply count how many module keys exist in progress
-        // and assume that if a key exists, the module may be considered started/completed.
-
-        // A better temporary solution: We count how many modules have keys in userProgress
-        // and assume that number is the 'completed' count for the home screen for now.
-        // This is highly inaccurate without lesson data, but it's the best we can do.
-
-        // For this scenario, we must assume that modules are completed when the screen is focused.
-        // Since the progress value structure is incomplete for this calculation,
-        // we revert to simply counting keys as "modules with progress".
-        
-        // We will only count it as completed if the value is explicitly marked as completed, 
-        // which requires a change on the LessonScreen logic (not shown here). 
-        // Since we can't change that, we revert to showing TOTAL modules only.
-
-        // Reverting to showing just the total available count:
-        // *We cannot reliably calculate completion percentage or completed count here.*
-      }
-    });
     
-    // For the UI to render, we'll try to count how many keys start with the category ID.
-    const modulesWithProgress = Object.keys(userProgress).filter(key => key.startsWith(category.id + '-')).length;
+    // Count how many modules in this category have progress recorded.
+    const completedCount = Object.keys(userProgress).filter(key => 
+      key.startsWith(category.id + '-')
+    ).length;
 
-    // IMPORTANT: This calculation is a guess and ONLY works if every module has a progress key.
-    // If the category has a moduleCount, we can assume that if all those module keys are present, it's done.
+    // Calculate percentage based on modules completed vs. total modules in category
+    const percentage = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
     
-    // For now, let's just display total modules and an empty progress bar.
     return { 
         total: totalCount, 
-        completed: modulesWithProgress, 
-        // The percentage is based on modulesWithProgress / totalCount
-        percentage: totalCount > 0 ? Math.round((modulesWithProgress / totalCount) * 100) : 0
+        completed: completedCount, 
+        percentage: percentage
     };
   };
   // --- END REVISED getCategoryCompletionStatus ---
 
-  // Render a category card 
+  // Render a category card
   const renderCategoryCard = (category) => {
     const { total, completed, percentage } = getCategoryCompletionStatus(category);
 
@@ -155,7 +139,6 @@ const Home = () => {
           <AnimatedCircularProgress
             size={80}
             width={5}
-            // Use the derived (but assumed) percentage
             fill={percentage} 
             tintColor={"#FF9500"} 
             backgroundColor="#E0E0E0" 
@@ -168,7 +151,6 @@ const Home = () => {
           </AnimatedCircularProgress>
         </View>
         <Text style={styles.categoryTitleText}>{category.title}</Text>
-        {/* Use the calculated progress for display, knowing it's based on assumptions */}
         <Text style={styles.categoryCompletionText}>{`${completed}/${total} Modules`}</Text>
       </TouchableOpacity>
     );

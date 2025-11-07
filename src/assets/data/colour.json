@@ -1,0 +1,44 @@
+{
+  "colour": [
+    {
+      "id": "1",
+      "title": "Colour Signs (Part 1)",
+      "subtitle": "Basic colour signs",
+      "icon": "🌈",
+      "bgColor": "#E9F5FF",
+      "category": "colour",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Black.mp4", "correctAnswer": "Black", "options": [ "Black", "Blue", "Brown" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Black & Blue)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/colour/Black.mp4", "translation": "Black", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/colour/Blue.mp4", "translation": "Blue", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Blue.mp4", "correctAnswer": "Blue", "options": [ "Black", "Blue", "Brown" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Brown.mp4", "correctAnswer": "Brown", "options": [ "Black", "Blue", "Brown" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Gold & Gray)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/colour/Gold.mp4", "translation": "Gold", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/colour/Gray.mp4", "translation": "Gray", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Gold.mp4", "correctAnswer": "Gold", "options": [ "Gold", "Gray", "Green" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Gray.mp4", "correctAnswer": "Gray", "options": [ "Gold", "Gray", "Green" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Green & Orange)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/colour/Green.mp4", "translation": "Green", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/colour/Orange.mp4", "translation": "Orange", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Green.mp4", "correctAnswer": "Green", "options": [ "Gold", "Gray", "Green" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Orange.mp4", "correctAnswer": "Orange", "options": [ "Orange", "Pink", "Purple" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Colour Signs (Part 2)",
+      "subtitle": "More colour signs",
+      "icon": "🎨",
+      "bgColor": "#E9F5FF",
+      "category": "colour",
+      "lessons": [
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Pink.mp4", "correctAnswer": "Pink", "options": [ "Orange", "Pink", "Purple" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Pink & Purple)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/colour/Pink.mp4", "translation": "Pink", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/colour/Purple.mp4", "translation": "Purple", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Purple.mp4", "correctAnswer": "Purple", "options": [ "Orange", "Pink", "Purple" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Red.mp4", "correctAnswer": "Red", "options": [ "Red", "Silver", "White" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Red & Silver)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/colour/Red.mp4", "translation": "Red", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/colour/Silver.mp4", "translation": "Silver", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/colour/SignLanguageColour.mp4", "correctAnswer": "SignLanguageColour", "options": [ "SignLanguageColour", "Silver", "White" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Silver.mp4", "correctAnswer": "Silver", "options": [ "SignLanguageColour", "Silver", "White" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (White & Yellow)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/colour/White.mp4", "translation": "White", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/colour/Yellow.mp4", "translation": "Yellow", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/colour/White.mp4", "correctAnswer": "White", "options": [ "SignLanguageColour", "Silver", "White" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/colour/Yellow.mp4", "correctAnswer": "Yellow", "options": [ "White", "Yellow", "Blue" ] } }
+      ]
+    }
+  ]
+}

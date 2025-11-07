@@ -1,0 +1,65 @@
+{
+  "sport": [
+    {
+      "id": "1",
+      "title": "Sport Signs (Part 1)",
+      "subtitle": "Signs for competitive activities",
+      "icon": "⚽",
+      "bgColor": "#FFE6E6",
+      "category": "sport",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Archery.mp4", "correctAnswer": "Archery", "options": [ "Archery", "Basketball", "Boxing" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Archery & Basketball)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Archery.mp4", "translation": "Archery", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Basketball.mp4", "translation": "Basketball", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Basketball.mp4", "correctAnswer": "Basketball", "options": [ "Archery", "Basketball", "Boxing" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Boxing.mp4", "correctAnswer": "Boxing", "options": [ "Archery", "Basketball", "Boxing" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Boxing & Canoeing)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Boxing.mp4", "translation": "Boxing", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Canoeing.mp4", "translation": "Canoeing", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Canoeing.mp4", "correctAnswer": "Canoeing", "options": [ "Canoeing", "Cycle", "Dart" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Cycling.mp4", "correctAnswer": "Cycle", "options": [ "Canoeing", "Cycle", "Dart" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Cycle & Dart)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Cycling.mp4", "translation": "Cycle", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Dart.mp4", "translation": "Dart", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Dart.mp4", "correctAnswer": "Dart", "options": [ "Canoeing", "Cycle", "Dart" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Futsal.mp4", "correctAnswer": "Futsal", "options": [ "Futsal", "Golf", "Hockey" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Sport Signs (Part 2)",
+      "subtitle": "More sport signs",
+      "icon": "🏅",
+      "bgColor": "#FFE6E6",
+      "category": "sport",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Golf.mp4", "correctAnswer": "Golf", "options": [ "Futsal", "Golf", "Hockey" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Golf & Hockey)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Golf.mp4", "translation": "Golf", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Hockey.mp4", "translation": "Hockey", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Hockey.mp4", "correctAnswer": "Hockey", "options": [ "Futsal", "Golf", "Hockey" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Karate.mp4", "correctAnswer": "Karate", "options": [ "Karate", "Netball", "Rugby" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Karate & Netball)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Karate.mp4", "translation": "Karate", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Netball.mp4", "translation": "Netball", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Netball.mp4", "correctAnswer": "Netball", "options": [ "Karate", "Netball", "Rugby" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Rugby.mp4", "correctAnswer": "Rugby", "options": [ "Karate", "Netball", "Rugby" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Rugby & Running)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Rugby.mp4", "translation": "Rugby", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Running.mp4", "translation": "Running", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Rugby7.mp4", "correctAnswer": "Rugby7", "options": [ "Rugby7", "Running", "Soccer" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Running.mp4", "correctAnswer": "Running", "options": [ "Rugby7", "Running", "Soccer" ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Sport Signs (Part 3)",
+      "subtitle": "Final sport signs",
+      "icon": "🏊",
+      "bgColor": "#FFE6E6",
+      "category": "sport",
+      "lessons": [
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Soccer.mp4", "correctAnswer": "Soccer", "options": [ "Rugby7", "Running", "Soccer" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Soccer & Sports)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Soccer.mp4", "translation": "Soccer", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Sports.mp4", "translation": "Sports", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Sports.mp4", "correctAnswer": "Sports", "options": [ "Sports", "Surfing", "Swimming" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Surfing.mp4", "correctAnswer": "Surfing", "options": [ "Sports", "Surfing", "Swimming" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Surfing & Swimming)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/Surfing.mp4", "translation": "Surfing", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Swimming.mp4", "translation": "Swimming", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Swimming.mp4", "correctAnswer": "Swimming", "options": [ "Sports", "Surfing", "Swimming" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/sport/TableTennis.mp4", "correctAnswer": "TableTennis", "options": [ "TableTennis", "Tennis", "Volleyball" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Table Tennis & Tennis)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/sport/TableTennis.mp4", "translation": "TableTennis", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4", "translation": "Tennis", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4", "correctAnswer": "Tennis", "options": [ "TableTennis", "Tennis", "Volleyball" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/sport/Volleyball.mp4", "correctAnswer": "Volleyball", "options": [ "TableTennis", "Tennis", "Volleyball" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/sport/WeightLifting.mp4", "correctAnswer": "WeightLifting", "options": [ "WeightLifting", "Running", "Boxing" ] } }
+      ]
+    }
+  ]
+}

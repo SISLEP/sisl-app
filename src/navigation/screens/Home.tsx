@@ -13,17 +13,18 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchLearningModules } from '../../api/fetch';
+import { fetchCategories } from '../../api/fetch'; 
+import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
 
 const Home = () => {
   const navigation = useNavigation();
-  const [learningModules, setLearningModules] = useState([]);
+  const [categories, setCategories] = useState([]); 
   const [isLoading, setIsLoading] = useState(true);
   const [userProgress, setUserProgress] = useState({});
 
-  // Function to load progress from AsyncStorage
+  // Helper function to load progress from AsyncStorage
   const loadProgress = async () => {
     try {
       const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
@@ -35,17 +36,21 @@ const Home = () => {
     }
   };
 
-  // Use useFocusEffect to reload modules and progress whenever the screen is focused
+  // Use useFocusEffect to reload categories and progress
   useFocusEffect(
     useCallback(() => {
       const loadData = async () => {
         setIsLoading(true);
         try {
-          const modules = await fetchLearningModules();
-          setLearningModules(modules);
+          // 1. Fetch categories list
+          const fetchedCategories = await fetchCategories();
+          setCategories(fetchedCategories);
+
+          // 2. Load user progress
           await loadProgress();
         } catch (error) {
-          Alert.alert('Error', 'Failed to load learning modules or progress. Please check your network connection.');
+          Alert.alert('Error', 'Failed to load data. Please check your network connection.');
+          console.error(error);
         } finally {
           setIsLoading(false);
         }
@@ -55,106 +60,101 @@ const Home = () => {
     }, [])
   );
 
+  // Finds next incomplete Category
   const handleContinue = () => {
-    // Find the first module that is not yet completed
-    const uncompletedModule = learningModules.find(mod => {
-      const progress = userProgress[mod.id];
-      // A module is considered uncompleted if:
-      // 1. There is no progress recorded, OR
-      // 2. The number of completed lessons is less than the total number of lessons
-      return !progress || progress.lessonsCompleted < mod.lessons.length;
-    });
+    if (isLoading || categories.length === 0) return;
 
-    if (uncompletedModule) {
-      const completedLessonsCount = userProgress[uncompletedModule.id]?.lessonsCompleted || 0;
-      
-      // The starting lesson index will be the next lesson after the last completed one.
-      const nextLessonIndex = completedLessonsCount;
+    // Helper to check if a category is fully completed based on moduleCount and userProgress keys
+    const isCategoryComplete = (category) => {
+      const totalModules = category.moduleCount || 0;
+      if (totalModules === 0) return true; // Treat empty categories as complete
 
-      navigation.navigate('LessonScreen', {
-        lessons: uncompletedModule.lessons,
-        initialLessonIndex: nextLessonIndex,
-        moduleId: uncompletedModule.id
+      // Count how many modules in this category have *any* progress recorded.
+      const modulesWithProgress = Object.keys(userProgress).filter(key => 
+        key.startsWith(category.id + '-')
+      ).length;
+
+      // This is still an assumption: a module is only counted as complete if it has
+      // a progress entry. We assume that if every module has an entry, the category is "done" 
+      // for the purpose of finding the next one.
+      return modulesWithProgress >= totalModules;
+    };
+
+    // Find the first category that is NOT complete
+    const nextCategory = categories.find(category => !isCategoryComplete(category));
+
+    if (nextCategory) {
+      // Navigate to the found category. CategoryModulesScreen will load the modules 
+      // and determine the exact next lesson index based on userProgress.
+      navigation.navigate('CategoryModulesScreen', {
+        categoryId: nextCategory.id, 
+        categoryTitle: nextCategory.title,
+        userProgress: userProgress,
       });
-      return;
-    }
-
-    // If all modules are completed or no modules are available
-    Alert.alert("No New Modules", "It looks like you've finished all available modules. Great work! You can retake any module below.");
-  };
-
-  const handleModulePress = (moduleId) => {
-    const selectedModule = learningModules.find(mod => mod.id === moduleId);
-    if (!selectedModule || selectedModule.lessons.length === 0) {
-      Alert.alert('No lessons', 'This module has no lessons yet.');
-      return;
-    }
-  
-    const progress = userProgress[moduleId];
-    // Check if progress exists and if all lessons are completed.
-    const isCompleted = progress && progress.lessonsCompleted >= selectedModule.lessons.length;
-
-    if (isCompleted) {
-      Alert.alert(
-        "Module Completed",
-        "You have already finished this module. Do you want to retake the lessons from the beginning?",
-        [
-          {
-            text: "Cancel",
-            style: "cancel"
-          },
-          {
-            text: "Retake",
-            onPress: () => {
-              navigation.navigate('LessonScreen', { 
-                lessons: selectedModule.lessons, 
-                initialLessonIndex: 0, // Start from the beginning
-                moduleId: moduleId
-              });
-            }
-          }
-        ]
-      );
     } else {
-      // Continue from the last completed lesson or start from the beginning
-      const initialLessonIndex = progress?.lessonsCompleted || 0;
-      navigation.navigate('LessonScreen', { 
-        lessons: selectedModule.lessons,
-        initialLessonIndex: initialLessonIndex,
-        moduleId: moduleId
-      });
+      Alert.alert("All Modules Complete!", "You've finished all available lessons. Great work! Select a category to retake modules.");
     }
   };
 
-  const getProgressText = (moduleId) => {
-    const progress = userProgress[moduleId];
-    const module = learningModules.find(m => m.id === moduleId);
-    if (!module) return '0 Lessons Complete';
+  const handleCategoryPress = (categoryId, categoryTitle) => {
+    if (isLoading) return;
 
-    if (progress) {
-      const isCompleted = progress.lessonsCompleted >= module.lessons.length;
-      return isCompleted ? 'Completed!' : `${progress.lessonsCompleted}/${module.lessons.length} Lessons Complete`;
-    }
-    return '0 Lessons Complete';
+    navigation.navigate('CategoryModulesScreen', {
+      categoryId: categoryId, 
+      categoryTitle: categoryTitle,
+      userProgress: userProgress,
+    });
   };
 
-  const renderLearningModule = (module) => (
-    <TouchableOpacity
-      key={module.id}
-      style={[styles.moduleCard, { backgroundColor: module.bgColor }]}
-      onPress={() => handleModulePress(module.id)}
-    >
-      <View style={styles.moduleIcon}>
-        <Text style={styles.moduleEmoji}>{module.icon}</Text>
-      </View>
-      <View style={styles.moduleContent}>
-        <Text style={styles.moduleTitle}>{module.title}</Text>
-        <Text style={styles.moduleSubtitle}>{module.subtitle}</Text>
-        <Text style={styles.progressText}>{getProgressText(module.id)}</Text>
-      </View>
-      <Icon name="chevron-right" size={24} color="#666" />
-    </TouchableOpacity>
-  );
+  const getCategoryCompletionStatus = (category) => {
+    const totalCount = category.moduleCount || 0; // Use moduleCount from fetched data
+    
+    // Count how many modules in this category have progress recorded.
+    const completedCount = Object.keys(userProgress).filter(key => 
+      key.startsWith(category.id + '-')
+    ).length;
+
+    // Calculate percentage based on modules completed vs. total modules in category
+    const percentage = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
+    
+    return { 
+        total: totalCount, 
+        completed: completedCount, 
+        percentage: percentage
+    };
+  };
+  // --- END REVISED getCategoryCompletionStatus ---
+
+  // Render a category card
+  const renderCategoryCard = (category) => {
+    const { total, completed, percentage } = getCategoryCompletionStatus(category);
+
+    return (
+      <TouchableOpacity
+        key={category.id}
+        style={styles.categoryCard}
+        onPress={() => handleCategoryPress(category.id, category.title)}
+      >
+        <View style={styles.categoryIconContainer}>
+          <AnimatedCircularProgress
+            size={80}
+            width={5}
+            fill={percentage} 
+            tintColor={"#FF9500"} 
+            backgroundColor="#E0E0E0" 
+          >
+            {
+              () => (
+                <Text style={styles.categoryEmoji}>{category.icon}</Text>
+              )
+            }
+          </AnimatedCircularProgress>
+        </View>
+        <Text style={styles.categoryTitleText}>{category.title}</Text>
+        <Text style={styles.categoryCompletionText}>{`${completed}/${total} Modules`}</Text>
+      </TouchableOpacity>
+    );
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -173,17 +173,26 @@ const Home = () => {
             </View>
           </View>
           
-          <TouchableOpacity style={styles.continueButton} onPress={handleContinue}>
-            <Text style={styles.continueButtonText}>Continue</Text>
+          <TouchableOpacity 
+            style={[styles.continueButton, isLoading && styles.disabledButton]} 
+            onPress={handleContinue} 
+            disabled={isLoading || categories.length === 0}
+          >
+            <Text style={styles.continueButtonText}>
+                {isLoading ? 'Loading...' : 'Continue'}
+            </Text>
           </TouchableOpacity>
         </View>
 
-        {/* Learning Modules */}
-        <View style={styles.modulesSection}>
+        {/* Categories Section */}
+        <View style={styles.categoriesSection}>
+          <Text style={styles.sectionTitle}>Categories</Text>
           {isLoading ? (
-            <ActivityIndicator size="large" color="#FF9500" />
+            <ActivityIndicator size="large" color="#FF9500" style={styles.loadingIndicator} />
           ) : (
-            learningModules.map(renderLearningModule)
+            <View style={styles.categoryList}>
+              {categories.map(renderCategoryCard)}
+            </View>
           )}
         </View>
 
@@ -200,46 +209,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingTop: 10,
-    paddingBottom: 10,
-  },
-  time: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#000',
-  },
-  statusIcons: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-  },
-  battery: {
-    width: 24,
-    height: 12,
-    borderWidth: 1,
-    borderColor: '#000',
-    borderRadius: 2,
-    marginLeft: 4,
-    position: 'relative',
-  },
-  batteryFill: {
-    position: 'absolute',
-    left: 1,
-    top: 1,
-    bottom: 1,
-    width: '80%',
-    backgroundColor: '#000',
-    borderRadius: 1,
-  },
-  backButton: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
   },
   content: {
     flex: 1,
@@ -288,49 +257,60 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignSelf: 'flex-start',
   },
+  disabledButton: {
+    opacity: 0.6,
+  },
   continueButtonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
   },
-  modulesSection: {
-    gap: 16,
+  categoriesSection: {
+    marginBottom: 24,
   },
-  moduleCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 16,
-    borderRadius: 12,
-    marginBottom: 8,
-  },
-  moduleIcon: {
-    width: 40,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 12,
-  },
-  moduleEmoji: {
+  sectionTitle: {
     fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000',
+    marginBottom: 15,
   },
-  moduleContent: {
-    flex: 1,
+  loadingIndicator: {
+    marginVertical: 20,
   },
-  moduleTitle: {
+  categoryList: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    gap: 15,
+  },
+  categoryCard: {
+    width: '45%', // Approximately half-width with some spacing
+    alignItems: 'center',
+    padding: 15,
+    borderRadius: 12,
+    backgroundColor: '#fff',
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+  },
+  categoryIconContainer: {
+    marginBottom: 10,
+  },
+  categoryEmoji: {
+    fontSize: 30,
+  },
+  categoryTitleText: {
     fontSize: 16,
     fontWeight: '600',
     color: '#000',
-    marginBottom: 2,
+    textAlign: 'center',
+    marginBottom: 4,
   },
-  moduleSubtitle: {
-    fontSize: 14,
-    color: '#666',
-  },
-  progressText: {
+  categoryCompletionText: {
     fontSize: 12,
-    color: '#444',
-    marginTop: 4,
-    fontWeight: '600',
+    color: '#666',
   },
   bottomIndicator: {
     alignItems: 'center',

@@ -10,6 +10,7 @@ import bell from '../assets/bell.png';
 import home from '../assets/home.png';
 import book from '../assets/book.png';
 import Icon from 'react-native-vector-icons/FontAwesome'; // Import the icon library
+import CategoryModulesScreen from './screens/CategoryModulesScreen';
 import Home from './screens/Home';
 import { Profile } from './screens/Profile';
 import { Settings } from './screens/Settings';
@@ -59,6 +60,12 @@ const RootStack = createNativeStackNavigator({
         title: 'Home',
         headerShown: false,
       },
+    },
+    CategoryModulesScreen: {
+      screen: CategoryModulesScreen,
+      options: ({ route }) => ({
+        title: route.params?.categoryTitle || 'Modules',
+      }),
     },
     LessonScreen: {
       screen: LessonScreen,

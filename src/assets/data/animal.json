@@ -1,0 +1,84 @@
+{
+  "animal": [
+    {
+      "id": "1",
+      "title": "Animal Signs (Part 1)",
+      "subtitle": "Signs for insects and birds",
+      "icon": "🐛",
+      "bgColor": "#E6F5FF",
+      "category": "animal",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Ant.mp4", "correctAnswer": "Ant", "options": [ "Ant", "Bat", "Bee" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Ant & Bat)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Ant.mp4", "translation": "Ant", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Bat.mp4", "translation": "Bat", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Bat.mp4", "correctAnswer": "Bat", "options": [ "Ant", "Bat", "Bee" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Bee.mp4", "correctAnswer": "Bee", "options": [ "Ant", "Bat", "Bee" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Bird & Bull)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Bird.mp4", "translation": "Bird", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4", "translation": "Bull", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Bird.mp4", "correctAnswer": "Bird", "options": [ "Bird", "Bull", "Butterfly" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4", "correctAnswer": "Bull", "options": [ "Bird", "Bull", "Butterfly" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Butterfly & Cat)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Butterfly.mp4", "translation": "Butterfly", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Cat.mp4", "translation": "Cat", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Butterfly.mp4", "correctAnswer": "Butterfly", "options": [ "Bird", "Bull", "Butterfly" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Cat.mp4", "correctAnswer": "Cat", "options": [ "Cat", "Cockroach", "Cormorant" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Animal Signs (Part 2)",
+      "subtitle": "Signs for farm and domestic animals",
+      "icon": "🐶",
+      "bgColor": "#E6F5FF",
+      "category": "animal",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Cockroach.mp4", "correctAnswer": "Cockroach", "options": [ "Cat", "Cockroach", "Cormorant" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Cockroach & Cormorant)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Cockroach.mp4", "translation": "Cockroach", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4", "translation": "Cormorant", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4", "correctAnswer": "Cormorant", "options": [ "Cat", "Cockroach", "Cormorant" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Cow.mp4", "correctAnswer": "Cow", "options": [ "Cow", "Crocodile", "Dog" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Cow & Crocodile)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Cow.mp4", "translation": "Cow", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Crocodile.mp4", "translation": "Crocodile", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Crocodile.mp4", "correctAnswer": "Crocodile", "options": [ "Cow", "Crocodile", "Dog" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Dog.mp4", "correctAnswer": "Dog", "options": [ "Cow", "Crocodile", "Dog" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Duck & Firefly)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Duck.mp4", "translation": "Duck", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Firefly.mp4", "translation": "Firefly", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Duck.mp4", "correctAnswer": "Duck", "options": [ "Duck", "Firefly", "Fly" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Firefly.mp4", "correctAnswer": "Firefly", "options": [ "Duck", "Firefly", "Fly" ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Animal Signs (Part 3)",
+      "subtitle": "Signs for more animals",
+      "icon": "🦎",
+      "bgColor": "#E6F5FF",
+      "category": "animal",
+      "lessons": [
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Fly.mp4", "correctAnswer": "Fly", "options": [ "Duck", "Firefly", "Fly" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Fly & Frog)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Fly.mp4", "translation": "Fly", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Frog.mp4", "translation": "Frog", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Frog.mp4", "correctAnswer": "Frog", "options": [ "Frog", "Gecko", "Horse" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4", "correctAnswer": "Gecko", "options": [ "Frog", "Gecko", "Horse" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Gecko & Horse)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4", "translation": "Gecko", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4", "translation": "Horse", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4", "correctAnswer": "Horse", "options": [ "Frog", "Gecko", "Horse" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Lizard.mp4", "correctAnswer": "Lizard", "options": [ "Lizard", "Owl", "Pig" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Lizard & Owl)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Lizard.mp4", "translation": "Lizard", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4", "translation": "Owl", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4", "correctAnswer": "Owl", "options": [ "Lizard", "Owl", "Pig" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Pig.mp4", "correctAnswer": "Pig", "options": [ "Lizard", "Owl", "Pig" ] } }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Animal Signs (Part 4)",
+      "subtitle": "Final animal signs",
+      "icon": "🕷️",
+      "bgColor": "#E6F5FF",
+      "category": "animal",
+      "lessons": [
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Rat.mp4", "correctAnswer": "Rat", "options": [ "Rat", "SlowLorises", "Snail" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Rat & SlowLorises)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Rat.mp4", "translation": "Rat", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4", "translation": "SlowLorises", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/animal/SignLanguageAnimal.mp4", "correctAnswer": "SignLanguageAnimal", "options": [ "Rat", "SlowLorises", "Snail" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4", "correctAnswer": "SlowLorises", "options": [ "Rat", "SlowLorises", "Snail" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Snail & Snake)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Snail.mp4", "translation": "Snail", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Snake.mp4", "translation": "Snake", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Snail.mp4", "correctAnswer": "Snail", "options": [ "Snail", "Snake", "Spider" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Snake.mp4", "correctAnswer": "Snake", "options": [ "Snail", "Snake", "Spider" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Spider & Woodpecker)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/animal/Spider.mp4", "translation": "Spider", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4", "translation": "Woodpecker", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Spider.mp4", "correctAnswer": "Spider", "options": [ "Snail", "Snake", "Spider" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4", "correctAnswer": "Woodpecker", "options": [ "Woodpecker", "Bird", "Bat" ] } }
+      ]
+    }
+  ]
+}

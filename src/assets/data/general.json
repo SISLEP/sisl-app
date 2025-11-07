@@ -1,0 +1,19 @@
+{
+  "general": [
+    {
+      "id": "1",
+      "icon": "🤟",
+      "title": "Let's learn new signs!",
+      "subtitle": "Learn basic signs",
+      "bgColor": "#FFF4E6",
+      "category": "general",
+      "lessons": [
+        { "type": "sequencing", "instructions": "Pick out signs in the correct order", "data": { "signVideo": "https://sislep.github.io/video-site/example.mp4", "correctOrder": [ "NICE", "MEET-you" ], "options": [ "HELLO", "NICE", "MEET-you" ] } },
+        { "type": "fill_in_the_blank", "instructions": "Fill in the missing sign", "data": { "signVideo": "https://sislep.github.io/video-site/example.mp4", "fullPhrase": "NICE ____", "missingWord": "MEET-you", "options": [ "HELLO", "MEET-you" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Hello & Goodbye)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "HELLO", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "GOODBYE", "id": "2" } ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Nice & Meet-you)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "NICE", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "MEET-you", "id": "2" } ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Thank-you & Please)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "THANK-you", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "PLEASE", "id": "2" } ] } }
+      ]
+    }
+  ]
+}

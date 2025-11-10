@@ -221,10 +221,79 @@ const fetchAllWords = async (): Promise<DictionaryWord[]> => {
  * @returns The file:// URI for the category's local video folder.
  */
 const getCategoryDirectory = (categoryId: string): Directory => {
+    // The directory structure is Paths.document / "sislep" / categoryId
     return new Directory(Paths.document, "sislep", categoryId);
 };
 
-// const getFile = (fileName: )
+/**
+ * Helper to determine the local file URI for a given remote URL.
+ * This does NOT check if the file exists, it only calculates the path.
+ *
+ * @param remoteUrl The original remote URL of the video/image.
+ * @param categoryId The ID of the category (e.g., 'alphabet').
+ * @returns The expected local file URI string.
+ */
+const getLocalVideoUri = (remoteUrl: string, categoryId: string): string => {
+    // 1. Get the directory object
+    const dir = getCategoryDirectory(categoryId);
+
+    // 2. Extract the filename from the URL (e.g., "https://.../Alphabet/A.mp4" -> "A.mp4")
+    const filename = remoteUrl.substring(remoteUrl.lastIndexOf('/') + 1);
+
+    // 3. Construct the full local URI: <base-document-uri>/sislep/<categoryId>/<filename>
+    return `${dir.uri}/${filename}`;
+};
+
+/**
+ * Checks if a specific file (video or image) is downloaded locally.
+ *
+ * @param remoteUrl The original remote URL used to download the file.
+ * @param categoryId The ID of the category.
+ * @returns A promise that resolves to true if the file exists locally, false otherwise.
+ */
+const isFileDownloaded = async (remoteUrl: string, categoryId: string): Promise<boolean> => {
+    const localUri = getLocalVideoUri(remoteUrl, categoryId);
+    try {
+        // Use the File class to check for existence
+        const file = new File(localUri);
+        return file.exists;
+    } catch (e) {
+        console.error(`Error checking file existence for ${localUri}:`, e);
+        return false;
+    }
+};
+
+/**
+ * Determines the best source (local URI or remote URL) for a video/image.
+ * It prefers the local file if it exists, falling back to the remote URL.
+ * * @param remoteUrl The original remote URL.
+ * @param categoryId The ID of the category.
+ * @param isCategoryDownloaded Whether the entire category is marked as downloaded (as a quick check).
+ * @returns A promise that resolves to the local URI (if found) or the original remote URL.
+ */
+const getBestVideoSource = async (
+    remoteUrl: string, 
+    categoryId: string,
+    isCategoryDownloaded: boolean
+): Promise<string> => {
+    // Only bother checking the file system if the category is marked as fully downloaded
+    if (isCategoryDownloaded) {
+        const localUri = getLocalVideoUri(remoteUrl, categoryId);
+        console.log("myy checking ", localUri)
+
+        
+        const fileExists = await isFileDownloaded(remoteUrl, categoryId);
+
+        if (fileExists) {
+            console.log(`Using local file for ${remoteUrl}: ${localUri}`);
+            return localUri;
+        }
+    }
+    console.log(`Using remote URL for ${remoteUrl}`);
+    // Fallback to the original remote URL if the category isn't downloaded or file is missing
+    return remoteUrl;
+};
+
 
 /**
  * Helper to ensure the local category directory exists.
@@ -290,7 +359,7 @@ export const downloadCategoryVideos = async (categoryId: string): Promise<void> 
         // Use downloadAsync for downloading the file
         return File.downloadFileAsync(url, dir)
             .then(result => {
-                if (result && result.status !== 200) {
+                if (!result.exists) {
                     throw new Error(`Download failed with status ${result.status}`);
                 }
                 console.log(`Downloaded ${filename} to ${dir}`);
@@ -356,4 +425,8 @@ export {
     fetchModulesByCategory, 
     fetchDictionaryData, 
     fetchAllWords,
+    // 🚨 NEW EXPORTS for offline file resolution
+    getLocalVideoUri,
+    isFileDownloaded,
+    getBestVideoSource,
 };

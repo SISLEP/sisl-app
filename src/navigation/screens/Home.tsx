@@ -269,12 +269,12 @@ const Home = () => {
                 size={20} 
                 color={iconColor} 
             />
-            <Text style={[
+            {/* <Text style={[
                 styles.downloadButtonText, 
                 (isDownloading || isDownloaded) && { color: '#FFF' },
             ]}>
                 {isDownloading ? 'Downloading...' : (isDownloaded ? 'Remove Offline' : 'Download All')}
-            </Text>
+            </Text> */}
         </TouchableOpacity>
         
       </TouchableOpacity>
@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
     gap: 15,
   },
   categoryCard: {
-    width: '48%', // Adjusted for 48% width to fit two columns comfortably with a gap
+    width: '45%',
     alignItems: 'center',
     padding: 15,
     paddingBottom: 5, // 🚨 NEW: Adjusted padding

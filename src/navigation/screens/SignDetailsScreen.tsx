@@ -14,12 +14,6 @@ import Video from 'react-native-video';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-// 🚨 NEW: Import the necessary functions from the API service
-import { 
-  isCategoryFullyDownloaded, 
-  getBestVideoSource 
-} from '../../api/fetch'; 
-
 const { width } = Dimensions.get('window');
 
 const SignDetailsScreen = () => {
@@ -29,81 +23,24 @@ const SignDetailsScreen = () => {
 
   const [words, setWords] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);
-  const [mediaType, setMediaType] = useState('video');
-  
-  // 🚨 NEW STATES: To hold the actual URI/URL after checking for local files
-  const [currentVideoUri, setCurrentVideoUri] = useState(null);
-  const [currentImageUri, setCurrentImageUri] = useState(null);
-  const [isFullyDownloaded, setIsFullyDownloaded] = useState(false); // Cache category status
-  const [isLoadingMedia, setIsLoadingMedia] = useState(true); // Track media source loading
+  // NEW STATE: Tracks which media is currently visible. 'video' by default.
+  const [mediaType, setMediaType] = useState('video'); 
 
-  // --- Initial Data Load and Status Check ---
   useEffect(() => {
+    // Use the words passed from the previous screen
     setWords(allWords);
-    
-    // Check and cache the category's download status once
-    const checkDownloadStatus = async () => {
-        // Use lowercase title as category ID, matching the logic in fetch.tsx
-        const categoryId = category.toLowerCase();
-        const isDl = await isCategoryFullyDownloaded(categoryId);
-        console.log("myy category download status", categoryId, isDl);
-        setIsFullyDownloaded(isDl);
-    };
-    
-    checkDownloadStatus();
-  }, [allWords, category]);
+  }, [allWords]);
 
-  // --- Media Source Resolution Effect (triggered by index change) ---
+  // Reset mediaType to 'video' whenever the current word index changes.
   useEffect(() => {
-    // Return early if no words.
-    if (words.length === 0) return; 
-    
-    // Reset media type and start loading indicator
     setMediaType('video');
-    setIsLoadingMedia(true);
-
-    const currentSign = words[currentIndex];
-    const categoryId = category.toLowerCase(); // Use lowercase title as category ID
-
-    const resolveSources = async () => {
-        // Resolve Video Source
-        const bestVideoSource = await getBestVideoSource(
-            currentSign.signVideo, 
-            categoryId, 
-            isFullyDownloaded
-        );
-        setCurrentVideoUri(bestVideoSource);
-        console.log("myy ", bestVideoSource)
-
-        // Resolve Image Source (if available)
-        if (currentSign.signImage) {
-            const bestImageSource = await getBestVideoSource(
-                currentSign.signImage, 
-                categoryId, 
-                isFullyDownloaded
-            );
-            setCurrentImageUri(bestImageSource);
-        } else {
-            setCurrentImageUri(null); // Clear image URI if not available for this word
-        }
-        
-        setIsLoadingMedia(false);
-    };
-
-    resolveSources();
-  }, [currentIndex, words, category, isFullyDownloaded]); // Depend on currentIndex and cached status
+  }, [currentIndex]);
 
   const handleNext = () => {
-    // Reset URI/URL to null to force loading state briefly on next sign
-    setCurrentVideoUri(null);
-    setCurrentImageUri(null);
     setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
   };
 
   const handlePrevious = () => {
-    // Reset URI/URL to null
-    setCurrentVideoUri(null);
-    setCurrentImageUri(null);
     setCurrentIndex((prevIndex) => (prevIndex - 1 + words.length) % words.length);
   };
 
@@ -112,21 +49,25 @@ const SignDetailsScreen = () => {
     setMediaType((prevType) => (prevType === 'video' ? 'image' : 'video'));
   };
 
-  if (words.length === 0 || isLoadingMedia || !currentVideoUri) {
+  if (words.length === 0) {
     return (
       <View style={styles.loadingContainer}>
-        <Text>{words.length === 0 ? 'No signs available.' : 'Loading sign media...'}</Text>
+        <Text>No signs available for this category.</Text>
       </View>
     );
   }
 
   const currentSign = words[currentIndex];
+  const signImageUrl = currentSign.signImage;
   
-  const isImageAvailable = !!currentImageUri; // Use the resolved URI state
+  const isImageAvailable = !!signImageUrl;
   const isVideoVisible = mediaType === 'video';
+  
+  // Pause video when the image is visible
   const videoPausedState = !isVideoVisible;
-  const videoKey = `sign-video-${currentIndex}`;
 
+  // Create a unique key for the Video component based on the current index
+  const videoKey = `sign-video-${currentIndex}`;
 
   return (
     <View style={styles.container}>
@@ -142,10 +83,10 @@ const SignDetailsScreen = () => {
         <View style={styles.signMediaContainer}>
 
           {/* Video Component */}
-          {/* 🚨 UPDATED: Use currentVideoUri for source */}
           <Video
-            key={videoKey} 
-            source={{ uri: currentVideoUri }} 
+            key={videoKey} // <-- This forces the video component to reload completely
+            source={{ uri: currentSign.signVideo }}
+            // Apply hiddenMedia if it's the image's turn
             style={[styles.mediaElement, !isVideoVisible && styles.hiddenMedia]}
             paused={videoPausedState}
             repeat={true}
@@ -155,9 +96,9 @@ const SignDetailsScreen = () => {
 
           {/* Image Component */}
           {isImageAvailable && (
-            // 🚨 UPDATED: Use currentImageUri for source
             <Image
-              source={{ uri: currentImageUri }}
+              source={{ uri: signImageUrl }}
+              // Apply hiddenMedia if it's the video's turn
               style={[styles.mediaElement, isVideoVisible && styles.hiddenMedia]}
               resizeMode="contain"
             />
@@ -189,7 +130,7 @@ const SignDetailsScreen = () => {
           <View style={styles.currentSignContainer}>
             <Text 
               style={styles.currentSignWord}
-              numberOfLines={2} 
+              numberOfLines={2} // Limit to two lines for long words
               ellipsizeMode="tail"
             >
               {currentSign.word}

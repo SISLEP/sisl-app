@@ -2,7 +2,6 @@
  * @fileoverview This file contains the API service for fetching various data structures with a local fallback using a generic helper.
  */
 
-// import * as FileSystem from 'expo-file-system'; // 🚨 UPDATED: Import the standard FileSystem API
 import { Directory, File, Paths, documentDirectory } from 'expo-file-system';
 
 // Import the local JSON data to use as fallbacks.
@@ -130,7 +129,7 @@ const fetchData = async <T>(url: string, fallbackData: T, dataName: string): Pro
     console.log(`Successfully fetched ${dataName} from network.`);
     return data;
   } catch (error) {
-    console.error(`Network request failed for ${dataName}. Falling back to local data:`, error);
+    console.warn(`Network request failed for ${dataName}. Falling back to local data:`, error);
     // On failure, return the local data.
     return fallbackData;
   } finally {
@@ -156,15 +155,15 @@ const fetchCategories = async (): Promise<CategoryItem[]> => {
 };
 
 /**
- * Fetches all learning modules for a specific category.
+ * Fetches all learning modules for a specific category and updates video/image 
+ * sources to use local URIs if they are downloaded.
  *
  * @param {string} categoryId The ID of the category (e.g., 'alphabet', 'body').
  * @returns {Promise<LearningModule[]>} A promise that resolves with an array of modules for that category.
  */
 const fetchModulesByCategory = async (categoryId: string): Promise<LearningModule[]> => {
-    // Construct the specific URL for the category's JSON file
+    // 1. Fetch modules (network or local fallback)
     const url = `${MODULES_BASE_URL}${categoryId}.json`;
-    // Get the corresponding local fallback data
     const localData = localModuleDataMap[categoryId];
 
     if (!localData) {
@@ -178,24 +177,122 @@ const fetchModulesByCategory = async (categoryId: string): Promise<LearningModul
         `${categoryId} modules`
     );
 
-    // The response is an object with one key (the categoryId) pointing to the array of modules
-    return response[categoryId] || [];
+    let modules = response[categoryId] || [];
+    
+    // 2. Check if the category is fully downloaded
+    const isDownloaded = await isCategoryFullyDownloaded(categoryId);
+
+    // 3. If downloaded, update video/image URIs
+    if (isDownloaded) {
+        console.log(`Category '${categoryId}' is fully downloaded. Updating module sources.`);
+        
+        // Deep clone the modules to ensure the original data structures are not mutated
+        const updatedModules: LearningModule[] = JSON.parse(JSON.stringify(modules));
+
+        for (const module of updatedModules) {
+            if (module.lessons && Array.isArray(module.lessons)) {
+                for (const lesson of module.lessons) {
+                    
+                    // A. Handle lessons with signVideo/signImage directly in lesson.data (e.g., 'translation')
+                    if (lesson.data.signVideo) {
+                        lesson.data.signVideo = await getBestVideoSource(
+                            lesson.data.signVideo,
+                            categoryId
+                        );
+                    }
+                    if (lesson.data.signImage) {
+                        lesson.data.signImage = await getBestVideoSource(
+                            lesson.data.signImage,
+                            categoryId
+                        );
+                    }
+                    
+                    // B. Handle lessons with an 'items' array in lesson.data (e.g., 'matching_pairs')
+                    if (lesson.data.items && Array.isArray(lesson.data.items)) {
+                        for (const item of lesson.data.items) {
+                            if (item.signVideo) {
+                                item.signVideo = await getBestVideoSource(
+                                    item.signVideo,
+                                    categoryId
+                                );
+                            }
+                            if (item.signImage) {
+                                item.signImage = await getBestVideoSource(
+                                    item.signImage,
+                                    categoryId
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Return the modules with updated local paths
+        return updatedModules;
+    }
+
+    // 4. Return original modules if not downloaded or if an error occurred during update
+    return modules;
 };
 
 
 /**
  * Fetches dictionary data, using local data as a fallback.
  * The network request expects the shape of DictionaryData (categories as keys).
+ * This function also updates signVideo and signImage URLs to local URIs 
+ * if the corresponding category is fully downloaded.
  *
  * @returns {Promise<DictionaryData>} A promise that resolves with the dictionary data object.
  */
 const fetchDictionaryData = async (): Promise<DictionaryData> => {
-  // Assuming the dictionary.json is structured directly as DictionaryData { [category: string]: words[] }
-  return fetchData<DictionaryData>(
+  // 1. Fetch the raw dictionary data (network or local fallback)
+  const dictionaryData = await fetchData<DictionaryData>(
     DICTIONARY_DATA_URL,
-    localDictionaryData as DictionaryData, // Type cast local data to match expected structure
+    localDictionaryData as DictionaryData,
     'dictionary'
   );
+
+  // 2. Create a deep copy to modify the URIs
+  const updatedDictionaryData: DictionaryData = JSON.parse(JSON.stringify(dictionaryData));
+
+  // 3. Iterate over categories and update word sources
+  for (const categoryKey in updatedDictionaryData) {
+    if (updatedDictionaryData.hasOwnProperty(categoryKey)) {
+        
+        // Convert the category key to the expected lowercase ID for the file system functions
+        const categoryId = categoryKey.toLowerCase();
+        
+        // Check if the category is fully downloaded
+        const isDownloaded = await isCategoryFullyDownloaded(categoryId);
+        
+        if (isDownloaded) {
+            console.log(`Category '${categoryKey}' is fully downloaded. Updating word sources.`);
+            
+            const words = updatedDictionaryData[categoryKey];
+            
+            for (const word of words) {
+                // Update signVideo source
+                if (word.signVideo) {
+                    word.signVideo = await getBestVideoSource(
+                        word.signVideo,
+                        categoryId
+                    );
+                }
+
+                // Update signImage source (if it exists)
+                if (word.signImage) {
+                    word.signImage = await getBestVideoSource(
+                        word.signImage,
+                        categoryId
+                    );
+                }
+            }
+        }
+    }
+  }
+
+  return updatedDictionaryData;
 };
 
 /**
@@ -268,29 +365,26 @@ const isFileDownloaded = async (remoteUrl: string, categoryId: string): Promise<
  * It prefers the local file if it exists, falling back to the remote URL.
  * * @param remoteUrl The original remote URL.
  * @param categoryId The ID of the category.
- * @param isCategoryDownloaded Whether the entire category is marked as downloaded (as a quick check).
  * @returns A promise that resolves to the local URI (if found) or the original remote URL.
  */
 const getBestVideoSource = async (
     remoteUrl: string, 
-    categoryId: string,
-    isCategoryDownloaded: boolean
+    categoryId: string
 ): Promise<string> => {
-    // Only bother checking the file system if the category is marked as fully downloaded
-    if (isCategoryDownloaded) {
-        const localUri = getLocalVideoUri(remoteUrl, categoryId);
-        console.log("myy checking ", localUri)
+    // 1. Calculate the expected local URI.
+    const localUri = getLocalVideoUri(remoteUrl, categoryId);
 
-        
-        const fileExists = await isFileDownloaded(remoteUrl, categoryId);
+    // 2. Check the file system to see if the file exists locally.
+    const fileExists = await isFileDownloaded(remoteUrl, categoryId);
 
-        if (fileExists) {
-            console.log(`Using local file for ${remoteUrl}: ${localUri}`);
-            return localUri;
-        }
+    if (fileExists) {
+        console.log(`Using local file for ${remoteUrl}: ${localUri}`);
+        // 3. If it exists, return the local URI.
+        return localUri;
     }
+    
+    // 4. Fallback to the original remote URL.
     console.log(`Using remote URL for ${remoteUrl}`);
-    // Fallback to the original remote URL if the category isn't downloaded or file is missing
     return remoteUrl;
 };
 
@@ -425,7 +519,6 @@ export {
     fetchModulesByCategory, 
     fetchDictionaryData, 
     fetchAllWords,
-    // 🚨 NEW EXPORTS for offline file resolution
     getLocalVideoUri,
     isFileDownloaded,
     getBestVideoSource,

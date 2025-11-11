@@ -455,7 +455,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF9500', // Orange for downloading state
   },
   removeButton: {
-    backgroundColor: '#FF3B30', // Red for remove
+    backgroundColor: '#4CD964', // Green for remove/downloaded state
   },
   downloadButtonText: {
     marginLeft: 5,

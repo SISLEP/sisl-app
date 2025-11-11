@@ -6,7 +6,7 @@ import FillInTheBlankScreen from './FillInTheBlankScreen';
 import MatchingPairsScreen from './MatchingPairsScreen';
 import SequencingScreen from './SequencingScreen';
 import TranslationScreen from './TranslationScreen';
-import { saveWordMemory } from '../../storage/memoryService'; // 1. Import saveWordMemory
+import { addWordMemory } from '../../storage/memoryService';
 import { Word } from '../../data/word'; // 2. Import Word type (assuming path is correct)
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
@@ -15,36 +15,73 @@ const PROGRESS_STORAGE_KEY = 'userProgress';
 type LessonDataItem = { word?: string } | Word | string;
 
 // 3. Function to safely extract words from various lesson data structures
-const extractWordsFromLessonData = (data: any): string[] => {
+const extractWordsFromLessonData = (data: any, lessonType: string): string[] => {
+  console.log('Extracting words from lesson data:', data, 'for type:', lessonType);
   if (!data) return [];
   
-  // Assuming 'data' is an array of items, each containing a 'word' property
-  if (Array.isArray(data)) {
-    return data
-      .map((item: LessonDataItem) => {
-        // Handle objects with a 'word' property
-        if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {
-          return item.word;
-        }
-        // Handle the case where the array contains just the word strings
-        if (typeof item === 'string') {
-          return item;
-        }
-        // Handle the explicit Word type if necessary, assuming it matches { word: string }
-        if ('word' in item && typeof (item as Word).word === 'string') {
-          return (item as Word).word;
-        }
-        return null;
-      })
-      .filter((word): word is string => word !== null && word.trim() !== '');
+  let words: (string | null)[] = [];
+
+  switch (lessonType) {
+    case 'matching_pairs':
+      // Data format: { "items": [{ "translation": "Word1" }, { "translation": "Word2" }] }
+      if (data.items && Array.isArray(data.items)) {
+        words = data.items.map((item: { translation?: string }) => 
+          item.translation && typeof item.translation === 'string' ? item.translation : null
+        );
+      }
+      break;
+    case 'translation':
+      // Data format: { "correctAnswer": "Word" }
+      if (data.correctAnswer && typeof data.correctAnswer === 'string') {
+        words = [data.correctAnswer];
+      }
+      break;
+    case 'sequencing':
+    case 'fill_in_the_blank':
+      // Default array extraction logic for other types
+      if (Array.isArray(data)) {
+        words = data.map((item: LessonDataItem) => {
+          if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {
+            return item.word;
+          }
+          if (typeof item === 'string') {
+            return item;
+          }
+          return null;
+        });
+      }
+      // Fallback for non-array data structure (if only one word is expected)
+      if (typeof data === 'object' && 'word' in data && typeof data.word === 'string') {
+          words = [data.word];
+      }
+      break;
+    default:
+      console.warn('Unknown lesson type or missing extraction logic:', lessonType);
+      // Fallback to original, generic extraction for safety
+      if (Array.isArray(data)) {
+        words = data
+          .map((item: LessonDataItem) => {
+            if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {
+              return item.word;
+            }
+            if (typeof item === 'string') {
+              return item;
+            }
+            if ('word' in item && typeof (item as Word).word === 'string') {
+              return (item as Word).word;
+            }
+            return null;
+          });
+      }
+      break;
   }
 
-  // Fallback for non-array data structure (less common for lessons but good for safety)
-  if (typeof data === 'object' && 'word' in data && typeof data.word === 'string') {
-      return [data.word];
-  }
+  // Filter out nulls and duplicates and return only non-empty strings
+  const uniqueWords = Array.from(new Set(
+    words.filter((word): word is string => word !== null && word.trim() !== '')
+  ));
 
-  return [];
+  return uniqueWords;
 };
 
 const LessonScreen = () => {
@@ -111,15 +148,17 @@ const LessonScreen = () => {
   const handleNextLesson = async () => {
     // 4. Word Memory Saving Logic
     if (currentLesson) {
-      const wordsToSave = extractWordsFromLessonData(currentLesson.data);
+      // Pass the lesson type to correctly extract words
+      const wordsToSave = extractWordsFromLessonData(currentLesson.data, currentLesson.type);
       console.log('Words to save as Badly remembered:', wordsToSave);
       
-      // Save each word with the 'Badly' rating as requested
+      // Use addWordMemory to only add the word if it's not already present.
+      // This initializes its score to 0 ('Badly' remembered).
       const memoryPromises = wordsToSave.map(wordId => 
-        saveWordMemory(wordId, 'Badly')
+        addWordMemory(wordId)
       );
       await Promise.all(memoryPromises);
-      console.log(`Saved ${wordsToSave.length} words with 'Badly' rating to memory service.`);
+      console.log(`Attempted to add ${wordsToSave.length} new words to memory service.`);
     }
     // End of Word Memory Saving Logic
 

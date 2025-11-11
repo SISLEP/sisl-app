@@ -8,8 +8,8 @@ import { getWordsForSession, getAllWordsLearned } from '../../storage/memoryServ
 import { fetchAllWords } from '../../api/fetch';
 import { Word } from '../../data/word';
 
-const FLASHCARD_COUNT = 10;
-const QUIZ_WORD_COUNT = 7; // As required by QuizScreen's generator logic
+const FLASHCARD_COUNT = 7;
+const QUIZ_WORD_COUNT = 7;
 
 export function PracticeHome() {
   const navigation = useNavigation();

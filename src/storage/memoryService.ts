@@ -55,6 +55,7 @@ export const saveWordMemory = async (wordId: string, rating: Rating) => {
     // Logic to reduce frequency for less remembered words (lower score = higher frequency)
     switch (rating) {
       case 'Badly':
+        // NOTE: When a word is new (score is 0), setting to -2 ensures it gets prioritized.
         newScore = Math.max(0, currentScore - 2); // Decrease score significantly
         break;
       case 'Partly':
@@ -73,6 +74,40 @@ export const saveWordMemory = async (wordId: string, rating: Rating) => {
     await AsyncStorage.setItem(MEMORY_KEY, JSON.stringify(scores));
   } catch (e) {
     console.error('Failed to save word memory', e);
+  }
+};
+
+/**
+ * NEW: Adds a word to memory *only* if it is not already present.
+ * It initializes the word with a 'Badly' score (score 0 by default).
+ */
+export const addWordMemory = async (wordId: string) => {
+  try {
+    if (typeof AsyncStorage === 'undefined') {
+      console.warn('AsyncStorage is not available. Memory not saved.');
+      return;
+    }
+
+    const scores = await getMemoryScores();
+    
+    // Check if the wordId is already in memory
+    if (scores[wordId]) {
+      console.log(`Word '${wordId}' is already in memory. Skipping addition.`);
+      return;
+    }
+
+    // If not present, save it, which initializes its score and lastSeen time.
+    // We use the same 'Badly' logic as saveWordMemory for initialization.
+    scores[wordId] = {
+      score: 0, // Initial score for a newly added word.
+      lastSeen: Date.now(),
+    };
+
+    await AsyncStorage.setItem(MEMORY_KEY, JSON.stringify(scores));
+    console.log(`Word '${wordId}' added to memory for the first time.`);
+
+  } catch (e) {
+    console.error('Failed to add word to memory', e);
   }
 };
 

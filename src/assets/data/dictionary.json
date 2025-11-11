@@ -127,13 +127,12 @@
     },
     {
       "word": "Eyes",
-      "signVideo": "https://sislep.github.io/video-site/body/Eyes.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Eyes.jpg"
+      "signVideo": "https://sislep.github.io/video-site/body/Eye.mp4",
+      "signImage": "https://sislep.github.io/video-site/body/Eye.jpg"
     },
     {
       "word": "Mouth",
-      "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Mouth.jpg"
+      "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4"
     },
     {
       "word": "Nose",
@@ -168,7 +167,7 @@
     {
       "word": "Fingers",
       "signVideo": "https://sislep.github.io/video-site/body/Fingers.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Fingersß.jpg"
+      "signImage": "https://sislep.github.io/video-site/body/Fingers.jpg"
     },
     {
       "word": "Feet",
@@ -199,8 +198,7 @@
     },
     {
         "word": "Boyfriend",
-        "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Boyfriend.jpg"
+        "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4"
     },
     {
         "word": "Brother",
@@ -249,8 +247,7 @@
     },
     {
         "word": "Girlfriend",
-        "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Girlfriend.jpg"
+        "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4"
     },
     {
         "word": "Granddaughter",
@@ -269,8 +266,7 @@
     },
     {
         "word": "Grandson",
-        "signVideo": "https://sislep.github.io/video-site/family/Grandson.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Grandson.jpg"
+        "signVideo": "https://sislep.github.io/video-site/family/Grandson.mp4"
     },
     {
         "word": "HusbandandWife",
@@ -318,18 +314,15 @@
     },
     {
         "word": "Uncle",
-        "signVideo": "https://sislep.github.io/video-site/family/Uncle.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Uncle.jpg"
+        "signVideo": "https://sislep.github.io/video-site/family/Uncle.mp4"
     },
     {
         "word": "Wedding",
-        "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Wedding.jpg"
+        "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4"
     },
     {
         "word": "Wife",
-        "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Wife.jpg"
+        "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4"
     },
     {
         "word": "Woman",
@@ -341,67 +334,67 @@
     {
         "word": "Sign Language Month",
         "signVideo": "https://sislep.github.io/video-site/month/SignLanguageMonth.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/Month.png"
+        "signImage": "https://sislep.github.io/video-site/month/Month.jpg"
     },
     {
         "word": "January",
         "signVideo": "https://sislep.github.io/video-site/month/January.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/January.png"
+        "signImage": "https://sislep.github.io/video-site/month/January.jpg"
     },
     {
         "word": "February",
         "signVideo": "https://sislep.github.io/video-site/month/February.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/February.png"
+        "signImage": "https://sislep.github.io/video-site/month/February.jpg"
     },
     {
         "word": "March",
         "signVideo": "https://sislep.github.io/video-site/month/March.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/March.png"
+        "signImage": "https://sislep.github.io/video-site/month/March.jpg"
     },
     {
         "word": "April",
         "signVideo": "https://sislep.github.io/video-site/month/April.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/April.png"
+        "signImage": "https://sislep.github.io/video-site/month/April.jpg"
     },
     {
         "word": "May",
         "signVideo": "https://sislep.github.io/video-site/month/May.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/May.png"
+        "signImage": "https://sislep.github.io/video-site/month/May.jpg"
     },
     {
         "word": "June",
         "signVideo": "https://sislep.github.io/video-site/month/June.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/June.png"
+        "signImage": "https://sislep.github.io/video-site/month/June.jpg"
     },
     {
         "word": "July",
         "signVideo": "https://sislep.github.io/video-site/month/July.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/July.png"
+        "signImage": "https://sislep.github.io/video-site/month/July.jpg"
     },
     {
         "word": "August",
         "signVideo": "https://sislep.github.io/video-site/month/August.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/August.png"
+        "signImage": "https://sislep.github.io/video-site/month/August.jpg"
     },
     {
         "word": "September",
         "signVideo": "https://sislep.github.io/video-site/month/September.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/September.png"
+        "signImage": "https://sislep.github.io/video-site/month/September.jpg"
     },
     {
         "word": "October",
         "signVideo": "https://sislep.github.io/video-site/month/October.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/October.png"
+        "signImage": "https://sislep.github.io/video-site/month/October.jpg"
     },
     {
         "word": "November",
         "signVideo": "https://sislep.github.io/video-site/month/November.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/November.png"
+        "signImage": "https://sislep.github.io/video-site/month/November.jpg"
     },
     {
         "word": "December",
         "signVideo": "https://sislep.github.io/video-site/month/December.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/December.png"
+        "signImage": "https://sislep.github.io/video-site/month/December.jpg"
     }
   ],
   "Colours": [
@@ -556,8 +549,7 @@
     },
     {
         "word": "Bull",
-        "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Bull.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4"
     },
     {
         "word": "Butterfly",
@@ -576,8 +568,7 @@
     },
     {
         "word": "Cormorant",
-        "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Cormorant.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4"
     },
     {
         "word": "Cow",
@@ -616,13 +607,11 @@
     },
     {
         "word": "Gecko",
-        "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Gecko.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4"
     },
     {
         "word": "Horse",
-        "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Horse.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4"
     },
     {
         "word": "Lizard",
@@ -631,8 +620,7 @@
     },
     {
         "word": "Owl",
-        "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Owl.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4"
     },
     {
         "word": "Pig",
@@ -651,8 +639,7 @@
     },
     {
         "word": "SlowLorises",
-        "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/SlowLorises.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4"
     },
     {
         "word": "Snail",
@@ -666,13 +653,11 @@
     },
     {
         "word": "Spider",
-        "signVideo": "https://sislep.github.io/video-site/animal/Spider.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Spider.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/Spider.mp4"
     },
     {
         "word": "Woodpecker",
-        "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Woodpecker.jpg"
+        "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4"
     }
   ],
   "Sport": [
@@ -708,8 +693,7 @@
     },
     {
         "word": "Futsal",
-        "signVideo": "https://sislep.github.io/video-site/sport/Futsal.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Futsal.jpg"
+        "signVideo": "https://sislep.github.io/video-site/sport/Futsal.mp4"
     },
     {
         "word": "Golf",
@@ -738,8 +722,7 @@
     },
     {
         "word": "Rugby7",
-        "signVideo": "https://sislep.github.io/video-site/sport/Rugby7.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Rugby7.jpg"
+        "signVideo": "https://sislep.github.io/video-site/sport/Rugby7.mp4"
     },
     {
         "word": "Running",
@@ -773,8 +756,7 @@
     },
     {
         "word": "Tennis",
-        "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Tennis.jpg"
+        "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4"
     },
     {
         "word": "Volleyball",
@@ -785,6 +767,73 @@
         "word": "WeightLifting",
         "signVideo": "https://sislep.github.io/video-site/sport/WeightLifting.mp4",
         "signImage": "https://sislep.github.io/video-site/sport/WeightLifting.jpg"
+    }
+  ],
+  "Weather": [
+    {
+      "word": "Cyclone",
+      "signVideo": "https://sislep.github.io/video-site/weather/Cyclone.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Cyclone.jpg"
+    },
+    {
+      "word": "Earthquake",
+      "signVideo": "https://sislep.github.io/video-site/weather/Earthquake.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Earthquake.jpg"
+    },
+    {
+      "word": "Island",
+      "signVideo": "https://sislep.github.io/video-site/weather/Island.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Island.jpg"
+    },
+    {
+      "word": "Rainbow",
+      "signVideo": "https://sislep.github.io/video-site/weather/Rainbow.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Rainbow.jpg"
+    },
+    {
+      "word": "Raining",
+      "signVideo": "https://sislep.github.io/video-site/weather/Raining.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Raining.jpg"
+    },
+    {
+      "word": "Sea",
+      "signVideo": "https://sislep.github.io/video-site/weather/Sea.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Sea.jpg"
+    },
+    {
+      "word": "Storm",
+      "signVideo": "https://sislep.github.io/video-site/weather/Storm.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Storm.jpg"
+    },
+    {
+      "word": "Sun",
+      "signVideo": "https://sislep.github.io/video-site/weather/Sun.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Sun.jpg"
+    },
+    {
+      "word": "Thunder",
+      "signVideo": "https://sislep.github.io/video-site/weather/Thunder.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Thunder.jpg"
+    },
+    {
+      "word": "Volcano",
+      "signVideo": "https://sislep.github.io/video-site/weather/Volcano.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Volcano.jpg"
+    },
+    {
+      "word": "Waterfall",
+      "signVideo": "https://sislep.github.io/video-site/weather/Waterfall.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Waterfall.jpg"
+    },
+    {
+      "word": "Weather",
+      "signVideo": "https://sislep.github.io/video-site/weather/Weather.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Weather.jpg"
+    },
+    {
+      "word": "Wind",
+      "signVideo": "https://sislep.github.io/video-site/weather/Wind.mp4",
+      "signImage": "https://sislep.github.io/video-site/weather/Wind.jpg"
     }
   ]
 }

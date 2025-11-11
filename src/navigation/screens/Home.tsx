@@ -13,16 +13,26 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { fetchCategories } from '../../api/fetch'; 
+import { 
+    fetchCategories, 
+    isCategoryFullyDownloaded, // 🚨 NEW: Import new status check
+    downloadCategoryVideos,    // 🚨 NEW: Import download function
+    removeCategoryVideos,      // 🚨 NEW: Import remove function
+} from '../../api/fetch'; 
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 const PROGRESS_STORAGE_KEY = 'userProgress';
+
+// 🚨 NEW: Define types for download status
+type DownloadStatus = 'NOT_DOWNLOADED' | 'DOWNLOADING' | 'DOWNLOADED';
 
 const Home = () => {
   const navigation = useNavigation();
   const [categories, setCategories] = useState([]); 
   const [isLoading, setIsLoading] = useState(true);
   const [userProgress, setUserProgress] = useState({});
+  // 🚨 NEW: State for tracking download status per category
+  const [downloadStatus, setDownloadStatus] = useState<{ [key: string]: DownloadStatus }>({});
 
   // Helper function to load progress from AsyncStorage
   const loadProgress = async () => {
@@ -36,6 +46,27 @@ const Home = () => {
     }
   };
 
+  // 🚨 NEW: Helper function to check and update all download statuses
+  const checkAllDownloadStatuses = async (categoriesList) => {
+    const statusChecks = categoriesList.map(async (category) => {
+        // id is the lowercase category ID (e.g., 'alphabet')
+        const isDownloaded = await isCategoryFullyDownloaded(category.id); 
+        return {
+            categoryId: category.id,
+            status: isDownloaded ? 'DOWNLOADED' : 'NOT_DOWNLOADED',
+        };
+    });
+
+    const results = await Promise.all(statusChecks);
+    const newStatus = results.reduce((acc, curr) => {
+        acc[curr.categoryId] = curr.status;
+        return acc;
+    }, {});
+    
+    setDownloadStatus(newStatus);
+  };
+
+
   // Use useFocusEffect to reload categories and progress
   useFocusEffect(
     useCallback(() => {
@@ -48,6 +79,10 @@ const Home = () => {
 
           // 2. Load user progress
           await loadProgress();
+          
+          // 3. Load download status for all categories 🚨 NEW
+          await checkAllDownloadStatuses(fetchedCategories); 
+          
         } catch (error) {
           Alert.alert('Error', 'Failed to load data. Please check your network connection.');
           console.error(error);
@@ -59,33 +94,85 @@ const Home = () => {
       loadData();
     }, [])
   );
+  
+  // 🚨 NEW: Download Handler
+  const handleDownloadCategory = async (categoryId: string, categoryTitle: string) => {
+    Alert.alert(
+        'Confirm Download',
+        `Do you want to download all videos for '${categoryTitle}'? This may take some time depending on your internet connection.`,
+        [
+            {
+                text: 'Cancel',
+                style: 'cancel',
+            },
+            {
+                text: 'Download',
+                onPress: async () => {
+                    setDownloadStatus(prev => ({ ...prev, [categoryId]: 'DOWNLOADING' }));
+                    try {
+                        await downloadCategoryVideos(categoryId);
+                        Alert.alert('Success', `All videos for ${categoryTitle} are now available offline!`);
+                        setDownloadStatus(prev => ({ ...prev, [categoryId]: 'DOWNLOADED' }));
+                    } catch (error) {
+                        Alert.alert('Download Failed', `Could not download videos for ${categoryTitle}. Please try again.`);
+                        console.error('Download Error:', error);
+                        setDownloadStatus(prev => ({ ...prev, [categoryId]: 'NOT_DOWNLOADED' }));
+                    }
+                },
+            },
+        ],
+        { cancelable: true }
+    );
+  };
+  
+  // 🚨 NEW: Remove Download Handler
+  const handleRemoveDownload = async (categoryId: string, categoryTitle: string) => {
+    Alert.alert(
+        'Confirm Removal',
+        `Do you want to remove all downloaded videos for '${categoryTitle}'? This will free up storage space.`,
+        [
+            {
+                text: 'Cancel',
+                style: 'cancel',
+            },
+            {
+                text: 'Remove',
+                style: 'destructive',
+                onPress: async () => {
+                    setDownloadStatus(prev => ({ ...prev, [categoryId]: 'NOT_DOWNLOADED' }));
+                    try {
+                        await removeCategoryVideos(categoryId);
+                        Alert.alert('Success', `Offline videos for ${categoryTitle} have been removed.`);
+                    } catch (error) {
+                        Alert.alert('Removal Failed', `Could not remove videos for ${categoryTitle}.`);
+                        console.error('Removal Error:', error);
+                        // Revert status on failure
+                        setDownloadStatus(prev => ({ ...prev, [categoryId]: 'DOWNLOADED' })); 
+                    }
+                },
+            },
+        ],
+        { cancelable: true }
+    );
+  };
+
 
   // Finds next incomplete Category
   const handleContinue = () => {
     if (isLoading || categories.length === 0) return;
-
-    // Helper to check if a category is fully completed based on moduleCount and userProgress keys
+    // ... rest of handleContinue is unchanged ...
     const isCategoryComplete = (category) => {
       const totalModules = category.moduleCount || 0;
-      if (totalModules === 0) return true; // Treat empty categories as complete
-
-      // Count how many modules in this category have *any* progress recorded.
+      if (totalModules === 0) return true; 
       const modulesWithProgress = Object.keys(userProgress).filter(key => 
         key.startsWith(category.id + '-')
       ).length;
-
-      // This is still an assumption: a module is only counted as complete if it has
-      // a progress entry. We assume that if every module has an entry, the category is "done" 
-      // for the purpose of finding the next one.
       return modulesWithProgress >= totalModules;
     };
 
-    // Find the first category that is NOT complete
     const nextCategory = categories.find(category => !isCategoryComplete(category));
 
     if (nextCategory) {
-      // Navigate to the found category. CategoryModulesScreen will load the modules 
-      // and determine the exact next lesson index based on userProgress.
       navigation.navigate('CategoryModulesScreen', {
         categoryId: nextCategory.id, 
         categoryTitle: nextCategory.title,
@@ -107,14 +194,12 @@ const Home = () => {
   };
 
   const getCategoryCompletionStatus = (category) => {
-    const totalCount = category.moduleCount || 0; // Use moduleCount from fetched data
+    const totalCount = category.moduleCount || 0; 
     
-    // Count how many modules in this category have progress recorded.
     const completedCount = Object.keys(userProgress).filter(key => 
       key.startsWith(category.id + '-')
     ).length;
 
-    // Calculate percentage based on modules completed vs. total modules in category
     const percentage = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
     
     return { 
@@ -123,11 +208,26 @@ const Home = () => {
         percentage: percentage
     };
   };
-  // --- END REVISED getCategoryCompletionStatus ---
 
   // Render a category card
   const renderCategoryCard = (category) => {
     const { total, completed, percentage } = getCategoryCompletionStatus(category);
+    // 🚨 NEW: Get current download status
+    const status = downloadStatus[category.id] || 'NOT_DOWNLOADED';
+    const isDownloading = status === 'DOWNLOADING';
+    const isDownloaded = status === 'DOWNLOADED';
+    const canDownload = status === 'NOT_DOWNLOADED';
+    
+    // Choose appropriate icon and color based on status
+    let downloadIcon = canDownload ? 'cloud-download' : (isDownloaded ? 'cloud-done' : 'downloading');
+    let iconColor = isDownloaded ? '#FFFFFF' : (isDownloading ? '#FFF' : '#FF9500'); 
+    
+    // Determine the button's action and disability state
+    const actionHandler = isDownloaded 
+        ? () => handleRemoveDownload(category.id, category.title)
+        : canDownload
+        ? () => handleDownloadCategory(category.id, category.title)
+        : null; // Null/disabled when downloading
 
     return (
       <TouchableOpacity
@@ -152,6 +252,31 @@ const Home = () => {
         </View>
         <Text style={styles.categoryTitleText}>{category.title}</Text>
         <Text style={styles.categoryCompletionText}>{`${completed}/${total} Modules`}</Text>
+        
+        {/* 🚨 NEW: Download Button/Status Indicator */}
+        <TouchableOpacity
+            style={[
+                styles.downloadButton, 
+                isDownloading && styles.downloadingButton,
+                isDownloaded && styles.removeButton, // Style for removal option
+                (isDownloading || isLoading) && styles.disabledButton,
+            ]}
+            onPress={actionHandler}
+            disabled={isDownloading || isLoading}
+        >
+            <Icon 
+                name={downloadIcon} 
+                size={20} 
+                color={iconColor} 
+            />
+            {/* <Text style={[
+                styles.downloadButtonText, 
+                (isDownloading || isDownloaded) && { color: '#FFF' },
+            ]}>
+                {isDownloading ? 'Downloading...' : (isDownloaded ? 'Remove Offline' : 'Download All')}
+            </Text> */}
+        </TouchableOpacity>
+        
       </TouchableOpacity>
     );
   };
@@ -284,9 +409,10 @@ const styles = StyleSheet.create({
     gap: 15,
   },
   categoryCard: {
-    width: '45%', // Approximately half-width with some spacing
+    width: '45%',
     alignItems: 'center',
     padding: 15,
+    paddingBottom: 5, // 🚨 NEW: Adjusted padding
     borderRadius: 12,
     backgroundColor: '#fff',
     elevation: 2,
@@ -311,6 +437,35 @@ const styles = StyleSheet.create({
   categoryCompletionText: {
     fontSize: 12,
     color: '#666',
+    marginBottom: 5,
+  },
+  // 🚨 NEW: Download button styles
+  downloadButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 5,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 8,
+    backgroundColor: '#F0F0F0', // Light grey for download
+    width: '100%',
+  },
+  downloadingButton: {
+    backgroundColor: '#FF9500', // Orange for downloading state
+  },
+  removeButton: {
+    backgroundColor: '#4CD964', // Green for remove/downloaded state
+  },
+  downloadButtonText: {
+    marginLeft: 5,
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#FF9500', // Orange color for default state
+  },
+  // Re-use disabledButton for all disabled states
+  disabledButton: {
+    opacity: 0.6,
   },
   bottomIndicator: {
     alignItems: 'center',

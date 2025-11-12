@@ -84,6 +84,18 @@
       "icon": "🔢",
       "bgColor": "#E9E6FF",
       "moduleCount": 5
+    },
+    {
+      "id": "transport",
+      "title": "Transport",
+      "icon": "🚗",
+      "moduleCount": 4
+    },
+    {
+      "id": "vegetable",
+      "title": "Vegetable",
+      "icon": "🥦",
+      "moduleCount": 4
     }
   ]
 }

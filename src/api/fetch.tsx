@@ -27,8 +27,8 @@ import localDictionaryData from '../assets/data/dictionary.json';
 
 // Placeholder URLs for the hosted JSON files.
 // Base URL for the new modular module structure
-const BASE_URL = 'https://s3.tebi.io/sisl-app/';
-const MODULES_BASE_URL = BASE_URL + 'lessons/';
+const BASE_URL = 'https://raw.githubusercontent.com/SISLEP/sisl-app/refs/heads/main/src/assets/data/';
+const MODULES_BASE_URL = BASE_URL;
 const DICTIONARY_DATA_URL = BASE_URL + 'dictionary.json';
 const CATEGORIES_DATA_URL = MODULES_BASE_URL + 'categories.json';
 

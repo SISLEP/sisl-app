@@ -19,6 +19,7 @@ import classModulesData from '../assets/data/class.json';
 import fruitModulesData from '../assets/data/fruit.json';
 import gardenModulesData from '../assets/data/garden.json';
 import houseModulesData from '../assets/data/house.json';
+import numberModulesData from '../assets/data/number.json';
 
 import categoriesData from '../assets/data/categories.json'; // New category list data
 // Assuming the user has a local dictionary JSON file at this path:
@@ -49,6 +50,7 @@ const localModuleDataMap: { [key: string]: { [key: string]: LearningModule[] } }
     fruit: fruitModulesData,
     garden: gardenModulesData,
     house: houseModulesData,
+    number: numberModulesData,
     // Add other categories as needed
 };
 

@@ -1,0 +1,429 @@
+{
+    "number": [
+        {
+            "id": "1",
+            "title": "Numbers 1-6",
+            "subtitle": "Starting with the basics",
+            "icon": "1️⃣",
+            "bgColor": "#E6F0FF",
+            "category": "number",
+            "lessons": [
+                {
+                    "type": "translation",
+                    "instructions": "Guess the correct translation (1)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/1 One.mp4",
+                        "correctAnswer": "1 One",
+                        "options": [
+                            "5 Five",
+                            "40 Forty",
+                            "1 One"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (3 & 4)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/3 Three.mp4",
+                                "translation": "3 Three",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/4 Four.mp4",
+                                "translation": "4 Four",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "What is being signed? (6)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/6 Six.mp4",
+                        "correctAnswer": "6 Six",
+                        "options": [
+                            "9 Nine",
+                            "6 Six",
+                            "5 Five"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (2 & 5)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/2 Two.mp4",
+                                "translation": "2 Two",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/5 Five.mp4",
+                                "translation": "5 Five",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "Choose the right translation (4)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/4 Four.mp4",
+                        "correctAnswer": "4 Four",
+                        "options": [
+                            "50 Fifty",
+                            "4 Four",
+                            "70 Seventy"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Numbers 7-12",
+            "subtitle": "Single digits and starting the tens",
+            "icon": "2️⃣",
+            "bgColor": "#E6F0FF",
+            "category": "number",
+            "lessons": [
+                {
+                    "type": "translation",
+                    "instructions": "What is the English word for this sign? (7)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/7 Seven.mp4",
+                        "correctAnswer": "7 Seven",
+                        "options": [
+                            "20 Twenty",
+                            "15 Fifteen",
+                            "7 Seven"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (10 & 11)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/10 Ten.mp4",
+                                "translation": "10 Ten",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/11 Eleven.mp4",
+                                "translation": "11 Eleven",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "Select the correct word (9)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/9 Nine.mp4",
+                        "correctAnswer": "9 Nine",
+                        "options": [
+                            "3 Three",
+                            "7 Seven",
+                            "9 Nine"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (8 & 12)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/8 Eight.mp4",
+                                "translation": "8 Eight",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/12 Twelve.mp4",
+                                "translation": "12 Twelve",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "Identify the sign's meaning (11)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/11 Eleven.mp4",
+                        "correctAnswer": "11 Eleven",
+                        "options": [
+                            "11 Eleven",
+                            "19 Nineteen",
+                            "7 Seven"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "title": "Numbers 13-19",
+            "subtitle": "Learning the teens",
+            "icon": "3️⃣",
+            "bgColor": "#E6F0FF",
+            "category": "number",
+            "lessons": [
+                {
+                    "type": "translation",
+                    "instructions": "Guess the correct translation (13)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/13 Thirteen.mp4",
+                        "correctAnswer": "13 Thirteen",
+                        "options": [
+                            "13 Thirteen",
+                            "8 Eight",
+                            "16 Sixteen"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (14 & 15)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/14 Fourteen.mp4",
+                                "translation": "14 Fourteen",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/15 Fifteen.mp4",
+                                "translation": "15 Fifteen",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "What is being signed? (17)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/17 Seventeen.mp4",
+                        "correctAnswer": "17 Seventeen",
+                        "options": [
+                            "90 Ninety",
+                            "1000 Thousand",
+                            "17 Seventeen"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (18 & 19)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/18 Eighteen.mp4",
+                                "translation": "18 Eighteen",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/19 Nineteen.mp4",
+                                "translation": "19 Nineteen",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "Choose the right translation (16)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/16 Sixteen.mp4",
+                        "correctAnswer": "16 Sixteen",
+                        "options": [
+                            "16 Sixteen",
+                            "14 Fourteen",
+                            "60 Sixty"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "title": "Tens: 20-60",
+            "subtitle": "Practice the tens",
+            "icon": "4️⃣",
+            "bgColor": "#E6F0FF",
+            "category": "number",
+            "lessons": [
+                {
+                    "type": "translation",
+                    "instructions": "What is the English word for this sign? (20)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/20 Twenty.mp4",
+                        "correctAnswer": "20 Twenty",
+                        "options": [
+                            "7 Seven",
+                            "20 Twenty",
+                            "5 Five"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (30 & 40)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/30 Thirty.mp4",
+                                "translation": "30 Thirty",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/40 Forty.mp4",
+                                "translation": "40 Forty",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "Select the correct word (60)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/60 Sixty.mp4",
+                        "correctAnswer": "60 Sixty",
+                        "options": [
+                            "13 Thirteen",
+                            "3 Three",
+                            "60 Sixty"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (40 & 50)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/40 Forty.mp4",
+                                "translation": "40 Forty",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/50 Fifty.mp4",
+                                "translation": "50 Fifty",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "Identify the sign's meaning (30)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/30 Thirty.mp4",
+                        "correctAnswer": "30 Thirty",
+                        "options": [
+                            "30 Thirty",
+                            "1000 Thousand",
+                            "12 Twelve"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "title": "Tens, Hundreds, and Beyond",
+            "subtitle": "Large numbers and final tens",
+            "icon": "5️⃣",
+            "bgColor": "#E6F0FF",
+            "category": "number",
+            "lessons": [
+                {
+                    "type": "translation",
+                    "instructions": "Guess the correct translation (70)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/70 Seventy.mp4",
+                        "correctAnswer": "70 Seventy",
+                        "options": [
+                            "70 Seventy",
+                            "90 Ninety",
+                            "2 Two"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (80 & 90)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/80 Eighty.mp4",
+                                "translation": "80 Eighty",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/90 Ninety.mp4",
+                                "translation": "90 Ninety",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "What is being signed? (100)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/100 Hundred.mp4",
+                        "correctAnswer": "100 Hundred",
+                        "options": [
+                            "4 Four",
+                            "100 Hundred",
+                            "18 Eighteen"
+                        ]
+                    }
+                },
+                {
+                    "type": "matching_pairs",
+                    "instructions": "Tap the matching pair (1000 & 1 Million)",
+                    "data": {
+                        "items": [
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/1,000 Thousand.mp4",
+                                "translation": "1000 Thousand",
+                                "id": "1"
+                            },
+                            {
+                                "signVideo": "https://sislep.github.io/video-site/number/1 Million.mp4",
+                                "translation": "1 Million",
+                                "id": "2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "translation",
+                    "instructions": "Choose the right translation (1 Million)",
+                    "data": {
+                        "signVideo": "https://sislep.github.io/video-site/number/1 Million.mp4",
+                        "correctAnswer": "1 Million",
+                        "options": [
+                            "1 Million",
+                            "18 Eighteen",
+                            "10 Ten"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

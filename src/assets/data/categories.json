@@ -77,6 +77,13 @@
       "title": "House",
       "icon": "🏠",
       "moduleCount": 3
+    },
+    {
+      "id": "number",
+      "title": "Numbers",
+      "icon": "🔢",
+      "bgColor": "#E9E6FF",
+      "moduleCount": 5
     }
   ]
 }

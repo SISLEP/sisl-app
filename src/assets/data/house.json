@@ -1,0 +1,184 @@
+{
+  "house": [
+    {
+      "id": "1",
+      "title": "House Items (Part 1)",
+      "subtitle": "Bedroom and common furniture signs",
+      "icon": "🛏️",
+      "bgColor": "#ADD8E6",
+      "category": "house",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the sign translation: **Baby Cot**",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Babycot.mp4",
+            "correctAnswer": "Baby Cot",
+            "options": ["Baby Cot", "Bed", "Blanket"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Match the signs for Bed and Blanket",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/house/Bed.mp4", "translation": "Bed", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/house/Blaknket.mp4", "translation": "Blanket", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning: **Bookshelf**",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Bookshe.mp4",
+            "correctAnswer": "Bookshelf",
+            "options": ["Bookshelf", "Broom", "Chair"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Which English word matches the sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Broom.mp4",
+            "correctAnswer": "Broom",
+            "options": ["Broom", "Chair", "Curtains"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the correct pair (Chair & Curtains)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/house/Chair.mp4", "translation": "Chair", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/house/Curtains.mp4", "translation": "Curtains", "id": "2" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "House Items (Part 2)",
+      "subtitle": "Cleaning tools and appliances",
+      "icon": "🧹",
+      "bgColor": "#F0F8FF",
+      "category": "house",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the sign translation: **Dustpan**",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Dustpan.mp4",
+            "correctAnswer": "Dustpan",
+            "options": ["Dustpan", "Electric Fan", "Lamp"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Match the signs for Electric Fan and Lamp",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/house/Electricfan.mp4", "translation": "Electric Fan", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/house/Lamp.mp4", "translation": "Lamp", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning: **Mat**",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Mat.mp4",
+            "correctAnswer": "Mat",
+            "options": ["Mat", "Music", "Phone"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Which English word matches the sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Music.mp4",
+            "correctAnswer": "Music",
+            "options": ["Music", "Phone", "Picture"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the correct pair (Phone & Picture)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/house/Phone.mp4", "translation": "Phone", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/house/Picture.mp4", "translation": "Picture", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the correct word for the sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Pillow.mp4",
+            "correctAnswer": "Pillow",
+            "options": ["Pillow", "Refrigerator", "Sofa"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "House Items (Part 3)",
+      "subtitle": "Kitchen and living room essentials",
+      "icon": "🛋️",
+      "bgColor": "#FFF5EE",
+      "category": "house",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the sign translation: **Refrigerator**",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Refrigerator.mp4",
+            "correctAnswer": "Refrigerator",
+            "options": ["Refrigerator", "Sofa", "Table"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Match the signs for Sofa and Table",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/house/Sofa.mp4", "translation": "Sofa", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/house/Table.mp4", "translation": "Table", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning: **Television**",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Television.mp4",
+            "correctAnswer": "Television",
+            "options": ["Television", "Time", "Washing Machine"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Which English word matches the sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/house/Time.mp4",
+            "correctAnswer": "Time",
+            "options": ["Time", "Washing Machine", "Chair"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the correct pair (Time & Washing Machine)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/house/Time.mp4", "translation": "Time", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/house/Washingmachine.mp4", "translation": "Washing Machine", "id": "2" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

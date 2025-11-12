@@ -15,16 +15,22 @@ import provinceModulesData from '../assets/data/province.json';
 import animalModulesData from '../assets/data/animal.json';
 import sportModulesData from '../assets/data/sport.json';
 import generalModulesData from '../assets/data/general.json';
+import classModulesData from '../assets/data/class.json';
+import fruitModulesData from '../assets/data/fruit.json';
+import gardenModulesData from '../assets/data/garden.json';
+import houseModulesData from '../assets/data/house.json';
+import numberModulesData from '../assets/data/number.json';
 
 import categoriesData from '../assets/data/categories.json'; // New category list data
 // Assuming the user has a local dictionary JSON file at this path:
 import localDictionaryData from '../assets/data/dictionary.json'; 
 
 // Placeholder URLs for the hosted JSON files.
-const CATEGORIES_DATA_URL = 'https://sislep.github.io/video-site/lessons/categories.json'; // New URL
 // Base URL for the new modular module structure
-const MODULES_BASE_URL = 'https://sislep.github.io/video-site/lessons/'; 
-const DICTIONARY_DATA_URL = 'https://sislep.github.io/video-site/dictionary.json';
+const BASE_URL = 'https://s3.tebi.io/sisl-app/';
+const MODULES_BASE_URL = BASE_URL + 'lessons/';
+const DICTIONARY_DATA_URL = BASE_URL + 'dictionary.json';
+const CATEGORIES_DATA_URL = MODULES_BASE_URL + 'categories.json';
 
 // --- NEW: Offline Storage Configuration ---
 // Files will be saved in the document directory, which is persistent (not cleared automatically like cache).
@@ -41,6 +47,11 @@ const localModuleDataMap: { [key: string]: { [key: string]: LearningModule[] } }
     animal: animalModulesData,
     sport: sportModulesData,
     general: generalModulesData,
+    class: classModulesData,
+    fruit: fruitModulesData,
+    garden: gardenModulesData,
+    house: houseModulesData,
+    number: numberModulesData,
     // Add other categories as needed
 };
 

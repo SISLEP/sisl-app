@@ -4,84 +4,78 @@
       "id": "alphabet",
       "title": "Alphabet",
       "icon": "🅰️",
-      "bgColor": "#FBE8E8",
       "moduleCount": 4
     },
     {
       "id": "body",
       "title": "Body",
       "icon": "🧍",
-      "bgColor": "#E8FBF8",
       "moduleCount": 2
     },
     {
       "id": "family",
       "title": "Family",
       "icon": "👨‍👩‍👧‍👦",
-      "bgColor": "#F8E8FB",
       "moduleCount": 4
     },
     {
       "id": "month",
       "title": "Months",
       "icon": "📅",
-      "bgColor": "#E6FFEB",
       "moduleCount": 2
     },
     {
       "id": "colour",
       "title": "Colours",
       "icon": "🌈",
-      "bgColor": "#E9F5FF",
       "moduleCount": 2
     },
     {
       "id": "province",
       "title": "Provinces",
       "icon": "🗺️",
-      "bgColor": "#FFF9E6",
       "moduleCount": 2
     },
     {
       "id": "animal",
       "title": "Animals",
       "icon": "🐶",
-      "bgColor": "#E6F5FF",
       "moduleCount": 4
     },
     {
       "id": "sport",
       "title": "Sports",
       "icon": "⚽",
-      "bgColor": "#FFE6E6",
       "moduleCount": 3
     },
     {
       "id": "general",
       "title": "General Signs",
       "icon": "🤟",
-      "bgColor": "#FFF4E6",
       "moduleCount": 1
     },
     {
       "id": "class",
       "title": "Class",
       "icon": "🏫",
-      "bgColor": "#F0F8FF",
       "moduleCount": 7
     },
     {
       "id": "fruit",
       "title": "Fruit",
       "icon": "🍓",
-      "bgColor": "#FCE4EC",
       "moduleCount": 7
     },
     {
       "id": "garden",
       "title": "Garden",
       "icon": "🌻",
-      "bgColor": "#F0FFF0",
+      "moduleCount": 3
+    },
+    {
+      "id": "house",
+      "title": "House",
+      "icon": "🏠",
       "moduleCount": 3
     }
   ]

@@ -10,7 +10,7 @@
       "lessons": [
         {
           "type": "translation",
-          "instructions": "Select the sign translation: **Baby Cot**",
+          "instructions": "Select the sign translation",
           "data": {
             "signVideo": "https://sislep.github.io/video-site/house/Babycot.mp4",
             "correctAnswer": "Baby Cot",
@@ -29,7 +29,7 @@
         },
         {
           "type": "translation",
-          "instructions": "Identify the sign's meaning: **Bookshelf**",
+          "instructions": "Identify the sign's meaning",
           "data": {
             "signVideo": "https://sislep.github.io/video-site/house/Bookshe.mp4",
             "correctAnswer": "Bookshelf",
@@ -47,7 +47,7 @@
         },
         {
           "type": "matching_pairs",
-          "instructions": "Tap the correct pair (Chair & Curtains)",
+          "instructions": "Tap the correct pair",
           "data": {
             "items": [
               { "signVideo": "https://sislep.github.io/video-site/house/Chair.mp4", "translation": "Chair", "id": "1" },
@@ -67,7 +67,7 @@
       "lessons": [
         {
           "type": "translation",
-          "instructions": "Select the sign translation: **Dustpan**",
+          "instructions": "Select the sign translation",
           "data": {
             "signVideo": "https://sislep.github.io/video-site/house/Dustpan.mp4",
             "correctAnswer": "Dustpan",
@@ -86,7 +86,7 @@
         },
         {
           "type": "translation",
-          "instructions": "Identify the sign's meaning: **Mat**",
+          "instructions": "Identify the sign's meaning",
           "data": {
             "signVideo": "https://sislep.github.io/video-site/house/Mat.mp4",
             "correctAnswer": "Mat",
@@ -104,7 +104,7 @@
         },
         {
           "type": "matching_pairs",
-          "instructions": "Tap the correct pair (Phone & Picture)",
+          "instructions": "Tap the correct pair",
           "data": {
             "items": [
               { "signVideo": "https://sislep.github.io/video-site/house/Phone.mp4", "translation": "Phone", "id": "1" },
@@ -133,7 +133,7 @@
       "lessons": [
         {
           "type": "translation",
-          "instructions": "Select the sign translation: **Refrigerator**",
+          "instructions": "Select the sign translation",
           "data": {
             "signVideo": "https://sislep.github.io/video-site/house/Refrigerator.mp4",
             "correctAnswer": "Refrigerator",
@@ -152,7 +152,7 @@
         },
         {
           "type": "translation",
-          "instructions": "Identify the sign's meaning: **Television**",
+          "instructions": "Identify the sign's meaning",
           "data": {
             "signVideo": "https://sislep.github.io/video-site/house/Television.mp4",
             "correctAnswer": "Television",
@@ -170,7 +170,7 @@
         },
         {
           "type": "matching_pairs",
-          "instructions": "Tap the correct pair (Time & Washing Machine)",
+          "instructions": "Tap the correct pair",
           "data": {
             "items": [
               { "signVideo": "https://sislep.github.io/video-site/house/Time.mp4", "translation": "Time", "id": "1" },

@@ -10,7 +10,7 @@
             "lessons": [
                 {
                     "type": "translation",
-                    "instructions": "Guess the correct translation (1)",
+                    "instructions": "Guess the correct translation",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/1 One.mp4",
                         "correctAnswer": "1 One",
@@ -23,7 +23,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (3 & 4)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -41,7 +41,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "What is being signed? (6)",
+                    "instructions": "What is being signed?",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/6 Six.mp4",
                         "correctAnswer": "6 Six",
@@ -54,7 +54,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (2 & 5)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -72,7 +72,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "Choose the right translation (4)",
+                    "instructions": "Choose the right translation",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/4 Four.mp4",
                         "correctAnswer": "4 Four",
@@ -95,7 +95,7 @@
             "lessons": [
                 {
                     "type": "translation",
-                    "instructions": "What is the English word for this sign? (7)",
+                    "instructions": "What is the English word for this sign?",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/7 Seven.mp4",
                         "correctAnswer": "7 Seven",
@@ -108,7 +108,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (10 & 11)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -126,7 +126,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "Select the correct word (9)",
+                    "instructions": "Select the correct word",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/9 Nine.mp4",
                         "correctAnswer": "9 Nine",
@@ -139,7 +139,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (8 & 12)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -157,7 +157,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "Identify the sign's meaning (11)",
+                    "instructions": "Identify the sign's meaning",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/11 Eleven.mp4",
                         "correctAnswer": "11 Eleven",
@@ -180,7 +180,7 @@
             "lessons": [
                 {
                     "type": "translation",
-                    "instructions": "Guess the correct translation (13)",
+                    "instructions": "Guess the correct translation",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/13 Thirteen.mp4",
                         "correctAnswer": "13 Thirteen",
@@ -193,7 +193,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (14 & 15)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -211,7 +211,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "What is being signed? (17)",
+                    "instructions": "What is being signed?",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/17 Seventeen.mp4",
                         "correctAnswer": "17 Seventeen",
@@ -224,7 +224,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (18 & 19)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -242,7 +242,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "Choose the right translation (16)",
+                    "instructions": "Choose the right translation",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/16 Sixteen.mp4",
                         "correctAnswer": "16 Sixteen",
@@ -265,7 +265,7 @@
             "lessons": [
                 {
                     "type": "translation",
-                    "instructions": "What is the English word for this sign? (20)",
+                    "instructions": "What is the English word for this sign?",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/20 Twenty.mp4",
                         "correctAnswer": "20 Twenty",
@@ -278,7 +278,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (30 & 40)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -296,7 +296,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "Select the correct word (60)",
+                    "instructions": "Select the correct word",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/60 Sixty.mp4",
                         "correctAnswer": "60 Sixty",
@@ -309,7 +309,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (40 & 50)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -327,7 +327,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "Identify the sign's meaning (30)",
+                    "instructions": "Identify the sign's meaning",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/30 Thirty.mp4",
                         "correctAnswer": "30 Thirty",
@@ -350,7 +350,7 @@
             "lessons": [
                 {
                     "type": "translation",
-                    "instructions": "Guess the correct translation (70)",
+                    "instructions": "Guess the correct translation",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/70 Seventy.mp4",
                         "correctAnswer": "70 Seventy",
@@ -363,7 +363,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (80 & 90)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -381,7 +381,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "What is being signed? (100)",
+                    "instructions": "What is being signed?",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/100 Hundred.mp4",
                         "correctAnswer": "100 Hundred",
@@ -394,7 +394,7 @@
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (1000 & 1 Million)",
+                    "instructions": "Tap the matching pair",
                     "data": {
                         "items": [
                             {
@@ -412,7 +412,7 @@
                 },
                 {
                     "type": "translation",
-                    "instructions": "Choose the right translation (1 Million)",
+                    "instructions": "Choose the right translation",
                     "data": {
                         "signVideo": "https://sislep.github.io/video-site/number/1 Million.mp4",
                         "correctAnswer": "1 Million",

@@ -528,11 +528,6 @@
     ],
     "Animal": [
         {
-            "word": "Ant",
-            "signVideo": "https://sislep.github.io/video-site/animal/Ant.mp4",
-            "signImage": "https://sislep.github.io/video-site/animal/Ant.jpg"
-        },
-        {
             "word": "Bat",
             "signVideo": "https://sislep.github.io/video-site/animal/Bat.mp4",
             "signImage": "https://sislep.github.io/video-site/animal/Bat.jpg"
@@ -617,6 +612,11 @@
             "word": "Lizard",
             "signVideo": "https://sislep.github.io/video-site/animal/Lizard.mp4",
             "signImage": "https://sislep.github.io/video-site/animal/Lizard.jpg"
+        },
+        {
+            "word": "Mosquito",
+            "signVideo": "https://sislep.github.io/video-site/animal/Mosquito.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Mosquito.jpg"
         },
         {
             "word": "Owl",

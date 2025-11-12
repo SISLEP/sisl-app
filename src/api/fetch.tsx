@@ -26,10 +26,11 @@ import categoriesData from '../assets/data/categories.json'; // New category lis
 import localDictionaryData from '../assets/data/dictionary.json'; 
 
 // Placeholder URLs for the hosted JSON files.
-const CATEGORIES_DATA_URL = 'https://sislep.github.io/video-site/lessons/categories.json'; // New URL
 // Base URL for the new modular module structure
-const MODULES_BASE_URL = 'https://sislep.github.io/video-site/lessons/'; 
-const DICTIONARY_DATA_URL = 'https://sislep.github.io/video-site/dictionary.json';
+const BASE_URL = 'https://s3.tebi.io/sisl-app/';
+const MODULES_BASE_URL = BASE_URL + 'lessons/';
+const DICTIONARY_DATA_URL = BASE_URL + 'dictionary.json';
+const CATEGORIES_DATA_URL = MODULES_BASE_URL + 'categories.json';
 
 // --- NEW: Offline Storage Configuration ---
 // Files will be saved in the document directory, which is persistent (not cleared automatically like cache).

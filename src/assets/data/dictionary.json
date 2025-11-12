@@ -1,839 +1,1245 @@
 {
-  "Alphabet": [
-    {
-      "word": "A",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4"
-    },
-    {
-      "word": "B",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4"
-    },
-    {
-      "word": "C",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4"
-    },
-    {
-      "word": "D",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4"
-    },
-    {
-      "word": "E",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4"
-    },
-    {
-      "word": "F",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4"
-    },
-    {
-      "word": "G",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4"
-    },
-    {
-      "word": "H",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4"
-    },
-    {
-      "word": "I",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4"
-    },
-    {
-      "word": "J",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4"
-    },
-    {
-      "word": "K",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4"
-    },
-    {
-      "word": "L",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4"
-    },
-    {
-      "word": "M",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4"
-    },
-    {
-      "word": "N",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4"
-    },
-    {
-      "word": "O",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4"
-    },
-    {
-      "word": "P",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4"
-    },
-    {
-      "word": "Q",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4"
-    },
-    {
-      "word": "R",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4"
-    },
-    {
-      "word": "S",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4"
-    },
-    {
-      "word": "T",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4"
-    },
-    {
-      "word": "U",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4"
-    },
-    {
-      "word": "V",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4"
-    },
-    {
-      "word": "W",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4"
-    },
-    {
-      "word": "X",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4"
-    },
-    {
-      "word": "Y",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4"
-    },
-    {
-      "word": "Z",
-      "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4"
-    }
-  ],
-  "Body": [
-    {
-      "word": "Body",
-      "signVideo": "https://sislep.github.io/video-site/body/Body.mp4"
-    },
-    {
-      "word": "Face",
-      "signVideo": "https://sislep.github.io/video-site/body/Face.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Face.jpg"
-    },
-    {
-      "word": "Hair",
-      "signVideo": "https://sislep.github.io/video-site/body/Hair.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Hair.jpg"
-    },
-    {
-      "word": "Head",
-      "signVideo": "https://sislep.github.io/video-site/body/Head.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Head.jpg"
-    },
-    {
-      "word": "Eyes",
-      "signVideo": "https://sislep.github.io/video-site/body/Eye.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Eye.jpg"
-    },
-    {
-      "word": "Mouth",
-      "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4"
-    },
-    {
-      "word": "Nose",
-      "signVideo": "https://sislep.github.io/video-site/body/Nose.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Nose.jpg"
-    },
-    {
-      "word": "Teeth",
-      "signVideo": "https://sislep.github.io/video-site/body/Teeth.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Teeth.jpg"
-    },
-    {
-      "word": "Tongue",
-      "signVideo": "https://sislep.github.io/video-site/body/Tongue.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Tongue.jpg"
-    },
-    {
-      "word": "Chin",
-      "signVideo": "https://sislep.github.io/video-site/body/Chin.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Chin.jpg"
-    },
-    {
-      "word": "Ear",
-      "signVideo": "https://sislep.github.io/video-site/body/Ear.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Ear.jpg"
-    },
-    {
-      "word": "Armpit",
-      "signVideo": "https://sislep.github.io/video-site/body/Armpit.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Armpit.jpg"
-    },
-    {
-      "word": "Fingers",
-      "signVideo": "https://sislep.github.io/video-site/body/Fingers.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Fingers.jpg"
-    },
-    {
-      "word": "Feet",
-      "signVideo": "https://sislep.github.io/video-site/body/Feet.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Feet.jpg"
-    },
-    {
-      "word": "Neck",
-      "signVideo": "https://sislep.github.io/video-site/body/Neck.mp4",
-      "signImage": "https://sislep.github.io/video-site/body/Neck.jpg"
-    }
-  ],
-  "Family": [
-    {
-        "word": "Aunt",
-        "signVideo": "https://sislep.github.io/video-site/family/Aunt.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Aunt.jpg"
-    },
-    {
-        "word": "Baby",
-        "signVideo": "https://sislep.github.io/video-site/family/Baby.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Baby.jpg"
-    },
-    {
-        "word": "Boy",
-        "signVideo": "https://sislep.github.io/video-site/family/Boy.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Boy.jpg"
-    },
-    {
-        "word": "Boyfriend",
-        "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4"
-    },
-    {
-        "word": "Brother",
-        "signVideo": "https://sislep.github.io/video-site/family/Brother.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Brother.jpg"
-    },
-    {
-        "word": "Cousin",
-        "signVideo": "https://sislep.github.io/video-site/family/Cousin.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Cousin.jpg"
-    },
-    {
-        "word": "Dad",
-        "signVideo": "https://sislep.github.io/video-site/family/Dad.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Dad.jpg"
-    },
-    {
-        "word": "Daughter",
-        "signVideo": "https://sislep.github.io/video-site/family/Daughter.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Daughter.jpg"
-    },
-    {
-        "word": "Divorce",
-        "signVideo": "https://sislep.github.io/video-site/family/Divorce.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Divorce.jpg"
-    },
-    {
-        "word": "Engagement",
-        "signVideo": "https://sislep.github.io/video-site/family/Engagement.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Engagement.jpg"
-    },
-    {
-        "word": "Father",
-        "signVideo": "https://sislep.github.io/video-site/family/Father.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Dad.jpg"
-    },
-    {
-        "word": "Friend",
-        "signVideo": "https://sislep.github.io/video-site/family/Friend.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Friend.jpg"
-    },
-    {
-        "word": "Girl",
-        "signVideo": "https://sislep.github.io/video-site/family/Girl.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Girl.jpg"
-    },
-    {
-        "word": "Girlfriend",
-        "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4"
-    },
-    {
-        "word": "Granddaughter",
-        "signVideo": "https://sislep.github.io/video-site/family/Granddaughter.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Granddaughter.jpg"
-    },
-    {
-        "word": "Grandfather",
-        "signVideo": "https://sislep.github.io/video-site/family/Grandfather.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Grandfather.jpg"
-    },
-    {
-        "word": "Grandmother",
-        "signVideo": "https://sislep.github.io/video-site/family/Grandmother.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Grandmother.jpg"
-    },
-    {
-        "word": "Grandson",
-        "signVideo": "https://sislep.github.io/video-site/family/Grandson.mp4"
-    },
-    {
-        "word": "HusbandandWife",
-        "signVideo": "https://sislep.github.io/video-site/family/HusbandandWife.mp4"
-    },
-    {
-        "word": "Man",
-        "signVideo": "https://sislep.github.io/video-site/family/Man.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Man.jpg"
-    },
-    {
-        "word": "Marry",
-        "signVideo": "https://sislep.github.io/video-site/family/Marry.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Marry.jpg"
-    },
-    {
-        "word": "Mother",
-        "signVideo": "https://sislep.github.io/video-site/family/Mother.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Mum.jpg"
-    },
-    {
-        "word": "Mummy",
-        "signVideo": "https://sislep.github.io/video-site/family/Mummy.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Mum.jpg"
-    },
-    {
-        "word": "Old",
-        "signVideo": "https://sislep.github.io/video-site/family/Old.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Old.jpg"
-    },
-    {
-        "word": "Sign Language Family",
-        "signVideo": "https://sislep.github.io/video-site/family/SignLanguageFamily.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Family.jpg"
-    },
-    {
-        "word": "Sister",
-        "signVideo": "https://sislep.github.io/video-site/family/Sister.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Sister.jpg"
-    },
-    {
-        "word": "Son",
-        "signVideo": "https://sislep.github.io/video-site/family/Son.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Son.jpg"
-    },
-    {
-        "word": "Uncle",
-        "signVideo": "https://sislep.github.io/video-site/family/Uncle.mp4"
-    },
-    {
-        "word": "Wedding",
-        "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4"
-    },
-    {
-        "word": "Wife",
-        "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4"
-    },
-    {
-        "word": "Woman",
-        "signVideo": "https://sislep.github.io/video-site/family/Woman.mp4",
-        "signImage": "https://sislep.github.io/video-site/family/Woman.jpg"
-    }
-  ],
-  "Month": [
-    {
-        "word": "Sign Language Month",
-        "signVideo": "https://sislep.github.io/video-site/month/SignLanguageMonth.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/Month.jpg"
-    },
-    {
-        "word": "January",
-        "signVideo": "https://sislep.github.io/video-site/month/January.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/January.jpg"
-    },
-    {
-        "word": "February",
-        "signVideo": "https://sislep.github.io/video-site/month/February.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/February.jpg"
-    },
-    {
-        "word": "March",
-        "signVideo": "https://sislep.github.io/video-site/month/March.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/March.jpg"
-    },
-    {
-        "word": "April",
-        "signVideo": "https://sislep.github.io/video-site/month/April.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/April.jpg"
-    },
-    {
-        "word": "May",
-        "signVideo": "https://sislep.github.io/video-site/month/May.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/May.jpg"
-    },
-    {
-        "word": "June",
-        "signVideo": "https://sislep.github.io/video-site/month/June.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/June.jpg"
-    },
-    {
-        "word": "July",
-        "signVideo": "https://sislep.github.io/video-site/month/July.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/July.jpg"
-    },
-    {
-        "word": "August",
-        "signVideo": "https://sislep.github.io/video-site/month/August.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/August.jpg"
-    },
-    {
-        "word": "September",
-        "signVideo": "https://sislep.github.io/video-site/month/September.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/September.jpg"
-    },
-    {
-        "word": "October",
-        "signVideo": "https://sislep.github.io/video-site/month/October.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/October.jpg"
-    },
-    {
-        "word": "November",
-        "signVideo": "https://sislep.github.io/video-site/month/November.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/November.jpg"
-    },
-    {
-        "word": "December",
-        "signVideo": "https://sislep.github.io/video-site/month/December.mp4",
-        "signImage": "https://sislep.github.io/video-site/month/December.jpg"
-    }
-  ],
-  "Colours": [
-    {
-        "word": "Black",
-        "signVideo": "https://sislep.github.io/video-site/colour/Black.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Black.jpg"
-    },
-    {
-        "word": "Blue",
-        "signVideo": "https://sislep.github.io/video-site/colour/Blue.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Blue.jpg"
-    },
-    {
-        "word": "Brown",
-        "signVideo": "https://sislep.github.io/video-site/colour/Brown.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Brown.jpg"
-    },
-    {
-        "word": "Gold",
-        "signVideo": "https://sislep.github.io/video-site/colour/Gold.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Gold.jpg"
-    },
-    {
-        "word": "Gray",
-        "signVideo": "https://sislep.github.io/video-site/colour/Gray.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Gray.jpg"
-    },
-    {
-        "word": "Green",
-        "signVideo": "https://sislep.github.io/video-site/colour/Green.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Green.jpg"
-    },
-    {
-        "word": "Orange",
-        "signVideo": "https://sislep.github.io/video-site/colour/Orange.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Orange.jpg"
-    },
-    {
-        "word": "Pink",
-        "signVideo": "https://sislep.github.io/video-site/colour/Pink.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Pink.jpg"
-    },
-    {
-        "word": "Purple",
-        "signVideo": "https://sislep.github.io/video-site/colour/Purple.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Purple.jpg"
-    },
-    {
-        "word": "Red",
-        "signVideo": "https://sislep.github.io/video-site/colour/Red.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Red.jpg"
-    },
-    {
-        "word": "SignLanguageColour",
-        "signVideo": "https://sislep.github.io/video-site/colour/SignLanguageColour.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Colour.jpg"
-    },
-    {
-        "word": "Silver",
-        "signVideo": "https://sislep.github.io/video-site/colour/Silver.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Silver.jpg"
-    },
-    {
-        "word": "White",
-        "signVideo": "https://sislep.github.io/video-site/colour/White.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/White.jpg"
-    },
-    {
-        "word": "Yellow",
-        "signVideo": "https://sislep.github.io/video-site/colour/Yellow.mp4",
-        "signImage": "https://sislep.github.io/video-site/colour/Yellow.jpg"
-    }
-  ],
-  "Province": [
-    {
-        "word": "Central",
-        "signVideo": "https://sislep.github.io/video-site/province/Central.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Central.jpg"
-    },
-    {
-        "word": "Choiseul",
-        "signVideo": "https://sislep.github.io/video-site/province/Choiseul.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Choiseul.jpg"
-    },
-    {
-        "word": "Guadalcanal",
-        "signVideo": "https://sislep.github.io/video-site/province/Guadalcanal.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Guadalcanal.jpg"
-    },
-    {
-        "word": "Isabel",
-        "signVideo": "https://sislep.github.io/video-site/province/Isabel.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Isabel.jpg"
-    },
-    {
-        "word": "Makira",
-        "signVideo": "https://sislep.github.io/video-site/province/Makira.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Makira.jpg"
-    },
-    {
-        "word": "Malaita",
-        "signVideo": "https://sislep.github.io/video-site/province/Malaita.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Malaita.jpg"
-    },
-    {
-        "word": "Rennell & Bellona",
-        "signVideo": "https://sislep.github.io/video-site/province/Rennell&Bellona.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Rennell&Bellona.jpg"
-    },
-    {
-        "word": "Sign Language Province",
-        "signVideo": "https://sislep.github.io/video-site/province/SignLanguageProvince.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Province.jpg"
-    },
-    {
-        "word": "Solomon",
-        "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Solomon.jpg"
-    },
-    {
-        "word": "Temotu",
-        "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Temotu.jpg"
-    },
-    {
-        "word": "Western",
-        "signVideo": "https://sislep.github.io/video-site/province/Western.mp4",
-        "signImage": "https://sislep.github.io/video-site/province/Western.jpg"
-    }
-  ],
-  "Animal": [
-    {
-        "word": "Ant",
-        "signVideo": "https://sislep.github.io/video-site/animal/Ant.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Ant.jpg"
-    },
-    {
-        "word": "Bat",
-        "signVideo": "https://sislep.github.io/video-site/animal/Bat.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Bat.jpg"
-    },
-    {
-        "word": "Bee",
-        "signVideo": "https://sislep.github.io/video-site/animal/Bee.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Bee.jpg"
-    },
-    {
-        "word": "Bird",
-        "signVideo": "https://sislep.github.io/video-site/animal/Bird.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Bird.jpg"
-    },
-    {
-        "word": "Bull",
-        "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4"
-    },
-    {
-        "word": "Butterfly",
-        "signVideo": "https://sislep.github.io/video-site/animal/Butterfly.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Butterfly.jpg"
-    },
-    {
-        "word": "Cat",
-        "signVideo": "https://sislep.github.io/video-site/animal/Cat.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Cat.jpg"
-    },
-    {
-        "word": "Cockroach",
-        "signVideo": "https://sislep.github.io/video-site/animal/Cockroach.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Cockroach.jpg"
-    },
-    {
-        "word": "Cormorant",
-        "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4"
-    },
-    {
-        "word": "Cow",
-        "signVideo": "https://sislep.github.io/video-site/animal/Cow.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Cow.jpg"
-    },
-    {
-        "word": "Crocodile",
-        "signVideo": "https://sislep.github.io/video-site/animal/Crocodile.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Crocodile.jpg"
-    },
-    {
-        "word": "Dog",
-        "signVideo": "https://sislep.github.io/video-site/animal/Dog.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Dog.jpg"
-    },
-    {
-        "word": "Duck",
-        "signVideo": "https://sislep.github.io/video-site/animal/Duck.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Duck.jpg"
-    },
-    {
-        "word": "Firefly",
-        "signVideo": "https://sislep.github.io/video-site/animal/Firefly.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Firefly.jpg"
-    },
-    {
-        "word": "Fly",
-        "signVideo": "https://sislep.github.io/video-site/animal/Fly.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Fly.jpg"
-    },
-    {
-        "word": "Frog",
-        "signVideo": "https://sislep.github.io/video-site/animal/Frog.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Frog.jpg"
-    },
-    {
-        "word": "Gecko",
-        "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4"
-    },
-    {
-        "word": "Horse",
-        "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4"
-    },
-    {
-        "word": "Lizard",
-        "signVideo": "https://sislep.github.io/video-site/animal/Lizard.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Lizard.jpg"
-    },
-    {
-        "word": "Owl",
-        "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4"
-    },
-    {
-        "word": "Pig",
-        "signVideo": "https://sislep.github.io/video-site/animal/Pig.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Pig.jpg"
-    },
-    {
-        "word": "Rat",
-        "signVideo": "https://sislep.github.io/video-site/animal/Rat.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Rat.jpg"
-    },
-    {
-        "word": "SignLanguageAnimal",
-        "signVideo": "https://sislep.github.io/video-site/animal/SignLanguageAnimal.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Animal.jpg"
-    },
-    {
-        "word": "SlowLorises",
-        "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4"
-    },
-    {
-        "word": "Snail",
-        "signVideo": "https://sislep.github.io/video-site/animal/Snail.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Snail.jpg"
-    },
-    {
-        "word": "Snake",
-        "signVideo": "https://sislep.github.io/video-site/animal/Snake.mp4",
-        "signImage": "https://sislep.github.io/video-site/animal/Snake.jpg"
-    },
-    {
-        "word": "Spider",
-        "signVideo": "https://sislep.github.io/video-site/animal/Spider.mp4"
-    },
-    {
-        "word": "Woodpecker",
-        "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4"
-    }
-  ],
-  "Sport": [
-    {
-        "word": "Archery",
-        "signVideo": "https://sislep.github.io/video-site/sport/Archery.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Archery.jpg"
-    },
-    {
-        "word": "Basketball",
-        "signVideo": "https://sislep.github.io/video-site/sport/Basketball.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Basketball.jpg"
-    },
-    {
-        "word": "Boxing",
-        "signVideo": "https://sislep.github.io/video-site/sport/Boxing.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Boxing.jpg"
-    },
-    {
-        "word": "Canoeing",
-        "signVideo": "https://sislep.github.io/video-site/sport/Canoeing.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Canoeing.jpg"
-    },
-    {
-        "word": "Cycle",
-        "signVideo": "https://sislep.github.io/video-site/sport/Cycling.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Cycling.jpg"
-    },
-    {
-        "word": "Dart",
-        "signVideo": "https://sislep.github.io/video-site/sport/Dart.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Dart.jpg"
-    },
-    {
-        "word": "Futsal",
-        "signVideo": "https://sislep.github.io/video-site/sport/Futsal.mp4"
-    },
-    {
-        "word": "Golf",
-        "signVideo": "https://sislep.github.io/video-site/sport/Golf.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Golf.jpg"
-    },
-    {
-        "word": "Hockey",
-        "signVideo": "https://sislep.github.io/video-site/sport/Hockey.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Hockey.jpg"
-    },
-    {
-        "word": "Karate",
-        "signVideo": "https://sislep.github.io/video-site/sport/Karate.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Karate.jpg"
-    },
-    {
-        "word": "Netball",
-        "signVideo": "https://sislep.github.io/video-site/sport/Netball.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Netball.jpg"
-    },
-    {
-        "word": "Rugby",
-        "signVideo": "https://sislep.github.io/video-site/sport/Rugby.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Rugby.jpg"
-    },
-    {
-        "word": "Rugby7",
-        "signVideo": "https://sislep.github.io/video-site/sport/Rugby7.mp4"
-    },
-    {
-        "word": "Running",
-        "signVideo": "https://sislep.github.io/video-site/sport/Running.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Running.jpg"
-    },
-    {
-        "word": "Soccer",
-        "signVideo": "https://sislep.github.io/video-site/sport/Soccer.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Soccer.jpg"
-    },
-    {
-        "word": "Sports",
-        "signVideo": "https://sislep.github.io/video-site/sport/Sports.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Sports.jpg"
-    },
-    {
-        "word": "Surfing",
-        "signVideo": "https://sislep.github.io/video-site/sport/Surfing.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Surfing.jpg"
-    },
-    {
-        "word": "Swimming",
-        "signVideo": "https://sislep.github.io/video-site/sport/Swimming.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Swimming.jpg"
-    },
-    {
-        "word": "TableTennis",
-        "signVideo": "https://sislep.github.io/video-site/sport/TableTennis.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/TableTennis.jpg"
-    },
-    {
-        "word": "Tennis",
-        "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4"
-    },
-    {
-        "word": "Volleyball",
-        "signVideo": "https://sislep.github.io/video-site/sport/Volleyball.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/Volleyball.jpg"
-    },
-    {
-        "word": "WeightLifting",
-        "signVideo": "https://sislep.github.io/video-site/sport/WeightLifting.mp4",
-        "signImage": "https://sislep.github.io/video-site/sport/WeightLifting.jpg"
-    }
-  ],
-  "Weather": [
-    {
-      "word": "Cyclone",
-      "signVideo": "https://sislep.github.io/video-site/weather/Cyclone.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Cyclone.jpg"
-    },
-    {
-      "word": "Earthquake",
-      "signVideo": "https://sislep.github.io/video-site/weather/Earthquake.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Earthquake.jpg"
-    },
-    {
-      "word": "Island",
-      "signVideo": "https://sislep.github.io/video-site/weather/Island.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Island.jpg"
-    },
-    {
-      "word": "Rainbow",
-      "signVideo": "https://sislep.github.io/video-site/weather/Rainbow.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Rainbow.jpg"
-    },
-    {
-      "word": "Raining",
-      "signVideo": "https://sislep.github.io/video-site/weather/Raining.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Raining.jpg"
-    },
-    {
-      "word": "Sea",
-      "signVideo": "https://sislep.github.io/video-site/weather/Sea.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Sea.jpg"
-    },
-    {
-      "word": "Storm",
-      "signVideo": "https://sislep.github.io/video-site/weather/Storm.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Storm.jpg"
-    },
-    {
-      "word": "Sun",
-      "signVideo": "https://sislep.github.io/video-site/weather/Sun.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Sun.jpg"
-    },
-    {
-      "word": "Thunder",
-      "signVideo": "https://sislep.github.io/video-site/weather/Thunder.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Thunder.jpg"
-    },
-    {
-      "word": "Volcano",
-      "signVideo": "https://sislep.github.io/video-site/weather/Volcano.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Volcano.jpg"
-    },
-    {
-      "word": "Waterfall",
-      "signVideo": "https://sislep.github.io/video-site/weather/Waterfall.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Waterfall.jpg"
-    },
-    {
-      "word": "Weather",
-      "signVideo": "https://sislep.github.io/video-site/weather/Weather.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Weather.jpg"
-    },
-    {
-      "word": "Wind",
-      "signVideo": "https://sislep.github.io/video-site/weather/Wind.mp4",
-      "signImage": "https://sislep.github.io/video-site/weather/Wind.jpg"
-    }
-  ]
+    "Alphabet": [
+        {
+            "word": "A",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4"
+        },
+        {
+            "word": "B",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4"
+        },
+        {
+            "word": "C",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4"
+        },
+        {
+            "word": "D",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4"
+        },
+        {
+            "word": "E",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4"
+        },
+        {
+            "word": "F",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4"
+        },
+        {
+            "word": "G",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4"
+        },
+        {
+            "word": "H",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4"
+        },
+        {
+            "word": "I",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4"
+        },
+        {
+            "word": "J",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4"
+        },
+        {
+            "word": "K",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4"
+        },
+        {
+            "word": "L",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4"
+        },
+        {
+            "word": "M",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4"
+        },
+        {
+            "word": "N",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4"
+        },
+        {
+            "word": "O",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4"
+        },
+        {
+            "word": "P",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4"
+        },
+        {
+            "word": "Q",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4"
+        },
+        {
+            "word": "R",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4"
+        },
+        {
+            "word": "S",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4"
+        },
+        {
+            "word": "T",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4"
+        },
+        {
+            "word": "U",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4"
+        },
+        {
+            "word": "V",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4"
+        },
+        {
+            "word": "W",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4"
+        },
+        {
+            "word": "X",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4"
+        },
+        {
+            "word": "Y",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4"
+        },
+        {
+            "word": "Z",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4"
+        }
+    ],
+    "Body": [
+        {
+            "word": "Body",
+            "signVideo": "https://sislep.github.io/video-site/body/Body.mp4"
+        },
+        {
+            "word": "Face",
+            "signVideo": "https://sislep.github.io/video-site/body/Face.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Face.jpg"
+        },
+        {
+            "word": "Hair",
+            "signVideo": "https://sislep.github.io/video-site/body/Hair.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Hair.jpg"
+        },
+        {
+            "word": "Head",
+            "signVideo": "https://sislep.github.io/video-site/body/Head.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Head.jpg"
+        },
+        {
+            "word": "Eyes",
+            "signVideo": "https://sislep.github.io/video-site/body/Eye.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Eye.jpg"
+        },
+        {
+            "word": "Mouth",
+            "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4"
+        },
+        {
+            "word": "Nose",
+            "signVideo": "https://sislep.github.io/video-site/body/Nose.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Nose.jpg"
+        },
+        {
+            "word": "Teeth",
+            "signVideo": "https://sislep.github.io/video-site/body/Teeth.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Teeth.jpg"
+        },
+        {
+            "word": "Tongue",
+            "signVideo": "https://sislep.github.io/video-site/body/Tongue.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Tongue.jpg"
+        },
+        {
+            "word": "Chin",
+            "signVideo": "https://sislep.github.io/video-site/body/Chin.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Chin.jpg"
+        },
+        {
+            "word": "Ear",
+            "signVideo": "https://sislep.github.io/video-site/body/Ear.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Ear.jpg"
+        },
+        {
+            "word": "Armpit",
+            "signVideo": "https://sislep.github.io/video-site/body/Armpit.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Armpit.jpg"
+        },
+        {
+            "word": "Fingers",
+            "signVideo": "https://sislep.github.io/video-site/body/Fingers.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Fingers.jpg"
+        },
+        {
+            "word": "Feet",
+            "signVideo": "https://sislep.github.io/video-site/body/Feet.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Feet.jpg"
+        },
+        {
+            "word": "Neck",
+            "signVideo": "https://sislep.github.io/video-site/body/Neck.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Neck.jpg"
+        }
+    ],
+    "Family": [
+        {
+            "word": "Aunt",
+            "signVideo": "https://sislep.github.io/video-site/family/Aunt.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Aunt.jpg"
+        },
+        {
+            "word": "Baby",
+            "signVideo": "https://sislep.github.io/video-site/family/Baby.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Baby.jpg"
+        },
+        {
+            "word": "Boy",
+            "signVideo": "https://sislep.github.io/video-site/family/Boy.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Boy.jpg"
+        },
+        {
+            "word": "Boyfriend",
+            "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4"
+        },
+        {
+            "word": "Brother",
+            "signVideo": "https://sislep.github.io/video-site/family/Brother.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Brother.jpg"
+        },
+        {
+            "word": "Cousin",
+            "signVideo": "https://sislep.github.io/video-site/family/Cousin.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Cousin.jpg"
+        },
+        {
+            "word": "Dad",
+            "signVideo": "https://sislep.github.io/video-site/family/Dad.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Dad.jpg"
+        },
+        {
+            "word": "Daughter",
+            "signVideo": "https://sislep.github.io/video-site/family/Daughter.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Daughter.jpg"
+        },
+        {
+            "word": "Divorce",
+            "signVideo": "https://sislep.github.io/video-site/family/Divorce.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Divorce.jpg"
+        },
+        {
+            "word": "Engagement",
+            "signVideo": "https://sislep.github.io/video-site/family/Engagement.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Engagement.jpg"
+        },
+        {
+            "word": "Father",
+            "signVideo": "https://sislep.github.io/video-site/family/Father.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Dad.jpg"
+        },
+        {
+            "word": "Friend",
+            "signVideo": "https://sislep.github.io/video-site/family/Friend.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Friend.jpg"
+        },
+        {
+            "word": "Girl",
+            "signVideo": "https://sislep.github.io/video-site/family/Girl.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Girl.jpg"
+        },
+        {
+            "word": "Girlfriend",
+            "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4"
+        },
+        {
+            "word": "Granddaughter",
+            "signVideo": "https://sislep.github.io/video-site/family/Granddaughter.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Granddaughter.jpg"
+        },
+        {
+            "word": "Grandfather",
+            "signVideo": "https://sislep.github.io/video-site/family/Grandfather.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Grandfather.jpg"
+        },
+        {
+            "word": "Grandmother",
+            "signVideo": "https://sislep.github.io/video-site/family/Grandmother.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Grandmother.jpg"
+        },
+        {
+            "word": "Grandson",
+            "signVideo": "https://sislep.github.io/video-site/family/Grandson.mp4"
+        },
+        {
+            "word": "HusbandandWife",
+            "signVideo": "https://sislep.github.io/video-site/family/HusbandandWife.mp4"
+        },
+        {
+            "word": "Man",
+            "signVideo": "https://sislep.github.io/video-site/family/Man.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Man.jpg"
+        },
+        {
+            "word": "Marry",
+            "signVideo": "https://sislep.github.io/video-site/family/Marry.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Marry.jpg"
+        },
+        {
+            "word": "Mother",
+            "signVideo": "https://sislep.github.io/video-site/family/Mother.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Mum.jpg"
+        },
+        {
+            "word": "Mummy",
+            "signVideo": "https://sislep.github.io/video-site/family/Mummy.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Mum.jpg"
+        },
+        {
+            "word": "Old",
+            "signVideo": "https://sislep.github.io/video-site/family/Old.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Old.jpg"
+        },
+        {
+            "word": "Sign Language Family",
+            "signVideo": "https://sislep.github.io/video-site/family/SignLanguageFamily.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Family.jpg"
+        },
+        {
+            "word": "Sister",
+            "signVideo": "https://sislep.github.io/video-site/family/Sister.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Sister.jpg"
+        },
+        {
+            "word": "Son",
+            "signVideo": "https://sislep.github.io/video-site/family/Son.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Son.jpg"
+        },
+        {
+            "word": "Uncle",
+            "signVideo": "https://sislep.github.io/video-site/family/Uncle.mp4"
+        },
+        {
+            "word": "Wedding",
+            "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4"
+        },
+        {
+            "word": "Wife",
+            "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4"
+        },
+        {
+            "word": "Woman",
+            "signVideo": "https://sislep.github.io/video-site/family/Woman.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Woman.jpg"
+        }
+    ],
+    "Month": [
+        {
+            "word": "Sign Language Month",
+            "signVideo": "https://sislep.github.io/video-site/month/SignLanguageMonth.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/Month.jpg"
+        },
+        {
+            "word": "January",
+            "signVideo": "https://sislep.github.io/video-site/month/January.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/January.jpg"
+        },
+        {
+            "word": "February",
+            "signVideo": "https://sislep.github.io/video-site/month/February.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/February.jpg"
+        },
+        {
+            "word": "March",
+            "signVideo": "https://sislep.github.io/video-site/month/March.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/March.jpg"
+        },
+        {
+            "word": "April",
+            "signVideo": "https://sislep.github.io/video-site/month/April.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/April.jpg"
+        },
+        {
+            "word": "May",
+            "signVideo": "https://sislep.github.io/video-site/month/May.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/May.jpg"
+        },
+        {
+            "word": "June",
+            "signVideo": "https://sislep.github.io/video-site/month/June.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/June.jpg"
+        },
+        {
+            "word": "July",
+            "signVideo": "https://sislep.github.io/video-site/month/July.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/July.jpg"
+        },
+        {
+            "word": "August",
+            "signVideo": "https://sislep.github.io/video-site/month/August.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/August.jpg"
+        },
+        {
+            "word": "September",
+            "signVideo": "https://sislep.github.io/video-site/month/September.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/September.jpg"
+        },
+        {
+            "word": "October",
+            "signVideo": "https://sislep.github.io/video-site/month/October.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/October.jpg"
+        },
+        {
+            "word": "November",
+            "signVideo": "https://sislep.github.io/video-site/month/November.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/November.jpg"
+        },
+        {
+            "word": "December",
+            "signVideo": "https://sislep.github.io/video-site/month/December.mp4",
+            "signImage": "https://sislep.github.io/video-site/month/December.jpg"
+        }
+    ],
+    "Colours": [
+        {
+            "word": "Black",
+            "signVideo": "https://sislep.github.io/video-site/colour/Black.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Black.jpg"
+        },
+        {
+            "word": "Blue",
+            "signVideo": "https://sislep.github.io/video-site/colour/Blue.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Blue.jpg"
+        },
+        {
+            "word": "Brown",
+            "signVideo": "https://sislep.github.io/video-site/colour/Brown.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Brown.jpg"
+        },
+        {
+            "word": "Gold",
+            "signVideo": "https://sislep.github.io/video-site/colour/Gold.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Gold.jpg"
+        },
+        {
+            "word": "Gray",
+            "signVideo": "https://sislep.github.io/video-site/colour/Gray.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Gray.jpg"
+        },
+        {
+            "word": "Green",
+            "signVideo": "https://sislep.github.io/video-site/colour/Green.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Green.jpg"
+        },
+        {
+            "word": "Orange",
+            "signVideo": "https://sislep.github.io/video-site/colour/Orange.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Orange.jpg"
+        },
+        {
+            "word": "Pink",
+            "signVideo": "https://sislep.github.io/video-site/colour/Pink.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Pink.jpg"
+        },
+        {
+            "word": "Purple",
+            "signVideo": "https://sislep.github.io/video-site/colour/Purple.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Purple.jpg"
+        },
+        {
+            "word": "Red",
+            "signVideo": "https://sislep.github.io/video-site/colour/Red.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Red.jpg"
+        },
+        {
+            "word": "SignLanguageColour",
+            "signVideo": "https://sislep.github.io/video-site/colour/SignLanguageColour.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Colour.jpg"
+        },
+        {
+            "word": "Silver",
+            "signVideo": "https://sislep.github.io/video-site/colour/Silver.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Silver.jpg"
+        },
+        {
+            "word": "White",
+            "signVideo": "https://sislep.github.io/video-site/colour/White.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/White.jpg"
+        },
+        {
+            "word": "Yellow",
+            "signVideo": "https://sislep.github.io/video-site/colour/Yellow.mp4",
+            "signImage": "https://sislep.github.io/video-site/colour/Yellow.jpg"
+        }
+    ],
+    "Province": [
+        {
+            "word": "Central",
+            "signVideo": "https://sislep.github.io/video-site/province/Central.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Central.jpg"
+        },
+        {
+            "word": "Choiseul",
+            "signVideo": "https://sislep.github.io/video-site/province/Choiseul.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Choiseul.jpg"
+        },
+        {
+            "word": "Guadalcanal",
+            "signVideo": "https://sislep.github.io/video-site/province/Guadalcanal.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Guadalcanal.jpg"
+        },
+        {
+            "word": "Isabel",
+            "signVideo": "https://sislep.github.io/video-site/province/Isabel.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Isabel.jpg"
+        },
+        {
+            "word": "Makira",
+            "signVideo": "https://sislep.github.io/video-site/province/Makira.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Makira.jpg"
+        },
+        {
+            "word": "Malaita",
+            "signVideo": "https://sislep.github.io/video-site/province/Malaita.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Malaita.jpg"
+        },
+        {
+            "word": "Rennell & Bellona",
+            "signVideo": "https://sislep.github.io/video-site/province/Rennell&Bellona.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Rennell&Bellona.jpg"
+        },
+        {
+            "word": "Sign Language Province",
+            "signVideo": "https://sislep.github.io/video-site/province/SignLanguageProvince.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Province.jpg"
+        },
+        {
+            "word": "Solomon",
+            "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Solomon.jpg"
+        },
+        {
+            "word": "Temotu",
+            "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Temotu.jpg"
+        },
+        {
+            "word": "Western",
+            "signVideo": "https://sislep.github.io/video-site/province/Western.mp4",
+            "signImage": "https://sislep.github.io/video-site/province/Western.jpg"
+        }
+    ],
+    "Animal": [
+        {
+            "word": "Ant",
+            "signVideo": "https://sislep.github.io/video-site/animal/Ant.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Ant.jpg"
+        },
+        {
+            "word": "Bat",
+            "signVideo": "https://sislep.github.io/video-site/animal/Bat.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Bat.jpg"
+        },
+        {
+            "word": "Bee",
+            "signVideo": "https://sislep.github.io/video-site/animal/Bee.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Bee.jpg"
+        },
+        {
+            "word": "Bird",
+            "signVideo": "https://sislep.github.io/video-site/animal/Bird.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Bird.jpg"
+        },
+        {
+            "word": "Bull",
+            "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4"
+        },
+        {
+            "word": "Butterfly",
+            "signVideo": "https://sislep.github.io/video-site/animal/Butterfly.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Butterfly.jpg"
+        },
+        {
+            "word": "Cat",
+            "signVideo": "https://sislep.github.io/video-site/animal/Cat.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Cat.jpg"
+        },
+        {
+            "word": "Cockroach",
+            "signVideo": "https://sislep.github.io/video-site/animal/Cockroach.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Cockroach.jpg"
+        },
+        {
+            "word": "Cormorant",
+            "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4"
+        },
+        {
+            "word": "Cow",
+            "signVideo": "https://sislep.github.io/video-site/animal/Cow.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Cow.jpg"
+        },
+        {
+            "word": "Crocodile",
+            "signVideo": "https://sislep.github.io/video-site/animal/Crocodile.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Crocodile.jpg"
+        },
+        {
+            "word": "Dog",
+            "signVideo": "https://sislep.github.io/video-site/animal/Dog.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Dog.jpg"
+        },
+        {
+            "word": "Duck",
+            "signVideo": "https://sislep.github.io/video-site/animal/Duck.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Duck.jpg"
+        },
+        {
+            "word": "Firefly",
+            "signVideo": "https://sislep.github.io/video-site/animal/Firefly.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Firefly.jpg"
+        },
+        {
+            "word": "Fly",
+            "signVideo": "https://sislep.github.io/video-site/animal/Fly.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Fly.jpg"
+        },
+        {
+            "word": "Frog",
+            "signVideo": "https://sislep.github.io/video-site/animal/Frog.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Frog.jpg"
+        },
+        {
+            "word": "Gecko",
+            "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4"
+        },
+        {
+            "word": "Horse",
+            "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4"
+        },
+        {
+            "word": "Lizard",
+            "signVideo": "https://sislep.github.io/video-site/animal/Lizard.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Lizard.jpg"
+        },
+        {
+            "word": "Owl",
+            "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4"
+        },
+        {
+            "word": "Pig",
+            "signVideo": "https://sislep.github.io/video-site/animal/Pig.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Pig.jpg"
+        },
+        {
+            "word": "Rat",
+            "signVideo": "https://sislep.github.io/video-site/animal/Rat.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Rat.jpg"
+        },
+        {
+            "word": "SignLanguageAnimal",
+            "signVideo": "https://sislep.github.io/video-site/animal/SignLanguageAnimal.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Animal.jpg"
+        },
+        {
+            "word": "SlowLorises",
+            "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4"
+        },
+        {
+            "word": "Snail",
+            "signVideo": "https://sislep.github.io/video-site/animal/Snail.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Snail.jpg"
+        },
+        {
+            "word": "Snake",
+            "signVideo": "https://sislep.github.io/video-site/animal/Snake.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Snake.jpg"
+        },
+        {
+            "word": "Spider",
+            "signVideo": "https://sislep.github.io/video-site/animal/Spider.mp4"
+        },
+        {
+            "word": "Woodpecker",
+            "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4"
+        }
+    ],
+    "Sport": [
+        {
+            "word": "Archery",
+            "signVideo": "https://sislep.github.io/video-site/sport/Archery.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Archery.jpg"
+        },
+        {
+            "word": "Basketball",
+            "signVideo": "https://sislep.github.io/video-site/sport/Basketball.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Basketball.jpg"
+        },
+        {
+            "word": "Boxing",
+            "signVideo": "https://sislep.github.io/video-site/sport/Boxing.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Boxing.jpg"
+        },
+        {
+            "word": "Canoeing",
+            "signVideo": "https://sislep.github.io/video-site/sport/Canoeing.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Canoeing.jpg"
+        },
+        {
+            "word": "Cycle",
+            "signVideo": "https://sislep.github.io/video-site/sport/Cycling.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Cycling.jpg"
+        },
+        {
+            "word": "Dart",
+            "signVideo": "https://sislep.github.io/video-site/sport/Dart.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Dart.jpg"
+        },
+        {
+            "word": "Futsal",
+            "signVideo": "https://sislep.github.io/video-site/sport/Futsal.mp4"
+        },
+        {
+            "word": "Golf",
+            "signVideo": "https://sislep.github.io/video-site/sport/Golf.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Golf.jpg"
+        },
+        {
+            "word": "Hockey",
+            "signVideo": "https://sislep.github.io/video-site/sport/Hockey.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Hockey.jpg"
+        },
+        {
+            "word": "Karate",
+            "signVideo": "https://sislep.github.io/video-site/sport/Karate.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Karate.jpg"
+        },
+        {
+            "word": "Netball",
+            "signVideo": "https://sislep.github.io/video-site/sport/Netball.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Netball.jpg"
+        },
+        {
+            "word": "Rugby",
+            "signVideo": "https://sislep.github.io/video-site/sport/Rugby.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Rugby.jpg"
+        },
+        {
+            "word": "Rugby7",
+            "signVideo": "https://sislep.github.io/video-site/sport/Rugby7.mp4"
+        },
+        {
+            "word": "Running",
+            "signVideo": "https://sislep.github.io/video-site/sport/Running.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Running.jpg"
+        },
+        {
+            "word": "Soccer",
+            "signVideo": "https://sislep.github.io/video-site/sport/Soccer.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Soccer.jpg"
+        },
+        {
+            "word": "Sports",
+            "signVideo": "https://sislep.github.io/video-site/sport/Sports.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Sports.jpg"
+        },
+        {
+            "word": "Surfing",
+            "signVideo": "https://sislep.github.io/video-site/sport/Surfing.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Surfing.jpg"
+        },
+        {
+            "word": "Swimming",
+            "signVideo": "https://sislep.github.io/video-site/sport/Swimming.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Swimming.jpg"
+        },
+        {
+            "word": "TableTennis",
+            "signVideo": "https://sislep.github.io/video-site/sport/TableTennis.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/TableTennis.jpg"
+        },
+        {
+            "word": "Tennis",
+            "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4"
+        },
+        {
+            "word": "Volleyball",
+            "signVideo": "https://sislep.github.io/video-site/sport/Volleyball.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Volleyball.jpg"
+        },
+        {
+            "word": "WeightLifting",
+            "signVideo": "https://sislep.github.io/video-site/sport/WeightLifting.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/WeightLifting.jpg"
+        }
+    ],
+    "Weather": [
+        {
+            "word": "Cyclone",
+            "signVideo": "https://sislep.github.io/video-site/weather/Cyclone.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Cyclone.jpg"
+        },
+        {
+            "word": "Earthquake",
+            "signVideo": "https://sislep.github.io/video-site/weather/Earthquake.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Earthquake.jpg"
+        },
+        {
+            "word": "Island",
+            "signVideo": "https://sislep.github.io/video-site/weather/Island.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Island.jpg"
+        },
+        {
+            "word": "Rainbow",
+            "signVideo": "https://sislep.github.io/video-site/weather/Rainbow.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Rainbow.jpg"
+        },
+        {
+            "word": "Raining",
+            "signVideo": "https://sislep.github.io/video-site/weather/Raining.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Raining.jpg"
+        },
+        {
+            "word": "Sea",
+            "signVideo": "https://sislep.github.io/video-site/weather/Sea.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Sea.jpg"
+        },
+        {
+            "word": "Storm",
+            "signVideo": "https://sislep.github.io/video-site/weather/Storm.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Storm.jpg"
+        },
+        {
+            "word": "Sun",
+            "signVideo": "https://sislep.github.io/video-site/weather/Sun.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Sun.jpg"
+        },
+        {
+            "word": "Thunder",
+            "signVideo": "https://sislep.github.io/video-site/weather/Thunder.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Thunder.jpg"
+        },
+        {
+            "word": "Volcano",
+            "signVideo": "https://sislep.github.io/video-site/weather/Volcano.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Volcano.jpg"
+        },
+        {
+            "word": "Waterfall",
+            "signVideo": "https://sislep.github.io/video-site/weather/Waterfall.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Waterfall.jpg"
+        },
+        {
+            "word": "Weather",
+            "signVideo": "https://sislep.github.io/video-site/weather/Weather.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Weather.jpg"
+        },
+        {
+            "word": "Wind",
+            "signVideo": "https://sislep.github.io/video-site/weather/Wind.mp4",
+            "signImage": "https://sislep.github.io/video-site/weather/Wind.jpg"
+        }
+    ],
+    "Class": [
+        {
+            "word": "Bag Kids",
+            "signVideo": "https://sislep.github.io/video-site/class/BagKids.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/BagKids.jpg"
+        },
+        {
+            "word": "Bell",
+            "signVideo": "https://sislep.github.io/video-site/class/Bell.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Bell.jpg"
+        },
+        {
+            "word": "Black Board",
+            "signVideo": "https://sislep.github.io/video-site/class/BlackBoard.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/BlackBoard.jpg"
+        },
+        {
+            "word": "Book",
+            "signVideo": "https://sislep.github.io/video-site/class/Book.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Book.jpg"
+        },
+        {
+            "word": "Box Lunch",
+            "signVideo": "https://sislep.github.io/video-site/class/BoxLunch.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/BoxLunch.jpg"
+        },
+        {
+            "word": "Calculator",
+            "signVideo": "https://sislep.github.io/video-site/class/Calculator.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Calculator.jpg"
+        },
+        {
+            "word": "Calendar",
+            "signVideo": "https://sislep.github.io/video-site/class/Calendar.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Calendar.jpg"
+        },
+        {
+            "word": "Chalk",
+            "signVideo": "https://sislep.github.io/video-site/class/Chalk.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Chalk.jpg"
+        },
+        {
+            "word": "Clipboard",
+            "signVideo": "https://sislep.github.io/video-site/class/Clipboard.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Clipboard.jpg"
+        },
+        {
+            "word": "Colored Pencils",
+            "signVideo": "https://sislep.github.io/video-site/class/ColourPencils.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/ColoredPencils.jpg"
+        },
+        {
+            "word": "Crayons",
+            "signVideo": "https://sislep.github.io/video-site/class/Crayons.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Crayons.jpg"
+        },
+        {
+            "word": "Dictionary",
+            "signVideo": "https://sislep.github.io/video-site/class/Dictionary.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Dictionary.jpg"
+        },
+        {
+            "word": "Drawing Pins",
+            "signVideo": "https://sislep.github.io/video-site/class/DrawingPins.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/DrawingPins.jpg"
+        },
+        {
+            "word": "Dustbin",
+            "signVideo": "https://sislep.github.io/video-site/class/Dustbin.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Dustbin.jpg"
+        },
+        {
+            "word": "Duster",
+            "signVideo": "https://sislep.github.io/video-site/class/Duster.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Duster.jpg"
+        },
+        {
+            "word": "Eraser",
+            "signVideo": "https://sislep.github.io/video-site/class/Eraser.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Eraser.jpg"
+        },
+        {
+            "word": "Folder",
+            "signVideo": "https://sislep.github.io/video-site/class/Folder.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Folder.jpg"
+        },
+        {
+            "word": "Globe",
+            "signVideo": "https://sislep.github.io/video-site/class/Glober.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Glober.jpg"
+        },
+        {
+            "word": "Glue Stick",
+            "signVideo": "https://sislep.github.io/video-site/class/GlueStick.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/GlueStick.jpg"
+        },
+        {
+            "word": "Highlighter",
+            "signVideo": "https://sislep.github.io/video-site/class/Highlighter.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Highlighter.jpg"
+        },
+        {
+            "word": "Knife",
+            "signVideo": "https://sislep.github.io/video-site/class/Knife.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Knife.jpg"
+        },
+        {
+            "word": "Ink Pot",
+            "signVideo": "https://sislep.github.io/video-site/class/LnkPot.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/LnkPot.jpg"
+        },
+        {
+            "word": "Map",
+            "signVideo": "https://sislep.github.io/video-site/class/Map.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Map.jpg"
+        },
+        {
+            "word": "Paper",
+            "signVideo": "https://sislep.github.io/video-site/class/Paper.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Paper.jpg"
+        },
+        {
+            "word": "Paperclip",
+            "signVideo": "https://sislep.github.io/video-site/class/Paperclip.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Paperclip.jpg"
+        },
+        {
+            "word": "Pencil",
+            "signVideo": "https://sislep.github.io/video-site/class/Pencil.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Pencil.jpg"
+        },
+        {
+            "word": "Projector",
+            "signVideo": "https://sislep.github.io/video-site/class/Projector.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Projector.jpg"
+        },
+        {
+            "word": "Ring Binders",
+            "signVideo": "https://sislep.github.io/video-site/class/RingBinders.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/RingBinders.jpg"
+        },
+        {
+            "word": "Ruler",
+            "signVideo": "https://sislep.github.io/video-site/class/Ruler.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Ruler.jpg"
+        },
+        {
+            "word": "Scissor",
+            "signVideo": "https://sislep.github.io/video-site/class/Scissor.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Scissor.jpg"
+        },
+        {
+            "word": "Stapler",
+            "signVideo": "https://sislep.github.io/video-site/class/Stapler.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Stapler.jpg"
+        },
+        {
+            "word": "Teacher",
+            "signVideo": "https://sislep.github.io/video-site/class/Teacher.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Teacher.jpg"
+        }
+    ],
+    "Fruit": [
+        {
+            "word": "Ambarella Fruit",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Ambarellafruit.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Ambarellafruit.jpg"
+        },
+        {
+            "word": "Apple",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Apple.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Apple.jpg"
+        },
+        {
+            "word": "Avocado",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Avocado.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Avocado.jpg"
+        },
+        {
+            "word": "Banana",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Banana.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Banana.jpg"
+        },
+        {
+            "word": "Betel Leaf",
+            "signVideo": "https://sislep.github.io/video-site/fruit/BetelLeaf.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/BetelLeaf.jpg"
+        },
+        {
+            "word": "Betel Nut",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Betelnut.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Betelnut.jpg"
+        },
+        {
+            "word": "Carrot",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Carrot.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Carrot.jpg"
+        },
+        {
+            "word": "Clementine",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Clementine.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Clementine.jpg"
+        },
+        {
+            "word": "Corn",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Corn.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Corn.jpg"
+        },
+        {
+            "word": "Cucumber",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Cucumber.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Cucumber.jpg"
+        },
+        {
+            "word": "Custard Apple",
+            "signVideo": "https://sislep.github.io/video-site/fruit/CustardApple.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/CustardApple.jpg"
+        },
+        {
+            "word": "Cutnut",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Cutnut.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Cutnut.jpg"
+        },
+        {
+            "word": "Dragonfruit",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Dragonfruit.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Dragonfruit.jpg"
+        },
+        {
+            "word": "Guava",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Guava.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Guava.jpg"
+        },
+        {
+            "word": "Java Apple",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Javaapple.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Javaapple.jpg"
+        },
+        {
+            "word": "Lime",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Lime.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Lime.jpg"
+        },
+        {
+            "word": "Malay Apple",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Malayapple.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Malayapple.jpg"
+        },
+        {
+            "word": "Mango",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Mango.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Mango.jpg"
+        },
+        {
+            "word": "Nglai Nut",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Nglainut.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Nglainut.jpg"
+        },
+        {
+            "word": "Orange",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Orange.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Orange.jpg"
+        },
+        {
+            "word": "Pawpaw",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Pawpaw.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Pawpaw.jpg"
+        },
+        {
+            "word": "Peanut",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Peanut.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Peanut.jpg"
+        },
+        {
+            "word": "Pineapple",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Pineapple.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Pineapple.jpg"
+        },
+        {
+            "word": "Rambutan",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Rambutan.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Rambutan.jpg"
+        },
+        {
+            "word": "Seaweed",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Seaweed.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Seaweed.jpg"
+        },
+        {
+            "word": "Shaddock",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Shaddock.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Shaddock.jpg"
+        },
+        {
+            "word": "Soursop",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Soursop.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Soursop.jpg"
+        },
+        {
+            "word": "Starfruit",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Starfruit.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Starfruit.jpg"
+        },
+        {
+            "word": "Sugarcane",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Sugarcane.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Sugarcane.jpg"
+        },
+        {
+            "word": "Watermelon",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Watermelon.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Watermelon.jpg"
+        }
+    ],
+    "Garden": [
+        {
+            "word": "Axe",
+            "signVideo": "https://sislep.github.io/video-site/garden/Axe.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Axe.jpg"
+        },
+        {
+            "word": "Bucket",
+            "signVideo": "https://sislep.github.io/video-site/garden/Bucket.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Bucket.jpg"
+        },
+        {
+            "word": "Chain Saw",
+            "signVideo": "https://sislep.github.io/video-site/garden/ChainSaw.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/ChainSaw.jpg"
+        },
+        {
+            "word": "Cultivator",
+            "signVideo": "https://sislep.github.io/video-site/garden/Cultivator.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Cultivator.jpg"
+        },
+        {
+            "word": "Drain Spade",
+            "signVideo": "https://sislep.github.io/video-site/garden/DrainSpade.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/DrainSpade.jpg"
+        },
+        {
+            "word": "Gloves",
+            "signVideo": "https://sislep.github.io/video-site/garden/Gloves.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Gloves.jpg"
+        },
+        {
+            "word": "Grape Hoe",
+            "signVideo": "https://sislep.github.io/video-site/garden/GrapeHoe.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/GrapeHoe.jpg"
+        },
+        {
+            "word": "Hand Trowel",
+            "signVideo": "https://sislep.github.io/video-site/garden/HandTrowel.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/HandTrowel.jpg"
+        },
+        {
+            "word": "Hose Water",
+            "signVideo": "https://sislep.github.io/video-site/garden/HoseWater.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/HoseWater.jpg"
+        },
+        {
+            "word": "Lawn Mower",
+            "signVideo": "https://sislep.github.io/video-site/garden/LawnMower.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/LawnMower.jpg"
+        },
+        {
+            "word": "Mattocks",
+            "signVideo": "https://sislep.github.io/video-site/garden/Mattocks.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Mattocks.jpg"
+        },
+        {
+            "word": "Pruners",
+            "signVideo": "https://sislep.github.io/video-site/garden/Pruners.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Pruners.jpg"
+        },
+        {
+            "word": "Rubber Boots",
+            "signVideo": "https://sislep.github.io/video-site/garden/RubberBoots.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/RubberBoots.jpg"
+        },
+        {
+            "word": "Scythe",
+            "signVideo": "https://sislep.github.io/video-site/garden/Scythe.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Scythe.jpg"
+        },
+        {
+            "word": "String Trimmer",
+            "signVideo": "https://sislep.github.io/video-site/garden/StringTrimmer.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/StringTrimmer.jpg"
+        },
+        {
+            "word": "Tamping Bar",
+            "signVideo": "https://sislep.github.io/video-site/garden/TampingBar.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/TampingBar.jpg"
+        },
+        {
+            "word": "Watering Can",
+            "signVideo": "https://sislep.github.io/video-site/garden/WateringCan.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/WateringCan.jpg"
+        },
+        {
+            "word": "Wheelbarrow",
+            "signVideo": "https://sislep.github.io/video-site/garden/Wheelbarrow.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/Wheelbarrow.jpg"
+        }
+    ]
 }

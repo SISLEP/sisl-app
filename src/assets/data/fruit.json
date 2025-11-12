@@ -1,0 +1,360 @@
+{
+  "fruit": [
+    {
+      "id": "1",
+      "title": "Fruit Signs (Part 1)",
+      "subtitle": "Common fruits, A-B",
+      "icon": "🍎",
+      "bgColor": "#FCE4EC",
+      "category": "fruit",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Ambarellafruit.mp4",
+            "correctAnswer": "Ambarella Fruit",
+            "options": ["Ambarella Fruit", "Apple", "Avocado"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Apple & Avocado)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Apple.mp4", "translation": "Apple", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Avocado.mp4", "translation": "Avocado", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Avocado.mp4",
+            "correctAnswer": "Avocado",
+            "options": ["Apple", "Avocado", "Banana"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Banana.mp4",
+            "correctAnswer": "Banana",
+            "options": ["Banana", "Clementine", "Custard Apple"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Fruit Signs (Part 2)",
+      "subtitle": "Tropical fruits, C-D",
+      "icon": "🥝",
+      "bgColor": "#F3E5F5",
+      "category": "fruit",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Clementine.mp4",
+            "correctAnswer": "Clementine",
+            "options": ["Clementine", "Custard Apple", "Cutnut"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Custard Apple & Cutnut)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/fruit/CustardApple.mp4", "translation": "Custard Apple", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Cutnut.mp4", "translation": "Cutnut", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Cutnut.mp4",
+            "correctAnswer": "Cutnut",
+            "options": ["Cutnut", "Dragonfruit", "Guava"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Dragonfruit.mp4",
+            "correctAnswer": "Dragonfruit",
+            "options": ["Clementine", "Dragonfruit", "Guava"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Fruit Signs (Part 3)",
+      "subtitle": "More tropical and citrus fruits, G-M",
+      "icon": "🍋",
+      "bgColor": "#E1F5FE",
+      "category": "fruit",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Guava.mp4",
+            "correctAnswer": "Guava",
+            "options": ["Guava", "Java Apple", "Lime"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Java Apple & Lime)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Javaapple.mp4", "translation": "Java Apple", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Lime.mp4", "translation": "Lime", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Lime.mp4",
+            "correctAnswer": "Lime",
+            "options": ["Lime", "Malay Apple", "Mango"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Malayapple.mp4",
+            "correctAnswer": "Malay Apple",
+            "options": ["Malay Apple", "Mango", "Nglai Nut"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Mango.mp4",
+            "correctAnswer": "Mango",
+            "options": ["Mango", "Orange", "Pawpaw"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Fruit Signs (Part 4)",
+      "subtitle": "Oils, nuts, and large fruits, N-P",
+      "icon": "🍊",
+      "bgColor": "#FFFDE7",
+      "category": "fruit",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Nglainut.mp4",
+            "correctAnswer": "Nglai Nut",
+            "options": ["Nglai Nut", "Orange", "Pawpaw"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Orange & Pawpaw)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Orange.mp4", "translation": "Orange", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Pawpaw.mp4", "translation": "Pawpaw", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Pawpaw.mp4",
+            "correctAnswer": "Pawpaw",
+            "options": ["Pawpaw", "Peanut", "Pineapple"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Peanut.mp4",
+            "correctAnswer": "Peanut",
+            "options": ["Peanut", "Pineapple", "Rambutan"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Pineapple.mp4",
+            "correctAnswer": "Pineapple",
+            "options": ["Orange", "Pineapple", "Rambutan"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Fruit Signs (Part 5)",
+      "subtitle": "Uncommon and spiky fruits, R-S",
+      "icon": "🍍",
+      "bgColor": "#F9FBE7",
+      "category": "fruit",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Rambutan.mp4",
+            "correctAnswer": "Rambutan",
+            "options": ["Rambutan", "Seaweed", "Shaddock"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Rambutan & Shaddock)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Rambutan.mp4", "translation": "Rambutan", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Shaddock.mp4", "translation": "Shaddock", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Shaddock.mp4",
+            "correctAnswer": "Shaddock",
+            "options": ["Shaddock", "Soursop", "Starfruit"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Soursop.mp4",
+            "correctAnswer": "Soursop",
+            "options": ["Soursop", "Starfruit", "Sugarcane"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Starfruit.mp4",
+            "correctAnswer": "Starfruit",
+            "options": ["Soursop", "Starfruit", "Watermelon"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Fruit Signs (Part 6)",
+      "subtitle": "Large produce and greens, S-W",
+      "icon": "🍉",
+      "bgColor": "#E8F5E9",
+      "category": "fruit",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Sugarcane.mp4",
+            "correctAnswer": "Sugarcane",
+            "options": ["Sugarcane", "Seaweed", "Watermelon"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Watermelon & Seaweed)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Watermelon.mp4", "translation": "Watermelon", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Seaweed.mp4", "translation": "Seaweed", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Watermelon.mp4",
+            "correctAnswer": "Watermelon",
+            "options": ["Watermelon", "Sugarcane", "Betel Leaf"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/BetelLeaf.mp4",
+            "correctAnswer": "Betel Leaf",
+            "options": ["Betel Leaf", "Betel Nut", "Carrot"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Fruit Signs (Part 7)",
+      "subtitle": "Remaining items (for completion)",
+      "icon": "🥕",
+      "bgColor": "#FFECB3",
+      "category": "fruit",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Betelnut.mp4",
+            "correctAnswer": "Betel Nut",
+            "options": ["Betel Nut", "Carrot", "Corn"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Carrot & Corn)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Carrot.mp4", "translation": "Carrot", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/fruit/Corn.mp4", "translation": "Corn", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Corn.mp4",
+            "correctAnswer": "Corn",
+            "options": ["Corn", "Cucumber", "Betel Nut"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fruit/Cucumber.mp4",
+            "correctAnswer": "Cucumber",
+            "options": ["Cucumber", "Carrot", "Seaweed"]
+          }
+        }
+      ]
+    }
+  ]
+}

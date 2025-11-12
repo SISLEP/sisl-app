@@ -62,6 +62,27 @@
       "icon": "🤟",
       "bgColor": "#FFF4E6",
       "moduleCount": 1
+    },
+    {
+      "id": "class",
+      "title": "Class",
+      "icon": "🏫",
+      "bgColor": "#F0F8FF",
+      "moduleCount": 7
+    },
+    {
+      "id": "fruit",
+      "title": "Fruit",
+      "icon": "🍓",
+      "bgColor": "#FCE4EC",
+      "moduleCount": 7
+    },
+    {
+      "id": "garden",
+      "title": "Garden",
+      "icon": "🌻",
+      "bgColor": "#F0FFF0",
+      "moduleCount": 3
     }
   ]
 }

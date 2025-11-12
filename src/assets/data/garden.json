@@ -1,0 +1,202 @@
+{
+  "garden": [
+    {
+      "id": "1",
+      "title": "Garden Tools (Part 1)",
+      "subtitle": "Essential items for yard work",
+      "icon": "⛏️",
+      "bgColor": "#F0FFF0",
+      "category": "garden",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the correct word for the sign",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/Axe.mp4",
+            "correctAnswer": "Axe",
+            "options": ["Axe", "Bucket", "Chain Saw"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Bucket & Chain Saw)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/garden/Bucket.mp4", "translation": "Bucket", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/garden/ChainSaw.mp4", "translation": "Chain Saw", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning in English",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/Cultivator.mp4",
+            "correctAnswer": "Cultivator",
+            "options": ["Cultivator", "Drain Spade", "Gloves"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/DrainSpade.mp4",
+            "correctAnswer": "Drain Spade",
+            "options": ["Drain Spade", "Gloves", "Grape Hoe"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Gloves & Grape Hoe)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/garden/Gloves.mp4", "translation": "Gloves", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/garden/GrapeHoe.mp4", "translation": "Grape Hoe", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the correct sign translation here",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/GrapeHoe.mp4",
+            "correctAnswer": "Grape Hoe",
+            "options": ["Grape Hoe", "Hand Trowel", "Hose Water"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Garden Tools (Part 2)",
+      "subtitle": "Small tools and watering needs",
+      "icon": "🧤",
+      "bgColor": "#F5FFFA",
+      "category": "garden",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the correct word for the sign",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/HandTrowel.mp4",
+            "correctAnswer": "Hand Trowel",
+            "options": ["Hand Trowel", "Hose Water", "Lawn Mower"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Hose Water & Lawn Mower)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/garden/HoseWater.mp4", "translation": "Hose Water", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/garden/LawnMower.mp4", "translation": "Lawn Mower", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning in English",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/LawnMower.mp4",
+            "correctAnswer": "Lawn Mower",
+            "options": ["Lawn Mower", "Mattocks", "Pruners"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/Mattocks.mp4",
+            "correctAnswer": "Mattocks",
+            "options": ["Mattocks", "Pruners", "Rubber Boots"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Pruners & Rubber Boots)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/garden/Pruners.mp4", "translation": "Pruners", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/garden/RubberBoots.mp4", "translation": "Rubber Boots", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the correct sign translation here",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/RubberBoots.mp4",
+            "correctAnswer": "Rubber Boots",
+            "options": ["Rubber Boots", "Scythe", "String Trimmer"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Garden Tools (Part 3)",
+      "subtitle": "Cutting, digging, and transport items",
+      "icon": "🌿",
+      "bgColor": "#FFF5EE",
+      "category": "garden",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the correct word for the sign",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/Scythe.mp4",
+            "correctAnswer": "Scythe",
+            "options": ["Scythe", "String Trimmer", "Tamping Bar"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (String Trimmer & Tamping Bar)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/garden/StringTrimmer.mp4", "translation": "String Trimmer", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/garden/TampingBar.mp4", "translation": "Tamping Bar", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning in English",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/TampingBar.mp4",
+            "correctAnswer": "Tamping Bar",
+            "options": ["Tamping Bar", "Watering Can", "Wheelbarrow"]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/WateringCan.mp4",
+            "correctAnswer": "Watering Can",
+            "options": ["Watering Can", "Wheelbarrow", "Scythe"]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Watering Can & Wheelbarrow)",
+          "data": {
+            "items": [
+              { "signVideo": "https://sislep.github.io/video-site/garden/WateringCan.mp4", "translation": "Watering Can", "id": "1" },
+              { "signVideo": "https://sislep.github.io/video-site/garden/Wheelbarrow.mp4", "translation": "Wheelbarrow", "id": "2" }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the correct sign translation here",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/garden/Wheelbarrow.mp4",
+            "correctAnswer": "Wheelbarrow",
+            "options": ["Wheelbarrow", "Axe", "Bucket"]
+          }
+        }
+      ]
+    }
+  ]
+}

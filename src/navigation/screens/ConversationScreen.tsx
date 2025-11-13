@@ -398,7 +398,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start', 
     alignItems: 'center',
     paddingTop: 10, 
-    paddingBottom: 30,
+    paddingBottom: 10,
   },
   navButton: {
     alignItems: 'center',

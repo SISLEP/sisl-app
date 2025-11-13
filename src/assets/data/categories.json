@@ -1,6 +1,12 @@
 {
   "categories": [
     {
+      "id": "general",
+      "title": "General Signs",
+      "icon": "🤟",
+      "moduleCount": 1
+    },
+    {
       "id": "alphabet",
       "title": "Alphabet",
       "icon": "🅰️",
@@ -47,12 +53,6 @@
       "title": "Sports",
       "icon": "⚽",
       "moduleCount": 3
-    },
-    {
-      "id": "general",
-      "title": "General Signs",
-      "icon": "🤟",
-      "moduleCount": 1
     },
     {
       "id": "class",

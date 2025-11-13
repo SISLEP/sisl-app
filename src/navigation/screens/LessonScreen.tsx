@@ -6,6 +6,7 @@ import FillInTheBlankScreen from './FillInTheBlankScreen';
 import MatchingPairsScreen from './MatchingPairsScreen';
 import SequencingScreen from './SequencingScreen';
 import TranslationScreen from './TranslationScreen';
+import ConversationScreen from './ConversationScreen'; // <-- NEW IMPORT
 import { addWordMemory } from '../../storage/memoryService';
 import { Word } from '../../data/word'; // 2. Import Word type (assuming path is correct)
 
@@ -38,9 +39,15 @@ const extractWordsFromLessonData = (data: any, lessonType: string): string[] => 
       break;
     case 'sequencing':
     case 'fill_in_the_blank':
+    case 'conversation': // <-- ADDED new type
       // Default array extraction logic for other types
       if (Array.isArray(data)) {
         words = data.map((item: LessonDataItem) => {
+          // For conversation, we might extract words from both sentences if they contain key words.
+          // For simplicity here, we'll assume the full English sentence is the "word" to track memory on.
+          if (typeof item === 'object' && item !== null && 'englishSentence' in item && typeof (item as any).englishSentence === 'string') {
+            return (item as any).englishSentence;
+          }
           if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {
             return item.word;
           }
@@ -188,6 +195,8 @@ const LessonScreen = () => {
         return <TranslationScreen key={uniqueKey} data={currentLesson.data} instructions={currentLesson.instructions} onNext={handleNextLesson} />;
       case 'fill_in_the_blank':
         return <FillInTheBlankScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
+      case 'conversation': // <-- NEW CASE FOR CONVERSATION
+        return <ConversationScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
       default:
         return <Text>Unknown lesson type: {currentLesson.type}</Text>;
     }

@@ -8,11 +8,54 @@
       "bgColor": "#FFF4E6",
       "category": "general",
       "lessons": [
-        { "type": "sequencing", "instructions": "Pick out signs in the correct order", "data": { "signVideo": "https://sislep.github.io/video-site/example.mp4", "correctOrder": [ "NICE", "MEET-you" ], "options": [ "HELLO", "NICE", "MEET-you" ] } },
-        { "type": "fill_in_the_blank", "instructions": "Fill in the missing sign", "data": { "signVideo": "https://sislep.github.io/video-site/example.mp4", "fullPhrase": "NICE ____", "missingWord": "MEET-you", "options": [ "HELLO", "MEET-you" ] } },
-        { "type": "matching_pairs", "instructions": "Tap the matching pair (Hello & Goodbye)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "HELLO", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "GOODBYE", "id": "2" } ] } },
-        { "type": "matching_pairs", "instructions": "Tap the matching pair (Nice & Meet-you)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "NICE", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "MEET-you", "id": "2" } ] } },
-        { "type": "matching_pairs", "instructions": "Tap the matching pair (Thank-you & Please)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "THANK-you", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/example.mp4", "translation": "PLEASE", "id": "2" } ] } }
+        {
+          "type": "conversation",
+          "instructions": "Practice your first conversation!",
+          "data": [
+            {
+              "signVideo": "https://sislep.github.io/video-site/general/Hello.mp4",
+              "speaker": "person1",
+              "signSentence": "Hello",
+              "englishSentence": "Hello",
+              "backgroundColor": "#FAF9F6"
+            },
+            {
+              "signVideo": "https://sislep.github.io/video-site/general/Hi.mp4",
+              "speaker": "person2",
+              "signSentence": "Hi",
+              "englishSentence": "Hi",
+              "backgroundColor": "#EBF8FF"
+            },
+            {
+              "signVideo": "https://sislep.github.io/video-site/general/You How.mp4",
+              "speaker": "person1",
+              "signSentence": "You How?",
+              "englishSentence": "How are you?",
+              "backgroundColor": "#FAF9F6"
+            },
+            {
+              "signVideo": "https://sislep.github.io/video-site/general/Alright.mp4",
+              "speaker": "person2",
+              "signSentence": "Alright",
+              "englishSentence": "Alright",
+              "backgroundColor": "#EBF8FF"
+            },
+            {
+              "signVideo": "https://sislep.github.io/video-site/general/Your Name.mp4",
+              "speaker": "person1",
+              "signSentence": "Your Name?",
+              "englishSentence": "What's your name?",
+              "backgroundColor": "#FAF9F6"
+            },
+            {
+              "signVideo": "https://sislep.github.io/video-site/general/My Name Lesley Sign.mp4",
+              "speaker": "person2",
+              "signSentence": "My Name Lesley Sign.",
+              "englishSentence": "My name is L-E-S-L-E-Y. My sign name is Lesley.",
+              "backgroundColor": "#FAF9F6"
+            }
+          ]
+        }
       ]
     }
   ]

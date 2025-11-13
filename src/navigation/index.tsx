@@ -34,7 +34,6 @@ const HomeTabs = createBottomTabNavigator({
       // Assuming you have a Dictionary component
       screen: DictionaryStack,
       options: {
-        title: 'Dictionary',
         tabBarIcon: ({ color, size }) => (
           <Icon name="book" color={color} size={size} />
         ),
@@ -49,7 +48,6 @@ const RootStack = createNativeStackNavigator({
     HomeTabs: {
       screen: HomeTabs,
       options: {
-        title: 'Home',
         headerShown: false,
       },
     },

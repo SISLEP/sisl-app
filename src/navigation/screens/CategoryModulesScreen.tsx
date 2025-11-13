@@ -14,6 +14,8 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons';
 // Import the specific fetch function
 import { fetchModulesByCategory } from '../../api/fetch'; 
+// 🚨 Import the custom hook
+import { useProgress } from '../../context/ProgressContext'; 
 
 // Assuming the module structure looks something like this:
 // type Lesson = { id: string; title: string; ... };
@@ -23,8 +25,10 @@ import { fetchModulesByCategory } from '../../api/fetch';
 const CategoryModulesScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  // We now receive categoryId and userProgress directly, not learningModules
-  const { categoryId, categoryTitle, userProgress } = route.params; 
+  const { categoryId, categoryTitle } = route.params; 
+  
+  // Get progress and update function from Context
+  const { userProgress, updateModuleProgress } = useProgress();
 
   const [learningModules, setLearningModules] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -68,7 +72,10 @@ const CategoryModulesScreen = () => {
       return () => {
         isActive = false; // Cleanup function to prevent setting state on unmounted component
       };
-    }, [categoryId, categoryTitle])
+    // 🚨 CHANGE: Add userProgress as a dependency. This ensures the component logic 
+    // for progress display is re-evaluated whenever the screen is focused AND 
+    // the global progress state has changed.
+    }, [categoryId, categoryTitle, userProgress]) 
   );
   // --- END NEW Fetch logic ---
 
@@ -79,7 +86,7 @@ const CategoryModulesScreen = () => {
   // Helper function to get the progress text
   const getProgressText = (module) => { // Takes the full module object now
     const uniqueKey = getUniqueModuleKey(module); // <-- Build composite key
-    const progress = userProgress[uniqueKey];    // <-- Use composite key for lookup
+    const progress = userProgress[uniqueKey];    // <-- Uses context's userProgress
 
     if (progress) {
       const isCompleted = progress.lessonsCompleted >= module.lessons.length;
@@ -96,7 +103,7 @@ const CategoryModulesScreen = () => {
     }
 
     const uniqueKey = getUniqueModuleKey(selectedModule); // <-- Build composite key
-    const progress = userProgress[uniqueKey];             // <-- Use composite key for lookup
+    const progress = userProgress[uniqueKey];             // <-- Uses context's userProgress
     
     // Check if progress exists and if all lessons are completed.
     const isCompleted = progress && progress.lessonsCompleted >= selectedModule.lessons.length;
@@ -117,6 +124,7 @@ const CategoryModulesScreen = () => {
                 lessons: selectedModule.lessons,
                 initialLessonIndex: 0, // Start from the beginning
                 moduleId: uniqueKey,   // <-- Pass the unique composite key
+                onCompleteLesson: updateModuleProgress, 
               });
             },
           },
@@ -129,6 +137,7 @@ const CategoryModulesScreen = () => {
         lessons: selectedModule.lessons,
         initialLessonIndex: initialLessonIndex,
         moduleId: uniqueKey, // <-- Pass the unique composite key
+        onCompleteLesson: updateModuleProgress,
       });
     }
   };

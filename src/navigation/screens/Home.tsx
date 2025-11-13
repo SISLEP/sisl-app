@@ -15,38 +15,34 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { 
     fetchCategories, 
-    isCategoryFullyDownloaded, // 🚨 NEW: Import new status check
-    downloadCategoryVideos,    // 🚨 NEW: Import download function
-    removeCategoryVideos,      // 🚨 NEW: Import remove function
+    isCategoryFullyDownloaded, 
+    downloadCategoryVideos,    
+    removeCategoryVideos,      
 } from '../../api/fetch'; 
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
+// 🚨 NEW: Import the custom hook
+import { useProgress } from '../../context/ProgressContext'; 
 
-const PROGRESS_STORAGE_KEY = 'userProgress';
 
-// 🚨 NEW: Define types for download status
+// 🚨 REMOVED: PROGRESS_STORAGE_KEY is now in utils/ProgressStorage.ts
+
+// Define types for download status
 type DownloadStatus = 'NOT_DOWNLOADED' | 'DOWNLOADING' | 'DOWNLOADED';
 
 const Home = () => {
   const navigation = useNavigation();
+  // 🚨 CHANGE: Get userProgress, setUserProgress, and isLoadingProgress from Context
+  const { userProgress, isLoadingProgress: isLoadingProgressFromContext } = useProgress(); 
+  
   const [categories, setCategories] = useState([]); 
-  const [isLoading, setIsLoading] = useState(true);
-  const [userProgress, setUserProgress] = useState({});
-  // 🚨 NEW: State for tracking download status per category
+  // 🚨 CHANGE: Use local state for data loading, not context for progress
+  const [isLoading, setIsLoading] = useState(true); 
+  // 🚨 REMOVED: userProgress state is now in context
   const [downloadStatus, setDownloadStatus] = useState<{ [key: string]: DownloadStatus }>({});
 
-  // Helper function to load progress from AsyncStorage
-  const loadProgress = async () => {
-    try {
-      const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
-      if (storedProgress) {
-        setUserProgress(JSON.parse(storedProgress));
-      }
-    } catch (e) {
-      console.error('Failed to load progress from storage', e);
-    }
-  };
+  // 🚨 REMOVED: loadProgress helper function is now in ProgressContext
 
-  // 🚨 NEW: Helper function to check and update all download statuses
+  // Helper function to check and update all download statuses
   const checkAllDownloadStatuses = async (categoriesList) => {
     const statusChecks = categoriesList.map(async (category) => {
         // id is the lowercase category ID (e.g., 'alphabet')
@@ -67,7 +63,7 @@ const Home = () => {
   };
 
 
-  // Use useFocusEffect to reload categories and progress
+  // Use useFocusEffect to reload categories and download status
   useFocusEffect(
     useCallback(() => {
       const loadData = async () => {
@@ -77,16 +73,14 @@ const Home = () => {
           const fetchedCategories = await fetchCategories();
           setCategories(fetchedCategories);
 
-          // 2. Load user progress
-          await loadProgress();
-          
-          // 3. Load download status for all categories 🚨 NEW
+          // 2. Load download status for all categories
           await checkAllDownloadStatuses(fetchedCategories); 
           
         } catch (error) {
           Alert.alert('Error', 'Failed to load data. Please check your network connection.');
           console.error(error);
         } finally {
+          // 🚨 CHANGE: Set local loading to false *after* categories and download statuses are loaded
           setIsLoading(false);
         }
       };
@@ -95,7 +89,10 @@ const Home = () => {
     }, [])
   );
   
-  // 🚨 NEW: Download Handler
+  // 🚨 NEW: Effect to manage the overall loading state
+  const overallLoading = isLoading || isLoadingProgressFromContext;
+  
+  // Download Handler (unchanged)
   const handleDownloadCategory = async (categoryId: string, categoryTitle: string) => {
     Alert.alert(
         'Confirm Download',
@@ -125,7 +122,7 @@ const Home = () => {
     );
   };
   
-  // 🚨 NEW: Remove Download Handler
+  // Remove Download Handler (unchanged)
   const handleRemoveDownload = async (categoryId: string, categoryTitle: string) => {
     Alert.alert(
         'Confirm Removal',
@@ -159,8 +156,9 @@ const Home = () => {
 
   // Finds next incomplete Category
   const handleContinue = () => {
-    if (isLoading || categories.length === 0) return;
-    // ... rest of handleContinue is unchanged ...
+    // 🚨 CHANGE: Use the combined loading flag
+    if (overallLoading || categories.length === 0) return; 
+    
     const isCategoryComplete = (category) => {
       const totalModules = category.moduleCount || 0;
       if (totalModules === 0) return true; 
@@ -173,10 +171,10 @@ const Home = () => {
     const nextCategory = categories.find(category => !isCategoryComplete(category));
 
     if (nextCategory) {
+      // 🚨 REMOVED: userProgress from route params
       navigation.navigate('CategoryModulesScreen', {
         categoryId: nextCategory.id, 
         categoryTitle: nextCategory.title,
-        userProgress: userProgress,
       });
     } else {
       Alert.alert("All Modules Complete!", "You've finished all available lessons. Great work! Select a category to retake modules.");
@@ -184,18 +182,20 @@ const Home = () => {
   };
 
   const handleCategoryPress = (categoryId, categoryTitle) => {
-    if (isLoading) return;
+    // 🚨 CHANGE: Use the combined loading flag
+    if (overallLoading) return;
 
+    // 🚨 REMOVED: userProgress from route params
     navigation.navigate('CategoryModulesScreen', {
       categoryId: categoryId, 
       categoryTitle: categoryTitle,
-      userProgress: userProgress,
     });
   };
 
   const getCategoryCompletionStatus = (category) => {
     const totalCount = category.moduleCount || 0; 
     
+    // userProgress is read from context
     const completedCount = Object.keys(userProgress).filter(key => 
       key.startsWith(category.id + '-')
     ).length;
@@ -212,7 +212,7 @@ const Home = () => {
   // Render a category card
   const renderCategoryCard = (category) => {
     const { total, completed, percentage } = getCategoryCompletionStatus(category);
-    // 🚨 NEW: Get current download status
+    // Get current download status
     const status = downloadStatus[category.id] || 'NOT_DOWNLOADED';
     const isDownloading = status === 'DOWNLOADING';
     const isDownloaded = status === 'DOWNLOADED';
@@ -253,28 +253,23 @@ const Home = () => {
         <Text style={styles.categoryTitleText}>{category.title}</Text>
         <Text style={styles.categoryCompletionText}>{`${completed}/${total} Modules`}</Text>
         
-        {/* 🚨 NEW: Download Button/Status Indicator */}
+        {/* Download Button/Status Indicator */}
         <TouchableOpacity
             style={[
                 styles.downloadButton, 
                 isDownloading && styles.downloadingButton,
                 isDownloaded && styles.removeButton, // Style for removal option
-                (isDownloading || isLoading) && styles.disabledButton,
+                (isDownloading || overallLoading) && styles.disabledButton, // 🚨 CHANGE
             ]}
             onPress={actionHandler}
-            disabled={isDownloading || isLoading}
+            disabled={isDownloading || overallLoading} // 🚨 CHANGE
         >
             <Icon 
                 name={downloadIcon} 
                 size={20} 
                 color={iconColor} 
             />
-            {/* <Text style={[
-                styles.downloadButtonText, 
-                (isDownloading || isDownloaded) && { color: '#FFF' },
-            ]}>
-                {isDownloading ? 'Downloading...' : (isDownloaded ? 'Remove Offline' : 'Download All')}
-            </Text> */}
+            {/* ... (commented-out button text) ... */}
         </TouchableOpacity>
         
       </TouchableOpacity>
@@ -299,12 +294,13 @@ const Home = () => {
           </View>
           
           <TouchableOpacity 
-            style={[styles.continueButton, isLoading && styles.disabledButton]} 
+            // 🚨 CHANGE: Use the combined loading flag
+            style={[styles.continueButton, overallLoading && styles.disabledButton]} 
             onPress={handleContinue} 
-            disabled={isLoading || categories.length === 0}
+            disabled={overallLoading || categories.length === 0}
           >
             <Text style={styles.continueButtonText}>
-                {isLoading ? 'Loading...' : 'Continue'}
+                {overallLoading ? 'Loading...' : 'Continue'}
             </Text>
           </TouchableOpacity>
         </View>
@@ -312,7 +308,8 @@ const Home = () => {
         {/* Categories Section */}
         <View style={styles.categoriesSection}>
           <Text style={styles.sectionTitle}>Categories</Text>
-          {isLoading ? (
+          {/* 🚨 CHANGE: Use the combined loading flag */}
+          {overallLoading ? (
             <ActivityIndicator size="large" color="#FF9500" style={styles.loadingIndicator} />
           ) : (
             <View style={styles.categoryList}>
@@ -412,7 +409,7 @@ const styles = StyleSheet.create({
     width: '45%',
     alignItems: 'center',
     padding: 15,
-    paddingBottom: 5, // 🚨 NEW: Adjusted padding
+    paddingBottom: 5, 
     borderRadius: 12,
     backgroundColor: '#fff',
     elevation: 2,
@@ -439,7 +436,7 @@ const styles = StyleSheet.create({
     color: '#666',
     marginBottom: 5,
   },
-  // 🚨 NEW: Download button styles
+  // Download button styles
   downloadButton: {
     flexDirection: 'row',
     alignItems: 'center',

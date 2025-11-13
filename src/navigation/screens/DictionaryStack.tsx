@@ -11,41 +11,37 @@ const DictionaryStack = createNativeStackNavigator({
     DictionaryCategories: {
       screen: DictionaryCategories,
       options: {
-        title: 'Explore', // Matches the screenshot
-        headerShown: false, // The 'HomeTabs' navigator handles the header
+        title: 'Dictionary',
       },
     },
     DictionaryWords: {
       screen: DictionaryWords,
       options: {
         title: 'Category', // Will be dynamically set
-        headerShown: false
       },
     },
     QuizScreen: {
       screen: QuizScreen,
       options: ({ route }) => ({
         title: `${route.params?.category || ''} Quiz`,
-        headerShown: false
       }),
     },
     SignDetails: {
       screen: SignDetailsScreen, // Add the new screen to the stack
       options: {
-        headerShown: false,
+        title: 'Sign Video',
       },
     },
     FlashcardScreen: {
       screen: FlashcardScreen,
       options: {
-        headerShown: false,
+        title: 'Flashcards',
       },
     },
     SearchScreen: {
       screen: SearchScreen,
       options: {
         title: 'Search Signs',
-        headerShown: false,
       },
     },
   },

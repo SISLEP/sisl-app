@@ -37,6 +37,7 @@ const HomeTabs = createBottomTabNavigator({
         tabBarIcon: ({ color, size }) => (
           <Icon name="pencil" color={color} size={size} />
         ),
+        headerShown: false,
       },
     },
     Dictionary: {
@@ -47,6 +48,7 @@ const HomeTabs = createBottomTabNavigator({
         tabBarIcon: ({ color, size }) => (
           <Icon name="book" color={color} size={size} />
         ),
+        headerShown: false,
       },
     },
   },

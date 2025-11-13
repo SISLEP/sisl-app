@@ -72,9 +72,6 @@ const SignDetailsScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Icon name="arrow-back-ios" size={24} color="#000" />
-        </TouchableOpacity>
         <Text style={styles.headerTitle}>{category}</Text>
         <View style={{ width: 24 }} />
       </View>
@@ -153,7 +150,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     paddingHorizontal: 20,
     paddingVertical: 10,
   },

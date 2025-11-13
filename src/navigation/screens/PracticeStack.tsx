@@ -19,8 +19,7 @@ const PracticeStackScreen = () => {
         name="PracticeHome"
         component={PracticeHome}
         options={{
-          title: 'Practices', // Title for the main screen in the tab
-          headerShown: false, // Let the main Tab Navigator handle the header or remove it entirely
+          title: 'Practice', // Title for the main screen in the tab
         }}
       />
       <PracticeStack.Screen
@@ -28,7 +27,6 @@ const PracticeStackScreen = () => {
         component={QuizScreen}
         options={({ route }) => ({
           title: `${route.params?.category || 'General'} Quiz`,
-          headerShown: false,
         })}
       />
       <PracticeStack.Screen
@@ -36,7 +34,6 @@ const PracticeStackScreen = () => {
         component={FlashcardScreen}
         options={{
           title: 'Flashcards',
-          headerShown: false,
         }}
       />
     </PracticeStack.Navigator>

@@ -131,9 +131,10 @@ const SearchScreen = () => {
       <View style={styles.container}>
         {/* Header/Search Bar Area */}
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
-            <Icon name="arrow-back-ios" size={24} color="#000" />
-          </TouchableOpacity>
+          {/* Static Search Icon instead of Back Button */}
+          <View style={styles.backButton}>
+            <Icon name="search" size={24} color="#000" />
+          </View>
           <TextInput
             style={styles.searchBar}
             placeholder="Search"
@@ -210,10 +211,7 @@ const styles = StyleSheet.create({
   backButton: {
     padding: 10,
   },
-  backButtonText: {
-    fontSize: 16,
-    color: '#007AFF', // Standard iOS blue
-  },
+
   searchBar: {
     flex: 1,
     backgroundColor: '#F0F0F0',

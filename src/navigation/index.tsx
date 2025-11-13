@@ -17,15 +17,17 @@ import { Settings } from './screens/Settings';
 import { NotFound } from './screens/NotFound';
 import LessonScreen from './screens/LessonScreen';
 import LessonCompleteScreen from './screens/LessonCompleteScreen';
+import HomeStack from './screens/HomeStack';
 import DictionaryStack from './screens/DictionaryStack';
 import PracticeStack from './screens/PracticeStack';
 
+// Header is handled by the individual stacks
 const HomeTabs = createBottomTabNavigator({
   screens: {
     Home: {
-      screen: Home,
+      screen: HomeStack,
       options: {
-        title: 'Home',
+        headerShown: false,
         tabBarIcon: ({ color, size }) => (
           <Icon name="home" color={color} size={size} />
         ),
@@ -61,56 +63,6 @@ const RootStack = createNativeStackNavigator({
       options: {
         title: 'Home',
         headerShown: false,
-      },
-    },
-    CategoryModulesScreen: {
-      screen: CategoryModulesScreen,
-      options: ({ route }) => ({
-        title: route.params?.categoryTitle || 'Modules',
-      }),
-    },
-    LessonScreen: {
-      screen: LessonScreen,
-      options: {
-        title: 'Lesson',
-      },
-    },
-    LessonComplete: {
-      screen: LessonCompleteScreen,
-      options: {
-        headerShown: false,
-      },
-    },
-    Profile: {
-      screen: Profile,
-      linking: {
-        path: ':user(@[a-zA-Z0-9-_]+)',
-        parse: {
-          user: (value) => value.replace(/^@/, ''),
-        },
-        stringify: {
-          user: (value) => `@${value}`,
-        },
-      },
-    },
-    Settings: {
-      screen: Settings,
-      options: ({ navigation }) => ({
-        presentation: 'modal',
-        headerRight: () => (
-          <HeaderButton onPress={navigation.goBack}>
-            <Text>Close</Text>
-          </HeaderButton>
-        ),
-      }),
-    },
-    NotFound: {
-      screen: NotFound,
-      options: {
-        title: '404',
-      },
-      linking: {
-        path: '*',
       },
     },
   },

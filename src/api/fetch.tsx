@@ -480,10 +480,9 @@ export const downloadCategoryVideos = async (categoryId: string): Promise<void> 
     const downloadPromises = urls.map(url => {
         // Extract the filename from the URL (e.g., "https://.../Alphabet/A.mp4" -> "A.mp4")
         const filename = url.substring(url.lastIndexOf('/') + 1);
-        // const fileUri = `${dirUri}${filename}`;
         
         // Use downloadAsync for downloading the file
-        return File.downloadFileAsync(url, dir)
+        return File.downloadFileAsync(encodeURI(url), dir)
             .then(result => {
                 if (!result.exists) {
                     throw new Error(`Download failed with status ${result.status}`);

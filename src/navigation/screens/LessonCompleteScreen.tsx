@@ -8,7 +8,7 @@ const LessonCompleteScreen = () => {
 
   const handleGoHome = () => {
     // This will unwind the navigation stack back to the very first screen (HomeTabs)
-    navigation.popToTop();
+    navigation.pop(2);
   };
 
   return (

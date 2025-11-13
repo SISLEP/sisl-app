@@ -1,22 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HeaderButton, Text } from '@react-navigation/elements';
 import {
   createStaticNavigation,
   StaticParamList,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Image } from 'react-native';
-import bell from '../assets/bell.png';
-import home from '../assets/home.png';
-import book from '../assets/book.png';
 import Icon from 'react-native-vector-icons/FontAwesome'; // Import the icon library
-import CategoryModulesScreen from './screens/CategoryModulesScreen';
-import Home from './screens/Home';
-import { Profile } from './screens/Profile';
-import { Settings } from './screens/Settings';
-import { NotFound } from './screens/NotFound';
-import LessonScreen from './screens/LessonScreen';
-import LessonCompleteScreen from './screens/LessonCompleteScreen';
 import HomeStack from './screens/HomeStack';
 import DictionaryStack from './screens/DictionaryStack';
 import PracticeStack from './screens/PracticeStack';

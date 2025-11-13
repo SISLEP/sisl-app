@@ -1,6 +1,4 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// Assuming you will have a screen component named Home
-// You may need to create this file: ./Home.tsx
 import Home from './Home'; 
 import CategoryModulesScreen from './CategoryModulesScreen';
 import LessonScreen from './LessonScreen';
@@ -9,8 +7,7 @@ import LessonCompleteScreen from './LessonCompleteScreen';
 const HomeStack = createNativeStackNavigator();
 
 /**
- * Defines the stack navigator for the '' tab.
- * This stack includes the home screen for practices, and its sub-screens like Quiz and Flashcards.
+ * Defines the stack navigator for the 'Home' tab.
  */
 const HomeStackScreen = () => {
   return (

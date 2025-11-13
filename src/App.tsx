@@ -6,6 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as React from 'react';
 import { useColorScheme } from 'react-native';
 import { Navigation } from './navigation';
+import { ProgressProvider } from './context/ProgressContext';
 
 Asset.loadAsync([
   ...NavigationAssets,
@@ -23,7 +24,8 @@ export function App() {
   const theme = colorScheme === 'dark' ? DarkTheme : DefaultTheme
 
   return (
-    <Navigation
+    <ProgressProvider>
+       <Navigation
       theme={theme}
       linking={{
         enabled: 'auto',
@@ -33,5 +35,7 @@ export function App() {
         SplashScreen.hideAsync();
       }}
     />
+    </ProgressProvider>
+   
   );
 }

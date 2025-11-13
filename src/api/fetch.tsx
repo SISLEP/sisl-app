@@ -367,7 +367,7 @@ const getLocalVideoUri = (remoteUrl: string, categoryId: string): string => {
     const filename = remoteUrl.substring(remoteUrl.lastIndexOf('/') + 1);
 
     // 3. Construct the full local URI: <base-document-uri>/sislep/<categoryId>/<filename>
-    return `${dir.uri}/${filename}`;
+    return `${dir.uri}${filename}`;
 };
 
 /**

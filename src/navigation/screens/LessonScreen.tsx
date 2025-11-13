@@ -1,21 +1,22 @@
 import { useNavigation, useRoute } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// 🚨 REMOVED: import AsyncStorage from '@react-native-async-storage/async-storage';
+// 🚨 REMOVED: PROGRESS_STORAGE_KEY is no longer needed here.
 import FillInTheBlankScreen from './FillInTheBlankScreen';
 import MatchingPairsScreen from './MatchingPairsScreen';
 import SequencingScreen from './SequencingScreen';
 import TranslationScreen from './TranslationScreen';
-import ConversationScreen from './ConversationScreen'; // <-- NEW IMPORT
+import ConversationScreen from './ConversationScreen';
 import { addWordMemory } from '../../storage/memoryService';
-import { Word } from '../../data/word'; // 2. Import Word type (assuming path is correct)
+import { Word } from '../../data/word'; // Import Word type (assuming path is correct)
 
-const PROGRESS_STORAGE_KEY = 'userProgress';
+// 🚨 REMOVED: const PROGRESS_STORAGE_KEY = 'userProgress';
 
 // Helper type to safely access word string from various data structures
 type LessonDataItem = { word?: string } | Word | string;
 
-// 3. Function to safely extract words from various lesson data structures
+// Function to safely extract words from various lesson data structures (Unchanged)
 const extractWordsFromLessonData = (data: any, lessonType: string): string[] => {
   console.log('Extracting words from lesson data:', data, 'for type:', lessonType);
   if (!data) return [];
@@ -39,14 +40,13 @@ const extractWordsFromLessonData = (data: any, lessonType: string): string[] => 
       break;
     case 'sequencing':
     case 'fill_in_the_blank':
-    case 'conversation': // <-- ADDED new type
+    case 'conversation': 
       // Default array extraction logic for other types
       if (Array.isArray(data)) {
         words = data.map((item: LessonDataItem) => {
-          // For conversation, we might extract words from both sentences if they contain key words.
-          // For simplicity here, we'll assume the full English sentence is the "word" to track memory on.
-          if (typeof item === 'object' && item !== null && 'englishSentence' in item && typeof (item as any).englishSentence === 'string') {
-            return (item as any).englishSentence;
+          // For conversation, we will now use the signSentence as the word/phrase to track memory on.
+          if (typeof item === 'object' && item !== null && 'signSentence' in item && typeof (item as any).signSentence === 'string') {
+            return (item as any).signSentence;
           }
           if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {
             return item.word;
@@ -94,8 +94,8 @@ const extractWordsFromLessonData = (data: any, lessonType: string): string[] => 
 const LessonScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  // moduleId now stores the composite key (e.g., "alphabet-1")
-  const { lessons, initialLessonIndex, moduleId } = route.params; 
+  // 🚨 CHANGE: Destructure onCompleteLesson from route params
+  const { lessons, initialLessonIndex, moduleId, onCompleteLesson } = route.params; 
 
   const [currentLessonIndex, setCurrentLessonIndex] = useState(initialLessonIndex || 0);
   const currentLesson = lessons[currentLessonIndex];
@@ -106,54 +106,13 @@ const LessonScreen = () => {
     setCurrentLessonIndex(initialLessonIndex);
   }, [initialLessonIndex]);
 
-  // This effect will run when the component mounts and when route params change
-  useEffect(() => {
-    // Check if the user is explicitly retaking a completed module
-    if (initialLessonIndex === 0 && currentLessonIndex === 0) {
-      const resetProgress = async () => {
-        try {
-          const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
-          if (storedProgress) {
-            const progress = JSON.parse(storedProgress);
-            // Only reset if the module was previously completed
-            if (progress[moduleId] && progress[moduleId].lessonsCompleted >= progress[moduleId].totalLessons) {
-              progress[moduleId] = { // <-- Uses moduleId (the composite key)
-                lessonsCompleted: 0,
-                totalLessons: lessons.length,
-              };
-              await AsyncStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
-              console.log(`Progress for module ${moduleId} has been reset for retake.`);
-            }
-          }
-        } catch (e) {
-          console.error('Failed to reset progress for retake', e);
-        }
-      };
-      resetProgress();
-    }
-  }, [initialLessonIndex, moduleId]); // <-- Uses moduleId in dependencies
+  // 🚨 REMOVED: Manual progress reset logic is removed, as the context provider
+  // and the CategoryModulesScreen handle the logic for starting at index 0 on retake.
 
-  // Function to save progress to AsyncStorage
-  const saveProgress = async (lessonsCompleted) => {
-    try {
-      const storedProgress = await AsyncStorage.getItem(PROGRESS_STORAGE_KEY);
-      const progress = storedProgress ? JSON.parse(storedProgress) : {};
-      
-      progress[moduleId] = { // <-- Uses moduleId (the composite key)
-        lessonsCompleted,
-        totalLessons: lessons.length
-      };
-      
-      await AsyncStorage.setItem(PROGRESS_STORAGE_KEY, JSON.stringify(progress));
-      console.log(`Progress for module ${moduleId} saved: ${lessonsCompleted}/${lessons.length}`);
-    } catch (e) {
-      console.error('Failed to save progress to storage', e);
-    }
-  };
-
+  // 🚨 REMOVED: saveProgress function is removed.
 
   const handleNextLesson = async () => {
-    // 4. Word Memory Saving Logic
+    // 4. Word Memory Saving Logic (Unchanged)
     if (currentLesson) {
       // Pass the lesson type to correctly extract words
       const wordsToSave = extractWordsFromLessonData(currentLesson.data, currentLesson.type);
@@ -170,7 +129,12 @@ const LessonScreen = () => {
     // End of Word Memory Saving Logic
 
     const nextLessonIndex = currentLessonIndex + 1;
-    await saveProgress(nextLessonIndex);
+    
+    // 🚨 CHANGE: Use the passed callback function to update progress in the global context
+    if (onCompleteLesson && moduleId) {
+        // onCompleteLesson is a function from context (updateModuleProgress)
+        onCompleteLesson(moduleId, nextLessonIndex); 
+    }
     
     if (nextLessonIndex < lessons.length) {
       setCurrentLessonIndex(nextLessonIndex);
@@ -195,7 +159,7 @@ const LessonScreen = () => {
         return <TranslationScreen key={uniqueKey} data={currentLesson.data} instructions={currentLesson.instructions} onNext={handleNextLesson} />;
       case 'fill_in_the_blank':
         return <FillInTheBlankScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
-      case 'conversation': // <-- NEW CASE FOR CONVERSATION
+      case 'conversation':
         return <ConversationScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
       default:
         return <Text>Unknown lesson type: {currentLesson.type}</Text>;

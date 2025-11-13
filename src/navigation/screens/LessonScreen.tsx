@@ -43,10 +43,8 @@ const extractWordsFromLessonData = (data: any, lessonType: string): string[] => 
       // Default array extraction logic for other types
       if (Array.isArray(data)) {
         words = data.map((item: LessonDataItem) => {
-          console.log("myy ", item);
           // For conversation, we will now use the signSentence as the word/phrase to track memory on.
           if (typeof item === 'object' && item !== null && 'signSentence' in item && typeof (item as any).signSentence === 'string') {
-            console.log("myy signSentence ", (item as any).signSentence);
             return (item as any).signSentence;
           }
           if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {

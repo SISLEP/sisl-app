@@ -39,7 +39,6 @@ const MatchingPairsScreen = ({ data, onNext }) => {
 
   // When a video or text card is selected, reset the feedback state
   const handleSelectVideo = (item) => {
-    console.log("myy selected video", item);
     setSelectedVideo(item);
     setShowFeedback(false);
   };

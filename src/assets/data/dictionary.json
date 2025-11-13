@@ -134,7 +134,8 @@
     "Body": [
         {
             "word": "Body",
-            "signVideo": "https://sislep.github.io/video-site/body/Body.mp4"
+            "signVideo": "https://sislep.github.io/video-site/body/Body.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Body.jpg"
         },
         {
             "word": "Face",
@@ -158,7 +159,8 @@
         },
         {
             "word": "Mouth",
-            "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4"
+            "signVideo": "https://sislep.github.io/video-site/body/Mouth.mp4",
+            "signImage": "https://sislep.github.io/video-site/body/Mouth.jpg"
         },
         {
             "word": "Nose",
@@ -224,7 +226,8 @@
         },
         {
             "word": "Boyfriend",
-            "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4"
+            "signVideo": "https://sislep.github.io/video-site/family/Boyfriend.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Boyfriend.jpg"
         },
         {
             "word": "Brother",
@@ -273,7 +276,8 @@
         },
         {
             "word": "Girlfriend",
-            "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4"
+            "signVideo": "https://sislep.github.io/video-site/family/Girlfriend.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Girlfriend.jpg"
         },
         {
             "word": "Granddaughter",
@@ -292,11 +296,8 @@
         },
         {
             "word": "Grandson",
-            "signVideo": "https://sislep.github.io/video-site/family/Grandson.mp4"
-        },
-        {
-            "word": "HusbandandWife",
-            "signVideo": "https://sislep.github.io/video-site/family/HusbandandWife.mp4"
+            "signVideo": "https://sislep.github.io/video-site/family/Grandson.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Grandson.jpg"
         },
         {
             "word": "Man",
@@ -340,15 +341,18 @@
         },
         {
             "word": "Uncle",
-            "signVideo": "https://sislep.github.io/video-site/family/Uncle.mp4"
+            "signVideo": "https://sislep.github.io/video-site/family/Uncle.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Uncle.jpg"
         },
         {
             "word": "Wedding",
-            "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4"
+            "signVideo": "https://sislep.github.io/video-site/family/Wedding.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Wedding.jpg"
         },
         {
             "word": "Wife",
-            "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4"
+            "signVideo": "https://sislep.github.io/video-site/family/Wife.mp4",
+            "signImage": "https://sislep.github.io/video-site/family/Wife.jpg"
         },
         {
             "word": "Woman",
@@ -570,7 +574,8 @@
         },
         {
             "word": "Bull",
-            "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4"
+            "signVideo": "https://sislep.github.io/video-site/animal/Bull.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Bull.jpg"
         },
         {
             "word": "Butterfly",
@@ -589,7 +594,8 @@
         },
         {
             "word": "Cormorant",
-            "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4"
+            "signVideo": "https://sislep.github.io/video-site/animal/Cormorant.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Cormorant.jpg"
         },
         {
             "word": "Cow",
@@ -628,11 +634,13 @@
         },
         {
             "word": "Gecko",
-            "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4"
+            "signVideo": "https://sislep.github.io/video-site/animal/Gecko.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Gecko.jpg"
         },
         {
             "word": "Horse",
-            "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4"
+            "signVideo": "https://sislep.github.io/video-site/animal/Horse.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Horse.jpg"
         },
         {
             "word": "Lizard",
@@ -646,7 +654,8 @@
         },
         {
             "word": "Owl",
-            "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4"
+            "signVideo": "https://sislep.github.io/video-site/animal/Owl.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Owl.jpg"
         },
         {
             "word": "Pig",
@@ -664,8 +673,10 @@
             "signImage": "https://sislep.github.io/video-site/animal/Animal.jpg"
         },
         {
-            "word": "SlowLorises",
-            "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4"
+            "word": "Slow Lorises",
+            "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Slow Lorises.jpg"
+
         },
         {
             "word": "Snail",
@@ -683,7 +694,8 @@
         },
         {
             "word": "Woodpecker",
-            "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4"
+            "signVideo": "https://sislep.github.io/video-site/animal/Woodpecker.mp4",
+            "signImage": "https://sislep.github.io/video-site/animal/Woodpecker.jpg"
         }
     ],
     "Sport": [
@@ -719,7 +731,8 @@
         },
         {
             "word": "Futsal",
-            "signVideo": "https://sislep.github.io/video-site/sport/Futsal.mp4"
+            "signVideo": "https://sislep.github.io/video-site/sport/Futsal.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Futsal.jpg"
         },
         {
             "word": "Golf",
@@ -745,10 +758,6 @@
             "word": "Rugby",
             "signVideo": "https://sislep.github.io/video-site/sport/Rugby.mp4",
             "signImage": "https://sislep.github.io/video-site/sport/Rugby.jpg"
-        },
-        {
-            "word": "Rugby7",
-            "signVideo": "https://sislep.github.io/video-site/sport/Rugby7.mp4"
         },
         {
             "word": "Running",
@@ -782,7 +791,8 @@
         },
         {
             "word": "Tennis",
-            "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4"
+            "signVideo": "https://sislep.github.io/video-site/sport/Tennis.mp4",
+            "signImage": "https://sislep.github.io/video-site/sport/Tennis.jpg"
         },
         {
             "word": "Volleyball",

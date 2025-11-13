@@ -2958,14 +2958,14 @@
             "correctAnswer": "Rat",
             "options": [
               "Rat",
-              "SlowLorises",
+              "Slow Lorises",
               "Snail"
             ]
           }
         },
         {
           "type": "matching_pairs",
-          "instructions": "Tap the matching pair (Rat & SlowLorises)",
+          "instructions": "Tap the matching pair (Rat & Slow Lorises)",
           "data": {
             "items": [
               {
@@ -2975,7 +2975,7 @@
               },
               {
                 "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4",
-                "translation": "SlowLorises",
+                "translation": "Slow Lorises",
                 "id": "2"
               }
             ]
@@ -2989,7 +2989,7 @@
             "correctAnswer": "SignLanguageAnimal",
             "options": [
               "Rat",
-              "SlowLorises",
+              "Slow Lorises",
               "Snail"
             ]
           }
@@ -2999,10 +2999,10 @@
           "instructions": "Choose the right translation",
           "data": {
             "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4",
-            "correctAnswer": "SlowLorises",
+            "correctAnswer": "Slow Lorises",
             "options": [
               "Rat",
-              "SlowLorises",
+              "Slow Lorises",
               "Snail"
             ]
           }
@@ -3381,10 +3381,10 @@
           "type": "translation",
           "instructions": "Select the correct word",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/sport/Rugby7.mp4",
-            "correctAnswer": "Rugby7",
+            "signVideo": "https://sislep.github.io/video-site/sport/Rugby.mp4",
+            "correctAnswer": "Rugby",
             "options": [
-              "Rugby7",
+              "Rugby",
               "Running",
               "Soccer"
             ]
@@ -3397,7 +3397,7 @@
             "signVideo": "https://sislep.github.io/video-site/sport/Running.mp4",
             "correctAnswer": "Running",
             "options": [
-              "Rugby7",
+              "Rugby",
               "Running",
               "Soccer"
             ]
@@ -3419,7 +3419,7 @@
             "signVideo": "https://sislep.github.io/video-site/sport/Soccer.mp4",
             "correctAnswer": "Soccer",
             "options": [
-              "Rugby7",
+              "Rugby",
               "Running",
               "Soccer"
             ]

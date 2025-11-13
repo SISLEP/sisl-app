@@ -43,10 +43,11 @@ const extractWordsFromLessonData = (data: any, lessonType: string): string[] => 
       // Default array extraction logic for other types
       if (Array.isArray(data)) {
         words = data.map((item: LessonDataItem) => {
-          // For conversation, we might extract words from both sentences if they contain key words.
-          // For simplicity here, we'll assume the full English sentence is the "word" to track memory on.
-          if (typeof item === 'object' && item !== null && 'englishSentence' in item && typeof (item as any).englishSentence === 'string') {
-            return (item as any).englishSentence;
+          console.log("myy ", item);
+          // For conversation, we will now use the signSentence as the word/phrase to track memory on.
+          if (typeof item === 'object' && item !== null && 'signSentence' in item && typeof (item as any).signSentence === 'string') {
+            console.log("myy signSentence ", (item as any).signSentence);
+            return (item as any).signSentence;
           }
           if (typeof item === 'object' && item !== null && 'word' in item && typeof item.word === 'string') {
             return item.word;
@@ -195,7 +196,7 @@ const LessonScreen = () => {
         return <TranslationScreen key={uniqueKey} data={currentLesson.data} instructions={currentLesson.instructions} onNext={handleNextLesson} />;
       case 'fill_in_the_blank':
         return <FillInTheBlankScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
-      case 'conversation': // <-- NEW CASE FOR CONVERSATION
+      case 'conversation':
         return <ConversationScreen key={uniqueKey} data={currentLesson.data} onNext={handleNextLesson} />;
       default:
         return <Text>Unknown lesson type: {currentLesson.type}</Text>;

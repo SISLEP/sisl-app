@@ -1,6 +1,12 @@
 {
   "categories": [
     {
+      "id": "general",
+      "title": "General Signs",
+      "icon": "🤟",
+      "moduleCount": 1
+    },
+    {
       "id": "alphabet",
       "title": "Alphabet",
       "icon": "🅰️",
@@ -49,12 +55,6 @@
       "moduleCount": 3
     },
     {
-      "id": "general",
-      "title": "General Signs",
-      "icon": "🤟",
-      "moduleCount": 1
-    },
-    {
       "id": "class",
       "title": "Class",
       "icon": "🏫",
@@ -84,6 +84,18 @@
       "icon": "🔢",
       "bgColor": "#E9E6FF",
       "moduleCount": 5
+    },
+    {
+      "id": "transport",
+      "title": "Transport",
+      "icon": "🚗",
+      "moduleCount": 4
+    },
+    {
+      "id": "vegetable",
+      "title": "Vegetable",
+      "icon": "🥦",
+      "moduleCount": 4
     }
   ]
 }

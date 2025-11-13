@@ -1,0 +1,64 @@
+{
+  "vegetable": [
+    {
+      "id": "1",
+      "title": "Vegetable Lesson 1",
+      "subtitle": "Roots and Tubers",
+      "icon": "🍠",
+      "bgColor": "#FFE6E6",
+      "category": "vegetable",
+      "lessons": [
+        { "type": "translation", "instructions": "Guess the correct translation for the vegetable sign", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Cavssava.mp4", "correctAnswer": "Cassava", "options": [ "Cassava", "Potatoes", "Taro" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Greater Yam & Potatoes)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/GreaterYam.mp4", "translation": "Greater Yam", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Potatoes.mp4", "translation": "Potatoes", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is being signed?", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Taro.mp4", "correctAnswer": "Taro", "options": [ "Ginger", "Taro", "Cassava" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Taro & Ginger)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/Taro.mp4", "translation": "Taro", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Ginger.mp4", "translation": "Ginger", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Potatoes.mp4", "correctAnswer": "Potatoes", "options": [ "Greater Yam", "Potatoes", "Ginger" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Vegetable Lesson 2",
+      "subtitle": "Leafy Greens and Stems",
+      "icon": "🥬",
+      "bgColor": "#E6FCF6",
+      "category": "vegetable",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Cabbage.mp4", "correctAnswer": "Cabbage", "options": [ "Cabbage", "Leek", "Coriander" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Leek & Coriander)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/Leek.mp4", "translation": "Leek", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Coriander.mp4", "translation": "Coriander", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Leafpumpkinlead.mp4", "correctAnswer": "Leaf Pumpkin Lead", "options": [ "Cabbage", "Leaf Pumpkin Lead", "Pumpkinlead" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Coriander & Cabbage)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/Coriander.mp4", "translation": "Coriander", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Cabbage.mp4", "translation": "Cabbage", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Pumpkinlead.mp4", "correctAnswer": "Pumpkinlead", "options": [ "Leek", "Leaf Pumpkin Lead", "Pumpkinlead" ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Vegetable Lesson 3",
+      "subtitle": "Fruits and Pods",
+      "icon": "🥥",
+      "bgColor": "#FBE6FF",
+      "category": "vegetable",
+      "lessons": [
+        { "type": "translation", "instructions": "What is being signed?", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Coconut.mp4", "correctAnswer": "Coconut", "options": [ "Cooking Banana", "Coconut", "Tomato" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Cooking Banana & Beans)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/BananaCook.mp4", "translation": "Cooking Banana", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Beans.mp4", "translation": "Beans", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Mangrovefruit.mp4", "correctAnswer": "Mangrovefruit", "options": [ "Beans", "Mangrovefruit", "Tomato" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Coconut & Mangrovefruit)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/Coconut.mp4", "translation": "Coconut", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Mangrovefruit.mp4", "translation": "Mangrovefruit", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Tomato.mp4", "correctAnswer": "Tomato", "options": [ "Cooking Banana", "Tomato", "Beans" ] } }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Vegetable Lesson 4",
+      "subtitle": "Bulbs and Others",
+      "icon": "🧅",
+      "bgColor": "#F2E6FC",
+      "category": "vegetable",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Bellpepper.mp4", "correctAnswer": "Bell Pepper", "options": [ "Chilli", "Bell Pepper", "Carrot" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Chilli & Onion)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/Chilli.mp4", "translation": "Chilli", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Onion.mp4", "translation": "Onion", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Eggplant.mp4", "correctAnswer": "Eggplant", "options": [ "Carrot", "Eggplant", "Onion" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Carrot & Eggplant)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/vegetable/Carrot.mp4", "translation": "Carrot", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/vegetable/Eggplant.mp4", "translation": "Eggplant", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/vegetable/Onion.mp4", "correctAnswer": "Onion", "options": [ "Chilli", "Onion", "Carrot" ] } }
+      ]
+    }
+  ]
+}

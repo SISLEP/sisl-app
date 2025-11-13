@@ -235,6 +235,24 @@ const fetchModulesByCategory = async (categoryId: string): Promise<LearningModul
                             }
                         }
                     }
+
+                    // C. NEW: Handle lessons with lesson.data as an array (e.g., 'conversation')
+                    if (Array.isArray(lesson.data)) {
+                        for (const conversationItem of lesson.data) {
+                            if (conversationItem.signVideo) {
+                                conversationItem.signVideo = await getBestVideoSource(
+                                    conversationItem.signVideo,
+                                    categoryId
+                                );
+                            }
+                            if (conversationItem.signImage) {
+                                conversationItem.signImage = await getBestVideoSource(
+                                    conversationItem.signImage,
+                                    categoryId
+                                );
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -450,6 +468,9 @@ const getCategoryVideoUrls = (categoryId: string): string[] => {
  * @param categoryId The ID of the category (e.g., 'alphabet').
  */
 export const downloadCategoryVideos = async (categoryId: string): Promise<void> => {
+    // --- Remove existing files before starting the download ---
+    await removeCategoryVideos(categoryId);
+
     await ensureCategoryDirectoryExists(categoryId);
     const urls = getCategoryVideoUrls(categoryId);
     const dir = getCategoryDirectory(categoryId);
@@ -459,10 +480,9 @@ export const downloadCategoryVideos = async (categoryId: string): Promise<void> 
     const downloadPromises = urls.map(url => {
         // Extract the filename from the URL (e.g., "https://.../Alphabet/A.mp4" -> "A.mp4")
         const filename = url.substring(url.lastIndexOf('/') + 1);
-        // const fileUri = `${dirUri}${filename}`;
         
         // Use downloadAsync for downloading the file
-        return File.downloadFileAsync(url, dir)
+        return File.downloadFileAsync(encodeURI(url), dir)
             .then(result => {
                 if (!result.exists) {
                     throw new Error(`Download failed with status ${result.status}`);

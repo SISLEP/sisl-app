@@ -1,0 +1,65 @@
+{
+  "transport": [
+    {
+      "id": "1",
+      "title": "Transport Lesson 1",
+      "subtitle": "Emergency & Road Vehicles",
+      "icon": "🚨",
+      "bgColor": "#FCE6E6",
+      "category": "transport",
+      "lessons": [
+        { "type": "translation", "instructions": "Guess the correct translation for the vehicle sign", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Ambulance.mp4", "correctAnswer": "Ambulance", "options": [ "Ambulance", "Bus" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Ambulance & Bus)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/Ambulance.mp4", "translation": "Ambulance", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/Bus.mp4", "translation": "Bus", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is being signed?", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Car.mp4", "correctAnswer": "Car", "options": [ "Ambulance", "Car", "Taxi" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Car & Fire Engine)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/Car.mp4", "translation": "Car", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/FireEngine.mp4", "translation": "Fire Engine", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Taxi.mp4", "correctAnswer": "Taxi", "options": [ "Bus", "Car", "Taxi" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Transport Lesson 2",
+      "subtitle": "Construction & Heavy Vehicles",
+      "icon": "🏗️",
+      "bgColor": "#FCF9E6",
+      "category": "transport",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/transport/ConcretetMixer.mp4", "correctAnswer": "Concretet Mixer", "options": [ "Truck", "Concretet Mixer", "Dump Truck" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Dump Truck & Excavation)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/DumpTruck.mp4", "translation": "Dump Truck", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/Excavation.mp4", "translation": "Excavation", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Forklift.mp4", "correctAnswer": "Forklift", "options": [ "Forklift", "Skid Steer Loader", "Excavation" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Lorry Truck & Road Roller)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/LorryTruck.mp4", "translation": "Lorry Truck", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/RoadRoller.mp4", "translation": "Road Roller", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/transport/SkidSteerLoader.mp4", "correctAnswer": "Skid Steer Loader", "options": [ "Lorry Truck", "Forklift", "Skid Steer Loader" ] } },
+        { "type": "translation", "instructions": "Guess the correct translation", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Truck.mp4", "correctAnswer": "Truck", "options": [ "Truck", "Bus", "Car" ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Transport Lesson 3",
+      "subtitle": "Air and Water Travel",
+      "icon": "✈️",
+      "bgColor": "#E6FCF6",
+      "category": "transport",
+      "lessons": [
+        { "type": "translation", "instructions": "What is being signed?", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Canoe.mp4", "correctAnswer": "Canoe", "options": [ "Sailboat", "Canoe", "Ship" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Helicopter & Plane)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/Helicopter.mp4", "translation": "Helicopter", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/Plane.mp4", "translation": "Plane", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Sailboat.mp4", "correctAnswer": "Sailboat", "options": [ "Canoe", "Ship", "Sailboat" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Sailboat & Ship)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/Sailboat.mp4", "translation": "Sailboat", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/Ship.mp4", "translation": "Ship", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Plane.mp4", "correctAnswer": "Plane", "options": [ "Helicopter", "Plane", "Ship" ] } }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Transport Lesson 4",
+      "subtitle": "Bikes and Law Enforcement",
+      "icon": "🏍️",
+      "bgColor": "#EBE6FC",
+      "category": "transport",
+      "lessons": [
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/transport/MotorBike.mp4", "correctAnswer": "Motor Bike", "options": [ "Mountain Bike", "Motor Bike", "Car" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Motor Bike & Mountain Bike)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/MotorBike.mp4", "translation": "Motor Bike", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/MountainBike.mp4", "translation": "Mountain Bike", "id": "2" } ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/transport/MountainBike.mp4", "correctAnswer": "Mountain Bike", "options": [ "Truck", "Motor Bike", "Mountain Bike" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Police Truck & Taxi)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/PoliceTruck.mp4", "translation": "Police Truck", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/Taxi.mp4", "translation": "Taxi", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/transport/PoliceTruck.mp4", "correctAnswer": "Police Truck", "options": [ "Ambulance", "Fire Engine", "Police Truck" ] } }
+      ]
+    }
+  ]
+}

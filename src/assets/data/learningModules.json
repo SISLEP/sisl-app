@@ -1328,7 +1328,7 @@
         },
         {
           "type": "matching_pairs",
-          "instructions": "Tap the matching pair (Grandson & HusbandandWife)",
+          "instructions": "Tap the matching pair (Grandson & Husband)",
           "data": {
             "items": [
               {
@@ -1337,8 +1337,8 @@
                 "id": "1"
               },
               {
-                "signVideo": "https://sislep.github.io/video-site/family/HusbandandWife.mp4",
-                "translation": "HusbandandWife",
+                "signVideo": "https://sislep.github.io/video-site/family/Husband.mp4",
+                "translation": "Husband",
                 "id": "2"
               }
             ]
@@ -1361,10 +1361,10 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/family/HusbandandWife.mp4",
-            "correctAnswer": "HusbandandWife",
+            "signVideo": "https://sislep.github.io/video-site/family/Husband.mp4",
+            "correctAnswer": "Husband",
             "options": [
-              "HusbandandWife",
+              "Husband",
               "Man",
               "Marry"
             ]
@@ -1395,7 +1395,7 @@
             "signVideo": "https://sislep.github.io/video-site/family/Man.mp4",
             "correctAnswer": "Man",
             "options": [
-              "HusbandandWife",
+              "Husband",
               "Man",
               "Marry"
             ]
@@ -1408,7 +1408,7 @@
             "signVideo": "https://sislep.github.io/video-site/family/Marry.mp4",
             "correctAnswer": "Marry",
             "options": [
-              "HusbandandWife",
+              "Husband",
               "Man",
               "Marry"
             ]

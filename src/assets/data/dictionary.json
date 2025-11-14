@@ -27,108 +27,139 @@
     ],
     "Alphabet": [
         {
+            "word": "Alphabet",
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Alphabet.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/Alphabet.jpg"
+        },
+        {
             "word": "A",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/A.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/A.jpg"
         },
         {
             "word": "B",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/B.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/B.jpg"
         },
         {
             "word": "C",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/C.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/C.jpg"
         },
         {
             "word": "D",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/D.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/D.jpg"
         },
         {
             "word": "E",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/E.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/E.jpg"
         },
         {
             "word": "F",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/F.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/F.jpg"
         },
         {
             "word": "G",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/G.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/G.jpg"
         },
         {
             "word": "H",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/H.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/H.jpg"
         },
         {
             "word": "I",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/I.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/I.jpg"
         },
         {
             "word": "J",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/J.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/J.jpg"
         },
         {
             "word": "K",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/K.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/K.jpg"
         },
         {
             "word": "L",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/L.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/L.jpg"
         },
         {
             "word": "M",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/M.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/M.jpg"
         },
         {
             "word": "N",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/N.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/N.jpg"
         },
         {
             "word": "O",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/O.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/O.jpg"
         },
         {
             "word": "P",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/P.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/P.jpg"
         },
         {
             "word": "Q",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Q.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/Q.jpg"
         },
         {
             "word": "R",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/R.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/R.jpg"
         },
         {
             "word": "S",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/S.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/S.jpg"
         },
         {
             "word": "T",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/T.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/T.jpg"
         },
         {
             "word": "U",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/U.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/U.jpg"
         },
         {
             "word": "V",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/V.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/V.jpg"
         },
         {
             "word": "W",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/W.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/W.jpg"
         },
         {
             "word": "X",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/X.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/X.jpg"
         },
         {
             "word": "Y",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Y.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/Y.jpg"
         },
         {
             "word": "Z",
-            "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4"
+            "signVideo": "https://sislep.github.io/video-site/alphabet/Z.mp4",
+            "signImage": "https://sislep.github.io/video-site/alphabet/Z.jpg"
         }
     ],
     "Body": [

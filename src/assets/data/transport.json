@@ -23,7 +23,7 @@
       "bgColor": "#FCF9E6",
       "category": "transport",
       "lessons": [
-        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/transport/ConcretetMixer.mp4", "correctAnswer": "Concretet Mixer", "options": [ "Truck", "Concretet Mixer", "Dump Truck" ] } },
+        { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/transport/ConcreteMixer.mp4", "correctAnswer": "Concrete Mixer", "options": [ "Truck", "Concrete Mixer", "Dump Truck" ] } },
         { "type": "matching_pairs", "instructions": "Tap the matching pair (Dump Truck & Excavation)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/DumpTruck.mp4", "translation": "Dump Truck", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/Excavation.mp4", "translation": "Excavation", "id": "2" } ] } },
         { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/transport/Forklift.mp4", "correctAnswer": "Forklift", "options": [ "Forklift", "Skid Steer Loader", "Excavation" ] } },
         { "type": "matching_pairs", "instructions": "Tap the matching pair (Lorry Truck & Road Roller)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/transport/LorryTruck.mp4", "translation": "Lorry Truck", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/transport/RoadRoller.mp4", "translation": "Road Roller", "id": "2" } ] } },

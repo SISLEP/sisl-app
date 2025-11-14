@@ -12,10 +12,10 @@
                     "type": "translation",
                     "instructions": "Select the correct word",
                     "data": {
-                        "signVideo": "https://sislep.github.io/video-site/class/BagKids.mp4",
-                        "correctAnswer": "Bag Kids",
+                        "signVideo": "https://sislep.github.io/video-site/class/Backpack.mp4",
+                        "correctAnswer": "Backpack",
                         "options": [
-                            "Bag Kids",
+                            "Backpack",
                             "Bell",
                             "Black Board"
                         ]
@@ -60,14 +60,14 @@
                         "correctAnswer": "Book",
                         "options": [
                             "Book",
-                            "Box Lunch",
+                            "Lunch Box",
                             "Calculator"
                         ]
                     }
                 },
                 {
                     "type": "matching_pairs",
-                    "instructions": "Tap the matching pair (Book & Box Lunch)",
+                    "instructions": "Tap the matching pair (Book & Lunch Box)",
                     "data": {
                         "items": [
                             {
@@ -76,8 +76,8 @@
                                 "id": "1"
                             },
                             {
-                                "signVideo": "https://sislep.github.io/video-site/class/BoxLunch.mp4",
-                                "translation": "Box Lunch",
+                                "signVideo": "https://sislep.github.io/video-site/class/LunchBox.mp4",
+                                "translation": "Lunch Box",
                                 "id": "2"
                             }
                         ]
@@ -87,10 +87,10 @@
                     "type": "translation",
                     "instructions": "Choose the right translation",
                     "data": {
-                        "signVideo": "https://sislep.github.io/video-site/class/BoxLunch.mp4",
-                        "correctAnswer": "Box Lunch",
+                        "signVideo": "https://sislep.github.io/video-site/class/LunchBox.mp4",
+                        "correctAnswer": "Lunch Box",
                         "options": [
-                            "Box Lunch",
+                            "Lunch Box",
                             "Calculator",
                             "Calendar"
                         ]
@@ -450,7 +450,7 @@
                                 "id": "1"
                             },
                             {
-                                "signVideo": "https://sislep.github.io/video-site/class/LnkPot.mp4",
+                                "signVideo": "https://sislep.github.io/video-site/class/InkPot.mp4",
                                 "translation": "Ink Pot",
                                 "id": "2"
                             }
@@ -461,7 +461,7 @@
                     "type": "translation",
                     "instructions": "Choose the right translation",
                     "data": {
-                        "signVideo": "https://sislep.github.io/video-site/class/LnkPot.mp4",
+                        "signVideo": "https://sislep.github.io/video-site/class/InkPot.mp4",
                         "correctAnswer": "Ink Pot",
                         "options": [
                             "Ink Pot",

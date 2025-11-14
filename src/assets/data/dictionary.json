@@ -879,9 +879,9 @@
     ],
     "Class": [
         {
-            "word": "Bag Kids",
-            "signVideo": "https://sislep.github.io/video-site/class/BagKids.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/BagKids.jpg"
+            "word": "Backpack",
+            "signVideo": "https://sislep.github.io/video-site/class/Backpack.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/Backpack.jpg"
         },
         {
             "word": "Bell",
@@ -899,9 +899,9 @@
             "signImage": "https://sislep.github.io/video-site/class/Book.jpg"
         },
         {
-            "word": "Box Lunch",
-            "signVideo": "https://sislep.github.io/video-site/class/BoxLunch.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/BoxLunch.jpg"
+            "word": "Lunch Box",
+            "signVideo": "https://sislep.github.io/video-site/class/LunchBox.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/LunchBox.jpg"
         },
         {
             "word": "Calculator",
@@ -985,8 +985,8 @@
         },
         {
             "word": "Ink Pot",
-            "signVideo": "https://sislep.github.io/video-site/class/LnkPot.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/LnkPot.jpg"
+            "signVideo": "https://sislep.github.io/video-site/class/InkPot.mp4",
+            "signImage": "https://sislep.github.io/video-site/class/InkPot.jpg"
         },
         {
             "word": "Map",
@@ -1296,13 +1296,13 @@
         },
         {
             "word": "Blanket",
-            "signVideo": "https://sislep.github.io/video-site/house/Blaknket.mp4",
-            "signImage": "https://sislep.github.io/video-site/house/Blaknket.jpg"
+            "signVideo": "https://sislep.github.io/video-site/house/Blanket.mp4",
+            "signImage": "https://sislep.github.io/video-site/house/Blanket.jpg"
         },
         {
             "word": "Bookshelf",
-            "signVideo": "https://sislep.github.io/video-site/house/Bookshe.mp4",
-            "signImage": "https://sislep.github.io/video-site/house/Bookshe.jpg"
+            "signVideo": "https://sislep.github.io/video-site/house/BookShelf.mp4",
+            "signImage": "https://sislep.github.io/video-site/house/BookShelf.jpg"
         },
         {
             "word": "Broom",
@@ -1563,9 +1563,9 @@
             "signImage": "https://sislep.github.io/video-site/transport/Car.jpg"
         },
         {
-            "word": "Concretet Mixer",
-            "signVideo": "https://sislep.github.io/video-site/transport/ConcretetMixer.mp4",
-            "signImage": "https://sislep.github.io/video-site/transport/ConcretetMixer.jpg"
+            "word": "Concrete Mixer",
+            "signVideo": "https://sislep.github.io/video-site/transport/ConcreteMixer.mp4",
+            "signImage": "https://sislep.github.io/video-site/transport/ConcreteMixer.jpg"
         },
         {
             "word": "Dump Truck",
@@ -1650,19 +1650,14 @@
     ],
     "Vegetable": [
         {
-            "word": "Cooking Banana",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/BananaCook.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/BananaCook.jpg"
-        },
-        {
             "word": "Beans",
             "signVideo": "https://sislep.github.io/video-site/vegetable/Beans.mp4",
             "signImage": "https://sislep.github.io/video-site/vegetable/Beans.png"
         },
         {
             "word": "Bell Pepper",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/Bellpepper.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/Bellpepper.png"
+            "signVideo": "https://sislep.github.io/video-site/vegetable/BellPepper.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/BellPepper.png"
         },
         {
             "word": "Cabbage",
@@ -1676,8 +1671,8 @@
         },
         {
             "word": "Cassava",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/Cavssava.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/Cavssava.jpg"
+            "signVideo": "https://sislep.github.io/video-site/vegetable/Cassava.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/Cassava.jpg"
         },
         {
             "word": "Chilli",
@@ -1705,14 +1700,14 @@
             "signImage": "https://sislep.github.io/video-site/vegetable/Ginger.jpg"
         },
         {
-            "word": "Greater Yam",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/GreaterYam.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/GreaterYam.png"
+            "word": "Yam",
+            "signVideo": "https://sislep.github.io/video-site/vegetable/Yam.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/Yam.png"
         },
         {
-            "word": "Leaf Pumpkin Lead",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/Leafpumpkinlead.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/Leafpumpkinlead.png"
+            "word": "Pumpkin Leaf",
+            "signVideo": "https://sislep.github.io/video-site/vegetable/PumpkinLeaf.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/PumpkinLeaf.png"
         },
         {
             "word": "Leek",
@@ -1720,9 +1715,9 @@
             "signImage": "https://sislep.github.io/video-site/vegetable/Leek.jpg"
         },
         {
-            "word": "Mangrovefruit",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/Mangrovefruit.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/Mangrovefruit.png"
+            "word": "Mangrove Fruit",
+            "signVideo": "https://sislep.github.io/video-site/vegetable/MangroveFruit.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/MangroveFruit.png"
         },
         {
             "word": "Onion",
@@ -1735,9 +1730,9 @@
             "signImage": "https://sislep.github.io/video-site/vegetable/Potatoes.png"
         },
         {
-            "word": "Pumpkinlead",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/Pumpkinlead.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/Pumpkinlead.jpg"
+            "word": "Pumpkin",
+            "signVideo": "https://sislep.github.io/video-site/vegetable/Pumpkin.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/Pumpkin.jpg"
         },
         {
             "word": "Taro",

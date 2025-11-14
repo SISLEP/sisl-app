@@ -23,7 +23,7 @@
           "data": {
             "items": [
               { "signVideo": "https://sislep.github.io/video-site/house/Bed.mp4", "translation": "Bed", "id": "1" },
-              { "signVideo": "https://sislep.github.io/video-site/house/Blaknket.mp4", "translation": "Blanket", "id": "2" }
+              { "signVideo": "https://sislep.github.io/video-site/house/Blanket.mp4", "translation": "Blanket", "id": "2" }
             ]
           }
         },
@@ -31,7 +31,7 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/house/Bookshe.mp4",
+            "signVideo": "https://sislep.github.io/video-site/house/BookShelf.mp4",
             "correctAnswer": "Bookshelf",
             "options": ["Bookshelf", "Broom", "Chair"]
           }

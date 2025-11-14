@@ -28,9 +28,9 @@
       "bgColor": "#FFF9E6",
       "category": "province",
       "lessons": [
-        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/province/SignLanguageProvince.mp4", "correctAnswer": "Sign Language Province", "options": [ "Sign Language Province", "Solomon", "Temotu" ] } },
+        { "type": "translation", "instructions": "Select the correct word", "data": { "signVideo": "https://sislep.github.io/video-site/province/Province.mp4", "correctAnswer": "Province", "options": [ "Province", "Solomon", "Temotu" ] } },
         { "type": "matching_pairs", "instructions": "Tap the matching pair (Solomon & Temotu)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4", "translation": "Solomon", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4", "translation": "Temotu", "id": "2" } ] } },
-        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4", "correctAnswer": "Solomon", "options": [ "Sign Language Province", "Solomon", "Temotu" ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning", "data": { "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4", "correctAnswer": "Solomon", "options": [ "Province", "Solomon", "Temotu" ] } },
         { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4", "correctAnswer": "Temotu", "options": [ "Rennell & Bellona", "Solomon", "Temotu" ] } },
         { "type": "matching_pairs", "instructions": "Tap the matching pair (Temotu & Western)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/province/Temotu.mp4", "translation": "Temotu", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/province/Western.mp4", "translation": "Western", "id": "2" } ] } },
         { "type": "translation", "instructions": "Choose the right translation", "data": { "signVideo": "https://sislep.github.io/video-site/province/Western.mp4", "correctAnswer": "Western", "options": [ "Western", "Central", "Malaita" ] } },

@@ -1502,10 +1502,10 @@
           "type": "translation",
           "instructions": "Choose the right translation",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/family/SignLanguageFamily.mp4",
-            "correctAnswer": "Sign Language Family",
+            "signVideo": "https://sislep.github.io/video-site/family/Family.mp4",
+            "correctAnswer": "Family",
             "options": [
-              "Sign Language Family",
+              "Family",
               "Sister",
               "Son"
             ]
@@ -1518,7 +1518,7 @@
             "signVideo": "https://sislep.github.io/video-site/family/Sister.mp4",
             "correctAnswer": "Sister",
             "options": [
-              "Sign Language Family",
+              "Family",
               "Sister",
               "Son"
             ]
@@ -1531,7 +1531,7 @@
             "signVideo": "https://sislep.github.io/video-site/family/Son.mp4",
             "correctAnswer": "Son",
             "options": [
-              "Sign Language Family",
+              "Family",
               "Sister",
               "Son"
             ]
@@ -1620,10 +1620,10 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/month/SignLanguageMonth.mp4",
-            "correctAnswer": "Sign Language Month",
+            "signVideo": "https://sislep.github.io/video-site/month/Month.mp4",
+            "correctAnswer": "Month",
             "options": [
-              "Sign Language Month",
+              "Month",
               "January",
               "February"
             ]
@@ -1654,7 +1654,7 @@
             "signVideo": "https://sislep.github.io/video-site/month/January.mp4",
             "correctAnswer": "January",
             "options": [
-              "Sign Language Month",
+              "Month",
               "January",
               "February"
             ]
@@ -1667,7 +1667,7 @@
             "signVideo": "https://sislep.github.io/video-site/month/February.mp4",
             "correctAnswer": "February",
             "options": [
-              "Sign Language Month",
+              "Month",
               "January",
               "February"
             ]
@@ -2144,10 +2144,10 @@
           "type": "translation",
           "instructions": "Identify the sign's meaning",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/colour/SignLanguageColour.mp4",
-            "correctAnswer": "SignLanguageColour",
+            "signVideo": "https://sislep.github.io/video-site/colour/Colour.mp4",
+            "correctAnswer": "Colour",
             "options": [
-              "SignLanguageColour",
+              "Colour",
               "Silver",
               "White"
             ]
@@ -2160,7 +2160,7 @@
             "signVideo": "https://sislep.github.io/video-site/colour/Silver.mp4",
             "correctAnswer": "Silver",
             "options": [
-              "SignLanguageColour",
+              "Colour",
               "Silver",
               "White"
             ]
@@ -2191,7 +2191,7 @@
             "signVideo": "https://sislep.github.io/video-site/colour/White.mp4",
             "correctAnswer": "White",
             "options": [
-              "SignLanguageColour",
+              "Colour",
               "Silver",
               "White"
             ]
@@ -2377,10 +2377,10 @@
           "type": "translation",
           "instructions": "Select the correct word",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/province/SignLanguageProvince.mp4",
-            "correctAnswer": "Sign Language Province",
+            "signVideo": "https://sislep.github.io/video-site/province/Province.mp4",
+            "correctAnswer": "Province",
             "options": [
-              "Sign Language Province",
+              "Province",
               "Solomon",
               "Temotu"
             ]
@@ -2411,7 +2411,7 @@
             "signVideo": "https://sislep.github.io/video-site/province/Solomon.mp4",
             "correctAnswer": "Solomon",
             "options": [
-              "Sign Language Province",
+              "Province",
               "Solomon",
               "Temotu"
             ]
@@ -2985,8 +2985,8 @@
           "type": "translation",
           "instructions": "What is the English word for this sign?",
           "data": {
-            "signVideo": "https://sislep.github.io/video-site/animal/SignLanguageAnimal.mp4",
-            "correctAnswer": "SignLanguageAnimal",
+            "signVideo": "https://sislep.github.io/video-site/animal/Animal.mp4",
+            "correctAnswer": "Animal",
             "options": [
               "Rat",
               "Slow Lorises",

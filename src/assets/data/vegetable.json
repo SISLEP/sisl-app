@@ -1,12 +1,12 @@
 {
-  "vegetables": [
+  "vegetable": [
     {
       "id": "1",
       "title": "Vegetables I: Beans to Coconut",
       "subtitle": "Learn the signs for common legumes and roots.",
       "icon": "🥕",
       "bgColor": "#F0FFF4",
-      "category": "vegetables",
+      "category": "vegetable",
       "lessons": [
         {
           "type": "translation",
@@ -122,7 +122,7 @@
       "subtitle": "Practice signs for herbs, leafy greens, and exotic ingredients.",
       "icon": "🌿",
       "bgColor": "#F0FFF4",
-      "category": "vegetables",
+      "category": "vegetable",
       "lessons": [
         {
           "type": "translation",
@@ -238,7 +238,7 @@
       "subtitle": "The final group of root vegetables, gourds, and fruits used as vegetables.",
       "icon": "🧅",
       "bgColor": "#F0FFF4",
-      "category": "vegetables",
+      "category": "vegetable",
       "lessons": [
         {
           "type": "translation",

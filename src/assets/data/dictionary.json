@@ -681,7 +681,6 @@
             "word": "Slow Lorises",
             "signVideo": "https://sislep.github.io/video-site/animal/SlowLorises.mp4",
             "signImage": "https://sislep.github.io/video-site/animal/Slow Lorises.jpg"
-
         },
         {
             "word": "Snail",
@@ -1763,6 +1762,271 @@
             "word": "Vegetable",
             "signVideo": "https://sislep.github.io/video-site/vegetable/Vegetable.mp4",
             "signImage": "https://sislep.github.io/video-site/vegetable/Vegetable.jpg"
+        }
+    ],
+    "Clothes": [
+        {
+            "word": "Belt",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Belt.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Belt.jpg"
+        },
+        {
+            "word": "Bikini Pant",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Bikinipant.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Bikinipant.jpg"
+        },
+        {
+            "word": "Bow Tie",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Bowtie.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Bowtie.jpg"
+        },
+        {
+            "word": "Brassiere",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Brassiere.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Brassiere.jpg"
+        },
+        {
+            "word": "Cap",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Cap.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Cap.jpg"
+        },
+        {
+            "word": "Clothes",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Clothes.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Clothes.jpg"
+        },
+        {
+            "word": "Coat",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Coat.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Coat.jpg"
+        },
+        {
+            "word": "Earring",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Earring.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Earring.jpg"
+        },
+        {
+            "word": "Glass",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Glass.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Glass.jpg"
+        },
+        {
+            "word": "Jumper",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Jumper.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Jumper.jpg"
+        },
+        {
+            "word": "Kilt",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Kilt.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Kilt.jpg"
+        },
+        {
+            "word": "Nightdress",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Nightdress.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Nightdress.jpg"
+        },
+        {
+            "word": "Shirt",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Shirt.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Shirt.jpg"
+        },
+        {
+            "word": "Singlet",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Singlet.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Singlet.jpg"
+        },
+        {
+            "word": "Socks",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Socks.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Socks.jpg"
+        },
+        {
+            "word": "Tie",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Tie.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Tie.jpg"
+        },
+        {
+            "word": "Trausers",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Trausers.mp4"
+        },
+        {
+            "word": "Underpants",
+            "signVideo": "https://sislep.github.io/video-site/clothes/Underpants.mp4",
+            "signImage": "https://sislep.github.io/video-site/clothes/Underpants.jpg"
+        }
+    ],
+    "Hospital": [
+        {
+            "word": "Bandage",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Bandage.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Bandage.jpg"
+        },
+        {
+            "word": "Blood Bag",
+            "signVideo": "https://sislep.github.io/video-site/hospital/BloodBag.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/BloodBag.jpg"
+        },
+        {
+            "word": "Crutches",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Crutches.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Crutches.jpg"
+        },
+        {
+            "word": "First Aid Kit",
+            "signVideo": "https://sislep.github.io/video-site/hospital/First Aid Kit.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/First Aid Kit.jpg"
+        },
+        {
+            "word": "Forceps",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Forceps.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Forceps.jpg"
+        },
+        {
+            "word": "Surgical Glove",
+            "signVideo": "https://sislep.github.io/video-site/hospital/GloveSurgical.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/GloveSurgical.jpg"
+        },
+        {
+            "word": "Gurney",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Gurney.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Gurney.jpg"
+        },
+        {
+            "word": "Hospital",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Hospital.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Hospitals.jpg"
+        },
+        {
+            "word": "Hot Water Bag",
+            "signVideo": "https://sislep.github.io/video-site/hospital/HotWaterBag.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/HotWaterBag.jpg"
+        },
+        {
+            "word": "LV Catheter",
+            "signVideo": "https://sislep.github.io/video-site/hospital/LV Catheter.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/LV Catheter.jpg"
+        },
+        {
+            "word": "Medicine",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Medicine.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Medicine.jpg"
+        },
+        {
+            "word": "Microscope",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Microscope.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Microscope.jpg"
+        },
+        {
+            "word": "Otoscope",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Otoscope.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Otoscope.jpg"
+        },
+        {
+            "word": "Perfusion",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Perfusion.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Perfusion.jpg"
+        },
+        {
+            "word": "Pipettes",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Pipettes.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Pipettes.jpg"
+        },
+        {
+            "word": "Plasters",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Plasters.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Plasters.jpg"
+        },
+        {
+            "word": "Scalpel",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Scalpel.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Scalpel.jpg"
+        },
+        {
+            "word": "Stethoscope",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Stethoscope.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Stethoscope.jpg"
+        },
+        {
+            "word": "Stretcher",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Stretcher.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Stretcher.jpg"
+        },
+        {
+            "word": "Surgical Mask",
+            "signVideo": "https://sislep.github.io/video-site/hospital/SurgicalMask.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/SurgicalMask.jpg"
+        },
+        {
+            "word": "Syringe",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Syringe.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Syringe.jpg"
+        },
+        {
+            "word": "Thermometer",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Thermometer.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Thermometer.jpg"
+        },
+        {
+            "word": "Weighing Scale",
+            "signVideo": "https://sislep.github.io/video-site/hospital/WeighingScate.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/WeighingScale.jpg"
+        },
+        {
+            "word": "Wheelchair",
+            "signVideo": "https://sislep.github.io/video-site/hospital/Wheelchair.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/Wheelchair.jpg"
+        },
+        {
+            "word": "X-Ray",
+            "signVideo": "https://sislep.github.io/video-site/hospital/X-Ray.mp4",
+            "signImage": "https://sislep.github.io/video-site/hospital/X-Ray.jpg"
+        }
+    ],
+    "Fish": [
+        {
+            "word": "Crab",
+            "signVideo": "https://sislep.github.io/video-site/fish/Crab.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Crab.jpg"
+        },
+        {
+            "word": "Dolphin",
+            "signVideo": "https://sislep.github.io/video-site/fish/Dolphin.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Dolphin.jpg"
+        },
+        {
+            "word": "Eel",
+            "signVideo": "https://sislep.github.io/video-site/fish/Eel.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Eel.jpg"
+        },
+        {
+            "word": "Fish",
+            "signVideo": "https://sislep.github.io/video-site/fish/Fish.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Fish.jpg"
+        },
+        {
+            "word": "Octopus",
+            "signVideo": "https://sislep.github.io/video-site/fish/Octopus.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Octopus.jpg"
+        },
+        {
+            "word": "Shark",
+            "signVideo": "https://sislep.github.io/video-site/fish/Shark.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Shark.jpg"
+        },
+        {
+            "word": "Skate Fish",
+            "signVideo": "https://sislep.github.io/video-site/fish/SkateFish.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/SkateFish.jpg"
+        },
+        {
+            "word": "Turtle",
+            "signVideo": "https://sislep.github.io/video-site/fish/Turtle.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Turtle.jpg"
+        },
+        {
+            "word": "Whale",
+            "signVideo": "https://sislep.github.io/video-site/fish/Whale.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/Whale.jpg"
         }
     ]
 }

@@ -330,8 +330,8 @@
             "signImage": "https://sislep.github.io/video-site/family/Old.jpg"
         },
         {
-            "word": "Sign Language Family",
-            "signVideo": "https://sislep.github.io/video-site/family/SignLanguageFamily.mp4",
+            "word": "Family",
+            "signVideo": "https://sislep.github.io/video-site/family/Family.mp4",
             "signImage": "https://sislep.github.io/video-site/family/Family.jpg"
         },
         {
@@ -367,8 +367,8 @@
     ],
     "Month": [
         {
-            "word": "Sign Language Month",
-            "signVideo": "https://sislep.github.io/video-site/month/SignLanguageMonth.mp4",
+            "word": "Month",
+            "signVideo": "https://sislep.github.io/video-site/month/Month.mp4",
             "signImage": "https://sislep.github.io/video-site/month/Month.jpg"
         },
         {
@@ -484,8 +484,8 @@
             "signImage": "https://sislep.github.io/video-site/colour/Red.jpg"
         },
         {
-            "word": "SignLanguageColour",
-            "signVideo": "https://sislep.github.io/video-site/colour/SignLanguageColour.mp4",
+            "word": "Colour",
+            "signVideo": "https://sislep.github.io/video-site/colour/Colour.mp4",
             "signImage": "https://sislep.github.io/video-site/colour/Colour.jpg"
         },
         {
@@ -541,8 +541,8 @@
             "signImage": "https://sislep.github.io/video-site/province/Rennell&Bellona.jpg"
         },
         {
-            "word": "Sign Language Province",
-            "signVideo": "https://sislep.github.io/video-site/province/SignLanguageProvince.mp4",
+            "word": "Province",
+            "signVideo": "https://sislep.github.io/video-site/province/Province.mp4",
             "signImage": "https://sislep.github.io/video-site/province/Province.jpg"
         },
         {
@@ -673,8 +673,8 @@
             "signImage": "https://sislep.github.io/video-site/animal/Rat.jpg"
         },
         {
-            "word": "SignLanguageAnimal",
-            "signVideo": "https://sislep.github.io/video-site/animal/SignLanguageAnimal.mp4",
+            "word": "Animal",
+            "signVideo": "https://sislep.github.io/video-site/animal/Animal.mp4",
             "signImage": "https://sislep.github.io/video-site/animal/Animal.jpg"
         },
         {

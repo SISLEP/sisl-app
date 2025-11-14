@@ -1106,6 +1106,11 @@
             "signImage": "https://sislep.github.io/video-site/fruit/Dragonfruit.jpg"
         },
         {
+            "word": "Fruit",
+            "signVideo": "https://sislep.github.io/video-site/fruit/Fruit.mp4",
+            "signImage": "https://sislep.github.io/video-site/fruit/Fruit.jpg"
+        },
+        {
             "word": "Guava",
             "signVideo": "https://sislep.github.io/video-site/fruit/Guava.mp4",
             "signImage": "https://sislep.github.io/video-site/fruit/Guava.jpg"
@@ -1539,6 +1544,11 @@
             "word": "90 Ninety",
             "signVideo": "https://sislep.github.io/video-site/number/90 Ninety.mp4",
             "signImage": "https://sislep.github.io/video-site/number/90 Ninety.jpg"
+        },
+        {
+            "word": "Number",
+            "signVideo": "https://sislep.github.io/video-site/number/Number.mp4",
+            "signImage": "https://sislep.github.io/video-site/number/Number.jpg"
         }
     ],
     "Transport": [
@@ -1643,6 +1653,11 @@
             "signImage": "https://sislep.github.io/video-site/transport/Taxi.jpg"
         },
         {
+            "word": "Transport",
+            "signVideo": "https://sislep.github.io/video-site/transport/Transport.mp4",
+            "signImage": "https://sislep.github.io/video-site/transport/Transport.jpg"
+        }
+        {
             "word": "Truck",
             "signVideo": "https://sislep.github.io/video-site/transport/Truck.mp4",
             "signImage": "https://sislep.github.io/video-site/transport/Truck.jpg"
@@ -1743,6 +1758,11 @@
             "word": "Tomato",
             "signVideo": "https://sislep.github.io/video-site/vegetable/Tomato.mp4",
             "signImage": "https://sislep.github.io/video-site/vegetable/Tomato.jpg"
+        },
+        {
+            "word": "Vegetable",
+            "signVideo": "https://sislep.github.io/video-site/vegetable/Vegetable.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/Vegetable.jpg"
         }
     ]
 }

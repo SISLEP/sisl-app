@@ -96,6 +96,24 @@
       "title": "Vegetable",
       "icon": "🥦",
       "moduleCount": 3
+    },
+    {
+      "id": "clothes",
+      "title": "Clothes",
+      "icon": "👚",
+      "moduleCount": 3
+    },
+    {
+      "id": "hospital",
+      "title": "Hospital",
+      "icon": "🏥",
+      "moduleCount": 5
+    },
+    {
+      "id": "fish",
+      "title": "Fish",
+      "icon": "🐟",
+      "moduleCount": 2
     }
   ]
 }

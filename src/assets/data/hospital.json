@@ -1,0 +1,79 @@
+{
+  "hospital": [
+    {
+      "id": "1",
+      "title": "Hospital Signs (Part 1)",
+      "subtitle": "First aid and basics",
+      "icon": "🩹",
+      "bgColor": "#F5E9FF",
+      "category": "hospital",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Bandage.mp4", "correctAnswer": "Bandage", "options": [ "Bandage", "Plasters", "Crutches" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/BloodBag.mp4", "correctAnswer": "Blood Bag", "options": [ "Blood Bag", "Medicine", "Syringe" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Crutches & First Aid Kit)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/hospital/Crutches.mp4", "translation": "Crutches", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/hospital/First Aid Kit.mp4", "translation": "First Aid Kit", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Forceps.mp4", "correctAnswer": "Forceps", "options": [ "Scalpel", "Forceps", "Pipettes" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/GloveSurgical.mp4", "correctAnswer": "Surgical Glove", "options": [ "Surgical Mask", "Surgical Glove", "Stethoscope" ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Hospital Signs (Part 2)",
+      "subtitle": "Transport and facilities",
+      "icon": "🚑",
+      "bgColor": "#F5E9FF",
+      "category": "hospital",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Gurney.mp4", "correctAnswer": "Gurney", "options": [ "Stretcher", "Gurney", "Wheelchair" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Hospital.mp4", "correctAnswer": "Hospital", "options": [ "Clinic", "Hospital", "First Aid Kit" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Hot Water Bag & LV Catheter)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/hospital/HotWaterBag.mp4", "translation": "Hot Water Bag", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/hospital/LV Catheter.mp4", "translation": "LV Catheter", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Medicine.mp4", "correctAnswer": "Medicine", "options": [ "Blood Bag", "Syringe", "Medicine" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Microscope.mp4", "correctAnswer": "Microscope", "options": [ "Otoscope", "Microscope", "X-Ray" ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Hospital Signs (Part 3)",
+      "subtitle": "Diagnostic and lab tools",
+      "icon": "🔬",
+      "bgColor": "#F5E9FF",
+      "category": "hospital",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Otoscope.mp4", "correctAnswer": "Otoscope", "options": [ "Stethoscope", "Otoscope", "Thermometer" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Perfusion.mp4", "correctAnswer": "Perfusion", "options": [ "LV Catheter", "Perfusion", "Blood Bag" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Pipettes & Plasters)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/hospital/Pipettes.mp4", "translation": "Pipettes", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/hospital/Plasters.mp4", "translation": "Plasters", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Scalpel.mp4", "correctAnswer": "Scalpel", "options": [ "Forceps", "Scalpel", "Syringe" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Stethoscope.mp4", "correctAnswer": "Stethoscope", "options": [ "Thermometer", "Stethoscope", "Otoscope" ] } }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Hospital Signs (Part 4)",
+      "subtitle": "Emergency and safety",
+      "icon": "🚨",
+      "bgColor": "#F5E9FF",
+      "category": "hospital",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Stretcher.mp4", "correctAnswer": "Stretcher", "options": [ "Gurney", "Stretcher", "Wheelchair" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/SurgicalMask.mp4", "correctAnswer": "Surgical Mask", "options": [ "Surgical Glove", "Surgical Mask", "Bandage" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Syringe & Thermometer)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/hospital/Syringe.mp4", "translation": "Syringe", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/hospital/Thermometer.mp4", "translation": "Thermometer", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/WeighingScate.mp4", "correctAnswer": "Weighing Scale", "options": [ "Weighing Scale", "X-Ray", "Gurney" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Wheelchair.mp4", "correctAnswer": "Wheelchair", "options": [ "Crutches", "Stretcher", "Wheelchair" ] } }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Hospital Signs (Part 5)",
+      "subtitle": "Review and advanced terms",
+      "icon": "➕",
+      "bgColor": "#F5E9FF",
+      "category": "hospital",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/X-Ray.mp4", "correctAnswer": "X-Ray", "options": [ "Microscope", "X-Ray", "Otoscope" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Plasters.mp4", "correctAnswer": "Plasters", "options": [ "Bandage", "Plasters", "Surgical Mask" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Medicine & Syringe)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/hospital/Medicine.mp4", "translation": "Medicine", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/hospital/Syringe.mp4", "translation": "Syringe", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Hospital.mp4", "correctAnswer": "Hospital", "options": [ "Hospital", "Gurney", "Weighing Scale" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/hospital/Crutches.mp4", "correctAnswer": "Crutches", "options": [ "Wheelchair", "Crutches", "Stretcher" ] } }
+      ]
+    }
+  ]
+}

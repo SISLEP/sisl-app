@@ -1,0 +1,52 @@
+{
+  "clothes": [
+    {
+      "id": "1",
+      "title": "Clothes Signs (Part 1)",
+      "subtitle": "Essential clothing items",
+      "icon": "👔",
+      "bgColor": "#FFF5E9",
+      "category": "clothes",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Belt.mp4", "correctAnswer": "Belt", "options": [ "Belt", "Coat", "Tie" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Bikinipant.mp4", "correctAnswer": "Bikini Pant", "options": [ "Underpants", "Bikini Pant", "Brassiere" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Bow Tie & Brassiere)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/clothes/Bowtie.mp4", "translation": "Bow Tie", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/clothes/Brassiere.mp4", "translation": "Brassiere", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Cap.mp4", "correctAnswer": "Cap", "options": [ "Hat", "Cap", "Glass" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Clothes.mp4", "correctAnswer": "Clothes", "options": [ "Clothes", "Shirt", "Jumper" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Coat & Earring)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/clothes/Coat.mp4", "translation": "Coat", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/clothes/Earring.mp4", "translation": "Earring", "id": "2" } ] } }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Clothes Signs (Part 2)",
+      "subtitle": "Outerwear and accessories",
+      "icon": "🧥",
+      "bgColor": "#FFF5E9",
+      "category": "clothes",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Glass.mp4", "correctAnswer": "Glass", "options": [ "Cap", "Glass", "Earring" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Jumper.mp4", "correctAnswer": "Jumper", "options": [ "Shirt", "Jumper", "Coat" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Kilt & Nightdress)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/clothes/Kilt.mp4", "translation": "Kilt", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/clothes/Nightdress.mp4", "translation": "Nightdress", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Shirt.mp4", "correctAnswer": "Shirt", "options": [ "Shirt", "Singlet", "Clothes" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Singlet.mp4", "correctAnswer": "Singlet", "options": [ "Jumper", "Singlet", "Shirt" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Socks & Tie)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/clothes/Socks.mp4", "translation": "Socks", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/clothes/Tie.mp4", "translation": "Tie", "id": "2" } ] } }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Clothes Signs (Part 3)",
+      "subtitle": "Bottoms and undergarments",
+      "icon": "👖",
+      "bgColor": "#FFF5E9",
+      "category": "clothes",
+      "lessons": [
+        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Trausers.mp4", "correctAnswer": "Trausers", "options": [ "Trausers", "Kilt", "Belt" ] } },
+        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Underpants.mp4", "correctAnswer": "Underpants", "options": [ "Bikini Pant", "Underpants", "Brassiere" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Cap & Glass)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/clothes/Cap.mp4", "translation": "Cap", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/clothes/Glass.mp4", "translation": "Glass", "id": "2" } ] } },
+        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Shirt.mp4", "correctAnswer": "Shirt", "options": [ "Coat", "Shirt", "Singlet" ] } },
+        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/clothes/Belt.mp4", "correctAnswer": "Belt", "options": [ "Tie", "Belt", "Trausers" ] } },
+        { "type": "matching_pairs", "instructions": "Tap the matching pair (Bow Tie & Tie)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/clothes/Bowtie.mp4", "translation": "Bow Tie", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/clothes/Tie.mp4", "translation": "Tie", "id": "2" } ] } }
+      ]
+    }
+  ]
+}

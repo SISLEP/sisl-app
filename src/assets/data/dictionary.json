@@ -1650,19 +1650,14 @@
     ],
     "Vegetable": [
         {
-            "word": "Cooking Banana",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/BananaCook.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/BananaCook.jpg"
-        },
-        {
             "word": "Beans",
             "signVideo": "https://sislep.github.io/video-site/vegetable/Beans.mp4",
             "signImage": "https://sislep.github.io/video-site/vegetable/Beans.png"
         },
         {
             "word": "Bell Pepper",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/Bellpepper.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/Bellpepper.png"
+            "signVideo": "https://sislep.github.io/video-site/vegetable/BellPepper.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/BellPepper.png"
         },
         {
             "word": "Cabbage",
@@ -1676,8 +1671,8 @@
         },
         {
             "word": "Cassava",
-            "signVideo": "https://sislep.github.io/video-site/vegetable/Cavssava.mp4",
-            "signImage": "https://sislep.github.io/video-site/vegetable/Cavssava.jpg"
+            "signVideo": "https://sislep.github.io/video-site/vegetable/Cassava.mp4",
+            "signImage": "https://sislep.github.io/video-site/vegetable/Cassava.jpg"
         },
         {
             "word": "Chilli",

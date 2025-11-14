@@ -177,11 +177,6 @@ const fetchModulesByCategory = async (categoryId: string): Promise<LearningModul
     const url = `${MODULES_BASE_URL}${categoryId}.json`;
     const localData = localModuleDataMap[categoryId];
 
-    if (!localData) {
-        console.warn(`No local data found for category: ${categoryId}`);
-        return [];
-    }
-
     const response = await fetchData<CategoryModulesResponse>(
         url,
         localData as CategoryModulesResponse,

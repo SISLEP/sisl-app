@@ -7,7 +7,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
-  SafeAreaView,
   Alert,
   ScrollView,
 } from 'react-native';
@@ -215,7 +214,7 @@ const FlashcardScreen = () => {
   );
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <View style={styles.safeArea}>
       <View style={styles.header}>
         <TouchableOpacity onPress={handleClose}>
           <Icon name="close" size={28} color="#aaa" />
@@ -228,7 +227,7 @@ const FlashcardScreen = () => {
         </TouchableOpacity>
       </View>
       {isShowingAnswer ? renderAnswer() : renderQuestion()}
-    </SafeAreaView>
+    </View>
   );
 };
 

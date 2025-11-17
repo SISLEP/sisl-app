@@ -7,8 +7,6 @@ import {
   ScrollView, 
   Dimensions,
 } from 'react-native';
-// REMOVED SafeAreaView import for the bottom navigation, but keeping import for consistency
-import { SafeAreaView } from 'react-native-safe-area-context'; 
 import Video from 'react-native-video';
 // Using Material Icons
 import Icon from 'react-native-vector-icons/MaterialIcons'; 
@@ -208,9 +206,6 @@ const ConversationScreen = ({ data, onNext }) => {
           <Icon name="arrow-forward" size={20} color={currentlyPlayingIndex !== currentTurnIndex ? '#fff' : '#A9A9A9'} />
         </TouchableOpacity>
       </View>
-      {/* Re-introducing SafeAreaView padding only if necessary, but outside the fixed position container for safety, 
-          or by using a separate bottom padding view if necessary. 
-          For now, rely on increased paddingBottom in the ScrollView. */}
     </View>
   );
 

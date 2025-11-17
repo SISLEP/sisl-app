@@ -2,7 +2,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+
 const LessonCompleteScreen = () => {
   const navigation = useNavigation();
 
@@ -12,7 +12,7 @@ const LessonCompleteScreen = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.emoji}>🎉</Text>
         <Text style={styles.title}>Module Complete!</Text>
@@ -23,7 +23,7 @@ const LessonCompleteScreen = () => {
       <TouchableOpacity style={styles.button} onPress={handleGoHome}>
         <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
-    </SafeAreaView>
+    </View>
   );
 };
 

@@ -3,7 +3,6 @@ import React, { useState, useCallback } from 'react';
 import {
   ActivityIndicator,
   Alert,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -277,7 +276,7 @@ const Home = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         {/* Welcome Section */}
@@ -323,7 +322,7 @@ const Home = () => {
           <View style={styles.indicatorLine} />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

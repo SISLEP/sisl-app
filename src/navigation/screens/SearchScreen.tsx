@@ -8,7 +8,6 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
-  SafeAreaView,
   Image,
 } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
@@ -127,7 +126,7 @@ const SearchScreen = () => {
   );
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <View style={styles.safeArea}>
       <View style={styles.container}>
         {/* Header/Search Bar Area */}
         <View style={styles.header}>
@@ -188,7 +187,7 @@ const SearchScreen = () => {
           )}
         </ScrollView>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 

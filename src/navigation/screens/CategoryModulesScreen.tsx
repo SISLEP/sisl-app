@@ -3,7 +3,6 @@ import React, { useState, useCallback } from 'react';
 import {
   ActivityIndicator,
   Alert,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -15,7 +14,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 // Import the specific fetch function
 import { fetchModulesByCategory } from '../../api/fetch'; 
 // 🚨 Import the custom hook
-import { useProgress } from '../../context/ProgressContext'; 
+import { useProgress } from '../../context/ProgressContext';
 
 // Assuming the module structure looks something like this:
 // type Lesson = { id: string; title: string; ... };
@@ -162,7 +161,7 @@ const CategoryModulesScreen = () => {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <Text style={styles.categoryTitle}>{categoryTitle}</Text>
@@ -181,7 +180,7 @@ const CategoryModulesScreen = () => {
           )
         )}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

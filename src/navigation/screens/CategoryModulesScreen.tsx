@@ -123,7 +123,6 @@ const CategoryModulesScreen = () => {
                 lessons: selectedModule.lessons,
                 initialLessonIndex: 0, // Start from the beginning
                 moduleId: uniqueKey,   // <-- Pass the unique composite key
-                onCompleteLesson: updateModuleProgress, 
               });
             },
           },
@@ -136,7 +135,6 @@ const CategoryModulesScreen = () => {
         lessons: selectedModule.lessons,
         initialLessonIndex: initialLessonIndex,
         moduleId: uniqueKey, // <-- Pass the unique composite key
-        onCompleteLesson: updateModuleProgress,
       });
     }
   };

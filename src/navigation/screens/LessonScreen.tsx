@@ -10,6 +10,7 @@ import TranslationScreen from './TranslationScreen';
 import ConversationScreen from './ConversationScreen';
 import { addWordMemory } from '../../storage/memoryService';
 import { Word } from '../../data/word'; // Import Word type (assuming path is correct)
+import { useProgress } from '../../context/ProgressContext'; 
 
 // 🚨 REMOVED: const PROGRESS_STORAGE_KEY = 'userProgress';
 
@@ -94,8 +95,11 @@ const extractWordsFromLessonData = (data: any, lessonType: string): string[] => 
 const LessonScreen = () => {
   const navigation = useNavigation();
   const route = useRoute();
-  // 🚨 CHANGE: Destructure onCompleteLesson from route params
-  const { lessons, initialLessonIndex, moduleId, onCompleteLesson } = route.params; 
+  // Destructure only serializable params.
+  const { lessons, initialLessonIndex, moduleId } = route.params; 
+  
+  // Get updateModuleProgress directly from context
+  const { updateModuleProgress } = useProgress();
 
   const [currentLessonIndex, setCurrentLessonIndex] = useState(initialLessonIndex || 0);
   const currentLesson = lessons[currentLessonIndex];
@@ -105,11 +109,6 @@ const LessonScreen = () => {
   useEffect(() => {
     setCurrentLessonIndex(initialLessonIndex);
   }, [initialLessonIndex]);
-
-  // 🚨 REMOVED: Manual progress reset logic is removed, as the context provider
-  // and the CategoryModulesScreen handle the logic for starting at index 0 on retake.
-
-  // 🚨 REMOVED: saveProgress function is removed.
 
   const handleNextLesson = async () => {
     // 4. Word Memory Saving Logic (Unchanged)
@@ -130,10 +129,9 @@ const LessonScreen = () => {
 
     const nextLessonIndex = currentLessonIndex + 1;
     
-    // 🚨 CHANGE: Use the passed callback function to update progress in the global context
-    if (onCompleteLesson && moduleId) {
-        // onCompleteLesson is a function from context (updateModuleProgress)
-        onCompleteLesson(moduleId, nextLessonIndex); 
+    // Use the updateModuleProgress function obtained from the context
+    if (updateModuleProgress && moduleId) {
+        updateModuleProgress(moduleId, nextLessonIndex); 
     }
     
     if (nextLessonIndex < lessons.length) {

@@ -12,12 +12,12 @@ import PracticeStack from './screens/PracticeStack';
 // Header is handled by the individual stacks
 const HomeTabs = createBottomTabNavigator({
   screens: {
-    Home: {
+    Lessons: {
       screen: HomeStack,
       options: {
         headerShown: false,
         tabBarIcon: ({ color, size }) => (
-          <Icon name="home" color={color} size={size} />
+          <Icon name="leanpub" color={color} size={size} />
         ),
       },
     },

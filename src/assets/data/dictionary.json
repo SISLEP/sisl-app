@@ -907,166 +907,129 @@
             "signImage": "https://sislep.github.io/video-site/weather/Wind.jpg"
         }
     ],
-    "Class": [
-        {
-            "word": "Backpack",
-            "signVideo": "https://sislep.github.io/video-site/class/Backpack.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Backpack.jpg"
-        },
-        {
-            "word": "Bell",
-            "signVideo": "https://sislep.github.io/video-site/class/Bell.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Bell.jpg"
-        },
-        {
-            "word": "Black Board",
-            "signVideo": "https://sislep.github.io/video-site/class/BlackBoard.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/BlackBoard.jpg"
-        },
+    "Stationery": [
         {
             "word": "Book",
-            "signVideo": "https://sislep.github.io/video-site/class/Book.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Book.jpg"
-        },
-        {
-            "word": "Lunch Box",
-            "signVideo": "https://sislep.github.io/video-site/class/LunchBox.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/LunchBox.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Book.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Book.jpg"
         },
         {
             "word": "Calculator",
-            "signVideo": "https://sislep.github.io/video-site/class/Calculator.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Calculator.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Calculator.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Calculator.jpg"
         },
         {
             "word": "Calendar",
-            "signVideo": "https://sislep.github.io/video-site/class/Calendar.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Calendar.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Calendar.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Calendar.jpg"
         },
         {
             "word": "Chalk",
-            "signVideo": "https://sislep.github.io/video-site/class/Chalk.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Chalk.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Chalk.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Chalk.jpg"
         },
         {
             "word": "Clipboard",
-            "signVideo": "https://sislep.github.io/video-site/class/Clipboard.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Clipboard.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Clipboard.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Clipboard.jpg"
         },
         {
-            "word": "Colored Pencils",
-            "signVideo": "https://sislep.github.io/video-site/class/ColourPencils.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/ColoredPencils.jpg"
+            "word": "Colour Pencils",
+            "signVideo": "https://sislep.github.io/video-site/stationery/ColourPencils.mp4"
         },
         {
             "word": "Crayons",
-            "signVideo": "https://sislep.github.io/video-site/class/Crayons.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Crayons.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Crayons.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Crayons.jpg"
         },
         {
             "word": "Dictionary",
-            "signVideo": "https://sislep.github.io/video-site/class/Dictionary.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Dictionary.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Dictionary.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Dictionary.jpg"
         },
         {
             "word": "Drawing Pins",
-            "signVideo": "https://sislep.github.io/video-site/class/DrawingPins.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/DrawingPins.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/DrawingPins.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/DrawingPins.jpg"
         },
         {
             "word": "Dustbin",
-            "signVideo": "https://sislep.github.io/video-site/class/Dustbin.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Dustbin.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Dustbin.mp4"
         },
         {
             "word": "Duster",
-            "signVideo": "https://sislep.github.io/video-site/class/Duster.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Duster.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Duster.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Duster.jpg"
         },
         {
             "word": "Eraser",
-            "signVideo": "https://sislep.github.io/video-site/class/Eraser.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Eraser.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Eraser.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Eraser.jpg"
         },
         {
             "word": "Folder",
-            "signVideo": "https://sislep.github.io/video-site/class/Folder.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Folder.jpg"
-        },
-        {
-            "word": "Globe",
-            "signVideo": "https://sislep.github.io/video-site/class/Glober.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Glober.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Folder.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Folder.jpg"
         },
         {
             "word": "Glue Stick",
-            "signVideo": "https://sislep.github.io/video-site/class/GlueStick.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/GlueStick.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/GlueStick.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/GlueStick.jpg"
         },
         {
             "word": "Highlighter",
-            "signVideo": "https://sislep.github.io/video-site/class/Highlighter.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Highlighter.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Highlighter.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Highlighter.jpg"
         },
         {
             "word": "Knife",
-            "signVideo": "https://sislep.github.io/video-site/class/Knife.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Knife.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Knife.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Knife.jpg"
         },
         {
-            "word": "Ink Pot",
-            "signVideo": "https://sislep.github.io/video-site/class/InkPot.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/InkPot.jpg"
-        },
-        {
-            "word": "Map",
-            "signVideo": "https://sislep.github.io/video-site/class/Map.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Map.jpg"
+            "word": "Lnk Pot",
+            "signVideo": "https://sislep.github.io/video-site/stationery/LnkPot.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/LnkPot.jpg"
         },
         {
             "word": "Paper",
-            "signVideo": "https://sislep.github.io/video-site/class/Paper.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Paper.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Paper.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Paper.jpg"
         },
         {
             "word": "Paperclip",
-            "signVideo": "https://sislep.github.io/video-site/class/Paperclip.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Paperclip.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Paperclip.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Paperclip.jpg"
         },
         {
             "word": "Pencil",
-            "signVideo": "https://sislep.github.io/video-site/class/Pencil.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Pencil.jpg"
-        },
-        {
-            "word": "Projector",
-            "signVideo": "https://sislep.github.io/video-site/class/Projector.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Projector.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Pencil.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Pencil.jpg"
         },
         {
             "word": "Ring Binders",
-            "signVideo": "https://sislep.github.io/video-site/class/RingBinders.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/RingBinders.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/RingBinders.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/RingBinders.jpg"
         },
         {
             "word": "Ruler",
-            "signVideo": "https://sislep.github.io/video-site/class/Ruler.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Ruler.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Ruler.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Ruler.jpg"
         },
         {
             "word": "Scissor",
-            "signVideo": "https://sislep.github.io/video-site/class/Scissor.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Scissor.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Scissor.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Scissor.jpg"
         },
         {
             "word": "Stapler",
-            "signVideo": "https://sislep.github.io/video-site/class/Stapler.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Stapler.jpg"
+            "signVideo": "https://sislep.github.io/video-site/stationery/Stapler.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Stapler.jpg"
         },
         {
-            "word": "Teacher",
-            "signVideo": "https://sislep.github.io/video-site/class/Teacher.mp4",
-            "signImage": "https://sislep.github.io/video-site/class/Teacher.jpg"
+            "word": "Stationery",
+            "signVideo": "https://sislep.github.io/video-site/stationery/Stationery.mp4",
+            "signImage": "https://sislep.github.io/video-site/stationery/Stationery.jpg"
         }
     ],
     "Fruit": [
@@ -2058,6 +2021,103 @@
             "word": "Whale",
             "signVideo": "https://sislep.github.io/video-site/fish/Whale.mp4",
             "signImage": "https://sislep.github.io/video-site/fish/Whale.jpg"
+        }
+    ],
+    "Bathroom": [
+        {
+            "word": "Bathroom",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Bathroom.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Bathroom.jpg"
+        },
+        {
+            "word": "Bucket",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Bucket.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Bucket.jpg"
+        },
+        {
+            "word": "Cotton Swabs",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/CottonSwabs.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/CottonSwabs.jpg"
+        },
+        {
+            "word": "Hand Wash",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/HandWash.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/HandWash.jpg"
+        },
+        {
+            "word": "Mop",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Mop.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Mop.jpg"
+        },
+        {
+            "word": "Razor",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Razor.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Razor.jpg"
+        },
+        {
+            "word": "Rubbish Bin",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/RubbishBin.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/RubbishBin.jpg"
+        },
+        {
+            "word": "Shower Curtain",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ShowerCurtain.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ShowerCurtain.jpg"
+        },
+        {
+            "word": "Shower",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Shower.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Shower.jpg"
+        },
+        {
+            "word": "Soap",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Soap.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Soap.jpg"
+        },
+        {
+            "word": "Sponge",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Sponge.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Sponge.jpg"
+        },
+        {
+            "word": "Tissue Paper",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/TissuePaper.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/TissuePaper.jpg"
+        },
+        {
+            "word": "Toilet Brush",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletBrush.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletBrush.jpg"
+        },
+        {
+            "word": "Toilet Paper",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletPaper.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletPaper.jpg"
+        },
+        {
+            "word": "Toilet Plunger",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletPlunger.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletPlunger.jpg"
+        },
+        {
+            "word": "Toilet Seat",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletSeat.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletSeat.jpg"
+        },
+        {
+            "word": "Toilet",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Toilet.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Toilet.jpg"
+        },
+        {
+            "word": "Toothpaste",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Toothpaste.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Toothpaste.jpg"
+        },
+        {
+            "word": "Towel",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Towel.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Towel.jpg"
         }
     ]
 }

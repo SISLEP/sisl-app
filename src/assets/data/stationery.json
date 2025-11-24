@@ -1,0 +1,531 @@
+{
+  "stationery": [
+    {
+      "id": "1",
+      "title": "Stationery Signs (Part 1)",
+      "subtitle": "Signs for common writing and reading tools",
+      "icon": "📚",
+      "bgColor": "#F5F5F5",
+      "category": "stationery",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Book.mp4",
+            "correctAnswer": "Book",
+            "options": [
+              "Book",
+              "Calculator",
+              "Calendar"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Book & Calculator)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Book.mp4",
+                "translation": "Book",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Calculator.mp4",
+                "translation": "Calculator",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Calculator.mp4",
+            "correctAnswer": "Calculator",
+            "options": [
+              "Book",
+              "Calculator",
+              "Calendar"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Calendar.mp4",
+            "correctAnswer": "Calendar",
+            "options": [
+              "Calculator",
+              "Calendar",
+              "Chalk"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Calendar & Chalk)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Calendar.mp4",
+                "translation": "Calendar",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Chalk.mp4",
+                "translation": "Chalk",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Chalk.mp4",
+            "correctAnswer": "Chalk",
+            "options": [
+              "Calendar",
+              "Chalk",
+              "Clipboard"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Clipboard.mp4",
+            "correctAnswer": "Clipboard",
+            "options": [
+              "Chalk",
+              "Clipboard",
+              "Colour Pencils"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Stationery Signs (Part 2)",
+      "subtitle": "Signs for drawing and erasing tools",
+      "icon": "🖍️",
+      "bgColor": "#F5F5F5",
+      "category": "stationery",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/ColourPencils.mp4",
+            "correctAnswer": "Colour Pencils",
+            "options": [
+              "Clipboard",
+              "Colour Pencils",
+              "Crayons"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Colour Pencils & Crayons)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/ColourPencils.mp4",
+                "translation": "Colour Pencils",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Crayons.mp4",
+                "translation": "Crayons",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Crayons.mp4",
+            "correctAnswer": "Crayons",
+            "options": [
+              "Colour Pencils",
+              "Crayons",
+              "Dictionary"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Dictionary.mp4",
+            "correctAnswer": "Dictionary",
+            "options": [
+              "Crayons",
+              "Dictionary",
+              "Drawing Pins"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Dictionary & Drawing Pins)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Dictionary.mp4",
+                "translation": "Dictionary",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/DrawingPins.mp4",
+                "translation": "Drawing Pins",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/DrawingPins.mp4",
+            "correctAnswer": "Drawing Pins",
+            "options": [
+              "Dictionary",
+              "Drawing Pins",
+              "Dustbin"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Dustbin.mp4",
+            "correctAnswer": "Dustbin",
+            "options": [
+              "Drawing Pins",
+              "Dustbin",
+              "Duster"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Stationery Signs (Part 3)",
+      "subtitle": "Signs for fixing and highlighting tools",
+      "icon": "📎",
+      "bgColor": "#F5F5F5",
+      "category": "stationery",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Duster.mp4",
+            "correctAnswer": "Duster",
+            "options": [
+              "Dustbin",
+              "Duster",
+              "Eraser"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Duster & Eraser)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Duster.mp4",
+                "translation": "Duster",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Eraser.mp4",
+                "translation": "Eraser",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Eraser.mp4",
+            "correctAnswer": "Eraser",
+            "options": [
+              "Duster",
+              "Eraser",
+              "Folder"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Folder.mp4",
+            "correctAnswer": "Folder",
+            "options": [
+              "Eraser",
+              "Folder",
+              "Glue Stick"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Folder & Glue Stick)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Folder.mp4",
+                "translation": "Folder",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/GlueStick.mp4",
+                "translation": "Glue Stick",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/GlueStick.mp4",
+            "correctAnswer": "Glue Stick",
+            "options": [
+              "Folder",
+              "Glue Stick",
+              "Highlighter"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Highlighter.mp4",
+            "correctAnswer": "Highlighter",
+            "options": [
+              "Glue Stick",
+              "Highlighter",
+              "Knife"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Stationery Signs (Part 4)",
+      "subtitle": "Signs for measuring, cutting, and organising",
+      "icon": "📏",
+      "bgColor": "#F5F5F5",
+      "category": "stationery",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Knife.mp4",
+            "correctAnswer": "Knife",
+            "options": [
+              "Highlighter",
+              "Knife",
+              "Lnk Pot"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Knife & Lnk Pot)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Knife.mp4",
+                "translation": "Knife",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/LnkPot.mp4",
+                "translation": "Lnk Pot",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/LnkPot.mp4",
+            "correctAnswer": "Lnk Pot",
+            "options": [
+              "Knife",
+              "Lnk Pot",
+              "Paper"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Paper.mp4",
+            "correctAnswer": "Paper",
+            "options": [
+              "Lnk Pot",
+              "Paper",
+              "Paperclip"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Paper & Paperclip)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Paper.mp4",
+                "translation": "Paper",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Paperclip.mp4",
+                "translation": "Paperclip",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Paperclip.mp4",
+            "correctAnswer": "Paperclip",
+            "options": [
+              "Paper",
+              "Paperclip",
+              "Pencil"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Pencil.mp4",
+            "correctAnswer": "Pencil",
+            "options": [
+              "Paperclip",
+              "Pencil",
+              "Ring Binders"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/RingBinders.mp4",
+            "correctAnswer": "Ring Binders",
+            "options": [
+              "Pencil",
+              "Ring Binders",
+              "Ruler"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Ruler.mp4",
+            "correctAnswer": "Ruler",
+            "options": [
+              "Ring Binders",
+              "Ruler",
+              "Scissor"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Scissor.mp4",
+            "correctAnswer": "Scissor",
+            "options": [
+              "Ruler",
+              "Scissor",
+              "Stapler"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Scissor & Stapler)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Scissor.mp4",
+                "translation": "Scissor",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/stationery/Stapler.mp4",
+                "translation": "Stapler",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Stapler.mp4",
+            "correctAnswer": "Stapler",
+            "options": [
+              "Scissor",
+              "Stapler",
+              "Stationery"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/stationery/Stationery.mp4",
+            "correctAnswer": "Stationery",
+            "options": [
+              "Stapler",
+              "Stationery",
+              "Book"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

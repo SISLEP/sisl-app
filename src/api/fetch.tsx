@@ -15,7 +15,6 @@ import provinceModulesData from '../assets/data/province.json';
 import animalModulesData from '../assets/data/animal.json';
 import sportModulesData from '../assets/data/sport.json';
 import generalModulesData from '../assets/data/general.json';
-import classModulesData from '../assets/data/class.json';
 import fruitModulesData from '../assets/data/fruit.json';
 import gardenModulesData from '../assets/data/garden.json';
 import houseModulesData from '../assets/data/house.json';
@@ -47,7 +46,6 @@ const localModuleDataMap: { [key: string]: { [key: string]: LearningModule[] } }
     animal: animalModulesData,
     sport: sportModulesData,
     general: generalModulesData,
-    class: classModulesData,
     fruit: fruitModulesData,
     garden: gardenModulesData,
     house: houseModulesData,

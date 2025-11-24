@@ -1,0 +1,407 @@
+{
+  "bathroom": [
+    {
+      "id": "1",
+      "title": "Bathroom Signs (Part 1)",
+      "subtitle": "Signs for cleaning and hygiene",
+      "icon": "🧼",
+      "bgColor": "#F5F5F5",
+      "category": "bathroom",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Bathroom.mp4",
+            "correctAnswer": "Bathroom",
+            "options": [
+              "Bathroom",
+              "Bucket",
+              "Cotton Swabs"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Bathroom & Bucket)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/Bathroom.mp4",
+                "translation": "Bathroom",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/Bucket.mp4",
+                "translation": "Bucket",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Bucket.mp4",
+            "correctAnswer": "Bucket",
+            "options": [
+              "Bathroom",
+              "Bucket",
+              "Cotton Swabs"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/CottonSwabs.mp4",
+            "correctAnswer": "Cotton Swabs",
+            "options": [
+              "Bucket",
+              "Cotton Swabs",
+              "Hand Wash"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Cotton Swabs & Hand Wash)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/CottonSwabs.mp4",
+                "translation": "Cotton Swabs",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/HandWash.mp4",
+                "translation": "Hand Wash",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/HandWash.mp4",
+            "correctAnswer": "Hand Wash",
+            "options": [
+              "Cotton Swabs",
+              "Hand Wash",
+              "Mop"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Mop.mp4",
+            "correctAnswer": "Mop",
+            "options": [
+              "Hand Wash",
+              "Mop",
+              "Razor"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Bathroom Signs (Part 2)",
+      "subtitle": "Signs for waste, showering, and cleaning tools",
+      "icon": "🚿",
+      "bgColor": "#F5F5F5",
+      "category": "bathroom",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Razor.mp4",
+            "correctAnswer": "Razor",
+            "options": [
+              "Mop",
+              "Razor",
+              "Rubbish Bin"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Razor & Rubbish Bin)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/Razor.mp4",
+                "translation": "Razor",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/RubbishBin.mp4",
+                "translation": "Rubbish Bin",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/RubbishBin.mp4",
+            "correctAnswer": "Rubbish Bin",
+            "options": [
+              "Razor",
+              "Rubbish Bin",
+              "Shower Curtain"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ShowerCurtain.mp4",
+            "correctAnswer": "Shower Curtain",
+            "options": [
+              "Rubbish Bin",
+              "Shower Curtain",
+              "Shower"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Shower Curtain & Shower)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/ShowerCurtain.mp4",
+                "translation": "Shower Curtain",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/Shower.mp4",
+                "translation": "Shower",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Shower.mp4",
+            "correctAnswer": "Shower",
+            "options": [
+              "Shower Curtain",
+              "Shower",
+              "Soap"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Soap.mp4",
+            "correctAnswer": "Soap",
+            "options": [
+              "Shower",
+              "Soap",
+              "Sponge"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Bathroom Signs (Part 3)",
+      "subtitle": "Signs for toilet items and oral hygiene",
+      "icon": "🧻",
+      "bgColor": "#F5F5F5",
+      "category": "bathroom",
+      "lessons": [
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Sponge.mp4",
+            "correctAnswer": "Sponge",
+            "options": [
+              "Soap",
+              "Sponge",
+              "Tissue Paper"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Sponge & Tissue Paper)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/Sponge.mp4",
+                "translation": "Sponge",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/TissuePaper.mp4",
+                "translation": "Tissue Paper",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/TissuePaper.mp4",
+            "correctAnswer": "Tissue Paper",
+            "options": [
+              "Sponge",
+              "Tissue Paper",
+              "Toilet Brush"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletBrush.mp4",
+            "correctAnswer": "Toilet Brush",
+            "options": [
+              "Tissue Paper",
+              "Toilet Brush",
+              "Toilet Paper"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Toilet Brush & Toilet Paper)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletBrush.mp4",
+                "translation": "Toilet Brush",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletPaper.mp4",
+                "translation": "Toilet Paper",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletPaper.mp4",
+            "correctAnswer": "Toilet Paper",
+            "options": [
+              "Toilet Brush",
+              "Toilet Paper",
+              "Toilet Plunger"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletPlunger.mp4",
+            "correctAnswer": "Toilet Plunger",
+            "options": [
+              "Toilet Paper",
+              "Toilet Plunger",
+              "Toilet Seat"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletSeat.mp4",
+            "correctAnswer": "Toilet Seat",
+            "options": [
+              "Toilet Plunger",
+              "Toilet Seat",
+              "Toilet"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Toilet.mp4",
+            "correctAnswer": "Toilet",
+            "options": [
+              "Toilet Seat",
+              "Toilet",
+              "Toothpaste"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Toilet & Toothpaste)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/Toilet.mp4",
+                "translation": "Toilet",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/bathroom/Toothpaste.mp4",
+                "translation": "Toothpaste",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Toothpaste.mp4",
+            "correctAnswer": "Toothpaste",
+            "options": [
+              "Toilet",
+              "Toothpaste",
+              "Towel"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Towel.mp4",
+            "correctAnswer": "Towel",
+            "options": [
+              "Toothpaste",
+              "Towel",
+              "Soap"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

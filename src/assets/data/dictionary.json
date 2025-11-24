@@ -2022,5 +2022,102 @@
             "signVideo": "https://sislep.github.io/video-site/fish/Whale.mp4",
             "signImage": "https://sislep.github.io/video-site/fish/Whale.jpg"
         }
+    ],
+    "Bathroom": [
+        {
+            "word": "Bathroom",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Bathroom.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Bathroom.jpg"
+        },
+        {
+            "word": "Bucket",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Bucket.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Bucket.jpg"
+        },
+        {
+            "word": "Cotton Swabs",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/CottonSwabs.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/CottonSwabs.jpg"
+        },
+        {
+            "word": "Hand Wash",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/HandWash.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/HandWash.jpg"
+        },
+        {
+            "word": "Mop",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Mop.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Mop.jpg"
+        },
+        {
+            "word": "Razor",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Razor.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Razor.jpg"
+        },
+        {
+            "word": "Rubbish Bin",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/RubbishBin.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/RubbishBin.jpg"
+        },
+        {
+            "word": "Shower Curtain",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ShowerCurtain.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ShowerCurtain.jpg"
+        },
+        {
+            "word": "Shower",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Shower.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Shower.jpg"
+        },
+        {
+            "word": "Soap",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Soap.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Soap.jpg"
+        },
+        {
+            "word": "Sponge",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Sponge.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Sponge.jpg"
+        },
+        {
+            "word": "Tissue Paper",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/TissuePaper.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/TissuePaper.jpg"
+        },
+        {
+            "word": "Toilet Brush",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletBrush.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletBrush.jpg"
+        },
+        {
+            "word": "Toilet Paper",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletPaper.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletPaper.jpg"
+        },
+        {
+            "word": "Toilet Plunger",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletPlunger.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletPlunger.jpg"
+        },
+        {
+            "word": "Toilet Seat",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/ToiletSeat.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/ToiletSeat.jpg"
+        },
+        {
+            "word": "Toilet",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Toilet.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Toilet.jpg"
+        },
+        {
+            "word": "Toothpaste",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Toothpaste.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Toothpaste.jpg"
+        },
+        {
+            "word": "Towel",
+            "signVideo": "https://sislep.github.io/video-site/bathroom/Towel.mp4",
+            "signImage": "https://sislep.github.io/video-site/bathroom/Towel.jpg"
+        }
     ]
 }

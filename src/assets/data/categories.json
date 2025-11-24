@@ -114,6 +114,12 @@
       "title": "Fish",
       "icon": "🐟",
       "moduleCount": 2
+    },
+    {
+      "id": "Bathroom",
+      "title": "Bathroom",
+      "icon": "🚽",
+      "moduleCount": 3
     }
   ]
 }

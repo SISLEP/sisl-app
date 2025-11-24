@@ -1189,7 +1189,7 @@
             "signImage": "https://sislep.github.io/video-site/fruit/Watermelon.jpg"
         }
     ],
-    "Garden": [
+    "Gardening Tool": [
         {
             "word": "Axe",
             "signVideo": "https://sislep.github.io/video-site/garden/Axe.mp4",
@@ -1214,6 +1214,11 @@
             "word": "Drain Spade",
             "signVideo": "https://sislep.github.io/video-site/garden/DrainSpade.mp4",
             "signImage": "https://sislep.github.io/video-site/garden/DrainSpade.jpg"
+        },
+        {
+            "word": "Gardening Tool",
+            "signVideo": "https://sislep.github.io/video-site/garden/GardeningTool.mp4",
+            "signImage": "https://sislep.github.io/video-site/garden/GardeningTool.jpg"
         },
         {
             "word": "Gloves",
@@ -1976,7 +1981,7 @@
             "signImage": "https://sislep.github.io/video-site/hospital/X-Ray.jpg"
         }
     ],
-    "Fish": [
+    "Sea Fish": [
         {
             "word": "Crab",
             "signVideo": "https://sislep.github.io/video-site/fish/Crab.mp4",
@@ -2001,6 +2006,11 @@
             "word": "Octopus",
             "signVideo": "https://sislep.github.io/video-site/fish/Octopus.mp4",
             "signImage": "https://sislep.github.io/video-site/fish/Octopus.jpg"
+        },
+        {
+            "word": "Sea Fish",
+            "signVideo": "https://sislep.github.io/video-site/fish/SeaFish.mp4",
+            "signImage": "https://sislep.github.io/video-site/fish/SeaFish.jpg"
         },
         {
             "word": "Shark",

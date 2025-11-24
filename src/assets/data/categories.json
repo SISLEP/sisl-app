@@ -55,10 +55,10 @@
       "moduleCount": 3
     },
     {
-      "id": "class",
-      "title": "Class",
-      "icon": "🏫",
-      "moduleCount": 7
+      "id": "stationery",
+      "title": "Stationery",
+      "icon": "✏️",
+      "moduleCount": 4
     },
     {
       "id": "fruit",

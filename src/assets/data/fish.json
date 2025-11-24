@@ -8,11 +8,76 @@
       "bgColor": "#E9FFF5",
       "category": "fish",
       "lessons": [
-        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/fish/Crab.mp4", "correctAnswer": "Crab", "options": [ "Crab", "Octopus", "Skate Fish" ] } },
-        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/fish/Dolphin.mp4", "correctAnswer": "Dolphin", "options": [ "Shark", "Dolphin", "Whale" ] } },
-        { "type": "matching_pairs", "instructions": "Tap the matching pair (Eel & Fish)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/fish/Eel.mp4", "translation": "Eel", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/fish/Fish.mp4", "translation": "Fish", "id": "2" } ] } },
-        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/fish/Octopus.mp4", "correctAnswer": "Octopus", "options": [ "Crab", "Octopus", "Turtle" ] } },
-        { "type": "translation", "instructions": "What is the English word for this sign?", "data": { "signVideo": "https://sislep.github.io/video-site/fish/Shark.mp4", "correctAnswer": "Shark", "options": [ "Dolphin", "Whale", "Shark" ] } }
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation for this sign.",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/SeaFish.mp4",
+            "correctAnswer": "Sea Fish",
+            "options": [
+              "Crab",
+              "Sea Fish",
+              "Dolphin"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word for this sign.",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/Crab.mp4",
+            "correctAnswer": "Crab",
+            "options": [
+              "Crab",
+              "Octopus",
+              "Skate Fish"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Dolphin & Eel)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/fish/Dolphin.mp4",
+                "translation": "Dolphin",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/fish/Eel.mp4",
+                "translation": "Eel",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning.",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/Eel.mp4",
+            "correctAnswer": "Eel",
+            "options": [
+              "Dolphin",
+              "Fish",
+              "Eel"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/Fish.mp4",
+            "correctAnswer": "Fish",
+            "options": [
+              "Octopus",
+              "Fish",
+              "Crab"
+            ]
+          }
+        }
       ]
     },
     {
@@ -23,10 +88,76 @@
       "bgColor": "#E9FFF5",
       "category": "fish",
       "lessons": [
-        { "type": "translation", "instructions": "Choose the right translation for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/fish/SkateFish.mp4", "correctAnswer": "Skate Fish", "options": [ "Fish", "Skate Fish", "Eel" ] } },
-        { "type": "matching_pairs", "instructions": "Tap the matching pair (Turtle & Whale)", "data": { "items": [ { "signVideo": "https://sislep.github.io/video-site/fish/Turtle.mp4", "translation": "Turtle", "id": "1" }, { "signVideo": "https://sislep.github.io/video-site/fish/Whale.mp4", "translation": "Whale", "id": "2" } ] } },
-        { "type": "translation", "instructions": "Select the correct word for this sign.", "data": { "signVideo": "https://sislep.github.io/video-site/fish/Crab.mp4", "correctAnswer": "Crab", "options": [ "Octopus", "Crab", "Turtle" ] } },
-        { "type": "translation", "instructions": "Identify the sign's meaning.", "data": { "signVideo": "https://sislep.github.io/video-site/fish/Fish.mp4", "correctAnswer": "Fish", "options": [ "Eel", "Fish", "Skate Fish" ] } }
+        {
+          "type": "translation",
+          "instructions": "Choose the right translation for this sign.",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/Octopus.mp4",
+            "correctAnswer": "Octopus",
+            "options": [
+              "Octopus",
+              "Shark",
+              "Turtle"
+            ]
+          }
+        },
+        {
+          "type": "matching_pairs",
+          "instructions": "Tap the matching pair (Shark & Skate Fish)",
+          "data": {
+            "items": [
+              {
+                "signVideo": "https://sislep.github.io/video-site/fish/Shark.mp4",
+                "translation": "Shark",
+                "id": "1"
+              },
+              {
+                "signVideo": "https://sislep.github.io/video-site/fish/SkateFish.mp4",
+                "translation": "Skate Fish",
+                "id": "2"
+              }
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Select the correct word for this sign.",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/SkateFish.mp4",
+            "correctAnswer": "Skate Fish",
+            "options": [
+              "Dolphin",
+              "Skate Fish",
+              "Whale"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "Identify the sign's meaning.",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/Turtle.mp4",
+            "correctAnswer": "Turtle",
+            "options": [
+              "Turtle",
+              "Whale",
+              "Crab"
+            ]
+          }
+        },
+        {
+          "type": "translation",
+          "instructions": "What is the English word for this sign?",
+          "data": {
+            "signVideo": "https://sislep.github.io/video-site/fish/Whale.mp4",
+            "correctAnswer": "Whale",
+            "options": [
+              "Shark",
+              "Dolphin",
+              "Whale"
+            ]
+          }
+        }
       ]
     }
   ]

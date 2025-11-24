@@ -68,8 +68,8 @@
     },
     {
       "id": "garden",
-      "title": "Garden",
-      "icon": "🌻",
+      "title": "Gardening Tool",
+      "icon": "⛏️",
       "moduleCount": 3
     },
     {
@@ -111,7 +111,7 @@
     },
     {
       "id": "fish",
-      "title": "Fish",
+      "title": "Sea Fish",
       "icon": "🐟",
       "moduleCount": 2
     },
